@@ -59,7 +59,7 @@ export default function HomePage() {
             <p className="mt-5 text-[11px] leading-5 text-[#6b776d]">A veteran-led private initiative. No government or armed-forces endorsement is implied.</p>
           </div>
           <div className="relative min-h-[330px] overflow-hidden rounded-[2rem] border border-white/80 bg-[#e5e9df] shadow-[0_25px_80px_-28px_rgba(10,53,34,.35)] sm:min-h-[430px] lg:min-h-[500px]">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/Indian_Army_soldier_at_Camp_Babina.jpg" alt="Indian Army soldier, representing the veteran-led mission behind MyEVStation" className="absolute inset-0 h-full w-full object-cover object-[center_24%]" />
+            <img src="/myevstation-hero-banner.jpeg" alt="MyEVStation EV charging station, Indian tricolour and veteran-led clean-energy mission" className="absolute inset-0 h-full w-full object-cover object-center" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#061f16]/85 via-[#061f16]/10 to-transparent" />
             <div className="absolute left-0 top-0 h-2 w-full bg-gradient-to-r from-[#e87522] via-white to-[#16834a]" />
             <div className="absolute left-5 top-5 rounded-full border border-white/60 bg-white/90 px-3 py-2 text-[10px] font-extrabold uppercase tracking-[.15em] text-[#12402c] shadow-sm sm:left-7 sm:top-7 sm:text-xs">Service doesn’t end. It evolves.</div>
