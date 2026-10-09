@@ -42,32 +42,35 @@ export default function HomePage() {
         {mobileOpen && <nav className="grid gap-1 border-t border-black/10 bg-white px-5 py-4 lg:hidden">{sections.map(s => <a key={s.href} href={s.href} onClick={() => setMobileOpen(false)} className="rounded-lg px-3 py-3 font-semibold">{s.label}</a>)}<a href="#contact" onClick={() => setMobileOpen(false)} className="rounded-lg bg-[#e87522] px-3 py-3 font-bold text-white">Become a Partner</a></nav>}
       </header>
 
-      <section id="home-hero" className="relative isolate flex min-h-[100svh] items-end overflow-hidden bg-[#071e16] pt-24 sm:items-center sm:pt-20">
-        <img src="/myevstation-hero-banner.jpeg" alt="MyEVStation EV charging infrastructure mission with the Indian tricolour and a veteran leader" className="absolute inset-0 -z-30 h-full w-full object-cover object-center" fetchPriority="high" />
-        <div className="absolute inset-0 -z-20 bg-gradient-to-r from-[#061b14]/10 via-transparent to-[#061b14]/65" />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#061b14]/65 via-transparent to-[#061b14]/10 sm:bg-gradient-to-r sm:from-transparent sm:via-transparent sm:to-[#061b14]/75" />
-        <div className="mx-auto flex min-h-[100svh] w-full max-w-[1600px] items-end justify-end px-5 pb-12 pt-28 sm:items-center sm:px-10 sm:pb-16 lg:px-16">
-          <div className="w-full max-w-xl rounded-2xl border border-white/20 bg-[#061b14]/65 p-5 text-white shadow-2xl backdrop-blur-sm sm:rounded-none sm:border-0 sm:bg-transparent sm:p-0 sm:shadow-none lg:max-w-[43%]">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/30 bg-black/20 px-4 py-2 text-[10px] font-extrabold uppercase tracking-[.17em] text-white sm:text-xs">
-              <span className="h-2 w-2 rounded-full bg-[#f28a24]" /> A veteran-led national clean-energy mission
+      <section id="home-hero" className="relative isolate flex min-h-[calc(100svh-5rem)] overflow-hidden bg-[#071e16]">
+        <img src="/myevstation-hero-banner.jpeg" alt="MyEVStation EV charging station, Indian tricolour and veteran leader" className="absolute inset-0 -z-30 h-full w-full object-cover object-center" fetchPriority="high" />
+        <div className="absolute inset-0 -z-20 bg-gradient-to-r from-[#061b14]/85 via-[#061b14]/55 to-[#061b14]/0" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#061b14]/35 via-transparent to-[#061b14]/10" />
+        <div className="mx-auto flex min-h-[calc(100svh-5rem)] w-full max-w-[1600px] items-center px-5 py-16 sm:px-10 lg:px-16">
+          <div className="w-full max-w-2xl text-white">
+            <div className="mb-5 inline-flex items-center gap-2 border-l-4 border-[#e87522] bg-black/20 px-4 py-2 text-[10px] font-extrabold uppercase tracking-[.17em] backdrop-blur-sm sm:text-xs">
+              <span className="text-[#ff9b42]">🇮🇳</span> A veteran-led mission for a cleaner, stronger India
             </div>
-            <h1 className="text-4xl font-black leading-[.98] tracking-[-.045em] sm:text-5xl lg:text-6xl xl:text-7xl">
+            <h1 className="max-w-2xl text-4xl font-black leading-[.98] tracking-[-.045em] drop-shadow sm:text-5xl md:text-6xl lg:text-7xl">
               EV CHARGING STATIONS FOR INDIA’S NEXT MISSION
-              <span className="mt-3 block bg-gradient-to-r from-[#ff9b42] via-white to-[#75d49a] bg-clip-text text-transparent">Powering Clean Energy</span>
+              <span className="mt-3 block"><span className="text-[#ff8b2b]">Powering</span> <span className="text-white">Clean Energy</span></span>
             </h1>
-            <p className="mt-5 max-w-xl text-base font-medium leading-7 text-white sm:text-lg">
-              Build India’s EV charging future. Explore franchise and investment opportunities with or without land, supported by veteran leadership, smart technology and safety-focused operations.
+            <p className="mt-5 max-w-xl text-base font-semibold leading-7 text-white drop-shadow sm:text-lg">
+              From serving the nation to powering its tomorrow.
+            </p>
+            <p className="mt-2 max-w-xl text-sm leading-6 text-white/90 sm:text-base sm:leading-7">
+              Build an EV charging business with or without land—supported by veteran leadership, smart technology and safety-focused operations. Explore franchise and investment opportunities for India’s clean-energy future.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
-              <a href="#contact" className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#e87522] px-6 py-4 text-sm font-extrabold text-white shadow-lg transition hover:bg-[#c75b14]">Become a MyEVStation Partner <ArrowRight size={17}/></a>
-              <a href="#model" className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/70 bg-white/10 px-6 py-4 text-sm font-extrabold text-white backdrop-blur transition hover:bg-white/20">Explore Business Models <ArrowRight size={17}/></a>
+              <a href="#contact" className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#e87522] px-6 py-4 text-sm font-extrabold text-white shadow-xl transition hover:bg-[#c75b14]">Become a MyEVStation Partner <ArrowRight size={17}/></a>
+              <a href="#model" className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/80 bg-white/10 px-6 py-4 text-sm font-extrabold text-white backdrop-blur transition hover:bg-white/20">Explore Business Models <ArrowRight size={17}/></a>
             </div>
-            <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs font-semibold text-white/90">
+            <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs font-bold text-white drop-shadow">
               <span className="inline-flex items-center gap-2"><ShieldCheck size={16}/> Safety-first technology</span>
               <span className="inline-flex items-center gap-2"><Zap size={16}/> AC & DC charging</span>
-              <span className="inline-flex items-center gap-2"><Flag size={16}/> Built for India’s future</span>
+              <span className="inline-flex items-center gap-2"><Flag size={16}/> Made for India</span>
             </div>
-            <p className="mt-4 text-[10px] leading-4 text-white/75">A private-sector initiative. No government or armed-forces endorsement is implied.</p>
+            <p className="mt-4 max-w-lg text-[10px] leading-4 text-white/75">A private-sector initiative. No government or armed-forces endorsement is implied.</p>
           </div>
         </div>
         <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#e87522] via-white to-[#16834a]" />
