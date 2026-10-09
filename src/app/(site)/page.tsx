@@ -89,14 +89,17 @@ export default function HomePage() {
             <p className="mt-4 text-base leading-7 text-[#647067]">Choose the option that describes you. The next page explains the model, costs and steps in simple language.</p>
           </div>
           <div className="grid items-stretch gap-5 sm:grid-cols-2 xl:grid-cols-4">
-            <article className="flex h-full flex-col overflow-hidden rounded-[1.7rem] border border-[#dfe7df] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
-              <div className="flex min-h-[310px] flex-1 flex-col items-center bg-[#f2f7f2] px-6 pb-6 pt-7 text-center sm:px-7">
-                <span className="self-start rounded-full bg-[#ffe2cf] px-3 py-1 text-[10px] font-extrabold uppercase tracking-widest text-[#bd5518]">Option 01 · Veterans</span>
-                <div className="mt-7 flex h-20 w-20 items-center justify-center rounded-2xl bg-white text-[#0b5a42] shadow-sm"><Flag size={48} strokeWidth={1.8}/></div>
-                <h3 className="mt-5 min-h-[64px] text-2xl font-black leading-tight text-[#142f24]">EX-SERVICEMEN</h3>
-                <p className="mt-2 text-sm leading-6 text-[#647168]">Start your next mission with EV charging. Explore investment packages and a managed operating model for your next chapter.</p>
+            <article className="relative flex h-full flex-col overflow-hidden rounded-[1.7rem] border-2 border-[#e87522] bg-white shadow-[0_12px_35px_rgba(11,90,66,0.12)] transition hover:-translate-y-1 hover:shadow-xl">
+              <div className="h-1.5 w-full bg-gradient-to-r from-[#e87522] via-white to-[#13834b]"/>
+              <div className="relative flex min-h-[310px] flex-1 flex-col items-center bg-gradient-to-b from-[#e5f0e7] to-[#f5f8f3] px-6 pb-6 pt-6 text-center sm:px-7">
+                <div className="flex w-full items-center justify-between gap-2"><span className="rounded-full bg-[#ffe2cf] px-3 py-1 text-[10px] font-extrabold uppercase tracking-widest text-[#bd5518]">Option 01 · Veterans</span><span className="rounded-full bg-[#0b5a42] px-2.5 py-1 text-[9px] font-black uppercase tracking-wider text-white">A new mission</span></div>
+                <div className="mt-5 flex h-[76px] w-[76px] items-center justify-center rounded-2xl bg-[#0b5a42] text-white shadow-lg shadow-[#0b5a42]/20 ring-4 ring-white"><Flag size={42} strokeWidth={1.9}/></div>
+                <p className="mt-4 text-[10px] font-black uppercase tracking-[.2em] text-[#bd5518]">SERVICE DOESN’T END. IT EVOLVES.</p>
+                <h3 className="mt-2 text-[1.65rem] font-black leading-[1.05] tracking-tight text-[#142f24]">YOUR NEXT<br/>MISSION STARTS HERE.</h3>
+                <p className="mt-3 text-sm leading-6 text-[#52665a]">Turn your experience, discipline and leadership into a new chapter in India’s EV future.</p>
+                <div className="mt-4 rounded-full border border-[#c8ddce] bg-white/80 px-3 py-1.5 text-[11px] font-bold text-[#0b5a42]">Explore EV station ownership for veterans</div>
               </div>
-              <div className="flex min-h-[100px] items-center p-5"><Link href="/ex-servicemen" className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#e87522] px-4 py-3 text-center text-sm font-extrabold text-white transition hover:bg-[#cf6218]">Explore ex-servicemen model <ArrowRight size={16}/></Link></div>
+              <div className="flex min-h-[100px] items-center p-5"><Link href="/ex-servicemen" className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#e87522] px-4 py-3 text-center text-sm font-extrabold text-white shadow-sm transition hover:bg-[#cf6218]">Start your next mission <ArrowRight size={16}/></Link></div>
             </article>
             <article className="flex h-full flex-col overflow-hidden rounded-[1.7rem] border border-[#dfe7df] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
               <div className="flex min-h-[310px] flex-1 flex-col items-center bg-[#f2f7f2] px-6 pb-6 pt-7 text-center sm:px-7">
