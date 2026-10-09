@@ -5,10 +5,13 @@ import Link from "next/link";
 import { ArrowRight, BatteryCharging, ShieldCheck, MapPin, Zap, Gauge, Leaf, Menu, X, CheckCircle2, CarFront, Bike, Building2, Calculator, IndianRupee, ChevronDown, RadioTower, Route, PlugZap, Users, Flag, Target, BadgeCheck } from "lucide-react";
 
 const sections = [
-  { label: "Our Model", href: "#model" },
-  { label: "Investment", href: "#investment" },
+  { label: "Home", href: "#home" },
+  { label: "Why MyEVStation", href: "#mission" },
+  { label: "Business Model", href: "#model" },
   { label: "Technology", href: "#technology" },
-  { label: "Our Mission", href: "#mission" },
+  { label: "Investment", href: "#investment" },
+  { label: "Impact", href: "#impact" },
+  { label: "About Us", href: "#contact" },
 ];
 
 export default function HomePage() {
@@ -26,7 +29,7 @@ export default function HomePage() {
   const money = (v: number) => new Intl.NumberFormat("en-IN", { style: "currency", currency: "INR", maximumFractionDigits: 0 }).format(v);
 
   return (
-    <main className="min-h-screen bg-white text-[#17212b]">
+    <main id="home" className="min-h-screen bg-white text-[#17212b]">
       <header className="sticky top-0 z-50 border-b border-black/10 bg-white/95 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 lg:px-8">
           <Link href="/" className="flex items-center gap-3" aria-label="MyEVStation home">
@@ -74,7 +77,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-y border-[#e4e9e4] bg-white">
+      <section id="impact" className="border-y border-[#e4e9e4] bg-white">
         <div className="mx-auto grid max-w-7xl grid-cols-2 gap-4 px-5 py-6 sm:grid-cols-3 lg:grid-cols-5 lg:px-8">
           {[{icon:Leaf,title:"1000+",sub:"EV stations target"},{icon:Users,title:"10,000+",sub:"Jobs & livelihoods"},{icon:BatteryCharging,title:"1M+ Tons",sub:"CO₂ reduction ambition"},{icon:MapPin,title:"Pan India",sub:"Expansion vision"},{icon:Flag,title:"One Mission",sub:"A cleaner, self-reliant India"}].map(({icon:Icon,title,sub})=><div key={title} className="flex items-center gap-3 py-2"><span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-[#eaf4ed] text-[#155b39]"><Icon size={24}/></span><span><b className="block text-lg font-extrabold text-[#102b20]">{title}</b><span className="block text-xs text-[#66736a]">{sub}</span></span></div>)}
         </div>
