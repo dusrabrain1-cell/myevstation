@@ -1,3 +1,6 @@
+"use client";
+
+import { usePathname } from "next/navigation";
 import { Navbar } from "@/components/custom/Navbar";
 import { Footer } from "@/components/custom/Footer";
 import { RouteLoader } from "@/components/custom/RouteLoader";
@@ -8,12 +11,15 @@ export default function SiteLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const pathname = usePathname();
+  const isMyEVStationHome = pathname === "/";
+
   return (
     <ContactModalProvider>
       <RouteLoader />
-      <Navbar />
+      {!isMyEVStationHome && <Navbar />}
       <main className="flex-1">{children}</main>
-      <Footer />
+      {!isMyEVStationHome && <Footer />}
     </ContactModalProvider>
   );
 }
