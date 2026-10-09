@@ -1,27 +1,24 @@
 /**
- * Static site configuration that isn't content-managed.
+ * Static site configuration for MyEVStation.
  */
 export const SITE = {
-  name: "Carbon Mandi",
+  name: "MyEVStation",
   shortDescription:
-    "India's first hemp & napier biomass based green hydrogen initiative.",
-  // Canonical host — matches Shopify's existing www subdomain so URLs are byte-identical.
-  url: "https://www.carbonmandi.com",
-  email: "hello@carbonmandi.com",
-  phone: "+91-9140897297",
+    "Veteran-led EV charging infrastructure, franchise and location partnerships across India.",
+  url: "https://myevstation.vercel.app",
+  email: "hello@myevstation.in",
+  phone: "",
 } as const;
 
 export interface NavLink {
   label: string;
   href: string;
-  /** When true the item doesn't navigate and shows a "Coming Soon" hint. */
   comingSoon?: boolean;
 }
 
-/** Primary navigation. ("मंडी" = "Mandi" in Hindi.) */
 export const NAV_LINKS: NavLink[] = [
-  { label: "National Projects", href: "/projects" },
-  { label: "Team", href: "/team" },
-  { label: "मंडी", href: "/mandi" },
-  { label: "Blogs", href: "/blogs/blog" },
+  { label: "EV Station Models", href: "/#model" },
+  { label: "Investment Calculator", href: "/#investment" },
+  { label: "Technology & Safety", href: "/#technology" },
+  { label: "Our Mission", href: "/#mission" },
 ];
