@@ -88,24 +88,22 @@ export default function HomePage() {
             <h2 className="mt-4 text-4xl font-extrabold tracking-tight text-[#15281f] sm:text-5xl">How would you like to start?</h2>
             <p className="mt-4 text-base leading-7 text-[#647067]">Choose the option that describes you. The next page explains the model, costs and steps in simple language.</p>
           </div>
-          <div className="grid gap-6 lg:grid-cols-2">
-            <article className="group overflow-hidden rounded-[1.7rem] border border-[#e3e6df] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
-              <div className="relative flex min-h-72 items-end overflow-hidden bg-[linear-gradient(120deg,#e9f1e9,#d7e7dc)] p-8 text-[#26352d] sm:p-10">
-                <div className="absolute -right-10 -top-14 h-72 w-72 rounded-full border border-[#6c563f]/20"/>
-                <div className="absolute right-16 top-10 h-40 w-40 rounded-full bg-white/55 blur-2xl"/>
-                <Users className="absolute right-8 top-8 text-[#b75220]" size={54}/>
-                <div className="relative"><span className="rounded-full bg-white/70 px-3 py-1 text-xs font-bold uppercase tracking-widest">Option 01</span><h3 className="mt-5 text-4xl font-extrabold sm:text-5xl">I HAVE NO LAND</h3><p className="mt-3 max-w-md text-base leading-7 text-[#5c655d]">Want to start an EV charging business? Explore our partner-site model with premium locations arranged subject to availability.</p></div>
-              </div>
-              <div className="p-7 sm:p-8"><Link href="/without-land" className="inline-flex items-center rounded-full bg-[#e87522] px-6 py-4 text-sm font-extrabold text-white transition hover:bg-[#c75b14]">Explore no-land partner model <ArrowRight className="ml-2" size={17}/></Link></div>
+          <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+            <article className="group flex flex-col overflow-hidden rounded-[1.7rem] border border-[#e3e6df] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
+              <div className="relative flex min-h-64 flex-1 items-end overflow-hidden bg-[linear-gradient(140deg,#e9f1e9,#cbded0)] p-6 text-[#26352d] sm:p-7"><Users className="absolute right-6 top-6 text-[#b75220]" size={43}/><div className="relative"><span className="rounded-full bg-white/75 px-3 py-1 text-[10px] font-extrabold uppercase tracking-widest">Option 01</span><h3 className="mt-5 text-3xl font-black">NO LAND?</h3><p className="mt-3 text-sm leading-6 text-[#536158]">Explore EV station ownership at a suitable host location—without buying the land.</p></div></div>
+              <div className="p-6"><Link href="/without-land" className="inline-flex items-center gap-2 rounded-full bg-[#e87522] px-5 py-3 text-sm font-extrabold text-white">Explore no-land model <ArrowRight size={16}/></Link></div>
             </article>
-            <article className="group overflow-hidden rounded-[1.7rem] border border-[#e3e9e4] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
-              <div className="relative flex min-h-72 items-end overflow-hidden bg-[linear-gradient(120deg,#174b37,#0b2018)] p-8 text-white sm:p-10">
-                <div className="absolute -right-10 -top-14 h-72 w-72 rounded-full border border-white/15"/>
-                <div className="absolute right-16 top-10 h-40 w-40 rounded-full bg-[#e87522]/20 blur-2xl"/>
-                <MapPin className="absolute right-8 top-8 text-[#ffb181]" size={54}/>
-                <div className="relative"><span className="rounded-full bg-white/15 px-3 py-1 text-xs font-bold uppercase tracking-widest">Option 02</span><h3 className="mt-5 text-4xl font-extrabold sm:text-5xl">I HAVE LAND</h3><p className="mt-3 max-w-md text-base leading-7 text-white/75">Own a plot, parking area or commercial site? Explore charger options and request a location assessment.</p></div>
-              </div>
-              <div className="p-7 sm:p-8"><Link href="/with-land" className="inline-flex items-center rounded-full bg-[#0b5a42] px-6 py-4 text-sm font-extrabold text-white transition hover:bg-[#084631]">Explore land partner model <ArrowRight className="ml-2" size={17}/></Link></div>
+            <article className="group flex flex-col overflow-hidden rounded-[1.7rem] border border-[#e3e9e4] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
+              <div className="relative flex min-h-64 flex-1 items-end overflow-hidden bg-[linear-gradient(140deg,#174b37,#0b2018)] p-6 text-white sm:p-7"><MapPin className="absolute right-6 top-6 text-[#ffb181]" size={43}/><div className="relative"><span className="rounded-full bg-white/15 px-3 py-1 text-[10px] font-extrabold uppercase tracking-widest">Option 02</span><h3 className="mt-5 text-3xl font-black">HAVE LAND?</h3><p className="mt-3 text-sm leading-6 text-white/75">Turn your plot, parking area, commercial property or fleet site into a charging destination.</p></div></div>
+              <div className="p-6"><Link href="/with-land" className="inline-flex items-center gap-2 rounded-full bg-[#0b5a42] px-5 py-3 text-sm font-extrabold text-white">Explore land model <ArrowRight size={16}/></Link></div>
+            </article>
+            <article className="group flex flex-col overflow-hidden rounded-[1.7rem] border border-[#e87522]/40 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
+              <div className="relative flex min-h-64 flex-1 items-end overflow-hidden bg-[linear-gradient(145deg,#102f25,#071b14)] p-6 text-white sm:p-7"><div className="absolute right-5 top-5 rounded-full bg-[#e87522] px-3 py-1 text-[9px] font-black uppercase tracking-wider">A new mission</div><Flag className="absolute right-6 top-16 text-[#ffb181]" size={43}/><div className="relative"><span className="rounded-full bg-white/15 px-3 py-1 text-[10px] font-extrabold uppercase tracking-widest">Option 03 · Veterans</span><h3 className="mt-5 text-3xl font-black">YOUR NEXT MISSION</h3><p className="mt-3 text-sm leading-6 text-white/75">Turn the discipline and leadership built in service into a new chapter as an EV station owner.</p></div></div>
+              <div className="p-6"><p className="mb-3 text-sm font-extrabold text-[#0b5a42]">Packages from ₹3.75 lakh · ₹5 lakh</p><Link href="/ex-servicemen" className="inline-flex items-center gap-2 rounded-full bg-[#e87522] px-5 py-3 text-sm font-extrabold text-white">Start your next mission <ArrowRight size={16}/></Link></div>
+            </article>
+            <article className="group flex flex-col overflow-hidden rounded-[1.7rem] border border-[#e3e9e4] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
+              <div className="relative flex min-h-64 flex-1 items-end overflow-hidden bg-[linear-gradient(145deg,#e9f3f9,#d5e7ef)] p-6 text-[#172d3a] sm:p-7"><Building2 className="absolute right-6 top-6 text-[#176a8a]" size={43}/><div className="relative"><span className="rounded-full bg-white/80 px-3 py-1 text-[10px] font-extrabold uppercase tracking-widest">Option 04 · Community</span><h3 className="mt-5 text-3xl font-black">LIVE IN A SOCIETY?</h3><p className="mt-3 text-sm leading-6 text-[#536774]">Make everyday charging easier for residents—with options from smart sockets to AC and DC chargers.</p></div></div>
+              <div className="p-6"><Link href="/society" className="inline-flex items-center gap-2 rounded-full bg-[#176a8a] px-5 py-3 text-sm font-extrabold text-white">Explore society charging <ArrowRight size={16}/></Link></div>
             </article>
           </div>
         </div>
