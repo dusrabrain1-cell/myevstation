@@ -43,38 +43,63 @@ export default function HomePage() {
       </header>
 
       <div aria-hidden="true" className="h-1 w-full bg-gradient-to-r from-[#e87522] via-white to-[#16834a]" />
-      <section className="relative isolate overflow-hidden bg-[#f8faf7]">
-        <div className="absolute inset-0 -z-20 bg-[linear-gradient(110deg,#ffffff_0%,#f8faf7_48%,#e7f0e8_100%)]" />
-        <div className="mx-auto grid w-full max-w-7xl items-center gap-10 px-5 py-12 sm:py-16 lg:grid-cols-[.92fr_1.08fr] lg:px-8 lg:py-20">
-          <div className="relative z-10">
-            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#16834a]/20 bg-white px-4 py-2 text-xs font-extrabold uppercase tracking-[.15em] text-[#155b39] shadow-sm"><span className="h-2 w-2 rounded-full bg-[#e87522]" /> A veteran-led mission for a stronger India</div>
-            <h1 className="max-w-2xl text-5xl font-extrabold leading-[1.02] tracking-[-.055em] text-[#102b20] sm:text-6xl lg:text-7xl">From serving India<br />to <span className="text-[#e87522]">powering</span> its<br /><span className="text-[#16834a]">EV future.</span></h1>
-            <p className="mt-6 max-w-xl text-lg leading-8 text-[#52635b]">MyEVStation is building opportunities in electric vehicle charging through veteran-led leadership, smart technology and trusted partnerships. Start with land—or explore a model without owning it.</p>
-            <div className="mt-8 flex flex-wrap gap-3"><a href="#model" className="rounded-lg bg-[#155b39] px-6 py-4 text-sm font-extrabold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-[#10482d]">Explore EV Opportunities <ArrowRight className="ml-2 inline" size={17}/></a><a href="#investment" className="rounded-lg border border-[#155b39]/25 bg-white px-6 py-4 text-sm font-extrabold text-[#155b39] transition hover:bg-[#edf5ef]">Calculate Investment</a></div>
-            <div className="mt-8 flex flex-wrap gap-x-5 gap-y-3 text-sm font-semibold text-[#45584e]"><span><CheckCircle2 className="mr-2 inline text-[#16834a]" size={17}/> With-land & no-land options</span><span><CheckCircle2 className="mr-2 inline text-[#16834a]" size={17}/> 2W, 3W & car charging</span><span><CheckCircle2 className="mr-2 inline text-[#16834a]" size={17}/> Safety-first technology</span></div>
-            <div className="mt-8 flex items-center gap-3 border-l-4 border-[#e87522] bg-white/70 px-4 py-3">
-              <span className="text-2xl" aria-hidden="true">🇮🇳</span><p className="text-sm font-semibold leading-6 text-[#315443]">A new mission of service—supporting India’s cleaner mobility transition.</p>
-            </div>
-          </div>
-          <div className="relative">
-            <div className="absolute -inset-4 rounded-[2rem] bg-[#155b39]/10 blur-2xl" />
-            <div className="relative overflow-hidden rounded-[1.5rem] border border-white bg-[#e7eee8] shadow-2xl">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/Indian_Army_soldier_at_Camp_Babina.jpg" alt="Indian Army soldier during a joint training exercise; used to represent the veteran-led spirit of MyEVStation" className="h-[420px] w-full object-cover object-[center_32%] sm:h-[500px] lg:h-[570px]" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#081b12]/85 via-transparent to-transparent" />
-              <div className="absolute left-0 right-0 top-0 h-2 bg-gradient-to-r from-[#e87522] via-white to-[#16834a]" />
-              <div className="absolute left-5 top-5 rounded-lg border border-white/40 bg-white/95 px-4 py-3 shadow-lg sm:left-7 sm:top-7">
-                <span className="block text-[10px] font-extrabold uppercase tracking-[.16em] text-[#65736a]">One nation. One mission.</span><strong className="text-lg text-[#155b39]">Powering EV India</strong>
-              </div>
-              <div className="absolute bottom-0 left-0 right-0 p-6 text-white sm:p-8">
-                <div className="mb-3 flex items-center gap-3"><span className="h-1 w-10 bg-[#e87522]" /><span className="h-1 w-10 bg-white" /><span className="h-1 w-10 bg-[#16834a]" /></div>
-                <h2 className="text-2xl font-extrabold sm:text-3xl">Service doesn’t end. It evolves.</h2>
-                <p className="mt-2 max-w-lg text-sm leading-6 text-white/85">A veteran-led EV charging network for entrepreneurs, landowners and businesses across India.</p>
-              </div>
-            </div>
-            <div className="mt-4 flex flex-wrap justify-center gap-3 text-xs font-bold text-[#3c5749]"><span className="rounded-full border border-[#155b39]/10 bg-white px-4 py-2">🇮🇳 Built for India</span><span className="rounded-full border border-[#155b39]/10 bg-white px-4 py-2">AC & DC charging</span><span className="rounded-full border border-[#155b39]/10 bg-white px-4 py-2">AI-led safety vision</span></div>
-            <p className="mt-3 text-center text-[10px] leading-4 text-[#879188]">Illustrative military photograph: <a className="underline" href="https://commons.wikimedia.org/wiki/File:Indian_Army_soldier_at_Camp_Babina.jpg" target="_blank" rel="noreferrer">U.S. Army / Wikimedia Commons</a>, public domain. No official endorsement implied.</p>
+      <section className="relative isolate flex min-h-[calc(100svh-1px)] flex-col overflow-hidden bg-[#f7f7f2]">
+        <div className="absolute inset-0 -z-20">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/2/22/Indian_Army_soldier_at_Camp_Babina.jpg"
+            alt=""
+            aria-hidden="true"
+            className="h-full w-full object-cover object-[center_28%]"
+          />
+          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,.86)_0%,rgba(255,255,255,.72)_34%,rgba(255,255,255,.58)_68%,rgba(255,255,255,.30)_100%)]" />
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,.82)_0%,rgba(255,255,255,.52)_55%,rgba(255,255,255,.08)_100%)]" />
+        </div>
+
+        <div className="mx-auto flex w-full max-w-7xl items-start justify-between gap-4 px-5 pt-5 sm:px-8 lg:px-10">
+          <Link href="/" className="inline-flex shrink-0 flex-col gap-1" aria-label="MyEVStation home">
+            <span className="flex items-center gap-2">
+              <span className="grid h-10 w-10 place-items-center rounded-lg bg-[#0d5c3d] text-white shadow-sm"><Zap size={23} fill="currentColor" /></span>
+              <span className="text-xl font-extrabold tracking-tight text-[#102a20] sm:text-2xl">my<span className="text-[#e87522]">EV</span>Station</span>
+            </span>
+            <span className="pl-1 text-[10px] font-semibold tracking-wide text-[#4d5b51] sm:text-xs">Your next mission. Power India’s EV future.</span>
+          </Link>
+          <nav className="hidden items-center justify-center gap-5 pt-3 xl:flex">
+            {sections.map(s => <a key={s.href} href={s.href} className="text-xs font-extrabold text-[#20362b] transition hover:text-[#c65d1c]">{s.label}</a>)}
+          </nav>
+          <div className="flex shrink-0 items-center gap-2 pt-1.5">
+            <span className="hidden text-right text-[10px] font-extrabold uppercase leading-tight tracking-[.12em] text-[#20362b] sm:block">Made in<br/>India</span>
+            <span className="text-2xl leading-none" role="img" aria-label="Indian national flag">🇮🇳</span>
+            <button className="rounded-lg border border-[#20362b]/20 bg-white/80 p-2 xl:hidden" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Toggle navigation">{mobileOpen ? <X size={19}/> : <Menu size={19}/>}</button>
           </div>
         </div>
+        {mobileOpen && <nav className="mx-5 mt-3 grid gap-1 rounded-xl border border-black/10 bg-white/95 p-3 shadow-lg xl:hidden">{sections.map(s => <a key={s.href} href={s.href} onClick={() => setMobileOpen(false)} className="rounded-lg px-3 py-2.5 text-sm font-semibold text-[#20362b]">{s.label}</a>)}<a href="#contact" onClick={() => setMobileOpen(false)} className="rounded-lg bg-[#e87522] px-3 py-3 text-sm font-bold text-white">Become a Partner</a></nav>}
+
+        <div className="mx-auto flex w-full max-w-7xl flex-1 flex-col items-center justify-center px-5 py-9 text-center sm:px-8 lg:px-10">
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#0d5c3d]/15 bg-white/90 px-4 py-2 text-[10px] font-extrabold uppercase tracking-[.18em] text-[#0d5c3d] shadow-sm sm:text-xs"><span className="h-2 w-2 rounded-full bg-[#e87522]"/> Veteran-led EV infrastructure initiative</div>
+          <h1 className="max-w-5xl font-display text-[clamp(2.25rem,5.5vw,5rem)] font-extrabold uppercase leading-[1.02] tracking-[-.04em] text-[#0d5c3d]">India’s EV Charging<br className="hidden sm:block"/> Infrastructure Mission</h1>
+          <p className="mt-4 max-w-3xl text-base font-bold leading-snug text-[#17251c] sm:text-xl lg:text-2xl">From serving the nation to powering its electric future.</p>
+          <p className="mt-3 max-w-3xl text-sm font-semibold leading-relaxed text-[#37473c] sm:text-base">Build an EV charging business with land or without land—supported by smart technology, responsible operations and a mission to move India forward.</p>
+          <div className="mt-5 flex flex-wrap items-center justify-center gap-3 text-[#c65d1c]">
+            <span aria-hidden="true" className="h-px w-8 bg-[#c65d1c]"/>
+            <span className="font-display text-lg font-extrabold sm:text-2xl">Service doesn’t end. It evolves.</span>
+            <span aria-hidden="true" className="h-px w-8 bg-[#c65d1c]"/>
+          </div>
+          <ul className="mt-6 grid w-full max-w-5xl grid-cols-2 items-center gap-x-3 gap-y-4 rounded-2xl border border-white/80 bg-white/95 px-4 py-4 text-left shadow-[0_20px_60px_-30px_rgba(13,92,61,.3)] backdrop-blur sm:grid-cols-3 sm:px-6 lg:grid-cols-5">
+            {[{I:BatteryCharging,a:"EV CHARGING",b:"AC & DC solutions"},{I:Flag,a:"VETERAN-LED",b:"Leadership with purpose"},{I:ShieldCheck,a:"BATTERY SAFETY",b:"Diagnostics-led vision"},{I:RadioTower,a:"SMART NETWORK",b:"Connected operations"},{I:Leaf,a:"CLEANER MOBILITY",b:"India’s EV transition"}].map(({I,a,b})=><li key={a} className="flex items-center gap-2.5"><span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[#e9f2ed] text-[#0d5c3d]"><I size={20}/></span><span><b className="block text-[10px] font-extrabold tracking-wide text-[#0d5c3d] sm:text-[11px]">{a}</b><span className="mt-1 block text-[10px] leading-4 text-[#5b675d] sm:text-xs">{b}</span></span></li>)}
+          </ul>
+          <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
+            <a href="#model" className="inline-flex items-center justify-center gap-2 rounded-md bg-[#073d28] px-6 py-3.5 text-xs font-extrabold uppercase tracking-wide text-white shadow-md transition hover:bg-[#0d5c3d] sm:text-sm">Explore EV Station Models <ArrowRight size={16}/></a>
+            <a href="#investment" className="inline-flex items-center justify-center gap-2 rounded-md bg-[#e87522] px-6 py-3.5 text-xs font-extrabold uppercase tracking-wide text-white shadow-md transition hover:bg-[#c65d1c] sm:text-sm">Calculate Investment <Calculator size={16}/></a>
+          </div>
+          <p className="mt-3 max-w-3xl text-[10px] leading-4 text-[#4e5d52] sm:text-xs">A veteran-led private initiative. National flag styling represents Indian identity; no government or armed-forces endorsement is implied.</p>
+        </div>
+
+        <div className="bg-[#073d28] text-white">
+          <ul className="mx-auto grid max-w-7xl grid-cols-2 gap-x-5 gap-y-4 px-5 py-4 sm:grid-cols-3 sm:px-8 lg:grid-cols-5 lg:px-10">
+            {[{I:Flag,a:"MADE FOR INDIA",b:"A mission-led initiative"},{I:Zap,a:"EV INFRASTRUCTURE",b:"Charging access & growth"},{I:Users,a:"PARTNER NETWORK",b:"Landowners & operators"},{I:ShieldCheck,a:"SAFETY FIRST",b:"Technology-led approach"},{I:Target,a:"2030 VISION",b:"Cleaner mobility transition"}].map(({I,a,b})=><li key={a} className="flex items-center gap-2.5"><span className="grid h-9 w-9 shrink-0 place-items-center text-[#dcebe1]"><I size={22}/></span><span className="leading-tight"><b className="block text-[10px] font-extrabold uppercase tracking-wide sm:text-[11px]">{a}</b><span className="mt-1 block text-[10px] text-white/70 sm:text-xs">{b}</span></span></li>)}
+          </ul>
+        </div>
+        <p className="bg-white/90 px-4 py-2 text-center text-[10px] text-[#6d786f]">Illustrative Indian Army photograph via Wikimedia Commons. Used to convey the veteran-led mission; no official endorsement implied.</p>
       </section>
 
       <section id="impact" className="border-y border-[#e4e9e4] bg-white">
