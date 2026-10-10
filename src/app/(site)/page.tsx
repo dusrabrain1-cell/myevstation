@@ -357,7 +357,7 @@ export default function HomePage() {
           <div className="mt-10 grid gap-5 lg:grid-cols-2">
             <article className="overflow-hidden rounded-3xl border border-[#e1e9e2] bg-[#f7faf7] shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
               <div className="relative aspect-[4/3] overflow-hidden bg-[#e8efe9]">
-                <img src="/raj-kishore-prasad.png" alt="HFL Raj Kishore Prasad at an EV charging station" loading="lazy" className="h-full w-full object-contain object-center"/>
+                <img src="/raj-kishore-prasad.png" alt="HFL Raj Kishore Prasad at an EV charging station" loading="lazy" className="h-full w-full object-contain object-center scale-[1.04]"/>
                 <div className="absolute inset-0 bg-gradient-to-t from-[#092d20]/65 via-transparent to-transparent"/>
                 <span className="absolute bottom-4 left-5 rounded-full border border-white/30 bg-white/95 px-3 py-1.5 text-[10px] font-extrabold uppercase tracking-[.14em] text-[#0b5a42]">Founder · Veteran leadership</span>
               </div>
@@ -372,7 +372,7 @@ export default function HomePage() {
             </article>
             <article className="overflow-hidden rounded-3xl border border-[#e1e9e2] bg-[#f7faf7] shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
               <div className="relative aspect-[4/3] overflow-hidden bg-[#e8efe9]">
-                <img src="/manoj-sharma.png" alt="HFO Manoj Sharma, co-founder of MyEVStation" loading="lazy" className="h-full w-full object-contain object-center"/>
+                <img src="/manoj-sharma.png" alt="HFO Manoj Sharma, co-founder of MyEVStation" loading="lazy" className="h-full w-full object-contain object-center scale-[1.04]"/>
                 <div className="absolute inset-0 bg-gradient-to-t from-[#092d20]/65 via-transparent to-transparent"/>
                 <span className="absolute bottom-4 left-5 rounded-full border border-white/30 bg-white/95 px-3 py-1.5 text-[10px] font-extrabold uppercase tracking-[.14em] text-[#0b5a42]">Founder · Veteran leadership</span>
               </div>
