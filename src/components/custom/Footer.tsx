@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Zap, Mail } from "lucide-react";
+import { ArrowRight, Zap, MessageCircle } from "lucide-react";
 
 import { SITE } from "@/lib/constants";
 
@@ -41,7 +41,7 @@ export function Footer() {
           <div>
             <h3 className="text-sm font-extrabold uppercase tracking-wider text-[#172d21]">Contact</h3>
             <p className="mt-5 text-sm leading-6 text-[#647067]">Ask for a site assessment, package details or a written estimate before investing.</p>
-            <a href={`mailto:${SITE.email}`} className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-[#0b5a42] hover:text-[#e87522]"><Mail size={16}/>{SITE.email}</a>
+            <a href={`https://wa.me/919625670132?text=${encodeURIComponent("Hello MyEVStation, I would like to make an enquiry.")}`} target="_blank" rel="noreferrer" className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-[#0b5a42] hover:text-[#e87522]"><MessageCircle size={16}/>Enquire on WhatsApp</a>
           </div>
         </div>
       </div>
