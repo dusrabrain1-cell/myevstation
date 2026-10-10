@@ -3,10 +3,9 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Zap, ArrowRight } from "lucide-react";
 
 import { NAV_LINKS } from "@/lib/constants";
-import { MandiLogo } from "./home/MandiLogo";
 import { NavMenu } from "./NavMenu";
 import { useContactModal } from "./contact/ContactModalProvider";
 
@@ -22,8 +21,9 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-paper">
       <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-10">
-        <Link href="/" className="flex items-center" aria-label="Carbon Mandi — home">
-          <MandiLogo className="h-11 w-auto" />
+        <Link href="/" className="flex items-center gap-3" aria-label="MyEVStation home">
+          <span className="grid h-10 w-10 place-items-center rounded-xl bg-[#0b5a42] text-white"><Zap size={22} fill="currentColor" /></span>
+          <span className="leading-tight"><span className="block text-xl font-extrabold tracking-tight text-[#172d21]">my<span className="text-[#e87522]">EV</span>Station</span><span className="block text-[9px] font-bold uppercase tracking-[.16em] text-[#64736d]">Your next mission</span></span>
         </Link>
 
         <NavMenu className="hidden lg:flex" />
@@ -31,7 +31,7 @@ export function Navbar() {
         <div className="hidden lg:block">
           <button
             type="button"
-            onClick={() => openContact("Join the Mission")}
+            onClick={() => openContact("Talk to our team")}
             className="rounded-md bg-mission px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-mission-dark"
           >
             Join the Mission
