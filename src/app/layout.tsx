@@ -20,8 +20,13 @@ export const metadata: Metadata = {
     default: `${SITE.name} — ${SITE.shortDescription}`,
     template: `%s | ${SITE.name}`,
   },
-  description: SITE.shortDescription,
+  description: "Explore EV charging station business opportunities in India with MyEVStation. Compare no-land, landowner, housing society and ex-servicemen models, charger options and indicative investment examples.",
   metadataBase: new URL(SITE.url),
+  applicationName: SITE.name,
+  category: "business",
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 } },
+  openGraph: { type: "website", locale: "en_IN", url: SITE.url, siteName: SITE.name, title: "MyEVStation | EV Charging Station Opportunities in India", description: "Compare EV charging station models for landowners, investors, housing societies and ex-servicemen.", images: [{ url: "/myevstation-hero-banner.jpeg", width: 1200, height: 630, alt: "MyEVStation EV charging station opportunities in India" }] },
+  twitter: { card: "summary_large_image", title: "MyEVStation | EV Charging Station Opportunities in India", description: "Explore EV charging station models, charger options and indicative investment examples across India.", images: ["/myevstation-hero-banner.jpeg"] },
 };
 
 export default function RootLayout({
