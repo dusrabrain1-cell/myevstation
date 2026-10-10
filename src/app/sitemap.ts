@@ -7,8 +7,6 @@ import { SITE } from "@/lib/constants";
  */
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = SITE.url.replace(/\/$/, "");
-  const now = new Date();
-
   const routes = [
     { path: "/", changeFrequency: "weekly" as const, priority: 1.0 },
     { path: "/without-land", changeFrequency: "monthly" as const, priority: 0.9 },
@@ -20,7 +18,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return routes.map((route) => ({
     url: `${base}${route.path}`,
-    lastModified: now,
     changeFrequency: route.changeFrequency,
     priority: route.priority,
   }));
