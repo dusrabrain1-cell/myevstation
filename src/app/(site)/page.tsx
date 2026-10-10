@@ -150,7 +150,7 @@ export default function HomePage() {
                 <span className="absolute bottom-3 left-4 text-xs font-bold tracking-wide text-white drop-shadow">A smarter way to get started</span>
               </div>
               <div className="flex min-h-[230px] flex-1 flex-col items-center bg-gradient-to-b from-[#f2f7f2] to-white px-6 pb-6 pt-5 text-center sm:px-7">
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-[#0b5a42] shadow-sm ring-1 ring-[#e4ece5]"><Users size={34} strokeWidth={1.8}/></div>
+                <p className="mt-2 rounded-full border border-[#cfe2d6] bg-white px-4 py-2 text-[10px] font-extrabold uppercase tracking-[.12em] text-[#0b5a42]">Your location. Our charging model.</p>
                 <h3 className="mt-4 min-h-[58px] text-2xl font-black leading-tight text-[#142f24]">NO LAND?</h3>
                 <p className="mt-1 text-sm leading-6 text-[#647168]">Start at a suitable host location without purchasing land. Compare the investment and managed station model.</p>
               </div>
@@ -164,7 +164,7 @@ export default function HomePage() {
                 <span className="absolute bottom-3 left-4 text-xs font-bold tracking-wide text-white drop-shadow">Convenient charging, closer to home</span>
               </div>
               <div className="flex min-h-[230px] flex-1 flex-col items-center bg-gradient-to-b from-[#f0f6fa] to-white px-6 pb-6 pt-5 text-center sm:px-7">
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-[#176a8a] shadow-sm ring-1 ring-[#e0eaf0]"><Building2 size={34} strokeWidth={1.8}/></div>
+                <p className="mt-2 rounded-full border border-[#cfe2ef] bg-white px-4 py-2 text-[10px] font-extrabold uppercase tracking-[.12em] text-[#176a8a]">Better charging. Right where you live.</p>
                 <h3 className="mt-4 min-h-[58px] text-2xl font-black leading-tight text-[#142f24]">LIVE IN A SOCIETY?</h3>
                 <p className="mt-1 text-sm leading-6 text-[#647168]">Make resident charging easier with smart sockets, AC chargers and DC options for suitable shared spaces.</p>
               </div>
@@ -178,7 +178,7 @@ export default function HomePage() {
                 <span className="absolute bottom-3 left-4 text-xs font-bold tracking-wide text-white drop-shadow">Turn your space into a charging destination</span>
               </div>
               <div className="flex min-h-[230px] flex-1 flex-col items-center bg-gradient-to-b from-[#f2f7f2] to-white px-6 pb-6 pt-5 text-center sm:px-7">
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-[#0b5a42] shadow-sm ring-1 ring-[#e4ece5]"><MapPin size={34} strokeWidth={1.8}/></div>
+                <p className="mt-2 rounded-full border border-[#cfe2d6] bg-white px-4 py-2 text-[10px] font-extrabold uppercase tracking-[.12em] text-[#0b5a42]">Turn your land into an EV asset.</p>
                 <h3 className="mt-4 min-h-[58px] text-2xl font-black leading-tight text-[#142f24]">HAVE LAND?</h3>
                 <p className="mt-1 text-sm leading-6 text-[#647168]">Use your plot, parking area, commercial property or fleet site to set up a suitable EV charging destination.</p>
               </div>
