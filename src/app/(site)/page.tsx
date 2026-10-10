@@ -106,7 +106,6 @@ export default function HomePage() {
               <span className="inline-flex items-center gap-1.5"><Zap size={14}/> AC & DC charging</span>
               <span className="inline-flex items-center gap-1.5"><Flag size={14}/> Built for India’s future</span>
             </div>
-            <p className="mt-2 max-w-lg text-[9px] leading-3 text-white/85">A private-sector initiative. No government or armed-forces endorsement is implied.</p>
           </div>
         </div>
         <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#e87522] via-white to-[#16834a]" />
