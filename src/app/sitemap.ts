@@ -1,33 +1,28 @@
 import type { MetadataRoute } from "next";
 
-import { blogPath, getAllBlogs } from "@/lib/blogs";
 import { SITE } from "@/lib/constants";
 
 /**
- * sitemap.xml — emitted at /sitemap.xml during build.
- * Includes every public route + all 325 migrated blog URLs so Google
- * can reindex the new origin fast after DNS cutover.
+ * Public MyEVStation pages only. Legacy Carbon Mandi blog and project
+ * routes were removed from this repository and must not appear in the sitemap.
  */
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = SITE.url.replace(/\/$/, "");
   const now = new Date();
 
-  const staticRoutes: MetadataRoute.Sitemap = [
-    { url: `${base}/`, lastModified: now, changeFrequency: "monthly", priority: 1.0 },
-    { url: `${base}/blogs/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
-    { url: `${base}/projects`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${base}/team`, lastModified: now, changeFrequency: "yearly", priority: 0.5 },
-    { url: `${base}/right-to-climate`, lastModified: now, changeFrequency: "yearly", priority: 0.6 },
-    { url: `${base}/mandi`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${base}/contact`, lastModified: now, changeFrequency: "yearly", priority: 0.4 },
+  const routes = [
+    { path: "/", changeFrequency: "weekly" as const, priority: 1.0 },
+    { path: "/without-land", changeFrequency: "monthly" as const, priority: 0.9 },
+    { path: "/with-land", changeFrequency: "monthly" as const, priority: 0.9 },
+    { path: "/ex-servicemen", changeFrequency: "monthly" as const, priority: 0.8 },
+    { path: "/society", changeFrequency: "monthly" as const, priority: 0.8 },
+    { path: "/contact", changeFrequency: "monthly" as const, priority: 0.6 },
   ];
 
-  const blogRoutes: MetadataRoute.Sitemap = getAllBlogs().map((b) => ({
-    url: `${base}${blogPath(b.handle)}`,
+  return routes.map((route) => ({
+    url: `${base}${route.path}`,
     lastModified: now,
-    changeFrequency: "yearly",
-    priority: 0.7,
+    changeFrequency: route.changeFrequency,
+    priority: route.priority,
   }));
-
-  return [...staticRoutes, ...blogRoutes];
 }
