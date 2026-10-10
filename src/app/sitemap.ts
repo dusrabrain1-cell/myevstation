@@ -3,8 +3,7 @@ import type { MetadataRoute } from "next";
 import { SITE } from "@/lib/constants";
 
 /**
- * Public MyEVStation pages only. Legacy Carbon Mandi blog and project
- * routes were removed from this repository and must not appear in the sitemap.
+ * Public, indexable MyEVStation routes.
  */
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = SITE.url.replace(/\/$/, "");
