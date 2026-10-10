@@ -144,7 +144,7 @@ export default function HomePage() {
             </article>
             <article className="group flex h-full flex-col overflow-hidden rounded-[1.7rem] border border-[#dfe7df] bg-white shadow-[0_8px_24px_rgba(11,90,66,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_38px_rgba(11,90,66,0.16)]">
               <div className="relative h-[150px] shrink-0 overflow-hidden sm:h-[160px]">
-                <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=1000&q=85" alt="Modern electric vehicle charging at an urban host location" loading="lazy" className="h-full w-full object-cover object-center transition duration-500 group-hover:scale-[1.04]"/>
+                <img src="/ev-without-land.jpg" alt="Modern electric vehicle charging at an urban host location" loading="lazy" className="h-full w-full object-cover object-center transition duration-500 group-hover:scale-[1.04]"/>
                 <div className="absolute inset-0 bg-gradient-to-t from-[#071e16]/65 via-[#071e16]/10 to-transparent"/>
                 <span className="absolute left-4 top-4 rounded-full bg-[#dceee5]/95 px-3 py-1 text-[10px] font-extrabold uppercase tracking-widest text-[#0b5a42]">Option 02 · No land</span>
                 <span className="absolute bottom-3 left-4 text-xs font-bold tracking-wide text-white drop-shadow">A smarter way to get started</span>
@@ -158,7 +158,7 @@ export default function HomePage() {
             </article>
             <article className="group flex h-full flex-col overflow-hidden rounded-[1.7rem] border border-[#dfe7df] bg-white shadow-[0_8px_24px_rgba(11,90,66,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_38px_rgba(11,90,66,0.16)]">
               <div className="relative h-[150px] shrink-0 overflow-hidden sm:h-[160px]">
-                <img src="https://images.unsplash.com/photo-1597766353939-dc5b1f7a4b2b?auto=format&fit=crop&w=1000&q=85" alt="Electric vehicle charging facilities for a residential community" loading="lazy" className="h-full w-full object-cover object-center transition duration-500 group-hover:scale-[1.04]"/>
+                <img src="/ev-society.jpg" alt="Electric vehicle charging facilities for a residential community" loading="lazy" className="h-full w-full object-cover object-center transition duration-500 group-hover:scale-[1.04]"/>
                 <div className="absolute inset-0 bg-gradient-to-t from-[#071e16]/65 via-[#071e16]/10 to-transparent"/>
                 <span className="absolute left-4 top-4 rounded-full bg-[#dceaf9]/95 px-3 py-1 text-[10px] font-extrabold uppercase tracking-widest text-[#176a8a]">Option 03 · Community</span>
                 <span className="absolute bottom-3 left-4 text-xs font-bold tracking-wide text-white drop-shadow">Convenient charging, closer to home</span>
@@ -172,7 +172,7 @@ export default function HomePage() {
             </article>
             <article className="group flex h-full flex-col overflow-hidden rounded-[1.7rem] border border-[#dfe7df] bg-white shadow-[0_8px_24px_rgba(11,90,66,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_38px_rgba(11,90,66,0.16)]">
               <div className="relative h-[150px] shrink-0 overflow-hidden sm:h-[160px]">
-                <img src="https://images.unsplash.com/photo-1593085512500-5d55148d6f0d?auto=format&fit=crop&w=1000&q=85" alt="Contemporary EV charging station on a dedicated property" loading="lazy" className="h-full w-full object-cover object-center transition duration-500 group-hover:scale-[1.04]"/>
+                <img src="/ev-with-land.jpg" alt="Contemporary EV charging station on a dedicated property" loading="lazy" className="h-full w-full object-cover object-center transition duration-500 group-hover:scale-[1.04]"/>
                 <div className="absolute inset-0 bg-gradient-to-t from-[#071e16]/65 via-[#071e16]/10 to-transparent"/>
                 <span className="absolute left-4 top-4 rounded-full bg-[#dceee5]/95 px-3 py-1 text-[10px] font-extrabold uppercase tracking-widest text-[#0b5a42]">Option 04 · Landowners</span>
                 <span className="absolute bottom-3 left-4 text-xs font-bold tracking-wide text-white drop-shadow">Turn your space into a charging destination</span>
