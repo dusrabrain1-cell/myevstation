@@ -9,28 +9,26 @@ const packages = [
 export default function ExServicemenPage() {
   return <main className="min-h-screen bg-[#f7f9f6] text-[#17212b]">
     <header className="border-b border-[#e2e8e1] bg-white"><div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3"><Link href="/" className="flex items-center gap-3" aria-label="MyEVStation home"><span className="grid h-10 w-10 place-items-center rounded-xl bg-[#0b5a42] text-white"><Zap size={22} fill="currentColor"/></span><span className="leading-tight"><span className="block text-xl font-extrabold tracking-tight text-[#172d21]">my<span className="text-[#e87522]">EV</span>Station</span><span className="block text-[9px] font-bold uppercase tracking-[.16em] text-[#64736d]">Your next mission</span></span></Link><Link href="/" className="inline-flex items-center gap-2 text-sm font-bold text-[#526158]"><ArrowLeft size={16}/> Back to home</Link></div></header>
-    <section className="px-4 py-8 sm:px-6 sm:py-12">
-      <div className="mx-auto max-w-5xl overflow-hidden rounded-[2rem] border-2 border-[#e87522] bg-white shadow-[0_22px_65px_rgba(11,90,66,0.12)]">
-        <div className="h-2 w-full bg-gradient-to-r from-[#e87522] via-white to-[#16834a]"/>
-        <div className="relative min-h-[340px] overflow-hidden bg-[#123b2b] sm:min-h-[440px]">
-          <img src="/ev-veterans.jpg" alt="Veteran entrepreneur at an EV charging station" className="absolute inset-0 h-full w-full object-cover object-[center_28%]"/>
-          <div className="absolute inset-0 bg-gradient-to-t from-[#071e16]/65 via-transparent to-[#071e16]/10"/>
-          <div className="absolute left-5 right-5 top-5 flex flex-wrap items-start justify-between gap-3 sm:left-10 sm:right-10 sm:top-8">
-            <span className="rounded-full bg-[#ffe2cf] px-5 py-3 text-center text-xs font-black uppercase tracking-[.14em] text-[#bd5518] sm:text-sm">Option 01 · Veterans</span>
-            <span className="rounded-full bg-[#0b5a42] px-5 py-3 text-center text-xs font-black uppercase tracking-[.14em] text-white shadow-lg sm:text-sm">A new mission</span>
+    <section className="relative isolate flex min-h-[calc(100svh-4.5rem)] overflow-hidden bg-[#071e16] text-white sm:min-h-[calc(100svh-5rem)]">
+      <img src="/ev-veterans.jpg" alt="Veteran entrepreneur standing at an EV charging station in India" className="absolute inset-0 -z-30 h-full w-full object-cover object-[center_30%] sm:object-center"/>
+      <div className="absolute inset-0 -z-20 bg-gradient-to-r from-[#061b14]/95 via-[#061b14]/70 to-[#061b14]/10"/>
+      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#061b14]/70 via-transparent to-[#061b14]/10"/>
+      <div className="mx-auto flex w-full max-w-7xl items-center px-5 py-14 sm:px-8 sm:py-20 lg:px-12">
+        <div className="max-w-3xl">
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-[#071e16]/55 px-4 py-2 text-xs font-black uppercase tracking-[.16em] text-[#ffd4b5] backdrop-blur-sm sm:text-sm"><Flag size={15}/> EV station ownership · Veterans</div>
+          <p className="mt-7 text-sm font-black uppercase tracking-[.2em] text-[#ff9b58] sm:text-base">Service doesn’t end. It evolves.</p>
+          <h1 className="mt-3 max-w-3xl text-4xl font-black leading-[.98] tracking-tight drop-shadow-lg sm:text-6xl lg:text-7xl">YOUR NEXT MISSION.<br/><span className="text-[#ff9b58]">YOUR OWN EV STATION.</span></h1>
+          <p className="mt-6 max-w-2xl text-base leading-7 text-white/90 sm:text-xl sm:leading-8">Put your discipline and leadership behind a new business opportunity. Explore EV station packages with clear investment examples, a managed-operations model and a discussion about suitable locations—before you commit.</p>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href="#packages" className="inline-flex items-center justify-center gap-3 rounded-xl bg-[#e87522] px-7 py-4 text-base font-black text-white shadow-xl transition hover:bg-[#cf5f12] sm:text-lg">Compare ownership packages <ArrowRight size={20}/></a>
+            <a href="#enquire" className="inline-flex items-center justify-center gap-3 rounded-xl border border-white/60 bg-white/10 px-7 py-4 text-base font-extrabold text-white backdrop-blur-sm transition hover:bg-white/20">Talk to our team <ArrowRight size={18}/></a>
           </div>
-        </div>
-        <div className="px-5 pb-7 pt-7 text-center sm:px-10 sm:pb-10 sm:pt-9 lg:px-14">
-          <p className="text-xs font-black uppercase tracking-[.2em] text-[#d65f12] sm:text-sm">Service doesn’t end. It evolves.</p>
-          <h1 className="mx-auto mt-4 max-w-4xl text-3xl font-black leading-[1.02] tracking-tight text-[#102f23] sm:text-5xl lg:text-6xl">YOUR NEXT MISSION<br/>STARTS HERE.</h1>
-          <p className="mx-auto mt-5 max-w-3xl text-base leading-7 text-[#667c70] sm:text-xl sm:leading-8">Turn your experience, discipline and leadership into a new chapter in India’s EV future.</p>
-          <div className="mx-auto mt-8 grid max-w-4xl gap-5 sm:grid-cols-3 sm:gap-3">
-            <div className="flex flex-col items-center justify-start px-3"><div className="grid h-16 w-16 place-items-center rounded-full bg-[#e3f1e7] text-[#0b5a42]"><ShieldCheck size={32}/></div><p className="mt-3 font-extrabold leading-6 text-[#164b39]">Purpose beyond service</p></div>
-            <div className="flex flex-col items-center justify-start border-[#cbded1] px-3 sm:border-x"><div className="grid h-16 w-16 place-items-center rounded-full bg-[#e3f1e7] text-[#0b5a42]"><Zap size={32}/></div><p className="mt-3 font-extrabold leading-6 text-[#164b39]">Explore an EV business opportunity</p></div>
-            <div className="flex flex-col items-center justify-start px-3"><div className="grid h-16 w-16 place-items-center rounded-full bg-[#e3f1e7] text-[#0b5a42]"><Users size={32}/></div><p className="mt-3 font-extrabold leading-6 text-[#164b39]">Help power a greener India</p></div>
+          <div className="mt-8 grid max-w-3xl gap-3 sm:grid-cols-3">
+            <div className="flex items-start gap-3 rounded-xl border border-white/15 bg-[#071e16]/55 p-4 backdrop-blur-sm"><ShieldCheck className="mt-0.5 shrink-0 text-[#9fe0b7]" size={22}/><div><p className="text-sm font-extrabold">Clear package pricing</p><p className="mt-1 text-xs leading-5 text-white/70">See the example investment before enquiring.</p></div></div>
+            <div className="flex items-start gap-3 rounded-xl border border-white/15 bg-[#071e16]/55 p-4 backdrop-blur-sm"><Users className="mt-0.5 shrink-0 text-[#9fe0b7]" size={22}/><div><p className="text-sm font-extrabold">Managed model</p><p className="mt-1 text-xs leading-5 text-white/70">Discuss roles and responsibilities in writing.</p></div></div>
+            <div className="flex items-start gap-3 rounded-xl border border-white/15 bg-[#071e16]/55 p-4 backdrop-blur-sm"><MapPin className="mt-0.5 shrink-0 text-[#9fe0b7]" size={22}/><div><p className="text-sm font-extrabold">Location assessment</p><p className="mt-1 text-xs leading-5 text-white/70">Suitability and demand must be checked.</p></div></div>
           </div>
-          <a href="#packages" className="mt-8 inline-flex w-full items-center justify-center gap-3 rounded-full bg-[#ed6b12] px-5 py-4 text-base font-black text-white shadow-[0_8px_18px_rgba(237,107,18,0.2)] transition hover:bg-[#d85c0b] sm:mt-10 sm:px-8 sm:py-5 sm:text-xl">Explore EV station ownership <ArrowRight size={22}/></a>
-          <p className="mt-4 text-xs leading-5 text-[#75877d]">Veteran-focused business opportunity; not affiliated with or endorsed by the armed forces or any government body.</p>
+          <p className="mt-5 max-w-2xl text-[11px] leading-5 text-white/65">Returns are illustrative, not guaranteed. This is a private business opportunity and is not affiliated with or endorsed by the Indian Armed Forces or any government body.</p>
         </div>
       </div>
     </section>
