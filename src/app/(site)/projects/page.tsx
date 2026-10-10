@@ -169,8 +169,7 @@ const CTA_CLASS =
   "inline-flex items-center gap-2 rounded-md bg-mission px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.12em] text-white transition-colors hover:bg-mission-dark";
 
 function ProjectRow({ project: p }: { project: Project }) {
-  // Each project card uses the same shared layout and strategic
-  // Partners, uses a compact emblem logo, and links Know More to the home page.
+  // Project rows use a shared layout with a compact emblem and a Know More link.
   const isFirst = p.no === "01";
 
   return (
