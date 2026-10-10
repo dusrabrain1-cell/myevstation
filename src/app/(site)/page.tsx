@@ -70,12 +70,12 @@ export default function HomePage() {
   return (
     <main id="home" className="min-h-screen bg-white text-[#17212b]">
       <header className="relative z-50 border-b border-[#e4e9e4] bg-white/95 shadow-[0_4px_18px_rgba(7,30,22,0.06)] backdrop-blur-md">
-        <div className="mx-auto flex min-h-[88px] max-w-7xl items-center justify-between gap-4 px-5 py-3 lg:min-h-[96px] lg:px-8">
+        <div className="mx-auto flex min-h-[76px] max-w-[1440px] items-center justify-between gap-3 px-5 py-2 lg:min-h-[82px] lg:gap-5 lg:px-8">
           <Link href="/" className="flex min-w-0 shrink-0 flex-col items-start justify-center" aria-label="MyEVStation home">
-            <img src="/myevstation-logo.png" alt="MyEVStation" className="h-auto w-[170px] object-contain mix-blend-multiply sm:w-[205px] lg:w-[238px]" />
-            <span className="-mt-0.5 pl-1 text-[8px] font-extrabold uppercase tracking-[.13em] text-[#0b5a42] sm:text-[9px]">Founded by Ex-Indian Air Force</span>
+            <img src="/myevstation-logo.png" alt="MyEVStation" className="h-auto w-[155px] object-contain mix-blend-multiply sm:w-[180px] lg:w-[205px]" />
+            <span className="-mt-0.5 whitespace-nowrap pl-1 text-[7px] font-extrabold uppercase tracking-[.1em] text-[#0b5a42] sm:text-[8px]">Founded by Ex-Indian Air Force</span>
           </Link>
-          <nav className="hidden items-center gap-7 lg:flex">{sections.map(s => <a key={s.href} href={s.href} className="text-sm font-semibold text-[#35423e] transition hover:text-[#e87522]">{s.label}</a>)}<a href="#contact" className="rounded-full bg-[#e87522] px-5 py-3 text-sm font-extrabold text-white shadow-sm transition hover:bg-[#c75b14]">Own an EV Station <ArrowRight className="ml-2 inline" size={16}/></a></nav>
+          <nav className="hidden flex-1 items-center justify-end gap-4 xl:gap-5 lg:flex">{sections.map(s => <a key={s.href} href={s.href} className="whitespace-nowrap text-[13px] font-semibold text-[#35423e] transition hover:text-[#e87522] xl:text-sm">{s.label}</a>)}<a href="#contact" className="inline-flex shrink-0 items-center whitespace-nowrap rounded-full bg-[#e87522] px-4 py-3 text-[13px] font-extrabold text-white shadow-sm transition hover:bg-[#c75b14] xl:px-5 xl:text-sm">Own an EV Station <ArrowRight className="ml-2 inline shrink-0" size={16}/></a></nav>
           <button className="rounded-lg border border-black/10 p-2 lg:hidden" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Toggle navigation">{mobileOpen ? <X/> : <Menu/>}</button>
         </div>
         {mobileOpen && <nav className="grid gap-1 border-t border-black/10 bg-white px-5 py-4 lg:hidden">{sections.map(s => <a key={s.href} href={s.href} onClick={() => setMobileOpen(false)} className="rounded-lg px-3 py-3 font-semibold">{s.label}</a>)}<a href="#contact" onClick={() => setMobileOpen(false)} className="rounded-lg bg-[#e87522] px-3 py-3 font-bold text-white">Own an EV Station</a></nav>}
