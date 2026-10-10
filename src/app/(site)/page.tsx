@@ -71,9 +71,8 @@ export default function HomePage() {
     <main id="home" className="min-h-screen bg-white text-[#17212b]">
       <header className="absolute inset-x-0 top-0 z-50 border-b border-white/30 bg-white/80 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 lg:px-8">
-          <Link href="/" className="flex items-center gap-3" aria-label="MyEVStation home">
-            <span className="grid h-11 w-11 place-items-center rounded-xl bg-[#0b5a42] text-white"><Zap size={24} fill="currentColor" /></span>
-            <span className="leading-tight"><span className="block text-xl font-extrabold tracking-tight">my<span className="text-[#e87522]">EV</span>Station</span><span className="block text-[9px] font-bold uppercase tracking-[.22em] text-[#64736d]">Your next mission</span></span>
+          <Link href="/" className="flex min-w-0 items-center" aria-label="MyEVStation home">
+            <img src="/myevstation-logo.png" alt="MyEVStation — Founded by Ex Indian Air Force" className="h-auto w-[175px] object-contain sm:w-[215px] lg:w-[270px]" />
           </Link>
           <nav className="hidden items-center gap-7 lg:flex">{sections.map(s => <a key={s.href} href={s.href} className="text-sm font-semibold text-[#35423e] transition hover:text-[#e87522]">{s.label}</a>)}<a href="#contact" className="rounded-full bg-[#e87522] px-5 py-3 text-sm font-extrabold text-white shadow-sm transition hover:bg-[#c75b14]">Own an EV Station <ArrowRight className="ml-2 inline" size={16}/></a></nav>
           <button className="rounded-lg border border-black/10 p-2 lg:hidden" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Toggle navigation">{mobileOpen ? <X/> : <Menu/>}</button>
