@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Zap, Mail } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
 
 import { SITE } from "@/lib/constants";
 
@@ -23,9 +23,8 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-5 py-12 lg:px-8 lg:py-14">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.25fr_1fr_1fr_1fr]">
           <div>
-            <Link href="/" className="inline-flex items-center gap-3" aria-label="MyEVStation home">
-              <span className="grid h-11 w-11 place-items-center rounded-xl bg-[#0b5a42] text-white"><Zap size={24} fill="currentColor" /></span>
-              <span className="leading-tight"><span className="block text-xl font-extrabold tracking-tight text-[#172d21]">my<span className="text-[#e87522]">EV</span>Station</span><span className="block text-[9px] font-bold uppercase tracking-[.16em] text-[#64736d]">Your next mission</span></span>
+            <Link href="/" className="inline-flex items-center" aria-label="MyEVStation home">
+              <img src="/myevstation-logo.png" alt="MyEVStation — Founded by Ex Indian Air Force" className="h-auto w-[220px] max-w-full object-contain" />
             </Link>
             <p className="mt-5 max-w-xs text-sm leading-6 text-[#647067]">EV charging opportunities for landowners, investors, housing societies and ex-servicemen—explained in simple terms.</p>
             <p className="mt-4 text-xs leading-5 text-[#7b877d]">Site suitability, costs and returns depend on actual conditions and written agreements.</p>
