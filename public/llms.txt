@@ -1,20 +1,18 @@
-# Carbon Mandi
+# MyEVStation
 
-> India's first hemp & napier biomass based green hydrogen initiative — turning farms into fuel for India's energy independence. "Farm to Fuel. Future for All."
+> Veteran-led EV charging infrastructure and station partnership opportunities in India. Founded by Ex-Indian Air Force.
 
-Carbon Mandi is an IIT Ropar–incubated venture building a decentralized, biomass-based green hydrogen ecosystem. It uses fast-growing hemp and napier grass grown by farmers as feedstock to produce green hydrogen, lowering production cost, strengthening energy security, supporting India's Climate Goals 2030, and creating new rural income streams. The model spans a circular economy (green hydrogen, biochar, carbon credits, fiber, construction materials) and aligns with the National Green Hydrogen Mission and Atmanirbhar Bharat.
+MyEVStation helps prospective partners explore electric vehicle charging station models and understand the practical questions involved before investing. Options include no-land host-location models, landowner and commercial-property sites, housing-society charging, and an ex-servicemen-focused business opportunity. Site suitability, costs, availability, commercial terms and returns depend on technical assessment and written agreements. Illustrative figures are not guaranteed.
 
-## Pages
+## Main pages
 
-- [Home](https://www.carbonmandi.com/): Overview of the green hydrogen mission, how it's made, who benefits, and the national opportunity.
-- [Blog](https://www.carbonmandi.com/blogs/blog): Articles on green hydrogen, biomass, the circular economy, and India's clean-energy transition.
-- [Projects](https://www.carbonmandi.com/projects): The national green hydrogen project and decentralized production plants.
-- [Team](https://www.carbonmandi.com/team): The people behind Carbon Mandi.
-- [Right to Climate](https://www.carbonmandi.com/right-to-climate): Climate goals, carbon-neutral initiatives, and tree planting.
-- [Mandi](https://www.carbonmandi.com/mandi): The farm-to-fuel marketplace model.
-- [Contact](https://www.carbonmandi.com/contact): Partnership, investment, research, and media enquiries.
+- [Home](https://myevstation-9rj8.vercel.app/): EV charging station models, technology overview, investment calculator and partner options.
+- [No-land model](https://myevstation-9rj8.vercel.app/without-land): Indicative equipment packages, charger prices and operating assumptions.
+- [Landowners](https://myevstation-9rj8.vercel.app/with-land): Site assessment considerations for plots, commercial properties, parking areas and fleet locations.
+- [Housing societies](https://myevstation-9rj8.vercel.app/society): Smart sockets, AC and DC charger options, indicative equipment pricing and installation planning.
+- [Ex-servicemen](https://myevstation-9rj8.vercel.app/ex-servicemen): Veteran-focused opportunity overview, illustrative packages and site assessment process.
+- [XML sitemap](https://myevstation-9rj8.vercel.app/sitemap.xml): Public indexable pages.
 
-## Optional
+## Contact
 
-- [Sitemap](https://www.carbonmandi.com/sitemap.xml): Full list of indexable URLs.
-- Contact email: hello@carbonmandi.com
+- WhatsApp: +91 96256 70132
