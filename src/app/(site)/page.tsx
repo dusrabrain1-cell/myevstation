@@ -131,7 +131,8 @@ export default function HomePage() {
               <div className="h-1.5 w-full bg-gradient-to-r from-[#e87522] via-white to-[#13834b]"/>
               <div className="relative h-[150px] shrink-0 overflow-hidden sm:h-[160px]">
                 <img src="/ev-veterans.jpg" alt="Veteran leader at an EV charging station" className="h-full w-full object-cover object-[center_28%]"/>
-                <div className="absolute inset-0 bg-gradient-to-t from-[#071e16]/55 via-transparent to-[#071e16]/10"/>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#071e16]/65 via-transparent to-[#071e16]/10"/>
+                <span className="absolute bottom-3 left-4 text-xs font-bold tracking-wide text-white drop-shadow">Service doesn’t end. It evolves.</span>
                 <div className="absolute left-4 right-4 top-4 flex items-center justify-between gap-2"><span className="rounded-full bg-[#ffe2cf] px-3 py-1 text-[9px] font-extrabold uppercase tracking-wider text-[#bd5518]">Option 01 · Veterans</span><span className="rounded-full bg-[#0b5a42] px-2.5 py-1 text-[9px] font-black uppercase tracking-wider text-white">A new mission</span></div>
               </div>
               <div className="flex flex-1 flex-col items-center bg-gradient-to-b from-[#f0f7f0] to-white px-5 pb-5 pt-5 text-center sm:px-6">
