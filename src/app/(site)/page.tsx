@@ -71,8 +71,9 @@ export default function HomePage() {
     <main id="home" className="min-h-screen bg-white text-[#17212b]">
       <header className="relative z-50 border-b border-[#e4e9e4] bg-white/95 shadow-[0_4px_18px_rgba(7,30,22,0.06)] backdrop-blur-md">
         <div className="mx-auto flex min-h-[76px] max-w-[1600px] items-center justify-between gap-3 px-4 py-2 lg:min-h-[82px] lg:gap-4 lg:px-6">
-          <Link href="/" className="flex min-w-0 shrink-0 flex-col items-start justify-center" aria-label="MyEVStation home">
-            <img src="/myevstation-logo.png" alt="MyEVStation" className="h-auto w-[155px] object-contain mix-blend-multiply sm:w-[180px] lg:w-[205px]" />
+          <Link href="/" className="flex shrink-0 items-center gap-2.5" aria-label="MyEVStation home">
+            <span className="grid h-10 w-10 place-items-center rounded-xl bg-[#0b5a42] text-white shadow-sm sm:h-11 sm:w-11"><Zap size={24} fill="currentColor" /></span>
+            <span className="leading-tight"><span className="block whitespace-nowrap text-[19px] font-extrabold tracking-tight text-[#172d21] sm:text-[21px]">my<span className="text-[#e87522]">EV</span>Station</span><span className="mt-0.5 block whitespace-nowrap text-[8px] font-bold uppercase tracking-[.12em] text-[#64736d]">Your next mission</span></span>
           </Link>
           <nav className="hidden min-w-0 flex-1 items-center justify-start gap-3 pl-1 lg:flex xl:gap-4 xl:pl-2">{sections.map(s => <a key={s.href} href={s.href} className="shrink-0 whitespace-nowrap text-[12px] font-semibold text-[#35423e] transition hover:text-[#e87522] xl:text-[13px]">{s.label}</a>)}<a href="#contact" className="ml-auto inline-flex shrink-0 items-center whitespace-nowrap rounded-full bg-[#e87522] px-4 py-3 text-[12px] font-extrabold text-white shadow-sm transition hover:bg-[#c75b14] xl:px-5 xl:text-[13px]">Own an EV Station <ArrowRight className="ml-2 inline shrink-0" size={16}/></a></nav>
           <button className="rounded-lg border border-black/10 p-2 lg:hidden" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Toggle navigation">{mobileOpen ? <X/> : <Menu/>}</button>
