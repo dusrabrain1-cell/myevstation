@@ -70,12 +70,11 @@ export default function HomePage() {
   return (
     <main id="home" className="min-h-screen bg-white text-[#17212b]">
       <header className="relative z-50 border-b border-[#e4e9e4] bg-white/95 shadow-[0_4px_18px_rgba(7,30,22,0.06)] backdrop-blur-md">
-        <div className="mx-auto flex min-h-[76px] max-w-[1440px] items-center justify-between gap-3 px-5 py-2 lg:min-h-[82px] lg:gap-5 lg:px-8">
+        <div className="mx-auto flex min-h-[76px] max-w-[1600px] items-center justify-between gap-3 px-4 py-2 lg:min-h-[82px] lg:gap-4 lg:px-6">
           <Link href="/" className="flex min-w-0 shrink-0 flex-col items-start justify-center" aria-label="MyEVStation home">
-            <img src="/myevstation-logo.png" alt="MyEVStation" className="h-auto w-[155px] object-contain mix-blend-multiply sm:w-[180px] lg:w-[205px]" />
-            <span className="-mt-0.5 whitespace-nowrap pl-1 text-[7px] font-extrabold uppercase tracking-[.1em] text-[#0b5a42] sm:text-[8px]">Founded by Ex-Indian Air Force</span>
+            <img src="/myevstation-logo.png" alt="MyEVStation — Founded by Ex Indian Air Force" className="h-auto w-[155px] object-contain mix-blend-multiply sm:w-[180px] lg:w-[205px]" />
           </Link>
-          <nav className="hidden flex-1 items-center justify-end gap-4 xl:gap-5 lg:flex">{sections.map(s => <a key={s.href} href={s.href} className="whitespace-nowrap text-[13px] font-semibold text-[#35423e] transition hover:text-[#e87522] xl:text-sm">{s.label}</a>)}<a href="#contact" className="inline-flex shrink-0 items-center whitespace-nowrap rounded-full bg-[#e87522] px-4 py-3 text-[13px] font-extrabold text-white shadow-sm transition hover:bg-[#c75b14] xl:px-5 xl:text-sm">Own an EV Station <ArrowRight className="ml-2 inline shrink-0" size={16}/></a></nav>
+          <nav className="hidden flex-1 items-center justify-end gap-3 lg:flex xl:gap-4">{sections.map(s => <a key={s.href} href={s.href} className="shrink-0 whitespace-nowrap text-[12px] font-semibold text-[#35423e] transition hover:text-[#e87522] xl:text-[13px]">{s.label}</a>)}<a href="#contact" className="inline-flex shrink-0 items-center whitespace-nowrap rounded-full bg-[#e87522] px-4 py-3 text-[12px] font-extrabold text-white shadow-sm transition hover:bg-[#c75b14] xl:px-5 xl:text-[13px]">Own an EV Station <ArrowRight className="ml-2 inline shrink-0" size={16}/></a></nav>
           <button className="rounded-lg border border-black/10 p-2 lg:hidden" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Toggle navigation">{mobileOpen ? <X/> : <Menu/>}</button>
         </div>
         {mobileOpen && <nav className="grid gap-1 border-t border-black/10 bg-white px-5 py-4 lg:hidden">{sections.map(s => <a key={s.href} href={s.href} onClick={() => setMobileOpen(false)} className="rounded-lg px-3 py-3 font-semibold">{s.label}</a>)}<a href="#contact" onClick={() => setMobileOpen(false)} className="rounded-lg bg-[#e87522] px-3 py-3 font-bold text-white">Own an EV Station</a></nav>}
@@ -87,7 +86,7 @@ export default function HomePage() {
         <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#061b14]/30 via-transparent to-transparent" />
         <div className="mx-auto flex min-h-[calc(100svh-5rem)] w-full max-w-[1600px] items-center px-5 py-7 sm:px-10 sm:py-8 lg:px-16">
           <div className="w-full max-w-[min(47%,660px)] text-white max-lg:max-w-[56%] max-sm:max-w-full max-sm:rounded-xl max-sm:bg-[#061b14]/60 max-sm:p-4">
-            <div className="mb-3 inline-flex items-center gap-2 border-l-4 border-[#e87522] bg-[#061b14]/35 px-3 py-1.5 text-[9px] font-extrabold uppercase tracking-[.14em] backdrop-blur-sm sm:text-[10px]">
+            <div className="mb-3 inline-flex max-w-full items-center gap-1.5 border-l-4 border-[#e87522] bg-[#061b14]/35 px-2.5 py-1.5 text-[9px] font-extrabold uppercase tracking-[.075em] backdrop-blur-sm sm:gap-2 sm:px-3 sm:text-[10px] sm:tracking-[.09em]">
               <span className="text-[#ff9b42]">🇮🇳</span> A veteran-led mission for a cleaner, stronger India
             </div>
             <h1 className="max-w-[650px] text-[clamp(2rem,3.7vw,3.8rem)] font-black leading-[.96] tracking-[-.045em] drop-shadow-lg">
