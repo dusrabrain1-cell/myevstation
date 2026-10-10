@@ -356,23 +356,23 @@ export default function HomePage() {
           </div>
           <div className="mt-10 grid gap-5 lg:grid-cols-2">
             <article className="overflow-hidden rounded-3xl border border-[#e1e9e2] bg-[#f7faf7] shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
-              <div className="relative h-72 overflow-hidden bg-[#e8efe9] sm:h-80">
-                <img src="/raj-kishore-prasad.png" alt="HFL Raj Kishore Prasad at an EV charging station" loading="lazy" className="h-full w-full object-cover object-[center_24%]"/>
+              <div className="relative aspect-[4/3] overflow-hidden bg-[#e8efe9]">
+                <img src="/raj-kishore-prasad.png" alt="HFL Raj Kishore Prasad at an EV charging station" loading="lazy" className="h-full w-full object-contain object-center"/>
                 <div className="absolute inset-0 bg-gradient-to-t from-[#092d20]/65 via-transparent to-transparent"/>
                 <span className="absolute bottom-4 left-5 rounded-full border border-white/30 bg-white/95 px-3 py-1.5 text-[10px] font-extrabold uppercase tracking-[.14em] text-[#0b5a42]">Founder · Veteran leadership</span>
               </div>
               <div className="p-7 sm:p-9">
                 <div className="flex items-start gap-4">
                   <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-[#0b5a42] text-white"><ShieldCheck size={25}/></div>
-                  <div><p className="text-xs font-extrabold uppercase tracking-[.16em] text-[#c65f19]">Founder</p><h3 className="mt-1 text-2xl font-black text-[#092d20]">HFL Raj Kishore Prasad</h3><p className="mt-1 text-sm font-semibold leading-6 text-[#526157]">Former Indian Air Force · Master Warrant Officer · Honorary Flight Lieutenant</p></div>
+                  <div><p className="text-xs font-extrabold uppercase tracking-[.16em] text-[#c65f19]">Founder</p><h3 className="mt-1 text-2xl font-black text-[#092d20]">HFL Raj Kishore Prasad</h3><p className="mt-1 text-sm font-semibold leading-6 text-[#526157]">Former Indian Air Force · Honorary Flight Lieutenant</p></div>
                 </div>
                 <p className="mt-5 text-sm leading-7 text-[#45554a]">Brings 37 years of Indian Air Force service and technical leadership, including oversight related to C-17, C-130J, IL-76 and IL-78 aircraft systems. His background includes senior electronics examination responsibilities and advanced electrical/avionics training.</p>
                 <div className="mt-5 flex flex-wrap gap-2"><span className="rounded-full bg-white px-3 py-2 text-xs font-bold text-[#24543b] ring-1 ring-[#dbe6dc]">Aviation electronics</span><span className="rounded-full bg-white px-3 py-2 text-xs font-bold text-[#24543b] ring-1 ring-[#dbe6dc]">Avionics & reliability</span><span className="rounded-full bg-white px-3 py-2 text-xs font-bold text-[#24543b] ring-1 ring-[#dbe6dc]">Technical team leadership</span></div>
               </div>
             </article>
             <article className="overflow-hidden rounded-3xl border border-[#e1e9e2] bg-[#f7faf7] shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
-              <div className="relative h-72 overflow-hidden bg-[#e8efe9] sm:h-80">
-                <img src="/manoj-sharma.png" alt="HFO Manoj Sharma, co-founder of MyEVStation" loading="lazy" className="h-full w-full object-cover object-[center_24%]"/>
+              <div className="relative aspect-[4/3] overflow-hidden bg-[#e8efe9]">
+                <img src="/manoj-sharma.png" alt="HFO Manoj Sharma, co-founder of MyEVStation" loading="lazy" className="h-full w-full object-contain object-center"/>
                 <div className="absolute inset-0 bg-gradient-to-t from-[#092d20]/65 via-transparent to-transparent"/>
                 <span className="absolute bottom-4 left-5 rounded-full border border-white/30 bg-white/95 px-3 py-1.5 text-[10px] font-extrabold uppercase tracking-[.14em] text-[#0b5a42]">Founder · Veteran leadership</span>
               </div>
