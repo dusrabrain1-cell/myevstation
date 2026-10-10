@@ -33,7 +33,6 @@ export function ContactModalProvider({
     <ContactModalContext.Provider value={{ open, close }}>
       {children}
 
-.Root>
     </ContactModalContext.Provider>
   );
 }
