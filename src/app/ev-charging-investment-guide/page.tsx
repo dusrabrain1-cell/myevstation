@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle2, MapPin, ShieldCheck, Zap } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "EV Charging Station Investment Guide India | MyEVStation",
+  title: "EV Charging Station Investment Guide India",
   description:
     "A practical guide to assessing EV charging station investment in India: site feasibility, charger selection, electricity costs, utilisation, operating expenses and questions to ask before signing.",
   alternates: { canonical: "/ev-charging-investment-guide" },
@@ -122,6 +122,25 @@ export default function EVChargingInvestmentGuide() {
         </aside>
       </article>
 
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqs.map((item) => ({
+            "@type": "Question",
+            name: item.q,
+            acceptedAnswer: { "@type": "Answer", text: item.a }
+          }))
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://myevstation-9rj8.vercel.app/" },
+            { "@type": "ListItem", position: 2, name: "EV Charging Investment Guide", item: "https://myevstation-9rj8.vercel.app/ev-charging-investment-guide" }
+          ]
+        }
+      ]) }} />
       <footer className="bg-[#081f16] px-5 py-8 text-center text-sm text-white/65">© {new Date().getFullYear()} MyEVStation · <Link href="/" className="underline">Home</Link> · <span className="inline-flex items-center gap-1"><MapPin size={14}/> India</span> · <span className="inline-flex items-center gap-1"><Zap size={14}/> EV charging</span></footer>
     </main>
   );
