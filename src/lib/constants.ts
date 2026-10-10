@@ -7,7 +7,7 @@ export const SITE = {
     "Veteran-led EV charging infrastructure, franchise and location partnerships across India.",
   url: "https://myevstation.vercel.app",
   email: "hello@myevstation.in",
-  phone: "",
+  phone: "+919625670132",
 } as const;
 
 export interface NavLink {
