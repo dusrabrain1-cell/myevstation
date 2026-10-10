@@ -25,7 +25,7 @@ export function Footer() {
           <div>
             <Link href="/" className="inline-flex items-center gap-3" aria-label="MyEVStation home">
               <span className="grid h-11 w-11 place-items-center rounded-xl bg-[#0b5a42] text-white"><Zap size={24} fill="currentColor" /></span>
-              <span className="leading-tight"><span className="block whitespace-nowrap text-xl font-extrabold tracking-tight text-[#172d21]">my<span className="text-[#e87522]">EV</span>Station</span><span className="mt-0.5 block whitespace-nowrap text-[9px] font-bold uppercase tracking-[.12em] text-[#64736d]">Your next mission</span></span>
+              <span className="leading-tight"><span className="block whitespace-nowrap text-xl font-extrabold tracking-tight text-[#172d21]">my<span className="text-[#e87522]">EV</span>Station</span><span className="mt-0.5 block whitespace-nowrap text-[8px] font-extrabold uppercase tracking-[.08em] text-[#0b5a42] sm:text-[9px]">Founded by Ex-Indian Air Force</span></span>
             </Link>
             <p className="mt-5 max-w-xs text-sm leading-6 text-[#647067]">EV charging opportunities for landowners, investors, housing societies and ex-servicemen—explained in simple terms.</p>
             <p className="mt-4 text-xs leading-5 text-[#7b877d]">Site suitability, costs and returns depend on actual conditions and written agreements.</p>
