@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
@@ -82,7 +83,7 @@ export default function HomePage() {
       </header>
 
       <section id="home-hero" className="relative isolate min-h-[calc(100svh-5rem)] overflow-hidden bg-[#071e16]">
-        <img src="/myevstation-hero-banner.jpeg" alt="MyEVStation EV charging station, Indian tricolour and veteran leader" className="absolute inset-0 -z-30 h-full w-full object-cover object-[64%_center] sm:object-[58%_center]" fetchPriority="high" />
+        <Image src=/myevstation-hero-banner.jpeg alt=MyEVStation EV charging station, Indian tricolour and veteran leader width={1920} height={1080} sizes="100vw" className=absolute inset-0 -z-30 h-full w-full object-cover object-[64%_center] sm:object-[58%_center] priority />
         <div className="absolute inset-0 -z-20 bg-gradient-to-r from-[#061b14]/70 via-[#061b14]/30 to-transparent" />
         <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#061b14]/30 via-transparent to-transparent" />
         <div className="mx-auto flex min-h-[min(760px,calc(100svh-4.5rem))] w-full max-w-[1600px] items-center px-4 py-6 sm:min-h-[calc(100svh-5rem)] sm:px-10 sm:py-8 lg:px-16">
@@ -130,7 +131,7 @@ export default function HomePage() {
             <article className="relative flex h-full flex-col overflow-hidden rounded-[1.7rem] border-2 border-[#e87522] bg-white shadow-[0_12px_35px_rgba(11,90,66,0.12)] transition hover:-translate-y-1 hover:shadow-xl">
               <div className="h-1.5 w-full bg-gradient-to-r from-[#e87522] via-white to-[#13834b]"/>
               <div className="relative h-[150px] shrink-0 overflow-hidden sm:h-[160px]">
-                <img src="/ev-veterans.jpg" alt="Veteran leader at an EV charging station" className="h-full w-full object-cover object-[center_28%]"/>
+                <Image src=/ev-veterans.jpg alt=Veteran leader at an EV charging station width={900} height={1200} sizes="(max-width: 768px) 100vw, 33vw" className=h-full w-full object-cover object-[center_28%] loading="lazy" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#071e16]/65 via-transparent to-[#071e16]/10"/>
                 <span className="absolute bottom-3 left-4 text-xs font-bold tracking-wide text-white drop-shadow">Service doesn’t end. It evolves.</span>
                 <div className="absolute left-4 right-4 top-4 flex items-center justify-between gap-2"><span className="rounded-full bg-[#ffe2cf] px-3 py-1 text-[9px] font-extrabold uppercase tracking-wider text-[#bd5518]">Option 01 · Veterans</span><span className="rounded-full bg-[#0b5a42] px-2.5 py-1 text-[9px] font-black uppercase tracking-wider text-white">A new mission</span></div>
@@ -145,7 +146,7 @@ export default function HomePage() {
             </article>
             <article className="group flex h-full flex-col overflow-hidden rounded-[1.7rem] border border-[#dfe7df] bg-white shadow-[0_8px_24px_rgba(11,90,66,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_38px_rgba(11,90,66,0.16)]">
               <div className="relative h-[150px] shrink-0 overflow-hidden sm:h-[160px]">
-                <img src="/ev-without-land.jpg" alt="Modern electric vehicle charging at an urban host location" loading="lazy" className="h-full w-full object-cover object-center transition duration-500 group-hover:scale-[1.04]"/>
+                <Image src=/ev-without-land.jpg alt=Modern electric vehicle charging at an urban host location width={1200} height={800} sizes="(max-width: 768px) 100vw, 33vw" className=h-full w-full object-cover object-center transition duration-500 group-hover:scale-[1.04] loading="lazy" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#071e16]/65 via-[#071e16]/10 to-transparent"/>
                 <span className="absolute left-4 top-4 rounded-full bg-[#dceee5]/95 px-3 py-1 text-[10px] font-extrabold uppercase tracking-widest text-[#0b5a42]">Option 02 · No land</span>
                 <span className="absolute bottom-3 left-4 text-xs font-bold tracking-wide text-white drop-shadow">A smarter way to get started</span>
@@ -159,7 +160,7 @@ export default function HomePage() {
             </article>
             <article className="group flex h-full flex-col overflow-hidden rounded-[1.7rem] border border-[#dfe7df] bg-white shadow-[0_8px_24px_rgba(11,90,66,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_38px_rgba(11,90,66,0.16)]">
               <div className="relative h-[150px] shrink-0 overflow-hidden sm:h-[160px]">
-                <img src="/ev-society.jpg" alt="Electric vehicle charging facilities for a residential community" loading="lazy" className="h-full w-full object-cover object-center transition duration-500 group-hover:scale-[1.04]"/>
+                <Image src=/ev-society.jpg alt=Electric vehicle charging facilities for a residential community width={1200} height={800} sizes="(max-width: 768px) 100vw, 33vw" className=h-full w-full object-cover object-center transition duration-500 group-hover:scale-[1.04] loading="lazy" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#071e16]/65 via-[#071e16]/10 to-transparent"/>
                 <span className="absolute left-4 top-4 rounded-full bg-[#dceaf9]/95 px-3 py-1 text-[10px] font-extrabold uppercase tracking-widest text-[#176a8a]">Option 03 · Community</span>
                 <span className="absolute bottom-3 left-4 text-xs font-bold tracking-wide text-white drop-shadow">Convenient charging, closer to home</span>
@@ -173,7 +174,7 @@ export default function HomePage() {
             </article>
             <article className="group flex h-full flex-col overflow-hidden rounded-[1.7rem] border border-[#dfe7df] bg-white shadow-[0_8px_24px_rgba(11,90,66,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_38px_rgba(11,90,66,0.16)]">
               <div className="relative h-[150px] shrink-0 overflow-hidden sm:h-[160px]">
-                <img src="/ev-with-land.jpg" alt="Contemporary EV charging station on a dedicated property" loading="lazy" className="h-full w-full object-cover object-center transition duration-500 group-hover:scale-[1.04]"/>
+                <Image src=/ev-with-land.jpg alt=Contemporary EV charging station on a dedicated property width={1200} height={800} sizes="(max-width: 768px) 100vw, 33vw" className=h-full w-full object-cover object-center transition duration-500 group-hover:scale-[1.04] loading="lazy" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#071e16]/65 via-[#071e16]/10 to-transparent"/>
                 <span className="absolute left-4 top-4 rounded-full bg-[#dceee5]/95 px-3 py-1 text-[10px] font-extrabold uppercase tracking-widest text-[#0b5a42]">Option 04 · Landowners</span>
                 <span className="absolute bottom-3 left-4 text-xs font-bold tracking-wide text-white drop-shadow">Turn your space into a charging destination</span>
@@ -271,7 +272,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="charger-guide" className="bg-[#f7f9f6] py-16 sm:py-20"><div className="mx-auto max-w-7xl px-5 lg:px-8"><div className="mx-auto max-w-3xl text-center"><span className="text-xs font-extrabold uppercase tracking-[.2em] text-[#d96a1b]">A simple guide</span><h2 className="mt-3 text-3xl font-black tracking-tight text-[#15281f] sm:text-4xl">Which charger is right for your location?</h2><p className="mt-3 leading-7 text-[#647067]">Different vehicles and parking times need different chargers. These are indicative charger categories from the supplied technical profile—not a final site design or price quote.</p></div><div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">{[{p:"3.3 kW",t:"Basic / overnight charging",v:"Homes, small businesses and longer parking stays",b:"Simple AC supply; a portable charging setup may be required.",img:"/ev-society.jpg"},{p:"3–12 kW",t:"Two- & three-wheeler DC",v:"Electric scooter and e-rickshaw fleets",b:"Designed for frequent fleet charging and quicker turnarounds.",img:"/ev-2w-3w-dc.png"},{p:"7.4–22 kW",t:"AC charging for cars",v:"Offices, malls, societies and destinations",b:"Useful where cars remain parked for a while.",img:"/ev-with-land.jpg"},{p:"30–240 kW",t:"High-power DC charging",v:"Buses, trucks, highways and commercial fleets",b:"For higher-demand sites; needs suitable electrical capacity and planning.",img:"/ev-bus-fleet-dc.png"}].map(x=><article key={x.p} className="overflow-hidden rounded-2xl border border-[#e1e8e0] bg-white shadow-sm"><div className="relative h-44 overflow-hidden bg-[#eaf3ed]"><img src={x.img} alt={x.t} className="h-full w-full object-cover object-center transition duration-500 hover:scale-[1.03]"/><div className="absolute inset-0 bg-gradient-to-t from-[#092d20]/25 via-transparent to-transparent"/><span className="absolute left-3 top-3 rounded-full border border-white/70 bg-white/95 px-3 py-1 text-[10px] font-extrabold tracking-wide text-[#0b5a42]">MYEVSTATION · CHARGING</span></div><div className="p-5"><span className="inline-flex rounded-lg bg-[#e8f4ea] px-3 py-2 text-lg font-black text-[#0b7652]">{x.p}</span><h3 className="mt-4 text-lg font-extrabold text-[#172d21]">{x.t}</h3><p className="mt-2 text-sm font-semibold text-[#52665a]">{x.v}</p><p className="mt-3 text-sm leading-6 text-[#718075]">{x.b}</p></div></article>)}</div><p className="mt-4 text-xs leading-5 text-[#7a857c]">Actual charging speed depends on the vehicle, connector, charger, electrical supply and conditions. Confirm compatibility, certifications, warranty, installation scope and service-level terms with the supplier.</p></div></section>
+      <section id="charger-guide" className="bg-[#f7f9f6] py-16 sm:py-20"><div className="mx-auto max-w-7xl px-5 lg:px-8"><div className="mx-auto max-w-3xl text-center"><span className="text-xs font-extrabold uppercase tracking-[.2em] text-[#d96a1b]">A simple guide</span><h2 className="mt-3 text-3xl font-black tracking-tight text-[#15281f] sm:text-4xl">Which charger is right for your location?</h2><p className="mt-3 leading-7 text-[#647067]">Different vehicles and parking times need different chargers. These are indicative charger categories from the supplied technical profile—not a final site design or price quote.</p></div><div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">{[{p:"3.3 kW",t:"Basic / overnight charging",v:"Homes, small businesses and longer parking stays",b:"Simple AC supply; a portable charging setup may be required.",img:"/ev-society.jpg"},{p:"3–12 kW",t:"Two- & three-wheeler DC",v:"Electric scooter and e-rickshaw fleets",b:"Designed for frequent fleet charging and quicker turnarounds.",img:"/ev-2w-3w-dc.png"},{p:"7.4–22 kW",t:"AC charging for cars",v:"Offices, malls, societies and destinations",b:"Useful where cars remain parked for a while.",img:"/ev-with-land.jpg"},{p:"30–240 kW",t:"High-power DC charging",v:"Buses, trucks, highways and commercial fleets",b:"For higher-demand sites; needs suitable electrical capacity and planning.",img:"/ev-bus-fleet-dc.png"}].map(x=><article key={x.p} className="overflow-hidden rounded-2xl border border-[#e1e8e0] bg-white shadow-sm"><div className="relative h-44 overflow-hidden bg-[#eaf3ed]"><Image src={x.img} alt={x.t} width={1200} height={800} sizes="(max-width: 768px) 100vw, 33vw" className=h-full w-full object-cover object-center transition duration-500 hover:scale-[1.03] loading="lazy" /><div className="absolute inset-0 bg-gradient-to-t from-[#092d20]/25 via-transparent to-transparent"/><span className="absolute left-3 top-3 rounded-full border border-white/70 bg-white/95 px-3 py-1 text-[10px] font-extrabold tracking-wide text-[#0b5a42]">MYEVSTATION · CHARGING</span></div><div className="p-5"><span className="inline-flex rounded-lg bg-[#e8f4ea] px-3 py-2 text-lg font-black text-[#0b7652]">{x.p}</span><h3 className="mt-4 text-lg font-extrabold text-[#172d21]">{x.t}</h3><p className="mt-2 text-sm font-semibold text-[#52665a]">{x.v}</p><p className="mt-3 text-sm leading-6 text-[#718075]">{x.b}</p></div></article>)}</div><p className="mt-4 text-xs leading-5 text-[#7a857c]">Actual charging speed depends on the vehicle, connector, charger, electrical supply and conditions. Confirm compatibility, certifications, warranty, installation scope and service-level terms with the supplier.</p></div></section>
 
       <section id="technology" className="bg-[#10291f] py-20 text-white sm:py-24">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
@@ -358,7 +359,7 @@ export default function HomePage() {
           <div className="mt-10 grid gap-5 lg:grid-cols-2">
             <article className="overflow-hidden rounded-3xl border border-[#e1e9e2] bg-[#f7faf7] shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
               <div className="relative aspect-[4/3] overflow-hidden bg-[#e8efe9]">
-                <img src="/raj-kishore-prasad.png" alt="HFL Raj Kishore Prasad at an EV charging station" loading="lazy" className="h-full w-full object-contain object-center scale-[1.04]"/>
+                <Image src=/raj-kishore-prasad.png alt=HFL Raj Kishore Prasad at an EV charging station width={900} height={1200} sizes="(max-width: 768px) 100vw, 50vw" className=h-full w-full object-contain object-center scale-[1.04] loading="lazy" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#092d20]/65 via-transparent to-transparent"/>
                 <span className="absolute bottom-4 left-5 rounded-full border border-white/30 bg-white/95 px-3 py-1.5 text-[10px] font-extrabold uppercase tracking-[.14em] text-[#0b5a42]">Founder · Veteran leadership</span>
               </div>
@@ -373,7 +374,7 @@ export default function HomePage() {
             </article>
             <article className="overflow-hidden rounded-3xl border border-[#e1e9e2] bg-[#f7faf7] shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
               <div className="relative aspect-[4/3] overflow-hidden bg-[#e8efe9]">
-                <img src="/manoj-sharma.png" alt="HFO Manoj Sharma, co-founder of MyEVStation" loading="lazy" className="h-full w-full object-contain object-center scale-[1.04]"/>
+                <Image src=/manoj-sharma.png alt=HFO Manoj Sharma, co-founder of MyEVStation width={900} height={1200} sizes="(max-width: 768px) 100vw, 50vw" className=h-full w-full object-contain object-center scale-[1.04] loading="lazy" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#092d20]/65 via-transparent to-transparent"/>
                 <span className="absolute bottom-4 left-5 rounded-full border border-white/30 bg-white/95 px-3 py-1.5 text-[10px] font-extrabold uppercase tracking-[.14em] text-[#0b5a42]">Founder · Veteran leadership</span>
               </div>
