@@ -4,7 +4,7 @@
 export const SITE = {
   name: "MyEVStation",
   shortDescription:
-    "Veteran-led EV charging infrastructure, franchise and location partnerships across India.",
+    "EV charging station opportunities and partnerships across India.",
   url: "https://myevstation-9rj8.vercel.app",
   email: "hello@myevstation.in",
   phone: "+919625670132",
