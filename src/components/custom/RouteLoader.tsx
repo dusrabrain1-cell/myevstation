@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { Zap } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 
@@ -81,7 +82,7 @@ export function RouteLoader() {
       aria-label="Loading page"
       className="fixed inset-0 z-[200] flex items-center justify-center bg-white/80 backdrop-blur-sm"
     >
-      <img src="/myevstation-logo.png" alt="MyEVStation" className="h-auto w-[220px] max-w-[72vw] object-contain drop-shadow-sm sm:w-[280px]" />
+      <span className="grid h-16 w-16 place-items-center rounded-2xl bg-[#0b5a42] text-white shadow-lg sm:h-20 sm:w-20"><Zap size={38} fill="currentColor" /></span>
       <span className="sr-only">Loading page…</span>
     </div>
   );
