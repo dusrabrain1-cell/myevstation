@@ -46,6 +46,20 @@ export default function RootLayout({
         suppressHydrationWarning
         className="min-h-full flex flex-col bg-paper text-ink"
       >
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: SITE.name,
+          url: SITE.url,
+          description: "EV charging infrastructure and station partnership opportunities in India.",
+          telephone: SITE.phone,
+          contactPoint: {
+            "@type": "ContactPoint",
+            telephone: SITE.phone,
+            contactType: "sales",
+            availableLanguage: ["English", "Hindi"]
+          }
+        }) }} />
         {children}
       </body>
     </html>
