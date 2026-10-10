@@ -9,7 +9,7 @@ import { type ImageKey } from "@/lib/images";
 export const metadata: Metadata = {
   title: "All National Projects",
   description:
-    "Pioneering indigenous solutions across energy, industry and environment for a self-reliant India — Carbon Mandi's national projects.",
+    "Pioneering technology and industrial solutions for a self-reliant India.",
   alternates: { canonical: "/projects" },
 };
 
@@ -37,25 +37,6 @@ type Project = {
 const PROJECTS: Project[] = [
   {
     no: "01",
-    brand: "Carbon Mandi",
-    logo: "/images/national-projects/logos/carbon-mandi.svg",
-    brandColor: "text-mission",
-    title: "India's First Hemp & Napier Biomass Based Green Hydrogen Fuel.",
-    description:
-      "Developing India's next generation clean fuel from hemp and napier biomass.",
-    location: "Punjab, India",
-    ledBy: "Carbon Mandi",
-    partners: [
-      {
-        name: "IIT Ropar",
-        logo: "/images/national-projects/logos/iit-ropar.svg",
-      },
-    ],
-    image: "projectGreenH2",
-    href: "/",
-  },
-  {
-    no: "02",
     brand: "AIG",
     logo: "/images/national-projects/logos/aig.svg",
     brandColor: "text-blue-600",
@@ -72,7 +53,7 @@ const PROJECTS: Project[] = [
     href: "#",
   },
   {
-    no: "03",
+    no: "02",
     brand: "Right to Climate",
     logo: "/images/national-projects/logos/right-to-climate.svg",
     brandColor: "text-mission",
@@ -86,7 +67,7 @@ const PROJECTS: Project[] = [
     href: "#",
   },
   {
-    no: "04",
+    no: "03",
     brand: "Q-LUB",
     logo: "/images/national-projects/logos/qlub.svg",
     brandColor: "text-mission-dark",
@@ -103,7 +84,7 @@ const PROJECTS: Project[] = [
     href: "#",
   },
   {
-    no: "05",
+    no: "04",
     brand: "AquaWelder",
     logo: "/images/national-projects/logos/aquawelder.svg",
     brandColor: "text-sky-600",
