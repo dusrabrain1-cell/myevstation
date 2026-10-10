@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Zap, ArrowRight } from "lucide-react";
+import { Menu, X, Zap } from "lucide-react";
 
 import { NAV_LINKS } from "@/lib/constants";
 import { NavMenu } from "./NavMenu";
