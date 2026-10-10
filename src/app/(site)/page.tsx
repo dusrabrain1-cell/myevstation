@@ -140,7 +140,7 @@ export default function HomePage() {
                 <p className="mt-3 text-sm leading-5 text-[#52665a]">Turn your experience, discipline and leadership into a new chapter in India’s EV future.</p>
                 <div className="mt-auto pt-4"><span className="inline-flex rounded-full border border-[#c8ddce] bg-white px-3 py-1.5 text-[10px] font-bold text-[#0b5a42]">Purpose · Opportunity · Service</span></div>
               </div>
-              <div className="flex min-h-[86px] items-center p-4"><Link href="https://wa.me/919625670132?text=Hello%20MyEVStation%2C%20I%20am%20an%20ex-serviceman%20interested%20in%20starting%20an%20EV%20charging%20station." className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#e87522] px-4 py-3 text-center text-sm font-extrabold text-white shadow-sm transition hover:bg-[#cf6218]">Start your next mission <ArrowRight size={16}/></Link></div>
+              <div className="flex min-h-[86px] items-center p-4"><Link href="/ex-servicemen" className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#e87522] px-4 py-3 text-center text-sm font-extrabold text-white shadow-sm transition hover:bg-[#cf6218]">Start your next mission <ArrowRight size={16}/></Link></div>
             </article>
             <article className="group flex h-full flex-col overflow-hidden rounded-[1.7rem] border border-[#dfe7df] bg-white shadow-[0_8px_24px_rgba(11,90,66,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_38px_rgba(11,90,66,0.16)]">
               <div className="relative h-[150px] shrink-0 overflow-hidden sm:h-[160px]">
@@ -154,7 +154,7 @@ export default function HomePage() {
                 <h3 className="mt-4 min-h-[58px] text-2xl font-black leading-tight text-[#142f24]">NO LAND?</h3>
                 <p className="mt-1 text-sm leading-6 text-[#647168]">Start at a suitable host location without purchasing land. Compare the investment and managed station model.</p>
               </div>
-              <div className="flex min-h-[86px] items-center p-4"><Link href="https://wa.me/919625670132?text=Hello%20MyEVStation%2C%20I%20am%20interested%20in%20the%20no-land%20EV%20station%20model.%20Please%20share%20details." className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#0b5a42] px-4 py-3 text-center text-sm font-extrabold text-white transition hover:bg-[#084632]">Explore no-land model <ArrowRight size={16}/></Link></div>
+              <div className="flex min-h-[86px] items-center p-4"><Link href="/without-land" className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#0b5a42] px-4 py-3 text-center text-sm font-extrabold text-white transition hover:bg-[#084632]">Explore no-land model <ArrowRight size={16}/></Link></div>
             </article>
             <article className="group flex h-full flex-col overflow-hidden rounded-[1.7rem] border border-[#dfe7df] bg-white shadow-[0_8px_24px_rgba(11,90,66,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_38px_rgba(11,90,66,0.16)]">
               <div className="relative h-[150px] shrink-0 overflow-hidden sm:h-[160px]">
@@ -168,7 +168,7 @@ export default function HomePage() {
                 <h3 className="mt-4 min-h-[58px] text-2xl font-black leading-tight text-[#142f24]">LIVE IN A SOCIETY?</h3>
                 <p className="mt-1 text-sm leading-6 text-[#647168]">Make resident charging easier with smart sockets, AC chargers and DC options for suitable shared spaces.</p>
               </div>
-              <div className="flex min-h-[86px] items-center p-4"><Link href="https://wa.me/919625670132?text=Hello%20MyEVStation%2C%20I%20represent%20a%20housing%20society%20and%20want%20to%20enquire%20about%20EV%20charging." className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#176a8a] px-4 py-3 text-center text-sm font-extrabold text-white transition hover:bg-[#125875]">Explore society charging <ArrowRight size={16}/></Link></div>
+              <div className="flex min-h-[86px] items-center p-4"><Link href="/society" className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#176a8a] px-4 py-3 text-center text-sm font-extrabold text-white transition hover:bg-[#125875]">Explore society charging <ArrowRight size={16}/></Link></div>
             </article>
             <article className="group flex h-full flex-col overflow-hidden rounded-[1.7rem] border border-[#dfe7df] bg-white shadow-[0_8px_24px_rgba(11,90,66,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_38px_rgba(11,90,66,0.16)]">
               <div className="relative h-[150px] shrink-0 overflow-hidden sm:h-[160px]">
@@ -182,7 +182,7 @@ export default function HomePage() {
                 <h3 className="mt-4 min-h-[58px] text-2xl font-black leading-tight text-[#142f24]">HAVE LAND?</h3>
                 <p className="mt-1 text-sm leading-6 text-[#647168]">Use your plot, parking area, commercial property or fleet site to set up a suitable EV charging destination.</p>
               </div>
-              <div className="flex min-h-[86px] items-center p-4"><Link href="https://wa.me/919625670132?text=Hello%20MyEVStation%2C%20I%20have%20land%2Fa%20site%20and%20want%20to%20explore%20an%20EV%20charging%20station." className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#0b5a42] px-4 py-3 text-center text-sm font-extrabold text-white transition hover:bg-[#084632]">Explore with-land model <ArrowRight size={16}/></Link></div>
+              <div className="flex min-h-[86px] items-center p-4"><Link href="/with-land" className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#0b5a42] px-4 py-3 text-center text-sm font-extrabold text-white transition hover:bg-[#084632]">Explore with-land model <ArrowRight size={16}/></Link></div>
             </article>
           </div>
         </div>
