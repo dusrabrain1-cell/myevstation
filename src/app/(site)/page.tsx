@@ -82,24 +82,24 @@ export default function HomePage() {
       </header>
 
       <section id="home-hero" className="relative isolate min-h-[calc(100svh-5rem)] overflow-hidden bg-[#071e16]">
-        <img src="/myevstation-hero-banner.jpeg" alt="MyEVStation EV charging station, Indian tricolour and veteran leader" className="absolute inset-0 -z-30 h-full w-full object-cover object-[58%_center]" fetchPriority="high" />
+        <img src="/myevstation-hero-banner.jpeg" alt="MyEVStation EV charging station, Indian tricolour and veteran leader" className="absolute inset-0 -z-30 h-full w-full object-cover object-[64%_center] sm:object-[58%_center]" fetchPriority="high" />
         <div className="absolute inset-0 -z-20 bg-gradient-to-r from-[#061b14]/70 via-[#061b14]/30 to-transparent" />
         <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#061b14]/30 via-transparent to-transparent" />
-        <div className="mx-auto flex min-h-[calc(100svh-5rem)] w-full max-w-[1600px] items-center px-5 py-7 sm:px-10 sm:py-8 lg:px-16">
-          <div className="w-full max-w-[min(47%,660px)] text-white max-lg:max-w-[56%] max-sm:max-w-full max-sm:rounded-xl max-sm:bg-[#061b14]/60 max-sm:p-4">
+        <div className="mx-auto flex min-h-[min(760px,calc(100svh-4.5rem))] w-full max-w-[1600px] items-center px-4 py-6 sm:min-h-[calc(100svh-5rem)] sm:px-10 sm:py-8 lg:px-16">
+          <div className="w-full max-w-[min(47%,660px)] text-white max-lg:max-w-[56%] max-sm:max-w-full max-sm:rounded-2xl max-sm:bg-[#061b14]/70 max-sm:p-4 max-sm:shadow-lg">
             <div className="mb-3 inline-flex max-w-full items-center gap-1.5 border-l-4 border-[#e87522] bg-[#061b14]/35 px-2.5 py-1.5 text-[9px] font-extrabold uppercase tracking-[.075em] backdrop-blur-sm sm:gap-2 sm:px-3 sm:text-[10px] sm:tracking-[.09em]">
               <span className="text-[#ff9b42]">🇮🇳</span> A veteran-led mission for a cleaner, stronger India
             </div>
-            <h1 className="max-w-[650px] text-[clamp(2rem,3.7vw,3.8rem)] font-black leading-[.96] tracking-[-.045em] drop-shadow-lg">
+            <h1 className="max-w-[650px] text-[clamp(1.85rem,3.7vw,3.8rem)] font-black leading-[1.02] tracking-[-.04em] drop-shadow-lg sm:leading-[.96]">
               EV CHARGING STATIONS FOR INDIA’S NEXT MISSION
               <span className="mt-2 block"><span className="text-[#ff8b2b]">Powering</span> <span className="text-white">Clean Energy</span></span>
             </h1>
             <p className="mt-3 max-w-xl text-sm font-semibold leading-5 text-white drop-shadow sm:text-base sm:leading-6">
               Own an EV charging business with or without land. Compare investment options, understand the setup process and discuss site suitability, operating responsibilities and estimated returns before you decide.
             </p>
-            <div className="mt-4 flex flex-wrap gap-2">
-              <a href="#contact" className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#e87522] px-4 py-3 text-xs font-extrabold text-white shadow-xl transition hover:bg-[#c75b14] sm:px-5 sm:text-sm">Own an EV Station <ArrowRight size={15}/></a>
-              <a href="#model" className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/80 bg-[#061b14]/35 px-4 py-3 text-xs font-extrabold text-white backdrop-blur transition hover:bg-white/20 sm:px-5 sm:text-sm">Explore Business Models <ArrowRight size={15}/></a>
+            <div className="mt-4 grid grid-cols-1 gap-2 min-[390px]:grid-cols-2 sm:flex sm:flex-wrap">
+              <a href="#contact" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#e87522] px-3 py-3 text-center text-xs font-extrabold leading-snug text-white shadow-xl transition hover:bg-[#c75b14] sm:px-5 sm:text-sm">Own an EV Station <ArrowRight size={15}/></a>
+              <a href="#model" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-white/80 bg-[#061b14]/35 px-3 py-3 text-center text-xs font-extrabold leading-snug text-white backdrop-blur transition hover:bg-white/20 sm:px-5 sm:text-sm">Explore Business Models <ArrowRight size={15}/></a>
             </div>
             <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[10px] font-bold text-white drop-shadow sm:text-xs">
               <span className="inline-flex items-center gap-1.5"><ShieldCheck size={14}/> Safety-first technology</span>
