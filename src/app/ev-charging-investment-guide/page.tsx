@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SITE } from "@/lib/constants";
 import { ArrowRight, CheckCircle2, MapPin, ShieldCheck, Zap } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -136,8 +137,8 @@ export default function EVChargingInvestmentGuide() {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://myevstation-9rj8.vercel.app/" },
-            { "@type": "ListItem", position: 2, name: "EV Charging Investment Guide", item: "https://myevstation-9rj8.vercel.app/ev-charging-investment-guide" }
+            { "@type": "ListItem", position: 1, name: "Home", item: `${SITE.url}/` },
+            { "@type": "ListItem", position: 2, name: "EV Charging Investment Guide", item: `${SITE.url}/ev-charging-investment-guide` }
           ]
         }
       ]) }} />
