@@ -8,7 +8,7 @@ const packages = [
 
 export default function ExServicemenPage() {
   return <main className="min-h-screen bg-[#f7f9f6] text-[#17212b]">
-    <header className="border-b border-white/10 bg-[#071e16] text-white"><div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4"><Link href="/" className="font-black text-xl">my<span className="text-[#e87522]">EV</span>Station</Link><Link href="/" className="inline-flex items-center gap-2 text-sm font-bold text-white/80"><ArrowLeft size={16}/> Home</Link></div></header>
+    <header className="border-b border-[#e2e8e1] bg-white"><div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3"><Link href="/" className="flex items-center gap-3" aria-label="MyEVStation home"><span className="grid h-10 w-10 place-items-center rounded-xl bg-[#0b5a42] text-white"><Zap size={22} fill="currentColor"/></span><span className="leading-tight"><span className="block text-xl font-extrabold tracking-tight text-[#172d21]">my<span className="text-[#e87522]">EV</span>Station</span><span className="block text-[9px] font-bold uppercase tracking-[.16em] text-[#64736d]">Your next mission</span></span></Link><Link href="/" className="inline-flex items-center gap-2 text-sm font-bold text-[#526158]"><ArrowLeft size={16}/> Back to home</Link></div></header>
     <section className="px-4 py-8 sm:px-6 sm:py-12">
       <div className="mx-auto max-w-5xl overflow-hidden rounded-[2rem] border-2 border-[#e87522] bg-white shadow-[0_22px_65px_rgba(11,90,66,0.12)]">
         <div className="h-2 w-full bg-gradient-to-r from-[#e87522] via-white to-[#16834a]"/>
