@@ -4,7 +4,7 @@ import SeoFaq from "@/components/custom/SeoFaq";
 
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowRight, BatteryCharging, ShieldCheck, MapPin, Zap, Gauge, Leaf, Menu, X, CheckCircle2, CarFront, Bike, Building2, Calculator, IndianRupee, RadioTower, PlugZap, Users, Flag } from "lucide-react";
+import { ArrowRight, BatteryCharging, ShieldCheck, MapPin, Zap, Leaf, Menu, X, CarFront, Calculator, Users, Flag } from "lucide-react";
 
 const sections = [
   { label: "Home", href: "/" },
