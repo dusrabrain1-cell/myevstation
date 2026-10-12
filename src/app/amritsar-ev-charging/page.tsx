@@ -41,7 +41,7 @@ export default function AmritsarEvChargingPage() {
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3">
           <Link href="/" className="flex items-center gap-3" aria-label="MyEVStation home">
             <span className="grid h-10 w-10 place-items-center rounded-xl bg-[#0b5a42] text-white"><Zap size={22} fill="currentColor" /></span>
-            <span className="leading-tight"><span className="block text-xl font-extrabold tracking-tight text-[#172d21]">my<span className="text-[#e87522]">EV</span>Station</span><span className="block text-[9px] font-bold uppercase tracking-[.16em] text-[#64736d]">EV charging for Punjab</span></span>
+            <span className="leading-tight"><span className="block text-xl font-extrabold tracking-tight text-[#172d21]">my<span className="text-[#e87522]">EV</span>Station</span><span className="block text-[9px] font-bold uppercase tracking-[.16em] text-[#64736d]">Founded by Ex-Indian Air Force</span></span>
           </Link>
           <Link href="/" className="inline-flex items-center gap-2 text-sm font-bold text-[#526158]"><ArrowLeft size={16} /> Home</Link>
         </div>
