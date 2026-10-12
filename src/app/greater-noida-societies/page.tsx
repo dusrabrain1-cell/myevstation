@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import SeoFaq from "@/components/custom/SeoFaq";
 import { ArrowLeft, ArrowRight, Building2, CheckCircle2, MapPin, ShieldCheck, Zap, CarFront, Bike, ClipboardCheck } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -133,6 +134,16 @@ export default function GreaterNoidaSocietiesPage() {
           <p className="mt-4 text-sm text-white/65">MyEVStation · India · Society feasibility is subject to site review.</p>
         </div>
       </section>
+      <SeoFaq eyebrow="RWA and resident questions" title="Greater Noida society EV charging: FAQs" items={[
+        { question: "Can an RWA install EV chargers in a housing society?", answer: "A society can explore charging after checking its governing rules, permissions, common-area arrangements, sanctioned load and electrical safety requirements. The exact process depends on the property and installation, so involve the RWA or facility manager and a qualified electrical professional early." },
+        { question: "Who pays for charging equipment and electricity?", answer: "This must be agreed before installation. Possible arrangements include resident-funded dedicated chargers, a shared charging service or a host/operator agreement. The written proposal should explain equipment ownership, metering, tariffs, software fees, maintenance and billing responsibility." },
+        { question: "Should a society choose AC or DC charging?", answer: "Choose according to vehicle compatibility, parking duration, demand and available electrical capacity. AC may fit cars parked for several hours; DC fast charging needs a suitable vehicle/connector mix, stronger power provision and a viable utilisation case. Higher power is not automatically better." },
+        { question: "Can chargers be installed in individual parking spaces?", answer: "It may be possible, subject to parking rights, society permission, safe cable routing, metering, electrical protection and applicable rules. A site survey should confirm the route from the distribution point and whether load upgrades are needed." },
+        { question: "How much does society EV charging cost?", answer: "The total depends on charger model, cabling distance, civil work, load upgrades, metering, software and maintenance. Ask for an itemised quotation and confirm whether electricity is billed to the resident, society or charging operator." },
+        { question: "Does MyEVStation guarantee savings or investment returns?", answer: "No. Savings and revenue depend on the specific arrangement and actual usage. Request written assumptions, clarify recurring fees and compare total costs before the RWA or resident commits." },
+        { question: "Does the ex-Indian Air Force founder background mean government approval?", answer: "No. MyEVStation is an independent venture. The founders' prior service background does not imply official Indian Air Force or Government of India endorsement, approval or certification." }
+      ]} />
+
       <footer className="bg-[#081f16] px-5 py-8 text-center text-sm text-white/60">© {new Date().getFullYear()} MyEVStation · <Link href="/society" className="text-white underline">All society solutions</Link> · <Link href="/" className="text-white underline">Home</Link></footer>
     </main>
   );
