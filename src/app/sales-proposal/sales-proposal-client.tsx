@@ -37,22 +37,29 @@ export default function SalesProposalPage() {
   const [prepared, setPrepared] = useState(false);
   const [proposalMode, setProposalMode] = useState<"automatic" | "custom">("automatic");
 
-  useEffect(() => {
-    if (step !== 3 || proposalMode !== "automatic") return;
+  const getAutomaticPicks = (): Array<[number, number]> => {
     const site = customer.site.toLowerCase();
     const demand = parking.dailyDemand;
-    let picks: Array<[number, number]>;
-    if (demand === "3–5") picks = [[4, 2]];
-    else if (demand === "5–10") picks = [[4, 4]];
-    else if (demand === "10–15") picks = [[4, 5]];
-    else if (demand === "15–25") picks = [[4, 6]];
-    else if (demand === "25–40") picks = [[8, 1]];
-    else if (demand === "40–75") picks = [[9, 1]];
-    else if (demand === "75–100+") picks = [[10, 1]];
-    else if (site.includes("petrol") || site.includes("highway") || site.includes("mall") || site.includes("commercial")) picks = [[8, 1], [4, 2]];
-    else if (site.includes("fleet") || site.includes("warehouse")) picks = [[7, 1], [4, 1]];
-    else picks = [[4, 2], [0, 2]];
-    if (parking.cars === "Under 20" && ["Not sure", "3–5"].includes(demand)) picks = [[4, 1], [0, 1]];
+    const commercial = site.includes("petrol") || site.includes("highway") || site.includes("mall") || site.includes("commercial");
+    const fleet = site.includes("fleet") || site.includes("warehouse");
+    // Catalogue indices: 4=7.4kW AC, 5=11kW AC, 6=22kW AC, 7=30kW DC, 8=60kW DC, 9=120kW DC, 10=180kW DC.
+    // Preliminary sales mix only; technical survey must confirm power, vehicle acceptance and installation.
+    if (demand === "3–5") return [[4, 2]];
+    if (demand === "5–10") return [[4, 4]];
+    if (demand === "10–15") return [[4, 4], [6, 1]];
+    if (demand === "15–25") return [[4, 4], [6, 2]];
+    if (demand === "25–40") return [[7, 1], [4, 2]];
+    if (demand === "40–75") return [[8, 1], [6, 2]];
+    if (demand === "75–100+") return [[9, 1], [6, 2]];
+    if (fleet) return [[7, 1], [4, 2]];
+    if (commercial) return [[7, 1], [4, 2]];
+    if (parking.cars === "Under 20") return [[4, 1]];
+    return [[4, 2]];
+  };
+
+  useEffect(() => {
+    if (step !== 3 || proposalMode !== "automatic") return;
+    const picks = getAutomaticPicks();
     setChargers(picks.map(([index, qty], i) => ({ ...catalogue[index], id: Date.now() + i, qty })));
     setPrepared(true);
   }, [step, proposalMode, customer.site, parking.cars, parking.dailyDemand]);
@@ -64,20 +71,7 @@ export default function SalesProposalPage() {
   const grandTotal = sellingSubtotal + taxAmount;
 
   const buildAutomaticMix = () => {
-    const site = customer.site.toLowerCase();
-    const demand = parking.dailyDemand;
-    let picks: Array<[number, number]>;
-    if (demand === "3–5") picks = [[4, 2]];
-    else if (demand === "5–10") picks = [[4, 4]];
-    else if (demand === "10–15") picks = [[4, 5]];
-    else if (demand === "15–25") picks = [[4, 6]];
-    else if (demand === "25–40") picks = [[8, 1]];
-    else if (demand === "40–75") picks = [[9, 1]];
-    else if (demand === "75–100+") picks = [[10, 1]];
-    else if (site.includes("petrol") || site.includes("highway") || site.includes("mall") || site.includes("commercial")) picks = [[8, 1], [4, 2]];
-    else if (site.includes("fleet") || site.includes("warehouse")) picks = [[7, 1], [4, 1]];
-    else picks = [[4, 2], [0, 2]];
-    if (parking.cars === "Under 20" && ["Not sure", "3–5"].includes(demand)) picks = [[4, 1], [0, 1]];
+    const picks = getAutomaticPicks();
     setChargers(picks.map(([index, qty], i) => ({ ...catalogue[index], id: Date.now() + i, qty })));
     setProposalMode("automatic");
     setPrepared(true);
