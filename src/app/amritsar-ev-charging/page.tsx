@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import SeoFaq from "@/components/custom/SeoFaq";
 import { ArrowLeft, ArrowRight, Building2, CheckCircle2, MapPin, ShieldCheck, Zap, CarFront, Bike, Store, ClipboardCheck } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -130,6 +131,15 @@ export default function AmritsarEvChargingPage() {
           <p className="mt-4 text-sm text-white/65">MyEVStation · Amritsar, Punjab · Subject to site feasibility.</p>
         </div>
       </section>
+      <SeoFaq eyebrow="Amritsar site enquiries" title="Amritsar EV charging: FAQs" items={[
+        { question: "Where in Amritsar should I consider an EV charging site?", answer: "Begin with a site-specific review of commercial parking, markets, hotels, destination businesses, housing societies and fleet locations. Areas mentioned on this page are prospecting zones, not a claim that they have no existing chargers or that a site is already approved." },
+        { question: "How do I check whether a nearby charging station already exists?", answer: "Check multiple operator apps and public maps, confirm the station is operational, verify connector compatibility and access hours, and visit the area. Do not rely on a single directory or assume a pin on a map is currently usable." },
+        { question: "Can a shop, hotel or market association host an EV charger?", answer: "Potentially, if parking access and customer safety can be managed, the property owner authorises installation, demand is plausible and electrical capacity is adequate. The host and operator should agree in writing on investment, revenue, electricity billing, maintenance and liability." },
+        { question: "What information is needed for an Amritsar site assessment?", answer: "Provide the exact locality, property type, parking availability, permission status, operating hours, likely vehicle mix, nearby chargers and available load if known. A qualified professional should verify the electrical and installation requirements." },
+        { question: "What is the total cost and expected monthly income?", answer: "Both depend on the selected charger, civil work, electrical upgrades, connection, software, electricity tariff, utilisation, rent and maintenance. Hardware price alone is not the installed cost, and projected income or payback is not guaranteed." },
+        { question: "Is MyEVStation an official Indian Air Force project?", answer: "No. MyEVStation is an independent venture. The founders' prior service background does not represent official Indian Air Force or Government of India endorsement." }
+      ]} />
+
       <footer className="bg-[#081f16] px-5 py-8 text-center text-sm text-white/60">© {new Date().getFullYear()} MyEVStation · <Link href="/" className="text-white underline">Home</Link></footer>
     </main>
   );
