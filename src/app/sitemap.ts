@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/society", changeFrequency: "monthly" as const, priority: 0.8 },
     { path: "/greater-noida-societies", changeFrequency: "monthly" as const, priority: 0.9 },
     { path: "/amritsar-ev-charging", changeFrequency: "monthly" as const, priority: 0.9 },
+    { path: "/punjab-ev-charging", changeFrequency: "monthly" as const, priority: 1.0 },
     { path: "/ev-charging-investment-guide", changeFrequency: "monthly" as const, priority: 0.8 },
   ];
 
