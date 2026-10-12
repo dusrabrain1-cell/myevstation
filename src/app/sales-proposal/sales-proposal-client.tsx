@@ -33,6 +33,8 @@ export default function SalesProposalPage() {
   const [photos, setPhotos] = useState<Photo[]>([]);
   const [margin, setMargin] = useState(20);
   const [tax, setTax] = useState(5);
+  const [sellRate, setSellRate] = useState(18);
+  const [powerCost, setPowerCost] = useState(8);
   const [showInternal, setShowInternal] = useState(false);
   const [prepared, setPrepared] = useState(false);
   const [proposalMode, setProposalMode] = useState<"automatic" | "custom">("automatic");
@@ -69,6 +71,11 @@ export default function SalesProposalPage() {
   const sellingSubtotal = Math.round(hardwareCost * (1 + margin / 100));
   const taxAmount = Math.round(sellingSubtotal * tax / 100);
   const grandTotal = sellingSubtotal + taxAmount;
+  const dailyCarsEstimate: Record<string, number> = { "Not sure": 5, "3–5": 4, "5–10": 7, "10–15": 12, "15–25": 20, "25–40": 32, "40–75": 55, "75–100+": 85 };
+  const estimatedDailyKwh = (dailyCarsEstimate[parking.dailyDemand] ?? 5) * 18;
+  const estimatedMonthlyChargingRevenue = estimatedDailyKwh * sellRate * 30;
+  const estimatedMonthlyEnergyCost = estimatedDailyKwh * powerCost * 30;
+  const estimatedMonthlyGrossEnergyMargin = estimatedMonthlyChargingRevenue - estimatedMonthlyEnergyCost;
 
   const buildAutomaticMix = () => {
     const picks = getAutomaticPicks();
@@ -179,6 +186,20 @@ export default function SalesProposalPage() {
               <label className="block text-stone-600">Selling margin (%)<input className={inputClass} type="number" min="0" max="200" value={margin} onChange={e=>setMargin(Math.min(200,Math.max(0,Number(e.target.value))))}/></label>
               <label className="block text-stone-600">GST assumption (%)<input className={inputClass} type="number" min="0" max="28" value={tax} onChange={e=>setTax(Math.min(28,Math.max(0,Number(e.target.value))))}/></label>
               <div className="flex justify-between"><span>Proposal subtotal</span><b>{money(sellingSubtotal)}</b></div><div className="flex justify-between"><span>GST assumption</span><b>{money(taxAmount)}</b></div><div className="flex justify-between border-t pt-3 text-lg"><b>Indicative total</b><b className="text-emerald-900">{money(grandTotal)}</b></div>
+              <div className="mt-5 rounded-xl border border-emerald-200 bg-emerald-50 p-4">
+                <h4 className="font-bold text-emerald-950">Owner revenue estimator</h4>
+                <p className="mt-1 text-xs leading-5 text-emerald-900">Illustrative energy-sales estimate, not a guaranteed return. Assumes 18 kWh per car, 30 operating days and the selected daily demand midpoint. Excludes charger financing, rent, staff, maintenance, payment fees, downtime and taxes.</p>
+                <div className="mt-3 grid grid-cols-2 gap-3">
+                  <label className="text-xs font-semibold text-stone-700">Customer tariff (₹/kWh)<input className={inputClass} type="number" min="0" value={sellRate} onChange={e=>setSellRate(Math.max(0,Number(e.target.value)||0))}/></label>
+                  <label className="text-xs font-semibold text-stone-700">Electricity cost (₹/kWh)<input className={inputClass} type="number" min="0" value={powerCost} onChange={e=>setPowerCost(Math.max(0,Number(e.target.value)||0))}/></label>
+                </div>
+                <div className="mt-3 space-y-2 text-sm">
+                  <div className="flex justify-between gap-3"><span>Estimated monthly energy sold</span><b>{Math.round(estimatedDailyKwh*30).toLocaleString("en-IN")} kWh</b></div>
+                  <div className="flex justify-between gap-3"><span>Estimated monthly charging sales</span><b>{money(estimatedMonthlyChargingRevenue)}</b></div>
+                  <div className="flex justify-between gap-3"><span>Estimated electricity cost</span><b>{money(estimatedMonthlyEnergyCost)}</b></div>
+                  <div className="flex justify-between gap-3 border-t border-emerald-200 pt-2"><span className="font-bold">Gross energy margin/month</span><b className="text-emerald-900">{money(estimatedMonthlyGrossEnergyMargin)}</b></div>
+                </div>
+              </div>
               <label className="flex items-center gap-2 rounded-lg bg-amber-50 p-3 text-xs text-amber-900"><input type="checkbox" checked={showInternal} onChange={e=>setShowInternal(e.target.checked)}/> Include internal costs in print preview (internal use only)</label>
             </div>
             <button onClick={()=>window.print()} disabled={chargers.length===0} className="mt-5 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#0d5c3d] px-4 py-3 font-bold text-white disabled:opacity-40"><Download size={18}/> Download proposal PDF</button>
