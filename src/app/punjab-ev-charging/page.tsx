@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, MapPin, Zap, Building2, CheckCircle2, CarFront, Bike, Truck, ClipboardCheck, Store } from "lucide-react";
+import { ArrowLeft, ArrowRight, MapPin, ShieldCheck, Zap, Building2, CheckCircle2, CarFront, Bike, Truck, ClipboardCheck, Store } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "EV Charging Station Opportunities Across Punjab | City-Wise",
