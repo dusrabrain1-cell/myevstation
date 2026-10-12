@@ -151,7 +151,7 @@ export default function SalesProposalPage() {
           <section className="rounded-2xl border border-stone-200 bg-white p-4 shadow-sm sm:p-7">
             <h2 className="text-xl font-bold">3. Build your proposal</h2><p className="mt-1 text-sm text-stone-500">Choose automatic recommendations or customise every charger yourself.</p>
             <div className="mt-4 grid grid-cols-2 gap-2 rounded-xl bg-stone-100 p-1">
-              <button onClick={buildAutomaticMix} className={"rounded-lg px-3 py-3 text-sm font-bold " + (proposalMode === "automatic" ? "bg-emerald-900 text-white" : "text-stone-700")}>Automatic proposal</button>
+              <button onClick={() => { setChargers([]); setPrepared(false); setProposalMode("automatic"); }} className={"rounded-lg px-3 py-3 text-sm font-bold " + (proposalMode === "automatic" ? "bg-emerald-900 text-white" : "text-stone-700")}>Automatic proposal</button>
               <button onClick={() => setProposalMode("custom")} className={"rounded-lg px-3 py-3 text-sm font-bold " + (proposalMode === "custom" ? "bg-emerald-900 text-white" : "text-stone-700")}>Customised proposal</button>
             </div>
             {proposalMode === "automatic" && <div className="mt-3 rounded-xl bg-emerald-50 p-3 text-sm text-emerald-900">Suggested starter mix based on site type and parking answers. This is a preliminary recommendation, not an electrical design. Choose “Customised proposal” to change it.</div>}
