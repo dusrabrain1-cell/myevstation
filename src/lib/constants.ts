@@ -17,8 +17,12 @@ export interface NavLink {
 }
 
 export const NAV_LINKS: NavLink[] = [
-  { label: "EV Station Models", href: "/#model" },
-  { label: "Investment Calculator", href: "/#investment" },
-  { label: "Technology & Safety", href: "/#technology" },
-  { label: "Our Mission", href: "/#mission" },
+  { label: "Home", href: "/" },
+  { label: "Why MyEVStation", href: "/why-myevstation" },
+  { label: "Business Model", href: "/business-model" },
+  { label: "Technology", href: "/technology" },
+  { label: "Investment", href: "/ev-charging-investment-guide" },
+  { label: "Impact", href: "/impact" },
+  { label: "FAQs", href: "/faq" },
+  { label: "About Us", href: "/about-us" },
 ];
