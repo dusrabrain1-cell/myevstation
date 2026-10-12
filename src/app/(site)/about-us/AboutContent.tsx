@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import SeoFaq from "@/components/custom/SeoFaq";
 import { ArrowRight, ShieldCheck, Zap, Calculator } from "lucide-react";
 
 export default function AboutContent() {
