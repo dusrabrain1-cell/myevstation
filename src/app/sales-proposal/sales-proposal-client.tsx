@@ -35,12 +35,26 @@ export default function SalesProposalPage() {
   const [tax, setTax] = useState(5);
   const [showInternal, setShowInternal] = useState(false);
   const [prepared, setPrepared] = useState(false);
+  const [proposalMode, setProposalMode] = useState<"automatic" | "custom">("automatic");
 
   const totalQty = chargers.reduce((s, c) => s + c.qty, 0);
   const hardwareCost = chargers.reduce((s, c) => s + c.qty * c.price, 0);
   const sellingSubtotal = Math.round(hardwareCost * (1 + margin / 100));
   const taxAmount = Math.round(sellingSubtotal * tax / 100);
   const grandTotal = sellingSubtotal + taxAmount;
+
+  const buildAutomaticMix = () => {
+    const site = customer.site.toLowerCase();
+    let picks: Array<[number, number]>;
+    if (site.includes("society")) picks = [[4, 2], [0, 2]];
+    else if (site.includes("petrol") || site.includes("highway") || site.includes("mall") || site.includes("commercial")) picks = [[8, 1], [4, 2]];
+    else if (site.includes("fleet") || site.includes("warehouse")) picks = [[7, 1], [4, 1]];
+    else picks = [[4, 1], [0, 1]];
+    if (parking.cars === "Under 20") picks = [[4, 1], [0, 1]];
+    setChargers(picks.map(([index, qty], i) => ({ ...catalogue[index], id: Date.now() + i, qty })));
+    setProposalMode("automatic");
+    setPrepared(true);
+  };
 
   const addCharger = (index: number) => {
     const product = catalogue[index];
@@ -122,8 +136,13 @@ export default function SalesProposalPage() {
 
         {step === 3 && <div className="grid items-start gap-5 lg:grid-cols-[1.2fr_.8fr]">
           <section className="rounded-2xl border border-stone-200 bg-white p-4 shadow-sm sm:p-7">
-            <h2 className="text-xl font-bold">3. Choose chargers</h2><p className="mt-1 text-sm text-stone-500">Tap “Add” to include one or more charger types in this proposal.</p>
-            <div className="mt-5 grid gap-3 sm:grid-cols-2">{catalogue.map((p,i)=><div key={p.power+p.name} className="rounded-xl border border-stone-200 p-4">
+            <h2 className="text-xl font-bold">3. Build your proposal</h2><p className="mt-1 text-sm text-stone-500">Choose automatic recommendations or customise every charger yourself.</p>
+            <div className="mt-4 grid grid-cols-2 gap-2 rounded-xl bg-stone-100 p-1">
+              <button onClick={buildAutomaticMix} className={"rounded-lg px-3 py-3 text-sm font-bold " + (proposalMode === "automatic" ? "bg-emerald-900 text-white" : "text-stone-700")}>Automatic proposal</button>
+              <button onClick={() => setProposalMode("custom")} className={"rounded-lg px-3 py-3 text-sm font-bold " + (proposalMode === "custom" ? "bg-emerald-900 text-white" : "text-stone-700")}>Customised proposal</button>
+            </div>
+            {proposalMode === "automatic" && <div className="mt-3 rounded-xl bg-emerald-50 p-3 text-sm text-emerald-900">Suggested starter mix based on site type and parking answers. This is a preliminary recommendation, not an electrical design. Choose “Customised proposal” to change it.</div>}
+            {proposalMode === "custom" && <div className="mt-5 grid gap-3 sm:grid-cols-2">{catalogue.map((p,i)=><div key={p.power+p.name} className="rounded-xl border border-stone-200 p-4">
               <div className="mb-3 flex h-24 items-center justify-center rounded-lg bg-emerald-50 text-emerald-900"><Zap size={38}/></div>
               <div className="text-xs font-semibold uppercase tracking-wide text-emerald-800">{p.category}</div><h3 className="mt-1 font-bold">{p.power} · {p.name}</h3><p className="mt-1 text-sm text-stone-600">Indicative hardware cost: {money(p.price)}</p>
               <button onClick={()=>addCharger(i)} className="mt-3 inline-flex min-h-10 w-full items-center justify-center gap-2 rounded-lg bg-emerald-900 px-3 py-2 text-sm font-bold text-white"><Plus size={16}/> Add charger</button>
@@ -140,8 +159,8 @@ export default function SalesProposalPage() {
               <div className="flex justify-between"><span>Proposal subtotal</span><b>{money(sellingSubtotal)}</b></div><div className="flex justify-between"><span>GST assumption</span><b>{money(taxAmount)}</b></div><div className="flex justify-between border-t pt-3 text-lg"><b>Indicative total</b><b className="text-emerald-900">{money(grandTotal)}</b></div>
               <label className="flex items-center gap-2 rounded-lg bg-amber-50 p-3 text-xs text-amber-900"><input type="checkbox" checked={showInternal} onChange={e=>setShowInternal(e.target.checked)}/> Include internal costs in print preview (internal use only)</label>
             </div>
-            <button onClick={()=>window.print()} disabled={chargers.length===0} className="mt-5 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#0d5c3d] px-4 py-3 font-bold text-white disabled:opacity-40"><Printer size={18}/> Print / Save PDF</button>
-            <p className="mt-2 text-center text-xs text-stone-500">Choose “Save as PDF” in your print window.</p>
+            <button onClick={()=>window.print()} disabled={chargers.length===0} className="mt-5 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#0d5c3d] px-4 py-3 font-bold text-white disabled:opacity-40"><Download size={18}/> Download proposal PDF</button>
+            <p className="mt-2 text-center text-xs text-stone-500">In the print window, select “Save as PDF” and click Save.</p>
           </aside>
         </div>}
 
@@ -168,7 +187,7 @@ export default function SalesProposalPage() {
           body * { visibility: hidden; }
           #proposal-print, #proposal-print * { visibility: visible; }
           #proposal-print { position: absolute; left: 0; top: 0; width: 100%; box-shadow: none !important; }
-          header, main > div > div, button, input, select, textarea, aside, .print\\:hidden { display: none !important; }
+          header, button, input, select, textarea, aside { display: none !important; }
           #proposal-print img { break-inside: avoid; max-height: 170px; }
           #proposal-print table { width: 100%; }
           #proposal-print tr { break-inside: avoid; }
