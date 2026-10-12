@@ -146,7 +146,7 @@ export default function SalesProposalPage() {
               <div className="mb-3 flex h-28 items-center justify-center overflow-hidden rounded-lg bg-white"><img src={p.image} alt={`${p.power} ${p.name}`} className="h-full w-full object-contain" loading="lazy"/></div>
               <div className="text-xs font-semibold uppercase tracking-wide text-emerald-800">{p.category}</div><h3 className="mt-1 font-bold">{p.power} · {p.name}</h3><p className="mt-1 text-sm text-stone-600">Indicative hardware cost: {money(p.price)}</p>
               <button onClick={()=>addCharger(i)} className="mt-3 inline-flex min-h-10 w-full items-center justify-center gap-2 rounded-lg bg-emerald-900 px-3 py-2 text-sm font-bold text-white"><Plus size={16}/> Add charger</button>
-            </div>)}</div>
+            </div>)}</div>}
             <p className="mt-4 rounded-xl bg-amber-50 p-3 text-xs leading-5 text-amber-900">Pricing is an editable starting point from the supplier quotation previously provided. Confirm current price, GST, connector/gun configuration and technical suitability with the supplier before sending a final offer. 22 kW AC description needs supplier confirmation.</p>
             <div className="mt-6 flex justify-between gap-3"><button onClick={()=>setStep(2)} className="inline-flex min-h-12 items-center gap-2 rounded-xl border border-stone-300 px-4 py-3 font-bold"><ArrowLeft size={18}/> Back</button><button onClick={()=>setPrepared(true)} className="inline-flex min-h-12 items-center gap-2 rounded-xl bg-[#0d5c3d] px-5 py-3 font-bold text-white"><CheckCircle2 size={18}/> Prepare proposal</button></div>
           </section>
