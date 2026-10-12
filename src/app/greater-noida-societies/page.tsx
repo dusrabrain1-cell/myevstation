@@ -144,7 +144,7 @@ export default function GreaterNoidaSocietiesPage() {
         { question: "Does the ex-Indian Air Force founder background mean government approval?", answer: "No. MyEVStation is an independent venture. The founders' prior service background does not imply official Indian Air Force or Government of India endorsement, approval or certification." }
       ]} />
 
-      <footer className="bg-[#081f16] px-5 py-8 text-center text-sm text-white/60">© {new Date().getFullYear()} MyEVStation · <Link href="/society" className="text-white underline">All society solutions</Link> · <Link href="/" className="text-white underline">Home</Link></footer>
+      <footer className="bg-[#081f16] px-5 py-8 text-center text-sm text-white/60"><div className="flex flex-wrap justify-center gap-x-5 gap-y-3"><Link href="/" className="text-white underline">Home</Link><Link href="/society" className="text-white underline">All society solutions</Link><Link href="/punjab-ev-charging" className="text-white underline">Punjab EV charging</Link><Link href="/amritsar-ev-charging" className="text-white underline">Amritsar EV charging</Link><Link href="/ev-charging-investment-guide" className="text-white underline">Investment guide</Link></div><p className="mt-4">© {new Date().getFullYear()} MyEVStation</p></footer>
     </main>
   );
 }
