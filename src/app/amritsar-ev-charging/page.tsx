@@ -69,6 +69,19 @@ export default function AmritsarEvChargingPage() {
         </div>
       </section>
 
+      <section aria-label="Founder credibility" className="border-b border-[#dce8df] bg-white">
+        <div className="mx-auto grid max-w-7xl gap-4 px-5 py-6 sm:grid-cols-[auto_1fr] sm:items-center">
+          <div className="flex items-center gap-3">
+            <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-[#eaf3ed] text-[#0b5a42]"><ShieldCheck size={26} /></span>
+            <div>
+              <p className="text-xs font-extrabold uppercase tracking-[.12em] text-[#0b7652]">Founded by Ex-Indian Air Force Professionals</p>
+              <p className="mt-1 text-sm font-semibold text-[#172d21]">Discipline. Integrity. Execution.</p>
+            </div>
+          </div>
+          <p className="max-w-3xl text-sm leading-6 text-[#647067]">Our founding team brings four decades of aircraft-maintenance and technical experience to a safety-first approach to EV infrastructure. MyEVStation is an independent venture; this background does not imply official Indian Air Force or Government of India endorsement.</p>
+        </div>
+      </section>
+
       <section className="mx-auto max-w-7xl px-5 py-14 sm:py-20">
         <div className="max-w-3xl">
           <p className="text-xs font-extrabold uppercase tracking-[.2em] text-[#0b7652]">Local promotion focus</p>
