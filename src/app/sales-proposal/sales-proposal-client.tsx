@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { ArrowLeft, ArrowRight, BatteryCharging, Camera, CheckCircle2, Download, MapPin, Plus, Printer, Trash2, Zap } from "lucide-react";
 
 type Charger = { id: number; power: string; name: string; qty: number; price: number; image: string; category: string };
@@ -36,6 +36,19 @@ export default function SalesProposalPage() {
   const [showInternal, setShowInternal] = useState(false);
   const [prepared, setPrepared] = useState(false);
   const [proposalMode, setProposalMode] = useState<"automatic" | "custom">("automatic");
+
+  useEffect(() => {
+    if (step !== 3 || proposalMode !== "automatic" || chargers.length > 0) return;
+    const site = customer.site.toLowerCase();
+    let picks: Array<[number, number]>;
+    if (site.includes("society")) picks = [[4, 2], [0, 2]];
+    else if (site.includes("petrol") || site.includes("highway") || site.includes("mall") || site.includes("commercial")) picks = [[8, 1], [4, 2]];
+    else if (site.includes("fleet") || site.includes("warehouse")) picks = [[7, 1], [4, 1]];
+    else picks = [[4, 1], [0, 1]];
+    if (parking.cars === "Under 20") picks = [[4, 1], [0, 1]];
+    setChargers(picks.map(([index, qty], i) => ({ ...catalogue[index], id: Date.now() + i, qty })));
+    setPrepared(true);
+  }, [step, proposalMode, chargers.length, customer.site, parking.cars]);
 
   const totalQty = chargers.reduce((s, c) => s + c.qty, 0);
   const hardwareCost = chargers.reduce((s, c) => s + c.qty * c.price, 0);
@@ -138,7 +151,7 @@ export default function SalesProposalPage() {
           <section className="rounded-2xl border border-stone-200 bg-white p-4 shadow-sm sm:p-7">
             <h2 className="text-xl font-bold">3. Build your proposal</h2><p className="mt-1 text-sm text-stone-500">Choose automatic recommendations or customise every charger yourself.</p>
             <div className="mt-4 grid grid-cols-2 gap-2 rounded-xl bg-stone-100 p-1">
-              <button onClick={buildAutomaticMix} className={"rounded-lg px-3 py-3 text-sm font-bold " + (proposalMode === "automatic" ? "bg-emerald-900 text-white" : "text-stone-700")}>Automatic proposal</button>
+              <button onClick={() => { setChargers([]); setPrepared(false); setProposalMode("automatic"); }} className={"rounded-lg px-3 py-3 text-sm font-bold " + (proposalMode === "automatic" ? "bg-emerald-900 text-white" : "text-stone-700")}>Automatic proposal</button>
               <button onClick={() => setProposalMode("custom")} className={"rounded-lg px-3 py-3 text-sm font-bold " + (proposalMode === "custom" ? "bg-emerald-900 text-white" : "text-stone-700")}>Customised proposal</button>
             </div>
             {proposalMode === "automatic" && <div className="mt-3 rounded-xl bg-emerald-50 p-3 text-sm text-emerald-900">Suggested starter mix based on site type and parking answers. This is a preliminary recommendation, not an electrical design. Choose “Customised proposal” to change it.</div>}
@@ -148,7 +161,7 @@ export default function SalesProposalPage() {
               <button onClick={()=>addCharger(i)} className="mt-3 inline-flex min-h-10 w-full items-center justify-center gap-2 rounded-lg bg-emerald-900 px-3 py-2 text-sm font-bold text-white"><Plus size={16}/> Add charger</button>
             </div>)}</div>}
             <p className="mt-4 rounded-xl bg-amber-50 p-3 text-xs leading-5 text-amber-900">Pricing is an editable starting point from the supplier quotation previously provided. Confirm current price, GST, connector/gun configuration and technical suitability with the supplier before sending a final offer. 22 kW AC description needs supplier confirmation.</p>
-            <div className="mt-6 flex justify-between gap-3"><button onClick={()=>setStep(2)} className="inline-flex min-h-12 items-center gap-2 rounded-xl border border-stone-300 px-4 py-3 font-bold"><ArrowLeft size={18}/> Back</button><button onClick={()=>setPrepared(true)} className="inline-flex min-h-12 items-center gap-2 rounded-xl bg-[#0d5c3d] px-5 py-3 font-bold text-white"><CheckCircle2 size={18}/> Prepare proposal</button></div>
+            <div className="mt-6 flex justify-between gap-3"><button onClick={()=>setStep(2)} className="inline-flex min-h-12 items-center gap-2 rounded-xl border border-stone-300 px-4 py-3 font-bold"><ArrowLeft size={18}/> Back</button><button onClick={()=>{ if (chargers.length === 0) buildAutomaticMix(); else setPrepared(true); }} className="inline-flex min-h-12 items-center gap-2 rounded-xl bg-[#0d5c3d] px-5 py-3 font-bold text-white"><CheckCircle2 size={18}/> {chargers.length === 0 ? "Prepare recommended proposal" : "Prepare proposal"}</button></div>
           </section>
           <aside className="rounded-2xl border border-stone-200 bg-white p-4 shadow-sm sm:p-6">
             <h3 className="text-lg font-bold">Proposal summary</h3><p className="mt-1 text-sm text-stone-500">Customer-facing prices are calculated below.</p>
@@ -172,7 +185,7 @@ export default function SalesProposalPage() {
           <h2 className="mt-6 text-2xl font-bold">Site proposal{customer.name ? " for "+customer.name : ""}</h2>
           <div className="mt-4 grid gap-3 text-sm sm:grid-cols-2"><div><span className="text-stone-500">Site type:</span> {customer.site}</div><div><span className="text-stone-500">Contact:</span> {customer.phone || "Not provided"}</div><div><span className="text-stone-500">Location:</span> {[customer.city,customer.address].filter(Boolean).join(", ") || "To be confirmed"}</div><div><span className="text-stone-500">Prepared by:</span> {customer.salesperson || "myEVStation sales team"}</div></div>
           <h3 className="mt-6 font-bold">Recommended charger mix</h3>
-          {chargers.length ? <div className="mt-3 overflow-x-auto"><table className="w-full min-w-[480px] border-collapse text-left text-sm"><thead><tr className="bg-emerald-50"><th className="p-3">Charger</th><th className="p-3">Qty</th><th className="p-3">Unit price</th><th className="p-3">Amount</th></tr></thead><tbody>{chargers.map(c=><tr key={c.id} className="border-b border-stone-200"><td className="p-3">{c.power} {c.name}<div className="text-xs text-stone-500">{c.category}</div></td><td className="p-3">{c.qty}</td><td className="p-3">{money(Math.round(c.price*(1+margin/100)))}</td><td className="p-3 font-semibold">{money(Math.round(c.price*(1+margin/100))*c.qty)}</td></tr>)}</tbody></table></div> : <p className="mt-2 text-sm text-stone-500">Charger selection pending site assessment.</p>}
+          {chargers.length ? <div className="mt-3 overflow-x-auto"><table className="w-full min-w-[480px] border-collapse text-left text-sm"><thead><tr className="bg-emerald-50"><th className="p-3">Charger</th><th className="p-3">Qty</th><th className="p-3">Unit price</th><th className="p-3">Amount</th></tr></thead><tbody>{chargers.map(c=><tr key={c.id} className="border-b border-stone-200"><td className="p-3"><div className="flex items-center gap-3"><img src={c.image} alt={`${c.power} ${c.name}`} className="h-16 w-20 rounded object-contain" /><div><div className="font-semibold">{c.power} {c.name}</div><div className="text-xs text-stone-500">{c.category}</div></div></div></td><td className="p-3">{c.qty}</td><td className="p-3">{money(Math.round(c.price*(1+margin/100)))}</td><td className="p-3 font-semibold">{money(Math.round(c.price*(1+margin/100))*c.qty)}</td></tr>)}</tbody></table></div> : <p className="mt-2 text-sm text-stone-500">Charger selection pending site assessment.</p>}
           <div className="mt-4 ml-auto max-w-sm space-y-2 text-sm"><div className="flex justify-between"><span>Subtotal</span><b>{money(sellingSubtotal)}</b></div><div className="flex justify-between"><span>GST (assumed {tax}%)</span><b>{money(taxAmount)}</b></div><div className="flex justify-between border-t pt-3 text-lg"><b>Indicative total</b><b className="text-emerald-900">{money(grandTotal)}</b></div></div>
           {showInternal && <div className="mt-4 rounded bg-amber-50 p-3 text-xs font-bold text-amber-900">INTERNAL ONLY — Supplier hardware cost: {money(hardwareCost)}. Do not share with customer.</div>}
           {photos.length>0 && <><h3 className="mt-6 font-bold">Site photos</h3><div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-3">{photos.map((p,i)=><div key={p.name+i}><img src={p.url} alt={p.name} className="h-36 w-full rounded-lg object-cover"/><p className="mt-1 text-xs text-stone-500">{p.name}</p></div>)}</div></>}
@@ -190,7 +203,7 @@ export default function SalesProposalPage() {
               <div><div className="mb-2 font-bold uppercase tracking-wide text-stone-500">Seller</div><div className="font-bold">myEVStation</div><div>Founded by Ex-Indian Air Force Personnel</div><div>Seller address, GSTIN and legal entity details: to be added before issuing a tax invoice.</div></div>
             </div>
             <h3 className="mt-7 font-bold">Invoice line items</h3>
-            {chargers.length ? <table className="mt-3 w-full border-collapse text-left text-sm"><thead><tr className="bg-emerald-50"><th className="border p-2">Description</th><th className="border p-2 text-right">Qty</th><th className="border p-2 text-right">Unit rate</th><th className="border p-2 text-right">Amount</th></tr></thead><tbody>{chargers.map(c=><tr key={"inv-"+c.id} className="break-inside-avoid"><td className="border p-2">{c.power} {c.name}<div className="text-xs text-stone-500">{c.category}</div></td><td className="border p-2 text-right">{c.qty}</td><td className="border p-2 text-right">{money(Math.round(c.price*(1+margin/100)))}</td><td className="border p-2 text-right">{money(Math.round(c.price*(1+margin/100))*c.qty)}</td></tr>)}</tbody></table> : <p className="mt-2 text-sm text-stone-500">No items selected. Return to the proposal builder and select chargers.</p>}
+            {chargers.length ? <table className="mt-3 w-full border-collapse text-left text-sm"><thead><tr className="bg-emerald-50"><th className="border p-2">Description</th><th className="border p-2 text-right">Qty</th><th className="border p-2 text-right">Unit rate</th><th className="border p-2 text-right">Amount</th></tr></thead><tbody>{chargers.map(c=><tr key={"inv-"+c.id} className="break-inside-avoid"><td className="border p-2"><div className="flex items-center gap-2"><img src={c.image} alt={`${c.power} ${c.name}`} className="h-14 w-16 object-contain" /><div>{c.power} {c.name}<div className="text-xs text-stone-500">{c.category}</div></div></div></td><td className="border p-2 text-right">{c.qty}</td><td className="border p-2 text-right">{money(Math.round(c.price*(1+margin/100)))}</td><td className="border p-2 text-right">{money(Math.round(c.price*(1+margin/100))*c.qty)}</td></tr>)}</tbody></table> : <p className="mt-2 text-sm text-stone-500">No items selected. Return to the proposal builder and select chargers.</p>}
             <div className="ml-auto mt-5 max-w-sm space-y-2 text-sm"><div className="flex justify-between"><span>Taxable subtotal</span><b>{money(sellingSubtotal)}</b></div><div className="flex justify-between"><span>GST estimate ({tax}%)</span><b>{money(taxAmount)}</b></div><div className="flex justify-between border-t pt-3 text-lg"><b>Total payable (indicative)</b><b className="text-emerald-900">{money(grandTotal)}</b></div></div>
             <div className="mt-6 rounded-lg bg-stone-50 p-4 text-sm leading-6"><b>Payment terms:</b> To be agreed in writing. <br/><b>Delivery / installation:</b> Not included unless separately confirmed in writing. <br/><b>Bank details:</b> To be shared on the final invoice. <br/><b>Tax note:</b> GST rate is an editable estimate only. Confirm correct HSN/SAC, tax rate, place of supply, seller legal name, address and GSTIN with your accountant before issuing a tax invoice.</div>
             <div className="mt-8 grid grid-cols-2 gap-8 text-xs text-stone-600"><div className="border-t pt-2">Customer acceptance / signature</div><div className="border-t pt-2 text-right">Authorised signatory — myEVStation</div></div>
@@ -205,7 +218,7 @@ export default function SalesProposalPage() {
           #proposal-print, #proposal-print * { visibility: visible; }
           #proposal-print { position: absolute; left: 0; top: 0; width: 100%; box-shadow: none !important; }
           header, button, input, select, textarea, aside { display: none !important; }
-          #proposal-print img { break-inside: avoid; max-height: 170px; }
+          #proposal-print img { display: block !important; visibility: visible !important; break-inside: avoid; max-height: 170px; max-width: 100%; object-fit: contain; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
           #proposal-print table { width: 100%; }
           #proposal-print tr { break-inside: avoid; }
           @page { size: A4; margin: 12mm; }
