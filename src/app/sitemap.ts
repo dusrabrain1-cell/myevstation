@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/business-model", changeFrequency: "monthly" as const, priority: 0.9 },
     { path: "/technology", changeFrequency: "monthly" as const, priority: 0.8 },
     { path: "/ev-charging-investment-guide", changeFrequency: "monthly" as const, priority: 0.9 },
+    { path: "/ev-charging-calculator", changeFrequency: "monthly" as const, priority: 0.9 },
     { path: "/impact", changeFrequency: "monthly" as const, priority: 0.7 },
     { path: "/faq", changeFrequency: "monthly" as const, priority: 0.8 },
     { path: "/about-us", changeFrequency: "monthly" as const, priority: 0.7 },
