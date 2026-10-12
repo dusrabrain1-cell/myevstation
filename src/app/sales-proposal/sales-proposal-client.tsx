@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { ArrowLeft, ArrowRight, BatteryCharging, Camera, CheckCircle2, Download, MapPin, Plus, Printer, Trash2, Zap } from "lucide-react";
 
 type Charger = { id: number; power: string; name: string; qty: number; price: number; image: string; category: string };
@@ -36,6 +36,19 @@ export default function SalesProposalPage() {
   const [showInternal, setShowInternal] = useState(false);
   const [prepared, setPrepared] = useState(false);
   const [proposalMode, setProposalMode] = useState<"automatic" | "custom">("automatic");
+
+  useEffect(() => {
+    if (step !== 3 || proposalMode !== "automatic" || chargers.length > 0) return;
+    const site = customer.site.toLowerCase();
+    let picks: Array<[number, number]>;
+    if (site.includes("society")) picks = [[4, 2], [0, 2]];
+    else if (site.includes("petrol") || site.includes("highway") || site.includes("mall") || site.includes("commercial")) picks = [[8, 1], [4, 2]];
+    else if (site.includes("fleet") || site.includes("warehouse")) picks = [[7, 1], [4, 1]];
+    else picks = [[4, 1], [0, 1]];
+    if (parking.cars === "Under 20") picks = [[4, 1], [0, 1]];
+    setChargers(picks.map(([index, qty], i) => ({ ...catalogue[index], id: Date.now() + i, qty })));
+    setPrepared(true);
+  }, [step, proposalMode, chargers.length, customer.site, parking.cars]);
 
   const totalQty = chargers.reduce((s, c) => s + c.qty, 0);
   const hardwareCost = chargers.reduce((s, c) => s + c.qty * c.price, 0);
@@ -205,7 +218,7 @@ export default function SalesProposalPage() {
           #proposal-print, #proposal-print * { visibility: visible; }
           #proposal-print { position: absolute; left: 0; top: 0; width: 100%; box-shadow: none !important; }
           header, button, input, select, textarea, aside { display: none !important; }
-          #proposal-print img { break-inside: avoid; max-height: 170px; }
+          #proposal-print img { display: block !important; visibility: visible !important; break-inside: avoid; max-height: 170px; max-width: 100%; object-fit: contain; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
           #proposal-print table { width: 100%; }
           #proposal-print tr { break-inside: avoid; }
           @page { size: A4; margin: 12mm; }
