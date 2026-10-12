@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import SeoFaq from "@/components/custom/SeoFaq";
 import { ArrowLeft, ArrowRight, MapPin, Zap, Building2, CheckCircle2, CarFront, Bike, Truck, ClipboardCheck, Store } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -156,6 +157,15 @@ export default function PunjabEvChargingPage() {
           <a href={whatsapp} className="mt-7 inline-flex items-center gap-2 rounded-xl bg-[#e87522] px-6 py-4 font-extrabold text-white">Contact MyEVStation <ArrowRight size={17} /></a>
         </div>
       </section>
+      <SeoFaq eyebrow="Punjab site development" title="Punjab EV charging: frequently asked questions" items={[
+        { question: "Which Punjab cities is MyEVStation targeting?", answer: "The current prospecting plan covers Majha, Doaba, Malwa and Tricity catchments, including Amritsar, Jalandhar, Ludhiana, Bathinda, Patiala, Mohali, Zirakpur, Hoshiarpur, Pathankot, Firozpur, Fazilka, Faridkot, Muktsar, Mansa and other listed markets. These are outreach areas, not a verified list of places with no chargers." },
+        { question: "Which areas in Punjab have no EV charging stations?", answer: "We cannot responsibly label an entire city or locality as having no chargers without current field verification. Public directories can be incomplete. Check operator apps and maps, connector compatibility, opening hours, public access and operational status, then visit the proposed location before calling it underserved." },
+        { question: "What types of locations are suitable for EV charging in Punjab?", answer: "Potential sites include authorised commercial parking, markets, hotels, housing societies, industrial properties, fleet depots, e-rickshaw or delivery hubs and highway-facing businesses. Suitability depends on demand, dwell time, access, property permission and electrical capacity." },
+        { question: "How can a Punjab property owner propose a site?", answer: "Share the city, locality, property type, parking spaces, ownership or permission status, expected EV users and any known electrical-load information. A site should then be checked for nearby operational chargers, demand, connection feasibility and total installation cost." },
+        { question: "Does MyEVStation guarantee earnings or provide government subsidies?", answer: "No earnings or subsidy is guaranteed. Revenue depends on utilisation and costs; subsidy and policy eligibility must be verified against current official rules and the specific applicant and project. Request written commercial assumptions and confirm any incentive with the relevant authority." },
+        { question: "Are MyEVStation's founders officially representing the Indian Air Force?", answer: "No. MyEVStation is an independent venture. Founder military service and technical experience are personal professional credentials and do not imply official Indian Air Force or Government of India endorsement." }
+      ]} />
+
       <footer className="bg-[#081f16] px-5 py-8 text-center text-sm text-white/60">© {new Date().getFullYear()} MyEVStation · <Link href="/" className="text-white underline">Home</Link></footer>
     </main>
   );
