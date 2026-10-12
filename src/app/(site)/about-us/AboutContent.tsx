@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, BatteryCharging, ShieldCheck, MapPin, Zap, Gauge, Leaf, CheckCircle2, CarFront, Bike, Building2, Calculator, IndianRupee, RadioTower, PlugZap, Users, Flag } from "lucide-react";
+import { ArrowRight, ShieldCheck, Zap, Calculator } from "lucide-react";
 
 export default function AboutContent() {
   return (
