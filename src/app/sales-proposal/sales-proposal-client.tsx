@@ -28,7 +28,7 @@ const labelClass = "block text-sm font-semibold text-stone-700";
 export default function SalesProposalPage() {
   const [step, setStep] = useState(1);
   const [customer, setCustomer] = useState({ name: "", phone: "", email: "", site: "Residential society", address: "", city: "", salesperson: "", notes: "" });
-  const [parking, setParking] = useState({ cars: "20–50", twoWheelers: "20–50", hours: "8–12 hours", power: "Not sure", permission: "Permission needed" });
+  const [parking, setParking] = useState({ cars: "20–50", dailyDemand: "5–10", twoWheelers: "20–50", hours: "8–12 hours", power: "Not sure", permission: "Permission needed" });
   const [chargers, setChargers] = useState<Charger[]>([]);
   const [photos, setPhotos] = useState<Photo[]>([]);
   const [margin, setMargin] = useState(20);
@@ -38,17 +38,24 @@ export default function SalesProposalPage() {
   const [proposalMode, setProposalMode] = useState<"automatic" | "custom">("automatic");
 
   useEffect(() => {
-    if (step !== 3 || proposalMode !== "automatic" || chargers.length > 0) return;
+    if (step !== 3 || proposalMode !== "automatic") return;
     const site = customer.site.toLowerCase();
+    const demand = parking.dailyDemand;
     let picks: Array<[number, number]>;
-    if (site.includes("society")) picks = [[4, 2], [0, 2]];
+    if (demand === "3–5") picks = [[4, 2]];
+    else if (demand === "5–10") picks = [[4, 4]];
+    else if (demand === "10–15") picks = [[4, 5]];
+    else if (demand === "15–25") picks = [[4, 6]];
+    else if (demand === "25–40") picks = [[8, 1]];
+    else if (demand === "40–75") picks = [[9, 1]];
+    else if (demand === "75–100+") picks = [[10, 1]];
     else if (site.includes("petrol") || site.includes("highway") || site.includes("mall") || site.includes("commercial")) picks = [[8, 1], [4, 2]];
     else if (site.includes("fleet") || site.includes("warehouse")) picks = [[7, 1], [4, 1]];
-    else picks = [[4, 1], [0, 1]];
-    if (parking.cars === "Under 20") picks = [[4, 1], [0, 1]];
+    else picks = [[4, 2], [0, 2]];
+    if (parking.cars === "Under 20" && ["Not sure", "3–5"].includes(demand)) picks = [[4, 1], [0, 1]];
     setChargers(picks.map(([index, qty], i) => ({ ...catalogue[index], id: Date.now() + i, qty })));
     setPrepared(true);
-  }, [step, proposalMode, chargers.length, customer.site, parking.cars]);
+  }, [step, proposalMode, customer.site, parking.cars, parking.dailyDemand]);
 
   const totalQty = chargers.reduce((s, c) => s + c.qty, 0);
   const hardwareCost = chargers.reduce((s, c) => s + c.qty * c.price, 0);
@@ -58,12 +65,19 @@ export default function SalesProposalPage() {
 
   const buildAutomaticMix = () => {
     const site = customer.site.toLowerCase();
+    const demand = parking.dailyDemand;
     let picks: Array<[number, number]>;
-    if (site.includes("society")) picks = [[4, 2], [0, 2]];
+    if (demand === "3–5") picks = [[4, 2]];
+    else if (demand === "5–10") picks = [[4, 4]];
+    else if (demand === "10–15") picks = [[4, 5]];
+    else if (demand === "15–25") picks = [[4, 6]];
+    else if (demand === "25–40") picks = [[8, 1]];
+    else if (demand === "40–75") picks = [[9, 1]];
+    else if (demand === "75–100+") picks = [[10, 1]];
     else if (site.includes("petrol") || site.includes("highway") || site.includes("mall") || site.includes("commercial")) picks = [[8, 1], [4, 2]];
     else if (site.includes("fleet") || site.includes("warehouse")) picks = [[7, 1], [4, 1]];
-    else picks = [[4, 1], [0, 1]];
-    if (parking.cars === "Under 20") picks = [[4, 1], [0, 1]];
+    else picks = [[4, 2], [0, 2]];
+    if (parking.cars === "Under 20" && ["Not sure", "3–5"].includes(demand)) picks = [[4, 1], [0, 1]];
     setChargers(picks.map(([index, qty], i) => ({ ...catalogue[index], id: Date.now() + i, qty })));
     setProposalMode("automatic");
     setPrepared(true);
@@ -134,6 +148,7 @@ export default function SalesProposalPage() {
           <h2 className="text-xl font-bold">2. Tell us about the site</h2><p className="mt-1 text-sm text-stone-500">Choose the closest answer. “Not sure” is always okay.</p>
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
             <label className={labelClass}>Available car parking<select className={inputClass} value={parking.cars} onChange={e=>setParking({...parking,cars:e.target.value})}>{["Under 20","20–50","51–100","Over 100","Not sure"].map(x=><option key={x}>{x}</option>)}</select></label>
+            <label className={labelClass}>Estimated cars needing a charge daily<select className={inputClass} value={parking.dailyDemand} onChange={e=>setParking({...parking,dailyDemand:e.target.value})}>{["Not sure","3–5","5–10","10–15","15–25","25–40","40–75","75–100+"].map(x=><option key={x}>{x}</option>)}</select></label>
             <label className={labelClass}>Two-wheeler parking<select className={inputClass} value={parking.twoWheelers} onChange={e=>setParking({...parking,twoWheelers:e.target.value})}>{["None","Under 20","20–50","51–100","Over 100","Not sure"].map(x=><option key={x}>{x}</option>)}</select></label>
             <label className={labelClass}>How long is parking used each day?<select className={inputClass} value={parking.hours} onChange={e=>setParking({...parking,hours:e.target.value})}>{["Under 4 hours","4–8 hours","8–12 hours","12–24 hours","Not sure"].map(x=><option key={x}>{x}</option>)}</select></label>
             <label className={labelClass}>Electricity available at site?<select className={inputClass} value={parking.power} onChange={e=>setParking({...parking,power:e.target.value})}>{["Yes, confirmed","Need electrician to check","Not sure","No connection yet"].map(x=><option key={x}>{x}</option>)}</select></label>
