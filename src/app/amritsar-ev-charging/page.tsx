@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, Building2, CheckCircle2, MapPin, Zap, CarFront, Bike, Store, ClipboardCheck } from "lucide-react";
+import { ArrowLeft, ArrowRight, Building2, CheckCircle2, MapPin, ShieldCheck, Zap, CarFront, Bike, Store, ClipboardCheck } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "EV Charging Stations for Amritsar Markets & Housing Societies",
