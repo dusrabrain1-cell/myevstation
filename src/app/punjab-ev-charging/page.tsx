@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, MapPin, ShieldCheck, Zap, Building2, CheckCircle2, CarFront, Bike, Truck, ClipboardCheck, Store } from "lucide-react";
+import { ArrowLeft, ArrowRight, MapPin, Zap, Building2, CheckCircle2, CarFront, Bike, Truck, ClipboardCheck, Store } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "EV Charging Station Opportunities Across Punjab | City-Wise",
@@ -108,7 +108,7 @@ export default function PunjabEvChargingPage() {
       <section aria-label="Founder credibility" className="border-b border-[#dce8df] bg-white">
         <div className="mx-auto grid max-w-7xl gap-4 px-5 py-6 sm:grid-cols-[auto_1fr] sm:items-center">
           <div className="flex items-center gap-3">
-            <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-[#eaf3ed] text-[#0b5a42]"><ShieldCheck size={26} /></span>
+            <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-[#eaf3ed] text-[#0b5a42]"><CheckCircle2 size={26} /></span>
             <div>
               <p className="text-xs font-extrabold uppercase tracking-[.12em] text-[#0b7652]">Founded by Ex-Indian Air Force Professionals</p>
               <p className="mt-1 text-sm font-semibold text-[#172d21]">Discipline. Integrity. Execution.</p>
