@@ -166,7 +166,7 @@ export default function PunjabEvChargingPage() {
         { question: "Are MyEVStation's founders officially representing the Indian Air Force?", answer: "No. MyEVStation is an independent venture. Founder military service and technical experience are personal professional credentials and do not imply official Indian Air Force or Government of India endorsement." }
       ]} />
 
-      <footer className="bg-[#081f16] px-5 py-8 text-center text-sm text-white/60">© {new Date().getFullYear()} MyEVStation · <Link href="/" className="text-white underline">Home</Link></footer>
+      <footer className="bg-[#081f16] px-5 py-8 text-center text-sm text-white/60"><div className="flex flex-wrap justify-center gap-x-5 gap-y-3"><Link href="/" className="text-white underline">Home</Link><Link href="/amritsar-ev-charging" className="text-white underline">Amritsar EV charging</Link><Link href="/greater-noida-societies" className="text-white underline">Greater Noida society charging</Link><Link href="/ev-charging-investment-guide" className="text-white underline">Investment guide</Link></div><p className="mt-4">© {new Date().getFullYear()} MyEVStation</p></footer>
     </main>
   );
 }
