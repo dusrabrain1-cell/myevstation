@@ -19,7 +19,7 @@ export default function SeoFaq({
         <div className="mb-8">
           <p className="text-xs font-extrabold uppercase tracking-[.2em] text-[#0b7652]">{eyebrow}</p>
           <h2 id="faq-heading" className="mt-3 text-3xl font-black text-[#172d21] sm:text-4xl">{title}</h2>
-          <p className="mt-3 max-w-3xl leading-7 text-[#647067]">Clear answers to common questions. Final charger selection, costs, permissions and returns depend on the specific site and written proposal.</p>
+          <p className="mt-3 max-w-3xl leading-7 text-[#647067]">Clear, practical answers to help you take the next step. MyEVStation can guide you through likely site permissions, document preparation and coordination with relevant property representatives or electricity providers. Requirements vary by site, and final approval rests with the relevant decision-maker or authority.</p>
         </div>
         <div className="divide-y divide-[#dce6dd] overflow-hidden rounded-2xl border border-[#dce6dd] bg-white">
           {items.map((item, index) => (
