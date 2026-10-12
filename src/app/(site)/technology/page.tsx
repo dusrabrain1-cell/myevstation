@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { ArrowRight, BatteryCharging, CheckCircle2, PlugZap, ShieldCheck, Zap } from "lucide-react";
-export const metadata: Metadata = { title: "EV Charging Technology and Safety", description: "Learn how MyEVStation approaches EV charger compatibility, AC and DC selection, electrical capacity, site planning and safety.", alternates: { canonical: "/technology" } };
-const items=[{title:"Choose the right charger",text:"Match connector, vehicle compatibility, charging power and parking duration. Higher power is not automatically better for every site.",icon:PlugZap},{title:"Check electrical feasibility",text:"A qualified professional should review sanctioned load, distribution equipment, cable routes, earthing, protection and any upgrade needs.",icon:Zap},{title:"Plan for safe operation",text:"Consider vehicle movement, weather exposure, access control, signage, emergency procedures, inspection and maintenance responsibilities.",icon:ShieldCheck},{title:"Understand connected features",text:"Depending on the selected equipment and enabled integrations, charging systems may support remote monitoring, session records and operational visibility.",icon:BatteryCharging}];
-export default function TechnologyPage(){return <main className="bg-[#f7f9f6] text-[#17212b]"><section className="bg-[#092d20] text-white"><div className="mx-auto max-w-7xl px-5 py-16 sm:py-20 lg:px-8"><p className="text-xs font-extrabold uppercase tracking-[.2em] text-[#ffc18f]">Technology & safety</p><h1 className="mt-4 max-w-3xl text-4xl font-black tracking-tight sm:text-5xl">Right charger. Suitable site. Safety-led installation.</h1><p className="mt-5 max-w-2xl leading-7 text-white/75">The technology decision should follow a site assessment and vehicle requirements—not just a charger price or headline power rating.</p></div></section><section className="mx-auto max-w-7xl px-5 py-14 sm:py-16 lg:px-8"><div className="grid gap-5 sm:grid-cols-2">{items.map(({title,text,icon:Icon})=><article key={title} className="rounded-2xl border border-[#e0e8e0] bg-white p-6"><span className="grid h-11 w-11 place-items-center rounded-xl bg-[#eaf4ec] text-[#0b7652]"><Icon size={22}/></span><h2 className="mt-4 text-xl font-extrabold text-[#173628]">{title}</h2><p className="mt-3 text-sm leading-7 text-[#647067]">{text}</p></article>)}</div><p className="mt-7 rounded-xl border border-[#e0e8e0] bg-white p-5 text-sm leading-7 text-[#647067]">Technology features, compatibility, installation requirements and safety measures vary by model and site. Qualified electrical assessment and manufacturer instructions remain essential. Connected monitoring does not replace certified inspection or vehicle battery-management systems.</p><Link href="/faq" className="mt-7 inline-flex items-center gap-2 rounded-full bg-[#0b5a42] px-6 py-3.5 text-sm font-extrabold text-white">Read FAQs <ArrowRight size={16}/></Link></section></main>}
+import TechnologyContent from "./TechnologyContent";
+
+export const metadata: Metadata = {
+  title: "EV Charging Technology and Safety",
+  description: "Learn how MyEVStation approaches EV charger compatibility, AC and DC selection, electrical capacity, site planning and safety.",
+  alternates: { canonical: "/technology" },
+};
+
+export default function Page() {
+  return <main className="bg-white text-[#17212b]"><TechnologyContent /></main>;
+}
