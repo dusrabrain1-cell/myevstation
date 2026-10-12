@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, MapPin, Zap, Building2, CheckCircle2, CarFront, Bike, Truck, ClipboardCheck } from "lucide-react";
+import { ArrowLeft, ArrowRight, MapPin, Zap, Building2, CheckCircle2, CarFront, Bike, Truck, ClipboardCheck, Store } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "EV Charging Station Opportunities Across Punjab | City-Wise",
@@ -62,15 +62,12 @@ const cityGroups = [
 ];
 
 const siteTypes = [
-  { Icon: StoreIcon, title: "Markets & commercial properties", body: "Approach market associations, shopping complexes, hotels, restaurants, hospitals and paid-parking operators." },
+  { Icon: Store, title: "Markets & commercial properties", body: "Approach market associations, shopping complexes, hotels, restaurants, hospitals and paid-parking operators." },
   { Icon: Building2, title: "Housing societies & apartments", body: "Work with RWAs and facility managers on resident parking and shared visitor charging." },
   { Icon: Truck, title: "Fleets & transport hubs", body: "Assess e-rickshaws, delivery fleets, taxis and commercial vehicles with recurring daily charging demand." },
   { Icon: CarFront, title: "Highway & destination sites", body: "Evaluate fuel stations, hotels and rest stops where access, dwell time and electrical supply are suitable." },
 ];
 
-function StoreIcon(props: React.ComponentProps<typeof Building2>) {
-  return <Building2 {...props} />;
-}
 
 export default function PunjabEvChargingPage() {
   const whatsapp = "https://wa.me/919625670132?text=Hello%20MyEVStation%2C%20I%20want%20to%20explore%20an%20EV%20charging%20site%20in%20Punjab.%20Please%20help%20me%20assess%20my%20city%2C%20property%20and%20charging%20demand.";
