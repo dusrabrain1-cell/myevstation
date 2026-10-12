@@ -7,14 +7,14 @@ type Charger = { id: number; power: string; name: string; qty: number; price: nu
 type Photo = { name: string; url: string };
 
 const catalogue: Omit<Charger, "id" | "qty">[] = [
-  { power: "3.3 kW", name: "EV charging socket", price: 5000, category: "Socket / 2W–4W", image: "/images/2a.png" },
-  { power: "3 kW", name: "Blaze DC – single gun", price: 76000, category: "DC / 2W–3W", image: "/images/3a.png" },
-  { power: "6 kW", name: "Blaze DC", price: 140000, category: "DC / 2W–3W", image: "/images/3B.png" },
-  { power: "12 kW", name: "Blaze DC", price: 180000, category: "DC / 2W–3W", image: "/images/3C.png" },
-  { power: "7.4 kW", name: "Blaze AC", price: 25000, category: "AC / Cars", image: "/images/6A.png" },
+  { power: "3.3 kW", name: "EV charging socket", price: 5000, category: "Socket / 2W–4W", image: "/images/socket-3-3kw.png" },
+  { power: "3 kW", name: "Blaze DC – single gun", price: 76000, category: "DC / 2W–3W", image: "/images/blaze-dc-2w-3w.png" },
+  { power: "6 kW", name: "Blaze DC", price: 140000, category: "DC / 2W–3W", image: "/images/blaze-dc-2w-3w.png" },
+  { power: "12 kW", name: "Blaze DC", price: 180000, category: "DC / 2W–3W", image: "/images/blaze-dc-2w-3w.png" },
+  { power: "7.4 kW", name: "Blaze AC", price: 25000, category: "AC / Cars", image: "/images/blaze-ac.png" },
   { power: "11 kW", name: "Blaze AC", price: 35000, category: "AC / Cars", image: "/images/6A.png" },
   { power: "22 kW", name: "Blaze AC", price: 35000, category: "AC / Cars", image: "/images/6A.png" },
-  { power: "30 kW", name: "Lightning DC – single gun", price: 330000, category: "DC fast / Cars", image: "/images/7.png" },
+  { power: "30 kW", name: "Lightning DC – single gun", price: 330000, category: "DC fast / Cars", image: "/images/lightning-dc.png" },
   { power: "60 kW", name: "Lightning DC – dual gun", price: 610000, category: "DC fast / Cars", image: "/images/7.png" },
   { power: "120 kW", name: "Lightning DC – dual gun", price: 810000, category: "DC fast / Cars", image: "/images/7.png" },
   { power: "180 kW", name: "Lightning DC – dual gun", price: 1200000, category: "DC fast / Cars, buses", image: "/images/7.png" },
