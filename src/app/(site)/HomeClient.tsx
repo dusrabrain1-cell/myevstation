@@ -2,9 +2,9 @@
 import Image from "next/image";
 import SeoFaq from "@/components/custom/SeoFaq";
 
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
-import { ArrowRight, BatteryCharging, ShieldCheck, MapPin, Zap, Gauge, Leaf, Menu, X, CheckCircle2, CarFront, Bike, Building2, Calculator, IndianRupee, ChevronDown, RadioTower, Route, PlugZap, Users, Flag, Target, BadgeCheck } from "lucide-react";
+import { ArrowRight, BatteryCharging, ShieldCheck, MapPin, Zap, Gauge, Leaf, Menu, X, CheckCircle2, CarFront, Bike, Building2, Calculator, IndianRupee, RadioTower, PlugZap, Users, Flag } from "lucide-react";
 
 const sections = [
   { label: "Home", href: "/" },
@@ -278,7 +278,7 @@ export default function HomePage() {
         { question: "What if I do not know which permissions or documents are required?", answer: "You do not need to figure it out alone. Share your location, site type, whether you own or lease the property, and whether it is a society, commercial site or private parking. MyEVStation will help you understand the likely permission steps and document checklist, then guide you toward the relevant property representative, DISCOM or local authority. The exact checklist depends on the site." }
       ]} />
 
-      <footer className="bg-[#0b2018] text-white"><div className="mx-auto flex max-w-7xl flex-col gap-6 px-5 py-10 sm:flex-row sm:items-center sm:justify-between lg:px-8"><div className="flex items-center gap-3"><span className="grid h-10 w-10 place-items-center rounded-xl bg-[#0b5a42] text-white"><Zap size={22} fill="currentColor"/></span><div><b className="text-lg">myEVStation</b><p className="text-[9px] font-bold uppercase tracking-[.08em] text-white/70">Founded by Ex-Indian Air Force</p></div></div><div className="flex flex-wrap gap-5 text-sm text-white/65"><a href="#model" className="hover:text-white">Models</a><a href="#investment" className="hover:text-white">Investment</a><a href="#technology" className="hover:text-white">Technology</a><Link href="/ev-charging-investment-guide" className="hover:text-white">Investment Guide</Link><Link href="/punjab-ev-charging" className="hover:text-white">Punjab EV Charging</Link><Link href="/amritsar-ev-charging" className="hover:text-white">Amritsar EV Charging</Link><Link href="/greater-noida-societies" className="hover:text-white">Greater Noida Societies</Link><a href="https://wa.me/919625670132?text=Hello%20MyEVStation%2C%20I%20would%20like%20to%20enquire%20about%20EV%20charging%20station%20opportunities." className="hover:text-white">Contact</a></div><span className="text-xs text-white/45">© {new Date().getFullYear()} MyEVStation</span></div></footer>
+      <footer className="bg-[#0b2018] text-white"><div className="mx-auto flex max-w-7xl flex-col gap-6 px-5 py-10 sm:flex-row sm:items-center sm:justify-between lg:px-8"><div className="flex items-center gap-3"><span className="grid h-10 w-10 place-items-center rounded-xl bg-[#0b5a42] text-white"><Zap size={22} fill="currentColor"/></span><div><b className="text-lg">myEVStation</b><p className="text-[9px] font-bold uppercase tracking-[.08em] text-white/70">Founded by Ex-Indian Air Force</p></div></div><div className="flex flex-wrap gap-5 text-sm text-white/65"><a href="#model" className="hover:text-white">Models</a><a href="/ev-charging-calculator" className="hover:text-white">Investment</a><a href="#technology" className="hover:text-white">Technology</a><Link href="/ev-charging-investment-guide" className="hover:text-white">Investment Guide</Link><Link href="/punjab-ev-charging" className="hover:text-white">Punjab EV Charging</Link><Link href="/amritsar-ev-charging" className="hover:text-white">Amritsar EV Charging</Link><Link href="/greater-noida-societies" className="hover:text-white">Greater Noida Societies</Link><a href="https://wa.me/919625670132?text=Hello%20MyEVStation%2C%20I%20would%20like%20to%20enquire%20about%20EV%20charging%20station%20opportunities." className="hover:text-white">Contact</a></div><span className="text-xs text-white/45">© {new Date().getFullYear()} MyEVStation</span></div></footer>
     </main>
   );
 }
