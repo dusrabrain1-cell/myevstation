@@ -1,17 +1,24 @@
 "use client";
+import Image from "next/image";
 import SeoFaq from "@/components/custom/SeoFaq";
 
 import { useMemo, useState } from "react";
+import Link from "next/link";
 import { ArrowRight, BatteryCharging, ShieldCheck, MapPin, Zap, Gauge, Leaf, Menu, X, CheckCircle2, CarFront, Bike, Building2, Calculator, IndianRupee, ChevronDown, RadioTower, Route, PlugZap, Users, Flag, Target, BadgeCheck } from "lucide-react";
+
 const sections = [
-  { label: "Home", href: "#home" },
-  { label: "Why MyEVStation", href: "#mission" },
-  { label: "Business Model", href: "#model" },
-  { label: "Technology", href: "#technology" },
-  { label: "Investment", href: "#investment" },
-  { label: "Impact", href: "#impact" },
-  { label: "FAQs", href: "#faq" },
-  { label: "About Us", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "Why MyEVStation", href: "/why-myevstation" },
+  { label: "Business Model", href: "/business-model" },
+  { label: "Technology", href: "/technology" },
+  { label: "Investment", href: "/ev-charging-investment-guide" },
+  { label: "Calculator", href: "/ev-charging-calculator" },
+  { label: "Impact", href: "/impact" },
+  { label: "FAQs", href: "/faq" },
+  { label: "About Us", href: "/about-us" },
+];
+
+export default function HomePage() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [land, setLand] = useState("without");
   const [packagePlan, setPackagePlan] = useState("starter");
@@ -64,12 +71,14 @@ const sections = [
     return { investment: selectedCharger.price * chargerCount, chargers: chargerCount, guns: chargerCount, sessions, energy, gross, powerCost, fees, maintenance, net, annual: net * 12, payback: net > 0 ? (selectedCharger.price * chargerCount) / net : null, basis: "Land/site-owner estimate: quoted charger hardware only, user-adjustable sessions, kWh/session, tariff and energy cost, 15% CMS fee by default, and annual maintenance divided monthly. Installation, civil work, electrical upgrades, rent, taxes beyond quoted price and financing are excluded." };
   }, [land, packagePlan, packageData.investment, packageData.chargers, packageData.guns, packageData.fixedCosts, cyclesPerGunDay, customSessionsPerDay, chargerCount, kwhPerSession, sellingRate, energyCost, cmsRate, selectedCharger]);
 
+  return (
     <main id="home" className="min-h-screen bg-white text-[#17212b]">
       <header className="relative z-50 border-b border-[#e4e9e4] bg-white/95 shadow-[0_4px_18px_rgba(7,30,22,0.06)] backdrop-blur-md">
         <div className="mx-auto flex min-h-[76px] max-w-[1600px] items-center justify-between gap-3 px-4 py-2 lg:min-h-[82px] lg:gap-4 lg:px-6">
           <Link href="/" className="flex shrink-0 items-center gap-2.5" aria-label="MyEVStation home">
             <span className="grid h-10 w-10 place-items-center rounded-xl bg-[#0b5a42] text-white shadow-sm sm:h-11 sm:w-11"><Zap size={24} fill="currentColor" /></span>
             <span className="leading-tight"><span className="block whitespace-nowrap text-[19px] font-extrabold tracking-tight text-[#172d21] sm:text-[21px]">my<span className="text-[#e87522]">EV</span>Station</span><span className="mt-0.5 block whitespace-nowrap text-[8px] font-extrabold uppercase tracking-[.09em] text-[#0b5a42] sm:text-[9px]">Founded by Ex-Indian Air Force</span></span>
+          </Link>
           <nav className="hidden min-w-0 flex-1 items-center justify-start gap-3 pl-1 lg:flex xl:gap-4 xl:pl-2">{sections.map(s => <a key={s.href} href={s.href} className="shrink-0 whitespace-nowrap text-[12px] font-semibold text-[#35423e] transition hover:text-[#e87522] xl:text-[13px]">{s.label}</a>)}<a href="https://wa.me/919625670132?text=Hello%20MyEVStation%2C%20I%20would%20like%20to%20enquire%20about%20EV%20charging%20station%20opportunities." className="ml-auto inline-flex shrink-0 items-center whitespace-nowrap rounded-full bg-[#e87522] px-4 py-3 text-[12px] font-extrabold text-white shadow-sm transition hover:bg-[#c75b14] xl:px-5 xl:text-[13px]">Own an EV Station <ArrowRight className="ml-2 inline shrink-0" size={16}/></a></nav>
           <button className="rounded-lg border border-black/10 p-2 lg:hidden" onClick={() => setMobileOpen(!mobileOpen)} aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"} aria-expanded={mobileOpen} aria-controls="mobile-navigation">{mobileOpen ? <X/> : <Menu/>}</button>
         </div>
@@ -235,7 +244,10 @@ const sections = [
             </div>
             <p className="mt-4 text-xs leading-5 text-[#7c877e]">{estimate.basis} {land!=="without"?(land==="society"?"Society estimate covers selected charger hardware and adjustable charging assumptions only. Wiring, metering, load upgrades, civil work, RWA permissions, installation and any common-area charges require a site survey.":"Hardware prices are indicative quoted prices, not turnkey station costs."):"The package term sheet assumes high utilisation (8 cycles per gun daily); reduce the slider to explore lower demand. All site terms and settlement deductions must be confirmed in writing."}</p>
             <div className="mt-5 flex flex-wrap gap-3"><a href="https://wa.me/919625670132?text=Hello%20MyEVStation%2C%20I%20would%20like%20to%20enquire%20about%20EV%20charging%20station%20opportunities." className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#e87522] px-5 py-3.5 text-sm font-extrabold text-white">Discuss this estimate <ArrowRight size={16}/></a><a href="https://wa.me/919625670132?text=Hello%20MyEVStation%2C%20please%20share%20no-land%20EV%20station%20packages%20and%20pricing." className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#0b5a42]/20 bg-white px-5 py-3.5 text-sm font-bold text-[#0b5a42]">Compare partner packages</a></div>
+          </div>
+        </div>
       </section>
+
       <section id="india-2030" className="relative overflow-hidden bg-[#f0f6f0] py-16 sm:py-20">
         <div className="absolute right-0 top-0 h-72 w-72 rounded-full bg-[#dcebdd] blur-3xl" />
         <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
@@ -254,10 +266,16 @@ const sections = [
               <article className="rounded-2xl border border-[#d9e5da] bg-white p-5 shadow-sm"><span className="text-xs font-extrabold uppercase tracking-wider text-[#d96a1b]">Clean power</span><b className="mt-3 block text-3xl font-black text-[#142f24]">~50%</b><p className="mt-2 text-sm leading-6 text-[#647067]">2030 NDC commitment for cumulative installed electricity capacity from non-fossil sources—a target India reported achieving in 2025.</p></article>
               <article className="rounded-2xl border border-[#d9e5da] bg-white p-5 shadow-sm"><span className="text-xs font-extrabold uppercase tracking-wider text-[#d96a1b]">Electric mobility</span><b className="mt-3 block text-3xl font-black text-[#142f24]">EV growth</b><p className="mt-2 text-sm leading-6 text-[#647067]">Public and private charging infrastructure can help make electric mobility more accessible across vehicle types and locations.</p></article>
               <article className="rounded-2xl border border-[#d9e5da] bg-white p-5 shadow-sm"><span className="text-xs font-extrabold uppercase tracking-wider text-[#d96a1b]">Long-term direction</span><b className="mt-3 block text-3xl font-black text-[#142f24]">Net Zero</b><p className="mt-2 text-sm leading-6 text-[#647067]">India’s announced goal is to reach net-zero emissions by 2070.</p></article>
+            </div>
+          </div>
           <div className="mt-8 grid gap-4 rounded-2xl border border-[#d9e5da] bg-white p-5 sm:grid-cols-3 sm:p-6">
             <div><b className="flex items-center gap-2 text-sm font-extrabold text-[#142f24]"><MapPin size={17} className="text-[#0b7652}"/> Have land?</b><p className="mt-2 text-sm leading-6 text-[#647067]">Explore a site-owner model for suitable plots, parking, commercial property or fleets.</p><a href="https://wa.me/919625670132?text=Hello%20MyEVStation%2C%20I%20have%20land%2Fa%20site%20and%20want%20to%20explore%20an%20EV%20charging%20station." className="mt-3 inline-flex items-center gap-1 text-sm font-extrabold text-[#0b5a42]">Explore with land <ArrowRight size={14}/></a></div>
             <div><b className="flex items-center gap-2 text-sm font-extrabold text-[#142f24]"><Users size={17} className="text-[#0b7652}"/> No land?</b><p className="mt-2 text-sm leading-6 text-[#647067]">Explore partner opportunities at suitable host locations without buying land.</p><a href="https://wa.me/919625670132?text=Hello%20MyEVStation%2C%20I%20am%20interested%20in%20the%20no-land%20EV%20station%20model.%20Please%20share%20details." className="mt-3 inline-flex items-center gap-1 text-sm font-extrabold text-[#0b5a42]">Explore no-land model <ArrowRight size={14}/></a></div>
             <div><b className="flex items-center gap-2 text-sm font-extrabold text-[#142f24]"><ShieldCheck size={17} className="text-[#0b7652}"/> Safety-led approach</b><p className="mt-2 text-sm leading-6 text-[#647067]">Explore connected charging infrastructure and AI-enabled battery diagnostics designed to support better visibility and safety decisions.</p><a href="#technology" className="mt-3 inline-flex items-center gap-1 text-sm font-extrabold text-[#0b5a42]">See the technology <ArrowRight size={14}/></a></div>
+          </div>
+        </div>
+      </section>
+
       <section id="charger-guide" className="bg-[#f7f9f6] py-16 sm:py-20"><div className="mx-auto max-w-7xl px-5 lg:px-8"><div className="mx-auto max-w-3xl text-center"><span className="text-xs font-extrabold uppercase tracking-[.2em] text-[#d96a1b]">A simple guide</span><h2 className="mt-3 text-3xl font-black tracking-tight text-[#15281f] sm:text-4xl">Which charger is right for your location?</h2><p className="mt-3 leading-7 text-[#647067]">Different vehicles and parking times need different chargers. These are indicative charger categories from the supplied technical profile—not a final site design or price quote.</p></div><div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">{[{p:"3.3 kW",t:"Basic / overnight charging",v:"Homes, small businesses and longer parking stays",b:"Simple AC supply; a portable charging setup may be required.",img:"/ev-society.jpg"},{p:"3–12 kW",t:"Two- & three-wheeler DC",v:"Electric scooter and e-rickshaw fleets",b:"Designed for frequent fleet charging and quicker turnarounds.",img:"/ev-2w-3w-dc.png"},{p:"7.4–22 kW",t:"AC charging for cars",v:"Offices, malls, societies and destinations",b:"Useful where cars remain parked for a while.",img:"/ev-with-land.jpg"},{p:"30–240 kW",t:"High-power DC charging",v:"Buses, trucks, highways and commercial fleets",b:"For higher-demand sites; needs suitable electrical capacity and planning.",img:"/ev-bus-fleet-dc.png"}].map(x=><article key={x.p} className="overflow-hidden rounded-2xl border border-[#e1e8e0] bg-white shadow-sm"><div className="relative h-44 overflow-hidden bg-[#eaf3ed]"><Image src={x.img} alt={x.t} width={1200} height={800} sizes="(max-width: 768px) 100vw, 33vw" className="h-full w-full object-cover object-center transition duration-500 hover:scale-[1.03]" loading="lazy" /><div className="absolute inset-0 bg-gradient-to-t from-[#092d20]/25 via-transparent to-transparent"/><span className="absolute left-3 top-3 rounded-full border border-white/70 bg-white/95 px-3 py-1 text-[10px] font-extrabold tracking-wide text-[#0b5a42]">MYEVSTATION · CHARGING</span></div><div className="p-5"><span className="inline-flex rounded-lg bg-[#e8f4ea] px-3 py-2 text-lg font-black text-[#0b7652]">{x.p}</span><h3 className="mt-4 text-lg font-extrabold text-[#172d21]">{x.t}</h3><p className="mt-2 text-sm font-semibold text-[#52665a]">{x.v}</p><p className="mt-3 text-sm leading-6 text-[#718075]">{x.b}</p></div></article>)}</div><p className="mt-4 text-xs leading-5 text-[#7a857c]">Actual charging speed depends on the vehicle, connector, charger, electrical supply and conditions. Confirm compatibility, certifications, warranty, installation scope and service-level terms with the supplier.</p></div></section>
 
       <section id="technology" className="bg-[#10291f] py-20 text-white sm:py-24">
@@ -298,6 +316,8 @@ const sections = [
             <div><h3 className="font-extrabold">Technology should earn trust.</h3><p className="mt-1 text-sm leading-6 text-white/65">We focus on appropriate charger selection, connected operations and safety-led diagnostics—not promises of zero risk.</p></div>
             <a href="https://wa.me/919625670132?text=Hello%20MyEVStation%2C%20I%20would%20like%20to%20enquire%20about%20EV%20charging%20station%20opportunities." className="inline-flex shrink-0 items-center justify-center rounded-full bg-[#e87522] px-6 py-3.5 text-sm font-extrabold text-white">Discuss a partnership <ArrowRight className="ml-2" size={16}/></a>
           </div>
+        </div>
+      </section>
       <section id="mission" className="scroll-mt-20 border-y border-[#dfe8df] bg-[#f5f8f3] py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <div className="grid items-stretch gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12">
@@ -330,6 +350,7 @@ const sections = [
       </section>
 
       <section id="contact" className="bg-white py-20 sm:py-24"><div className="mx-auto max-w-4xl px-5 text-center lg:px-8"><span className="text-xs font-extrabold uppercase tracking-[.2em] text-[#d96a1b]">Start your next mission</span><h2 className="mt-4 text-4xl font-extrabold tracking-tight text-[#15281f] sm:text-5xl">Ready to own an EV station?</h2><p className="mx-auto mt-5 max-w-2xl leading-7 text-[#647067]">Tell us your budget, location and preferred ownership model. We’ll walk you through the package, site requirements, operating responsibilities and an illustrative financial estimate before you make a decision.</p><div className="mt-8 flex flex-wrap justify-center gap-3"><a href="https://wa.me/919625670132?text=Hello%20MyEVStation%2C%20I%20want%20to%20explore%20an%20EV%20charging%20station%20partnership." target="_blank" rel="noreferrer" className="rounded-full bg-[#e87522] px-7 py-4 text-sm font-extrabold text-white shadow-lg shadow-orange-900/10">Enquire on WhatsApp <ArrowRight className="ml-2 inline" size={16}/></a><a href="#model" className="rounded-full border border-[#0b5a42]/25 px-7 py-4 text-sm font-extrabold text-[#0b5a42]">Compare the models</a></div><p className="mt-5 text-xs text-[#8a958c]">WhatsApp opens a pre-filled enquiry directly to our team.</p></div></section>
+
 
       <section id="leadership" className="relative overflow-hidden bg-white py-16 sm:py-20">
         <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#e87522] via-white to-[#16834a]" />
@@ -376,6 +397,8 @@ const sections = [
             <a href="https://wa.me/919625670132?text=Hello%20MyEVStation%2C%20I%20would%20like%20to%20enquire%20about%20EV%20charging%20station%20opportunities." className="mt-6 inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-[#e87522] px-6 py-4 text-sm font-extrabold text-white sm:mt-0">Discuss Your EV Station <ArrowRight size={17}/></a>
           </div>
         </div>
+      </section>
+
       <SeoFaq eyebrow="EV charging questions" title="EV charging station business: FAQs" items={[
         { question: "How do I start an EV charging station business in India?", answer: "Start by identifying your customer and site type, confirming property permission, checking electrical load and connection feasibility, mapping existing chargers, and obtaining an itemised proposal for equipment, installation, software, electricity, maintenance and approvals. Choose a model only after these checks." },
         { question: "Can I start an EV charging station without owning land?", answer: "Potentially. A site-partner or host-property model may work if the property owner gives written permission and the site has suitable parking, access, power and demand. The exact commercial terms must be agreed with the host and operator before investment." },
@@ -387,4 +410,8 @@ const sections = [
         { question: "Is MyEVStation officially endorsed by the Indian Air Force or the Government of India?", answer: "MyEVStation is an independent venture. Its founders' prior service and experience are background credentials only and do not imply official Indian Air Force or Government of India endorsement, approval or certification." },
         { question: "What if I do not know which permissions or documents are required?", answer: "You do not need to figure it out alone. Share your location, site type, whether you own or lease the property, and whether it is a society, commercial site or private parking. MyEVStation will help you understand the likely permission steps and document checklist, then guide you toward the relevant property representative, DISCOM or local authority. The exact checklist depends on the site." }
       ]} />
+
       <footer className="bg-[#0b2018] text-white"><div className="mx-auto flex max-w-7xl flex-col gap-6 px-5 py-10 sm:flex-row sm:items-center sm:justify-between lg:px-8"><div className="flex items-center gap-3"><span className="grid h-10 w-10 place-items-center rounded-xl bg-[#0b5a42] text-white"><Zap size={22} fill="currentColor"/></span><div><b className="text-lg">myEVStation</b><p className="text-[9px] font-bold uppercase tracking-[.08em] text-white/70">Founded by Ex-Indian Air Force</p></div></div><div className="flex flex-wrap gap-5 text-sm text-white/65"><a href="#model" className="hover:text-white">Models</a><a href="#investment" className="hover:text-white">Investment</a><a href="#technology" className="hover:text-white">Technology</a><Link href="/ev-charging-investment-guide" className="hover:text-white">Investment Guide</Link><Link href="/punjab-ev-charging" className="hover:text-white">Punjab EV Charging</Link><Link href="/amritsar-ev-charging" className="hover:text-white">Amritsar EV Charging</Link><Link href="/greater-noida-societies" className="hover:text-white">Greater Noida Societies</Link><a href="https://wa.me/919625670132?text=Hello%20MyEVStation%2C%20I%20would%20like%20to%20enquire%20about%20EV%20charging%20station%20opportunities." className="hover:text-white">Contact</a></div><span className="text-xs text-white/45">© {new Date().getFullYear()} MyEVStation</span></div></footer>
+    </main>
+  );
+}
