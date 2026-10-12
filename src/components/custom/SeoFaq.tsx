@@ -13,19 +13,8 @@ export default function SeoFaq({
   title?: string;
   eyebrow?: string;
 }) {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: items.map(({ question, answer }) => ({
-      "@type": "Question",
-      name: question,
-      acceptedAnswer: { "@type": "Answer", text: answer },
-    })),
-  };
-
   return (
     <section id="faq" aria-labelledby="faq-heading" className="bg-[#f7f9f6] py-14 sm:py-20">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <div className="mx-auto max-w-4xl px-5">
         <div className="mb-8">
           <p className="text-xs font-extrabold uppercase tracking-[.2em] text-[#0b7652]">{eyebrow}</p>
