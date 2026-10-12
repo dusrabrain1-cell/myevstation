@@ -13,6 +13,7 @@ const sections = [
   { label: "Technology", href: "#technology" },
   { label: "Investment", href: "#investment" },
   { label: "Impact", href: "#impact" },
+  { label: "FAQs", href: "#faq" },
   { label: "About Us", href: "#contact" },
 ];
 
