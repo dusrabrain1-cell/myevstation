@@ -7,18 +7,18 @@ type Charger = { id: number; power: string; name: string; qty: number; price: nu
 type Photo = { name: string; url: string };
 
 const catalogue: Omit<Charger, "id" | "qty">[] = [
-  { power: "3.3 kW", name: "EV charging socket", price: 5000, category: "Socket / 2W–4W", image: "https://boltearth.com/" },
-  { power: "3 kW", name: "Blaze DC – single gun", price: 76000, category: "DC / 2W–3W", image: "https://boltearth.com/" },
-  { power: "6 kW", name: "Blaze DC", price: 140000, category: "DC / 2W–3W", image: "https://boltearth.com/" },
-  { power: "12 kW", name: "Blaze DC", price: 180000, category: "DC / 2W–3W", image: "https://boltearth.com/" },
-  { power: "7.4 kW", name: "Blaze AC", price: 25000, category: "AC / Cars", image: "https://boltearth.com/" },
-  { power: "11 kW", name: "Blaze AC", price: 35000, category: "AC / Cars", image: "https://boltearth.com/" },
-  { power: "22 kW", name: "Blaze AC", price: 35000, category: "AC / Cars", image: "https://boltearth.com/" },
-  { power: "30 kW", name: "Lightning DC – single gun", price: 330000, category: "DC fast / Cars", image: "https://boltearth.com/" },
-  { power: "60 kW", name: "Lightning DC – dual gun", price: 610000, category: "DC fast / Cars", image: "https://boltearth.com/" },
-  { power: "120 kW", name: "Lightning DC – dual gun", price: 810000, category: "DC fast / Cars", image: "https://boltearth.com/" },
-  { power: "180 kW", name: "Lightning DC – dual gun", price: 1200000, category: "DC fast / Cars, buses", image: "https://boltearth.com/" },
-  { power: "240 kW", name: "Lightning DC – dual gun", price: 1400000, category: "DC fast / Cars, buses", image: "https://boltearth.com/" },
+  { power: "3.3 kW", name: "EV charging socket", price: 5000, category: "Socket / 2W–4W", image: "/images/2a.png" },
+  { power: "3 kW", name: "Blaze DC – single gun", price: 76000, category: "DC / 2W–3W", image: "/images/3a.png" },
+  { power: "6 kW", name: "Blaze DC", price: 140000, category: "DC / 2W–3W", image: "/images/3B.png" },
+  { power: "12 kW", name: "Blaze DC", price: 180000, category: "DC / 2W–3W", image: "/images/3C.png" },
+  { power: "7.4 kW", name: "Blaze AC", price: 25000, category: "AC / Cars", image: "/images/6A.png" },
+  { power: "11 kW", name: "Blaze AC", price: 35000, category: "AC / Cars", image: "/images/6A.png" },
+  { power: "22 kW", name: "Blaze AC", price: 35000, category: "AC / Cars", image: "/images/6A.png" },
+  { power: "30 kW", name: "Lightning DC – single gun", price: 330000, category: "DC fast / Cars", image: "/images/7.png" },
+  { power: "60 kW", name: "Lightning DC – dual gun", price: 610000, category: "DC fast / Cars", image: "/images/7.png" },
+  { power: "120 kW", name: "Lightning DC – dual gun", price: 810000, category: "DC fast / Cars", image: "/images/7.png" },
+  { power: "180 kW", name: "Lightning DC – dual gun", price: 1200000, category: "DC fast / Cars, buses", image: "/images/7.png" },
+  { power: "240 kW", name: "Lightning DC – dual gun", price: 1400000, category: "DC fast / Cars, buses", image: "/images/7.png" },
 ];
 
 const money = (n: number) => new Intl.NumberFormat("en-IN", { style: "currency", currency: "INR", maximumFractionDigits: 0 }).format(n);
@@ -143,7 +143,7 @@ export default function SalesProposalPage() {
             </div>
             {proposalMode === "automatic" && <div className="mt-3 rounded-xl bg-emerald-50 p-3 text-sm text-emerald-900">Suggested starter mix based on site type and parking answers. This is a preliminary recommendation, not an electrical design. Choose “Customised proposal” to change it.</div>}
             {proposalMode === "custom" && <div className="mt-5 grid gap-3 sm:grid-cols-2">{catalogue.map((p,i)=><div key={p.power+p.name} className="rounded-xl border border-stone-200 p-4">
-              <div className="mb-3 flex h-24 items-center justify-center rounded-lg bg-emerald-50 text-emerald-900"><Zap size={38}/></div>
+              <div className="mb-3 flex h-28 items-center justify-center overflow-hidden rounded-lg bg-white"><img src={p.image} alt={`${p.power} ${p.name}`} className="h-full w-full object-contain" loading="lazy"/></div>
               <div className="text-xs font-semibold uppercase tracking-wide text-emerald-800">{p.category}</div><h3 className="mt-1 font-bold">{p.power} · {p.name}</h3><p className="mt-1 text-sm text-stone-600">Indicative hardware cost: {money(p.price)}</p>
               <button onClick={()=>addCharger(i)} className="mt-3 inline-flex min-h-10 w-full items-center justify-center gap-2 rounded-lg bg-emerald-900 px-3 py-2 text-sm font-bold text-white"><Plus size={16}/> Add charger</button>
             </div>)}</div>
@@ -179,6 +179,23 @@ export default function SalesProposalPage() {
           <h3 className="mt-6 font-bold">Site observations</h3><div className="mt-2 grid gap-2 text-sm sm:grid-cols-2"><p>Car parking: {parking.cars}</p><p>Two-wheeler parking: {parking.twoWheelers}</p><p>Parking duration: {parking.hours}</p><p>Electricity: {parking.power}</p><p>Permission: {parking.permission}</p></div>{customer.notes && <p className="mt-3 whitespace-pre-wrap text-sm"><b>Notes:</b> {customer.notes}</p>}
           <div className="mt-7 rounded-xl bg-stone-50 p-4 text-xs leading-5 text-stone-600"><b>Important:</b> This is an indicative proposal, not an electrical design or confirmed supplier quotation. Final charger model, connector/gun configuration, price, taxes, installation, sanctioned load, civil work and approvals must be verified before order. Installation and civil/electrical works are not included unless explicitly stated. Charging speed depends on vehicle compatibility and available power. Price and tax assumptions require approval before sharing.</div>
           <div className="mt-6 border-t pt-4 text-xs text-stone-500">myEVStation · EV charging solutions · Customer proposal</div>
+
+          <div className="invoice-page mt-8 border-t-4 border-emerald-900 pt-7">
+            <div className="flex items-start justify-between gap-4 border-b pb-5">
+              <div><div className="text-2xl font-extrabold text-[#0d5c3d]">myEVStation</div><div className="mt-1 text-xs font-semibold text-stone-600">Founded by Ex-Indian Air Force Personnel</div><div className="mt-3 text-lg font-bold">TAX INVOICE / PROFORMA INVOICE</div><div className="text-xs text-stone-500">Draft for review — not a tax invoice until seller GST and statutory details are confirmed.</div></div>
+              <div className="text-right text-sm"><div><b>Invoice ref:</b> INV-{proposalNo.replace("MES-","")}</div><div className="mt-1"><b>Date:</b> {new Date().toLocaleDateString("en-IN")}</div><div className="mt-1"><b>Proposal ref:</b> {proposalNo}</div></div>
+            </div>
+            <div className="mt-5 grid gap-5 text-sm sm:grid-cols-2">
+              <div><div className="mb-2 font-bold uppercase tracking-wide text-stone-500">Bill to</div><div className="font-bold">{customer.name || "Customer name to be added"}</div><div>{customer.phone || "Phone to be added"}</div><div>{customer.email || ""}</div><div>{[customer.address, customer.city].filter(Boolean).join(", ") || "Billing address to be confirmed"}</div></div>
+              <div><div className="mb-2 font-bold uppercase tracking-wide text-stone-500">Seller</div><div className="font-bold">myEVStation</div><div>Founded by Ex-Indian Air Force Personnel</div><div>Seller address, GSTIN and legal entity details: to be added before issuing a tax invoice.</div></div>
+            </div>
+            <h3 className="mt-7 font-bold">Invoice line items</h3>
+            {chargers.length ? <table className="mt-3 w-full border-collapse text-left text-sm"><thead><tr className="bg-emerald-50"><th className="border p-2">Description</th><th className="border p-2 text-right">Qty</th><th className="border p-2 text-right">Unit rate</th><th className="border p-2 text-right">Amount</th></tr></thead><tbody>{chargers.map(c=><tr key={"inv-"+c.id} className="break-inside-avoid"><td className="border p-2">{c.power} {c.name}<div className="text-xs text-stone-500">{c.category}</div></td><td className="border p-2 text-right">{c.qty}</td><td className="border p-2 text-right">{money(Math.round(c.price*(1+margin/100)))}</td><td className="border p-2 text-right">{money(Math.round(c.price*(1+margin/100))*c.qty)}</td></tr>)}</tbody></table> : <p className="mt-2 text-sm text-stone-500">No items selected. Return to the proposal builder and select chargers.</p>}
+            <div className="ml-auto mt-5 max-w-sm space-y-2 text-sm"><div className="flex justify-between"><span>Taxable subtotal</span><b>{money(sellingSubtotal)}</b></div><div className="flex justify-between"><span>GST estimate ({tax}%)</span><b>{money(taxAmount)}</b></div><div className="flex justify-between border-t pt-3 text-lg"><b>Total payable (indicative)</b><b className="text-emerald-900">{money(grandTotal)}</b></div></div>
+            <div className="mt-6 rounded-lg bg-stone-50 p-4 text-sm leading-6"><b>Payment terms:</b> To be agreed in writing. <br/><b>Delivery / installation:</b> Not included unless separately confirmed in writing. <br/><b>Bank details:</b> To be shared on the final invoice. <br/><b>Tax note:</b> GST rate is an editable estimate only. Confirm correct HSN/SAC, tax rate, place of supply, seller legal name, address and GSTIN with your accountant before issuing a tax invoice.</div>
+            <div className="mt-8 grid grid-cols-2 gap-8 text-xs text-stone-600"><div className="border-t pt-2">Customer acceptance / signature</div><div className="border-t pt-2 text-right">Authorised signatory — myEVStation</div></div>
+            <div className="mt-6 border-t pt-4 text-xs text-stone-500">Combined document: site proposal + invoice draft · {proposalNo}</div>
+          </div>
         </section>
       </div>
       <style jsx global>{`
