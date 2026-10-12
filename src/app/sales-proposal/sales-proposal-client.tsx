@@ -14,11 +14,11 @@ const catalogue: Omit<Charger, "id" | "qty">[] = [
   { power: "7.4 kW", name: "Blaze AC", price: 25000, category: "AC / Cars", image: "/images/blaze-ac.png" },
   { power: "11 kW", name: "Blaze AC", price: 35000, category: "AC / Cars", image: "/images/blaze-ac.png" },
   { power: "22 kW", name: "Blaze AC", price: 35000, category: "AC / Cars", image: "/images/blaze-ac.png" },
-  { power: "30 kW", name: "Lightning DC – single gun", price: 330000, category: "DC fast / Cars", image: "/images/2a.png" },
-  { power: "60 kW", name: "Lightning DC – dual gun", price: 610000, category: "DC fast / Cars", image: "/images/2b.png" },
-  { power: "120 kW", name: "Lightning DC – dual gun", price: 810000, category: "DC fast / Cars", image: "/images/2b.png" },
-  { power: "180 kW", name: "Lightning DC – dual gun", price: 1200000, category: "DC fast / Cars, buses", image: "/images/2b.png" },
-  { power: "240 kW", name: "Lightning DC – dual gun", price: 1400000, category: "DC fast / Cars, buses", image: "/images/2b.png" },
+  { power: "30 kW", name: "Lightning DC – single gun", price: 330000, category: "DC fast / Cars", image: "/images/dc-fast-single.svg" },
+  { power: "60 kW", name: "Lightning DC – dual gun", price: 610000, category: "DC fast / Cars", image: "/images/dc-fast-dual.svg" },
+  { power: "120 kW", name: "Lightning DC – dual gun", price: 810000, category: "DC fast / Cars", image: "/images/dc-fast-dual.svg" },
+  { power: "180 kW", name: "Lightning DC – dual gun", price: 1200000, category: "DC fast / Cars, buses", image: "/images/dc-fast-dual.svg" },
+  { power: "240 kW", name: "Lightning DC – dual gun", price: 1400000, category: "DC fast / Cars, buses", image: "/images/dc-fast-dual.svg" },
 ];
 
 const money = (n: number) => new Intl.NumberFormat("en-IN", { style: "currency", currency: "INR", maximumFractionDigits: 0 }).format(n);
