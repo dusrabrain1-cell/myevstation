@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import SeoFaq from "@/components/custom/SeoFaq";
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
@@ -394,6 +395,18 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <SeoFaq eyebrow="EV charging questions" title="EV charging station business: FAQs" items={[
+        { question: "How do I start an EV charging station business in India?", answer: "Start by identifying your customer and site type, confirming property permission, checking electrical load and connection feasibility, mapping existing chargers, and obtaining an itemised proposal for equipment, installation, software, electricity, maintenance and approvals. Choose a model only after these checks." },
+        { question: "Can I start an EV charging station without owning land?", answer: "Potentially. A site-partner or host-property model may work if the property owner gives written permission and the site has suitable parking, access, power and demand. The exact commercial terms must be agreed with the host and operator before investment." },
+        { question: "How much does an EV charging station cost?", answer: "Cost depends on charger type and quantity, electrical load, cable distance, civil work, connection upgrades, metering, software, payment fees, maintenance and local requirements. A charger hardware price alone is not the total installed cost; request a site-specific written quotation." },
+        { question: "How much can an EV charging station earn per month?", answer: "Revenue depends on actual charging sessions, energy sold, tariff, electricity cost, utilisation, payment or network fees, rent, maintenance and financing. Calculator results are estimates, not guaranteed earnings. Use conservative utilisation assumptions and include all operating costs." },
+        { question: "Which charger is right for electric cars, scooters and e-rickshaws?", answer: "There is no single charger for every vehicle. Confirm connector and vehicle compatibility first. AC charging often suits cars parked for longer periods, while DC fast charging may suit high-turnover sites with sufficient electrical capacity. Two-wheelers and three-wheelers need compatible equipment and connectors." },
+        { question: "Do I need permission or an electrical inspection before installing a charger?", answer: "Usually you need the property owner's or society's permission and a qualified assessment of sanctioned load, wiring, earthing, protection, metering and applicable DISCOM or local requirements. Exact approvals depend on the site and installation; confirm them before purchasing equipment." },
+        { question: "Does MyEVStation guarantee a return on investment or a fixed payback period?", answer: "No. Any payback estimate depends on assumptions and actual demand. Ask for a written model that separates hardware, installation, electricity, rent, network fees, taxes, maintenance, downtime and financing, and test conservative and downside scenarios." },
+        { question: "Is MyEVStation officially endorsed by the Indian Air Force or the Government of India?", answer: "MyEVStation is an independent venture. Its founders' prior service and experience are background credentials only and do not imply official Indian Air Force or Government of India endorsement, approval or certification." },
+        { question: "How do I request an EV charging site assessment?", answer: "Share the city and exact locality, site type, parking capacity, ownership or permission status, expected vehicle types, available electrical load if known, and nearby charging options. MyEVStation can then discuss the information needed for a feasibility review." }
+      ]} />
 
       <footer className="bg-[#0b2018] text-white"><div className="mx-auto flex max-w-7xl flex-col gap-6 px-5 py-10 sm:flex-row sm:items-center sm:justify-between lg:px-8"><div className="flex items-center gap-3"><span className="grid h-10 w-10 place-items-center rounded-xl bg-[#0b5a42] text-white"><Zap size={22} fill="currentColor"/></span><div><b className="text-lg">myEVStation</b><p className="text-[9px] font-bold uppercase tracking-[.08em] text-white/70">Founded by Ex-Indian Air Force</p></div></div><div className="flex flex-wrap gap-5 text-sm text-white/65"><a href="#model" className="hover:text-white">Models</a><a href="#investment" className="hover:text-white">Investment</a><a href="#technology" className="hover:text-white">Technology</a><Link href="/ev-charging-investment-guide" className="hover:text-white">Investment Guide</Link><a href="https://wa.me/919625670132?text=Hello%20MyEVStation%2C%20I%20would%20like%20to%20enquire%20about%20EV%20charging%20station%20opportunities." className="hover:text-white">Contact</a></div><span className="text-xs text-white/45">© {new Date().getFullYear()} MyEVStation</span></div></footer>
     </main>
