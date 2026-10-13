@@ -5,7 +5,6 @@ export const metadata: Metadata = {
   title: "EV Charging Station Opportunities in India",
   description:
     "Explore EV charging station opportunities with or without land, for housing societies and ex-servicemen. Compare charger options, review indicative investment assumptions and enquire with MyEVStation.",
-  alternates: { canonical: "/" },
   openGraph: {
     title: "MyEVStation | EV Charging Station Opportunities in India",
     description:
