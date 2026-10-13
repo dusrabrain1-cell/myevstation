@@ -35,6 +35,11 @@ export const metadata: Metadata = {
     "EV charging franchise India",
   ],
   applicationName: SITE.name,
+  icons: {
+    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
+    shortcut: ["/icon.svg"],
+    apple: [{ url: "/myevstation-logo.png", type: "image/png" }],
+  },
   category: "business",
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 } },
   openGraph: { type: "website", locale: "en_IN", url: SITE.url, siteName: SITE.name, title: "EV Charging Station Setup & Investment Opportunities in India | MyEVStation", description: "Explore EV charging station setup, charger options and partnership models for landowners, investors, housing societies and ex-servicemen.", images: [{ url: "/myevstation-hero-banner.jpeg", width: 1200, height: 630, alt: "MyEVStation EV charging station opportunities in India" }] },
