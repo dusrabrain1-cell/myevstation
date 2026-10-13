@@ -5,7 +5,7 @@ export const SITE = {
   name: "MyEVStation",
   shortDescription:
     "EV charging station opportunities and partnerships across India.",
-  url: "https://myevstation-9rj8.vercel.app",
+  url: "https://myevstation.co",
   email: "hello@myevstation.in",
   phone: "+919625670132",
 } as const;
