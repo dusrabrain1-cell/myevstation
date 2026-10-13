@@ -19,7 +19,7 @@ export function NavMenu({ className }: { className?: string }) {
       ))}
       {moreLinks.length > 0 && (
         <li className="group relative shrink-0">
-          <span className="cursor-default whitespace-nowrap text-[12px] font-semibold text-ink xl:text-[13px]">More</span>
+          <button type="button" className="whitespace-nowrap text-[12px] font-semibold text-ink xl:text-[13px]" aria-haspopup="true">More</button>
           <ul className="invisible absolute right-0 top-full z-50 mt-3 min-w-48 rounded-xl border border-line bg-white p-2 opacity-0 shadow-xl transition group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
             {moreLinks.map((link) => (
               <li key={link.label}>
