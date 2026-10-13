@@ -73,16 +73,15 @@ export function Navbar() {
             )
           )}
           <li className="px-2 pt-3">
-            <button
-              type="button"
-              onClick={() => {
-                setOpen(false);
-
-              }}
+            <a
+              href="https://wa.me/919876260822?text=Hello%20MyEVStation%2C%20I%20would%20like%20to%20enquire."
+              target="_blank"
+              rel="noreferrer"
+              onClick={() => setOpen(false)}
               className="inline-flex w-full justify-center rounded-md bg-mission px-5 py-2.5 text-sm font-semibold text-white"
             >
-              WhatsApp enquiry · +91 98762 60822
-            </button>
+              <MessageCircle size={16} className="mr-2" /> WhatsApp enquiry · +91 98762 60822
+            </a>
           </li>
         </ul>
       )}
