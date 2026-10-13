@@ -5,9 +5,9 @@ import { Bike, Building2, CarFront, Wrench } from "lucide-react";
 
 const groups = [
   { title: "Smart sockets & light charging", rows: [
-    ["Basic 3.3 kW charging socket", "—", "₹5,250", "1 year"],
-    ["Pro 3.3 kW charging socket", "—", "₹5,775", "1 year"],
-    ["Connected 3.3 kW charger (4G)", "—", "₹7,875", "1 year"],
+    ["Basic 3.3 kW charging socket", "1 socket outlet; not a gun", "₹5,250", "1 year"],
+    ["Pro 3.3 kW charging socket", "1 socket outlet; not a gun", "₹5,775", "1 year"],
+    ["Connected 3.3 kW charger (4G)", "1 socket outlet; not a gun", "₹7,875", "1 year"],
   ]},
   { title: "DC chargers for 2- & 3-wheelers", rows: [
     ["3 kW DC fast charger", "Single connector", "₹79,800", "1 year"],
@@ -16,12 +16,12 @@ const groups = [
     ["12 kW DC fast charger", "Single connector", "₹1,89,000", "1 year"],
   ]},
   { title: "AC chargers for cars", rows: [
-    ["7.4 kW AC charger", "Not specified in quote", "₹26,250", "2 years"],
-    ["7.4 kW AC charger with 4G", "Not specified in quote", "₹28,350", "2 years"],
-    ["11 kW AC charger", "Not specified in quote", "₹36,750", "2 years"],
-    ["11 kW AC charger with 4G", "Not specified in quote", "₹38,850", "2 years"],
-    ["22 kW AC charger", "Not specified in quote", "₹36,750", "2 years"],
-    ["22 kW AC charger with 4G", "Not specified in quote", "₹38,850", "2 years"],
+    ["7.4 kW AC charger", "Not stated in quote", "₹26,250", "2 years"],
+    ["7.4 kW AC charger with 4G", "Not stated in quote", "₹28,350", "2 years"],
+    ["11 kW AC charger", "Not stated in quote", "₹36,750", "2 years"],
+    ["11 kW AC charger with 4G", "Not stated in quote", "₹38,850", "2 years"],
+    ["22 kW AC charger", "Not stated in quote", "₹36,750", "2 years"],
+    ["22 kW AC charger with 4G", "Not stated in quote", "₹38,850", "2 years"],
   ]},
   { title: "DC fast charging for cars & fleets", rows: [
     ["30 kW DC charger", "Single connector", "₹3,46,500", "2 years"],
@@ -54,7 +54,7 @@ export default function ChargerQuotation({ audience = "land" }: { audience?: "la
       <div className="mx-auto max-w-3xl text-center">
         <p className="text-xs font-extrabold uppercase tracking-[.2em] text-[#d96a1b]">Charger quotation & service costs</p>
         <h2 className="mt-3 text-3xl font-black sm:text-5xl">Equipment prices, gun count and service charges</h2>
-        <p className="mt-4 leading-7 text-[#647067]">A clear, itemised comparison of equipment price, connector (gun) count, warranty, annual maintenance, software fees and installation terms. Equipment prices below are transcribed from the supplied quotation and include 5% GST as stated by the supplier. These are equipment prices—not a complete installed-site quote.</p>
+        <p className="mt-4 leading-7 text-[#647067]">A clear, itemised comparison of equipment price, connector (gun) count, warranty, annual maintenance, software fees and installation terms. Equipment prices below are transcribed from the supplied quotation and include 5% GST as stated by the supplier. These are equipment prices—not a complete installed-site quote. Where the quotation does not state an AC connector count, it is marked “not stated” rather than assumed.</p>
         <div className="mt-5 grid gap-3 text-left sm:grid-cols-3">
           <div className="rounded-xl border border-[#dfe7df] bg-white p-4"><p className="text-xs font-bold uppercase tracking-wide text-[#647067]">01 · Equipment</p><p className="mt-1 font-extrabold text-[#17212b]">Price + connector count</p></div>
           <div className="rounded-xl border border-[#dfe7df] bg-white p-4"><p className="text-xs font-bold uppercase tracking-wide text-[#647067]">02 · Maintenance</p><p className="mt-1 font-extrabold text-[#17212b]">Warranty + annual charges</p></div>
