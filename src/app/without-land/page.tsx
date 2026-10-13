@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSocialMetadata } from "@/lib/page-social-metadata";
 import Image from "next/image";
 import { ArrowRight, CheckCircle2, MapPin, ShieldCheck, Smartphone, Wrench, Wallet, Zap, FileCheck, CarFront, Bike, Building2 } from "lucide-react";
 
@@ -6,6 +7,8 @@ export const metadata: Metadata = {
   title: "No-Land EV Charging Station Investment Model",
   description: "Explore MyEVStation's no-land EV charging station model, indicative Starter and Growth packages, charger prices, operating assumptions and site requirements in India.",
   alternates: { canonical: "/without-land" },
+
+  ...pageSocialMetadata("No-Land EV Charging Station Investment Model", "Explore MyEVStation's no-land EV charging station model, indicative Starter and Growth packages, charger prices, operating assumptions and site requirements in India.", "/without-land"),
 };
 
 const plans = [
