@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import SeoFaq from "@/components/custom/SeoFaq";
-import { ArrowLeft, ArrowRight, Building2, CheckCircle2, MapPin, ShieldCheck, Zap, CarFront, Bike, Store, ClipboardCheck } from "lucide-react";
+import { ArrowRight, Building2, CheckCircle2, MapPin, ShieldCheck, CarFront, Bike, Store, ClipboardCheck } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "EV Charging Stations for Amritsar Markets & Housing Societies",
@@ -35,18 +35,10 @@ const steps = [
 ];
 
 export default function AmritsarEvChargingPage() {
-  const whatsapp = "https://wa.me/919625670132?text=Hello%20MyEVStation%2C%20I%20am%20interested%20in%20EV%20charging%20in%20Amritsar.%20My%20site%20is%20a%20market%2Fcommercial%20property%2Fhousing%20society.%20Please%20help%20with%20a%20site%20assessment.";
+  const whatsapp = "https://wa.me/919876260822?text=Hello%20MyEVStation%2C%20I%20am%20interested%20in%20EV%20charging%20in%20Amritsar.%20My%20site%20is%20a%20market%2Fcommercial%20property%2Fhousing%20society.%20Please%20help%20with%20a%20site%20assessment.";
   return (
     <main className="min-h-screen bg-[#f7f9f6] text-[#17212b]">
-      <header className="border-b border-[#e2e8e1] bg-white">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3">
-          <Link href="/" className="flex items-center gap-3" aria-label="MyEVStation home">
-            <span className="grid h-10 w-10 place-items-center rounded-xl bg-[#0b5a42] text-white"><Zap size={22} fill="currentColor" /></span>
-            <span className="leading-tight"><span className="block text-xl font-extrabold tracking-tight text-[#172d21]">my<span className="text-[#e87522]">EV</span>Station</span><span className="block text-[9px] font-bold uppercase tracking-[.16em] text-[#64736d]">Founded by Ex-Indian Air Force</span></span>
-          </Link>
-          <Link href="/" className="inline-flex items-center gap-2 text-sm font-bold text-[#526158]"><ArrowLeft size={16} /> Home</Link>
-        </div>
-      </header>
+      
 
       <section className="bg-[linear-gradient(120deg,#0b2a1e,#0b7652)] text-white">
         <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:py-20 lg:grid-cols-[1.1fr_.9fr] lg:items-center">
@@ -140,7 +132,7 @@ export default function AmritsarEvChargingPage() {
         { question: "Is MyEVStation an official Indian Air Force project?", answer: "No. MyEVStation is an independent venture. The founders' prior service background does not represent official Indian Air Force or Government of India endorsement." }
       ]} />
 
-      <footer className="bg-[#081f16] px-5 py-8 text-center text-sm text-white/60"><div className="flex flex-wrap justify-center gap-x-5 gap-y-3"><Link href="/" className="text-white underline">Home</Link><Link href="/punjab-ev-charging" className="text-white underline">Punjab EV charging</Link><Link href="/greater-noida-societies" className="text-white underline">Greater Noida society charging</Link><Link href="/ev-charging-investment-guide" className="text-white underline">Investment guide</Link></div><p className="mt-4">© {new Date().getFullYear()} MyEVStation</p></footer>
+      
     </main>
   );
 }
