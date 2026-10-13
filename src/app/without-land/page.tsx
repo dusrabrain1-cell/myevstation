@@ -22,20 +22,41 @@ export default function WithoutLandPage(){
   <section className="bg-[#0b2a1e] text-white"><div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:py-20 lg:grid-cols-[1.1fr_.9fr] lg:items-center"><div><p className="text-xs font-extrabold uppercase tracking-[.2em] text-[#ffb181]">No-land EV station opportunity</p><h1 className="mt-4 text-4xl font-black leading-tight tracking-tight sm:text-6xl">I HAVE NO LAND.<br/><span className="text-[#ff9a4d]">How can I start?</span></h1><p className="mt-5 max-w-2xl text-lg leading-8 text-white/80">You can explore investing in EV charging equipment without buying a plot. MyEVStation can discuss suitable premium partner locations, subject to availability and a site check.</p><div className="mt-7 flex flex-wrap gap-3"><a href="#packages" className="inline-flex items-center gap-2 rounded-xl bg-[#e87522] px-6 py-4 font-extrabold text-white">See investment packages <ArrowRight size={17}/></a><a href="#charger-prices" className="inline-flex items-center gap-2 rounded-xl border border-white/30 px-6 py-4 font-bold text-white">Compare charger prices</a></div><p className="mt-4 text-xs text-white/55">A location, income or return is not guaranteed. Confirm site availability, full costs and responsibilities in a signed agreement before paying.</p></div><div className="rounded-3xl border border-white/10 bg-white/[.07] p-6 sm:p-8"><h2 className="text-xl font-extrabold">In simple words</h2><ul className="mt-5 space-y-4">{["You invest in the charging equipment package you choose.","A host partner may provide an approved place to install it; you do not buy the land under this model.","Drivers charge their vehicles and pay for the service.","Your actual earnings depend on charging demand, power costs, fees and the signed contract."].map(x=><li key={x} className="flex gap-3 text-sm leading-6 text-white/80"><CheckCircle2 className="mt-0.5 shrink-0 text-[#ffb181]" size={19}/>{x}</li>)}</ul></div></div></section>
   <section id="packages" className="mx-auto max-w-7xl px-5 py-12 sm:py-16">
     <div className="mx-auto max-w-3xl text-center"><p className="text-xs font-extrabold uppercase tracking-[.2em] text-[#d96a1b]">Choose your starting point</p><h2 className="mt-3 text-3xl font-black sm:text-5xl">Your EV station. Founded by Ex-Indian Air Force.</h2><p className="mt-3 leading-7 text-[#647067]">In this model, you fund the charging equipment package and the team coordinates routine station operations at an approved host site. Compare the estimated monthly balance, annual return and simple payback below. A host site and returns are not guaranteed.</p></div>
-    <div className="mt-7 grid items-stretch gap-5 lg:grid-cols-2">
-      {plans.map((p,i)=><article key={p.name} className={`flex h-full flex-col overflow-hidden rounded-3xl border bg-white shadow-md ${i===0 ? "border-[#dfe7df]" : "border-[#e87522] ring-2 ring-[#e87522]/15"}`}>
-        <div className={`p-6 text-white sm:p-7 ${i===0 ? "bg-[#203b2d]" : "bg-[#0b5a42]"}`}>
-          <div className="flex items-center justify-between gap-3"><span className="text-xs font-extrabold uppercase tracking-[.17em] text-white/75">{i===0?"STARTER PACKAGE":"GROWTH PACKAGE"}</span>{i===1&&<span className="rounded-full bg-[#e87522] px-3 py-1 text-xs font-extrabold">More capacity</span>}</div>
-          <h3 className="mt-3 text-2xl font-black">{p.name}</h3><p className="mt-1 text-4xl font-black sm:text-5xl">{p.price}</p><p className="mt-2 text-white/80">{p.units} · {p.guns}</p>
+    <div className="mt-8 overflow-hidden rounded-3xl border border-[#dfe7df] bg-white shadow-sm">
+      <div className="border-b border-[#e5ebe5] px-5 py-5 sm:px-7">
+        <h3 className="text-xl font-black text-[#203b2d] sm:text-2xl">Package comparison at a glance</h3>
+        <p className="mt-2 text-sm leading-6 text-[#647067]">The figures below preserve the current illustrative package assumptions. They are estimates, not a promise of income or a supplier-confirmed all-inclusive quote.</p>
+      </div>
+      <div className="overflow-x-auto">
+        <table className="w-full min-w-[1120px] text-left text-sm">
+          <thead className="bg-[#edf4f1] text-[#43564b]"><tr>
+            {["Package","Charger quantity","Connector / gun count","Package investment","Assumed monthly costs","Estimated balance / month","Estimated balance / year","Simple annual return","Simple payback"].map((h)=><th key={h} className={`px-4 py-4 font-extrabold leading-5 ${["Package investment","Assumed monthly costs","Estimated balance / month","Estimated balance / year"].includes(h)?"text-right":""}`}>{h}</th>)}
+          </tr></thead>
+          <tbody>{plans.map((p,i)=><tr key={p.name} className={`border-t border-[#edf1ed] ${i%2?"bg-[#f8faf8]":"bg-white"}`}>
+            <td className="px-4 py-4 font-extrabold text-[#203b2d]">{p.name}<p className="mt-1 text-xs font-medium text-[#6c766d]">{i===0?"Starter package":"Growth package"}</p></td>
+            <td className="px-4 py-4 text-[#526158]">{p.units}</td>
+            <td className="px-4 py-4 text-[#526158]">{p.guns}</td>
+            <td className="whitespace-nowrap px-4 py-4 text-right font-black tabular-nums text-[#203b2d]">{p.price}</td>
+            <td className="whitespace-nowrap px-4 py-4 text-right tabular-nums text-[#526158]">{p.costs}</td>
+            <td className="whitespace-nowrap px-4 py-4 text-right font-black tabular-nums text-[#08764f]">{p.monthly}</td>
+            <td className="whitespace-nowrap px-4 py-4 text-right font-bold tabular-nums text-[#08764f]">{p.annual}</td>
+            <td className="whitespace-nowrap px-4 py-4 text-right font-bold tabular-nums text-[#203b2d]">{i===0?"29.7%":"33.7%"}</td>
+            <td className="whitespace-nowrap px-4 py-4 text-right font-bold tabular-nums text-[#203b2d]">{i===0?"40.4 months":"35.6 months"}</td>
+          </tr>)}</tbody>
+        </table>
+      </div>
+      <div className="grid gap-4 border-t border-[#e5ebe5] bg-[#f8faf7] p-5 sm:grid-cols-2 sm:p-7">
+        <div className="rounded-2xl border border-[#e1e8e0] bg-white p-4">
+          <h4 className="font-extrabold text-[#203b2d]">Service and manpower — not yet priced</h4>
+          <p className="mt-2 text-sm leading-6 text-[#647067]">The current package information does not specify how many days or months of operations, staffing, maintenance or on-site support are included. A fixed service/manpower fee is also not stated. Ask for the exact duration, monthly/annual charge, visit count, staffing hours and exclusions in writing.</p>
         </div>
-        <div className="flex flex-1 flex-col p-6 sm:p-7">
-          <ul className="grid gap-3 text-sm text-[#526158]">{["Your investment funds the selected equipment package","Our team coordinates operational manpower and routine station management, as defined in the agreement","No day-to-day staffing or routine site tracking expected from you under the managed model","Premium partner-site location subject to availability, approval and site feasibility"].map(x=><li key={x} className="flex gap-2"><CheckCircle2 className="mt-0.5 shrink-0 text-[#0b7652]" size={18}/><span>{x}</span></li>)}</ul>
-          <div className="mt-5 grid grid-cols-2 gap-3"><div className="rounded-2xl bg-[#edf6ee] p-4"><p className="text-xs font-bold leading-5 text-[#58705e]">Estimated balance / month</p><p className="mt-2 text-2xl font-black text-[#0b7652]">{p.monthly}</p></div><div className="rounded-2xl bg-[#f5f6f2] p-4"><p className="text-xs font-bold leading-5 text-[#6c766d]">Estimated balance / year</p><p className="mt-2 text-2xl font-black text-[#203b2d]">{p.annual}</p></div></div><div className="mt-3 grid grid-cols-2 gap-3"><div className="rounded-2xl border border-[#e1e8e0] p-4"><p className="text-xs font-bold text-[#6c766d]">Simple annual return</p><p className="mt-2 text-xl font-black text-[#203b2d]">{i===0?"29.7%":"33.7%"}</p><p className="mt-1 text-[11px] leading-4 text-[#7c877e]">Annual estimate ÷ package price</p></div><div className="rounded-2xl border border-[#e1e8e0] p-4"><p className="text-xs font-bold text-[#6c766d]">Simple payback estimate</p><p className="mt-2 text-xl font-black text-[#203b2d]">{i===0?"40.4 months":"35.6 months"}</p><p className="mt-1 text-[11px] leading-4 text-[#7c877e]">Package price ÷ monthly estimate</p></div></div>
-          <p className="mt-3 text-xs leading-5 text-[#758077]">Illustrative example only—not guaranteed income. These figures assume 8 charging cycles per connector per day, 4.8 kWh per session and 30 days of operation, using the supplied term-sheet prices and monthly costs. Actual use may be lower. Confirm what the package price includes, all extra costs, tax treatment and revenue-sharing terms in writing. Simple return is not a guaranteed ROI.</p>
-          <a href="#enquire" className="mt-5 inline-flex items-center justify-center gap-2 rounded-xl bg-[#e87522] px-5 py-4 font-extrabold text-white hover:bg-[#c75b14]">Explore this package <ArrowRight size={17}/></a>
+        <div className="rounded-2xl border border-[#e1e8e0] bg-white p-4">
+          <h4 className="font-extrabold text-[#203b2d]">Software, installation and other fees</h4>
+          <p className="mt-2 text-sm leading-6 text-[#647067]">The supplied charger quotation lists a 15% charging-management software (CMS) fee on each transaction, one standard installation visit, ₹650 for each additional visit and a complimentary site survey / bill of quantities. Confirm whether these apply to the managed package, plus electricity, civil work, electrical upgrades, shipping, taxes and any host-site share.</p>
         </div>
-      </article>)}
+      </div>
     </div>
+    <p className="mt-4 text-xs leading-5 text-[#758077]">Illustrative calculations use 8 charging cycles per connector per day, 4.8 kWh per session and 30 operating days per month. Actual use may be lower. Simple annual return is estimated annual balance divided by package investment; simple payback is investment divided by estimated monthly balance. These are not guaranteed ROI or cash-flow forecasts. The stated monthly costs and package inclusions must be verified in a signed agreement.</p>
   </section>
   <section className="bg-[#0b2a1e] py-12 text-white sm:py-14">
     <div className="mx-auto grid max-w-7xl gap-8 px-5 lg:grid-cols-[1fr_1.1fr] lg:items-center">
