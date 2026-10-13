@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Bike, Building2, CarFront, Wrench, Info } from "lucide-react";
+import { Bike, Building2, CarFront, Wrench } from "lucide-react";
 
 const groups = [
   { title: "Smart sockets & light charging", rows: [
@@ -43,11 +43,6 @@ const maintenance = [
   ["DC charger 240 kW", "2 years", "Year 3 ₹84,999; later years not supplied"],
 ];
 
-const packages = [
-  ["Starter Node", "₹3,75,000", "3 dual-gun DC chargers", "6 connectors / guns"],
-  ["Growth Node", "₹5,00,000", "4 dual-gun DC chargers", "8 connectors / guns"],
-];
-
 function Table({ headers, rows, minWidth = "680px" }: { headers: string[]; rows: string[][]; minWidth?: string }) {
   return <div className="overflow-x-auto"><table className="w-full text-left text-sm" style={{ minWidth }}><thead className="bg-[#edf4f1] text-[#43564b]"><tr>{headers.map(h => <th key={h} className="px-4 py-3 font-extrabold">{h}</th>)}</tr></thead><tbody>{rows.map((r, i) => <tr key={r.join("|")} className={i % 2 ? "bg-[#f9fbf9]" : "bg-white"}>{r.map((cell, j) => <td key={j} className={`px-4 py-3.5 align-top leading-6 ${j === 0 ? "font-semibold text-[#26382e]" : j === 2 && headers.includes("Quoted price (incl. 5% GST)") ? "font-extrabold text-[#08764f]" : "text-[#5b685f]"}`}>{cell}</td>)}</tr>)}</tbody></table></div>;
 }
@@ -72,12 +67,12 @@ export default function ChargerQuotation({ audience = "land" }: { audience?: "la
       </div>
       {groups.map((g, index) => <article key={g.title} className="mt-6 overflow-hidden rounded-2xl border border-[#dfe7df] bg-white shadow-sm"><div className="flex flex-wrap items-center gap-3 bg-[#123b4b] px-5 py-4 text-white"><span className="rounded-md bg-white/15 px-2 py-1 text-xs font-black tabular-nums">{String(index + 1).padStart(2, "0")}</span><h3 className="font-extrabold">{g.title}</h3></div><Table headers={["Charger / power", "Connector / gun count", "Quoted equipment price (incl. 5% GST)", "Warranty"]} rows={g.rows} minWidth="760px"/></article>)}
       <article className="mt-8 overflow-hidden rounded-2xl border border-[#dfe7df] bg-white shadow-sm">
-        <div className="flex items-center gap-3 bg-[#123b4b] px-5 py-4 text-white"><span className="rounded-md bg-white/15 px-2 py-1 text-xs font-black">02</span><Wrench size={19}/><h3 className="font-extrabold">Warranty and annual maintenance charges</h3></div>
+        <div className="flex items-center gap-3 bg-[#123b4b] px-5 py-4 text-white"><span className="rounded-md bg-white/15 px-2 py-1 text-xs font-black">05</span><Wrench size={19}/><h3 className="font-extrabold">Warranty and annual maintenance charges</h3></div>
         <p className="px-5 py-4 text-sm leading-6 text-[#647067]">Maintenance prices transcribed from the supplied maintenance sheet. Confirm whether each amount is per charger, plus applicable taxes, and request the service-level agreement.</p>
         <Table headers={["Hardware type", "Warranty shown", "Maintenance price supplied"]} rows={maintenance} minWidth="760px"/>
       </article>
       <article className="mt-8 rounded-2xl border border-[#dfe7df] bg-white p-5 sm:p-6">
-        <div className="mb-4 flex items-center gap-3"><span className="rounded-md bg-[#123b4b] px-2 py-1 text-xs font-black text-white">03</span><h3 className="text-lg font-black">Installation, software and included-service terms</h3></div>
+        <div className="mb-4 flex items-center gap-3"><span className="rounded-md bg-[#123b4b] px-2 py-1 text-xs font-black text-white">06</span><h3 className="text-lg font-black">Installation, software and included-service terms</h3></div>
         <Table headers={["Item", "Supplied term", "What to confirm"]} rows={[
           ["Charging-management software (CMS)", "15% fee on each transaction", "Fee basis, GST, settlement cycle and who pays"],
           ["Standard installation", "One visit included", "Exact installation scope and travel limits"],
