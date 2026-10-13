@@ -3,39 +3,33 @@ import Link from "next/link";
 import { NAV_LINKS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
-/**
- * Primary desktop nav items. "Coming Soon" entries don't navigate and reveal a
- * tooltip on hover (pure CSS via `group-hover`). Used by both the global
- * Navbar and the homepage hero top bar.
- */
+const PRIMARY_LABELS = new Set(["Home", "Why MyEVStation", "Business Model", "Technology", "Investment", "Calculator", "About Us"]);
+const primaryLinks = NAV_LINKS.filter((link) => PRIMARY_LABELS.has(link.label));
+const moreLinks = NAV_LINKS.filter((link) => !PRIMARY_LABELS.has(link.label));
+
 export function NavMenu({ className }: { className?: string }) {
   return (
-    <ul className={cn("items-center gap-7", className)}>
-      {NAV_LINKS.map((link) =>
-        link.comingSoon ? (
-          <li key={link.label} className="group relative">
-            <span className="cursor-default text-[14px] font-medium text-ink/55 transition-colors group-hover:text-mission">
-              {link.label}
-            </span>
-            {/* Coming-soon tooltip — appears on hover */}
-            <span className="pointer-events-none absolute left-1/2 top-full z-50 mt-3 -translate-x-1/2 whitespace-nowrap rounded-md bg-mission px-2.5 py-1 text-[11px] font-semibold text-white opacity-0 shadow-lg transition-opacity duration-150 group-hover:opacity-100">
-              Coming Soon
-              <span
-                aria-hidden
-                className="absolute -top-1 left-1/2 h-2 w-2 -translate-x-1/2 rotate-45 bg-mission"
-              />
-            </span>
-          </li>
-        ) : (
-          <li key={link.label}>
-            <Link
-              href={link.href}
-              className="text-[14px] font-medium text-ink transition-colors hover:text-mission"
-            >
-              {link.label}
-            </Link>
-          </li>
-        )
+    <ul className={cn("flex flex-wrap items-center gap-x-5 gap-y-2", className)}>
+      {primaryLinks.map((link) => (
+        <li key={link.label} className="shrink-0">
+          <Link href={link.href} className="whitespace-nowrap text-[12px] font-semibold text-ink transition-colors hover:text-mission xl:text-[13px]">
+            {link.label}
+          </Link>
+        </li>
+      ))}
+      {moreLinks.length > 0 && (
+        <li className="group relative shrink-0">
+          <span className="cursor-default whitespace-nowrap text-[12px] font-semibold text-ink xl:text-[13px]">More</span>
+          <ul className="invisible absolute right-0 top-full z-50 mt-3 min-w-48 rounded-xl border border-line bg-white p-2 opacity-0 shadow-xl transition group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+            {moreLinks.map((link) => (
+              <li key={link.label}>
+                <Link href={link.href} className="block rounded-lg px-3 py-2.5 text-sm font-medium text-ink hover:bg-cream hover:text-mission">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </li>
       )}
     </ul>
   );
