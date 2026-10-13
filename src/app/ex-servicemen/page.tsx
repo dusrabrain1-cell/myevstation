@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSocialMetadata } from "@/lib/page-social-metadata";
 import Image from "next/image";
 import { ArrowRight, CheckCircle2, ShieldCheck, Flag, MapPin, Users, BatteryCharging } from "lucide-react";
 
@@ -6,6 +7,8 @@ export const metadata: Metadata = {
   title: "EV Charging Station Opportunity for Ex-Servicemen",
   description: "Explore MyEVStation's veteran-focused EV charging station opportunity, indicative Starter and Growth package examples, operating assumptions and site assessment process.",
   alternates: { canonical: "/ex-servicemen" },
+
+  ...pageSocialMetadata("EV Charging Station Opportunity for Ex-Servicemen", "Explore MyEVStation's veteran-focused EV charging station opportunity, indicative Starter and Growth package examples, operating assumptions and site assessment process.", "/ex-servicemen"),
 };
 
 const packages = [
