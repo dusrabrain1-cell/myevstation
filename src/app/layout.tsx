@@ -67,7 +67,7 @@ export default function RootLayout({
           telephone: SITE.phone,
           contactPoint: {
             "@type": "ContactPoint",
-            telephone: SITE.phone,
+            telephone: SITE.whatsappPhone,
             contactType: "sales",
             availableLanguage: ["English", "Hindi"]
           }
