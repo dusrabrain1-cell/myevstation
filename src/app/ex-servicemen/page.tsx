@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { ArrowRight, CheckCircle2, ShieldCheck, Flag, MapPin, Users, BatteryCharging } from "lucide-react";
 
 export const metadata: Metadata = {
