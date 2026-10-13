@@ -2,9 +2,8 @@
 import Image from "next/image";
 import SeoFaq from "@/components/custom/SeoFaq";
 
-import { useState } from "react";
 import Link from "next/link";
-import { ArrowRight, BatteryCharging, ShieldCheck, MapPin, Zap, Leaf, Menu, X, CarFront, Calculator, Users, Flag } from "lucide-react";
+import { ArrowRight, BatteryCharging, ShieldCheck, MapPin, Zap, Leaf, CarFront, Calculator, Users, Flag } from "lucide-react";
 
 const sections = [
   { label: "Home", href: "/" },
@@ -22,19 +21,7 @@ export default function HomePage() {
   const [mobileOpen, setMobileOpen] = useState(false);
   return (
     <main id="home" className="min-h-screen bg-white text-[#17212b]">
-      <header className="relative z-50 border-b border-[#e4e9e4] bg-white/95 shadow-[0_4px_18px_rgba(7,30,22,0.06)] backdrop-blur-md">
-        <div className="mx-auto flex min-h-[76px] max-w-[1600px] items-center justify-between gap-3 px-4 py-2 lg:min-h-[82px] lg:gap-4 lg:px-6">
-          <Link href="/" className="flex shrink-0 items-center gap-2.5" aria-label="MyEVStation home">
-            <span className="grid h-10 w-10 place-items-center rounded-xl bg-[#0b5a42] text-white shadow-sm sm:h-11 sm:w-11"><Zap size={24} fill="currentColor" /></span>
-            <span className="leading-tight"><span className="block whitespace-nowrap text-[19px] font-extrabold tracking-tight text-[#172d21] sm:text-[21px]">my<span className="text-[#e87522]">EV</span>Station</span><span className="mt-0.5 block whitespace-nowrap text-[8px] font-extrabold uppercase tracking-[.09em] text-[#0b5a42] sm:text-[9px]">Founded by Ex-Indian Air Force</span></span>
-          </Link>
-          <nav className="hidden min-w-0 flex-1 items-center justify-start gap-4 pl-2 lg:flex xl:gap-5 xl:pl-3">{sections.map(s => <a key={s.href} href={s.href} className="shrink-0 whitespace-nowrap whitespace-nowrap text-[12px] font-semibold text-[#35423e] transition hover:text-[#e87522] xl:text-[13px]">{s.label}</a>)}<a href="https://wa.me/919876260822?text=Hello%20MyEVStation%2C%20I%20would%20like%20to%20enquire%20about%20EV%20charging%20station%20opportunities." className="ml-auto inline-flex shrink-0 items-center whitespace-nowrap rounded-full bg-[#e87522] px-4 py-3 text-[12px] font-extrabold text-white shadow-sm transition hover:bg-[#c75b14] xl:px-5 xl:text-[13px]">WhatsApp · +91 98762 60822 <ArrowRight className="ml-2 inline shrink-0" size={16}/></a></nav>
-          <button className="rounded-lg border border-black/10 p-2 lg:hidden" onClick={() => setMobileOpen(!mobileOpen)} aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"} aria-expanded={mobileOpen} aria-controls="mobile-navigation">{mobileOpen ? <X/> : <Menu/>}</button>
-        </div>
-        {mobileOpen && <nav id="mobile-navigation" className="grid gap-1 border-t border-black/10 bg-white px-5 py-4 lg:hidden">{sections.map(s => <a key={s.href} href={s.href} onClick={() => setMobileOpen(false)} className="rounded-lg px-3 py-3 font-semibold">{s.label}</a>)}<a href="https://wa.me/919876260822?text=Hello%20MyEVStation%2C%20I%20would%20like%20to%20enquire%20about%20EV%20charging%20station%20opportunities." onClick={() => setMobileOpen(false)} className="rounded-lg bg-[#e87522] px-3 py-3 font-bold text-white">WhatsApp enquiry · +91 98762 60822</a></nav>}
-      </header>
-
-      <section id="home-hero" className="relative isolate min-h-[calc(100svh-5rem)] overflow-hidden bg-[#071e16]">
+<section id="home-hero" className="relative isolate min-h-[calc(100svh-5rem)] overflow-hidden bg-[#071e16]">
         <Image src="/myevstation-hero-banner.jpeg" alt="MyEVStation EV charging station, Indian tricolour and veteran leader" width={1920} height={1080} sizes="100vw" className="absolute inset-0 -z-30 h-full w-full object-cover object-[64%_center] sm:object-[58%_center]" priority />
         <div className="absolute inset-0 -z-20 bg-gradient-to-r from-[#061b14]/80 via-[#061b14]/42 to-[#061b14]/10" />
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_58%_42%,rgba(4,20,14,0.22)_0%,rgba(4,20,14,0.08)_22%,transparent_52%)]" />
@@ -76,7 +63,6 @@ export default function HomePage() {
       <section id="contact" className="bg-white py-20 sm:py-24"><div className="mx-auto max-w-4xl px-5 text-center lg:px-8"><span className="text-xs font-extrabold uppercase tracking-[.2em] text-[#d96a1b]">Start your next mission</span><h2 className="mt-4 text-4xl font-extrabold tracking-tight text-[#15281f] sm:text-5xl">Ready to own an EV station?</h2><p className="mx-auto mt-5 max-w-2xl leading-7 text-[#647067]">Tell us your budget, location and preferred ownership model. We’ll walk you through the package, site requirements, operating responsibilities and an illustrative financial estimate before you make a decision.</p><div className="mt-8 flex flex-wrap justify-center gap-3"><a href="https://wa.me/919876260822?text=Hello%20MyEVStation%2C%20I%20want%20to%20explore%20an%20EV%20charging%20station%20partnership." target="_blank" rel="noreferrer" className="rounded-full bg-[#e87522] px-7 py-4 text-sm font-extrabold text-white shadow-lg shadow-orange-900/10">Enquire on WhatsApp <ArrowRight className="ml-2 inline" size={16}/></a><a href="/business-model" className="rounded-full border border-[#0b5a42]/25 px-7 py-4 text-sm font-extrabold text-[#0b5a42]">Compare the models</a></div><p className="mt-5 text-xs text-[#8a958c]">WhatsApp opens a pre-filled enquiry directly to our team.</p></div></section>
 
 
-      <footer className="bg-[#0b2018] text-white"><div className="mx-auto flex max-w-7xl flex-col gap-6 px-5 py-10 sm:flex-row sm:items-center sm:justify-between lg:px-8"><div className="flex items-center gap-3"><span className="grid h-10 w-10 place-items-center rounded-xl bg-[#0b5a42] text-white"><Zap size={22} fill="currentColor"/></span><div><b className="text-lg">myEVStation</b><p className="text-[9px] font-bold uppercase tracking-[.08em] text-white/70">Founded by Ex-Indian Air Force</p></div></div><div className="flex flex-wrap gap-5 text-sm text-white/65"><Link href="/business-model" className="hover:text-white">Models</Link><a href="/ev-charging-calculator" className="hover:text-white">Investment</a><a href="/technology" className="hover:text-white">Technology</a><Link href="/ev-charging-investment-guide" className="hover:text-white">Investment Guide</Link><Link href="/punjab-ev-charging" className="hover:text-white">Punjab EV Charging</Link><Link href="/amritsar-ev-charging" className="hover:text-white">Amritsar EV Charging</Link><Link href="/greater-noida-societies" className="hover:text-white">Greater Noida Societies</Link><a href="tel:+919876260822" className="hover:text-white">Call +91 98762 60822</a><a href="https://wa.me/919876260822?text=Hello%20MyEVStation%2C%20I%20would%20like%20to%20enquire%20about%20EV%20charging%20station%20opportunities." className="hover:text-white">WhatsApp</a></div><span className="text-xs text-white/45">© {new Date().getFullYear()} MyEVStation</span></div></footer>
-    </main>
+</main>
   );
 }
