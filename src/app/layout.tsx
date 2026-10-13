@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { SITE } from "@/lib/constants";
+import SiteShell from "@/components/custom/SiteShell";
 
 /**
  * Montserrat across the whole system — body and display.
@@ -72,7 +73,7 @@ export default function RootLayout({
             availableLanguage: ["English", "Hindi"]
           }
         }) }} />
-        {children}
+        <SiteShell>{children}</SiteShell>
       </body>
     </html>
   );
