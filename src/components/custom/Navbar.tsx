@@ -18,9 +18,9 @@ export function Navbar() {
           <span className="leading-tight"><span className="block whitespace-nowrap text-xl font-extrabold tracking-tight text-[#172d21]">my<span className="text-[#e87522]">EV</span>Station</span><span className="mt-0.5 block whitespace-nowrap text-[8px] font-extrabold uppercase tracking-[.08em] text-[#0b5a42] sm:text-[9px]">Founded by Ex-Indian Air Force</span></span>
         </Link>
 
-        <NavMenu className="hidden min-w-0 flex-1 justify-center lg:flex" />
+        <NavMenu className="hidden min-w-0 flex-1 justify-center xl:flex" />
 
-        <div className="hidden lg:block">
+        <div className="hidden xl:block">
           <a
             href="https://wa.me/919876260822?text=Hello%20MyEVStation%2C%20I%20would%20like%20to%20enquire."
             target="_blank"
@@ -31,9 +31,18 @@ export function Navbar() {
           </a>
         </div>
 
+        <a
+          href="https://wa.me/919876260822?text=Hello%20MyEVStation%2C%20I%20would%20like%20to%20enquire."
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Chat with Abhinav on WhatsApp"
+          className="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-mission text-white xl:hidden"
+        >
+          <MessageCircle size={20} />
+        </a>
         <button
           type="button"
-          className="rounded-lg p-2 lg:hidden"
+          className="rounded-lg p-2 xl:hidden"
           aria-label="Toggle menu"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
@@ -43,7 +52,7 @@ export function Navbar() {
       </nav>
 
       {open && (
-        <ul className="flex flex-col gap-1 border-t border-line bg-paper px-6 py-4 lg:hidden">
+        <ul className="flex flex-col gap-1 border-t border-line bg-paper px-6 py-4 xl:hidden">
           {NAV_LINKS.map((link) =>
             link.comingSoon ? (
               <li key={link.label}>
