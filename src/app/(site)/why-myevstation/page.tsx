@@ -3,11 +3,11 @@ import { pageSocialMetadata } from "@/lib/page-social-metadata";
 import WhyContent from "./WhyContent";
 
 export const metadata: Metadata = {
-  title: "Why MyEVStation",
+  title: "Why Choose MyEVStation",
   description: "Learn how MyEVStation helps prospective EV charging partners understand site suitability, likely permissions, charger options and realistic investment assumptions.",
   alternates: { canonical: "/why-myevstation" },
 
-  ...pageSocialMetadata("Why MyEVStation", "Learn how MyEVStation helps prospective EV charging partners understand site suitability, likely permissions, charger options and realistic investment assumptions.", "/why-myevstation"),
+  ...pageSocialMetadata("Why Choose MyEVStation", "Learn how MyEVStation helps prospective EV charging partners understand site suitability, likely permissions, charger options and realistic investment assumptions.", "/why-myevstation"),
 };
 
 export default function Page() {
