@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SITE } from "@/lib/constants";
-import { ArrowRight, CheckCircle2, MapPin, ShieldCheck, Zap } from "lucide-react";
+import { ArrowRight, CheckCircle2, ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "EV Charging Station Investment Guide India",
@@ -41,15 +41,7 @@ const faqs = [
 export default function EVChargingInvestmentGuide() {
   return (
     <main className="min-h-screen bg-[#f7f9f6] text-[#17212b]">
-      <header className="border-b border-[#e1e8e0] bg-white">
-        <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4">
-          <Link href="/" aria-label="MyEVStation home" className="font-extrabold tracking-tight text-[#172d21]">
-            my<span className="text-[#e87522]">EV</span>Station
-            <span className="mt-1 block text-[9px] font-bold uppercase tracking-[.16em] text-[#64736d]">Founded by Ex-Indian Air Force</span>
-          </Link>
-          <Link href="/#investment" className="rounded-xl bg-[#0b5a42] px-4 py-3 text-sm font-bold text-white">Estimate & enquire</Link>
-        </div>
-      </header>
+      
 
       <section className="bg-[#0b2a1e] text-white">
         <div className="mx-auto max-w-6xl px-5 py-14 sm:py-20">
@@ -142,7 +134,7 @@ export default function EVChargingInvestmentGuide() {
           ]
         }
       ]) }} />
-      <footer className="bg-[#081f16] px-5 py-8 text-center text-sm text-white/65">© {new Date().getFullYear()} MyEVStation · <Link href="/" className="underline">Home</Link> · <span className="inline-flex items-center gap-1"><MapPin size={14}/> India</span> · <span className="inline-flex items-center gap-1"><Zap size={14}/> EV charging</span></footer>
+      
     </main>
   );
 }
