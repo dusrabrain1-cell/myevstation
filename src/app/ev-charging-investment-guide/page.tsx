@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSocialMetadata } from "@/lib/page-social-metadata";
 import Link from "next/link";
 import { SITE } from "@/lib/constants";
 import { ArrowRight, CheckCircle2, ShieldCheck } from "lucide-react";
@@ -8,6 +9,8 @@ export const metadata: Metadata = {
   description:
     "A practical guide to assessing EV charging station investment in India: site feasibility, charger selection, electricity costs, utilisation, operating expenses and questions to ask before signing.",
   alternates: { canonical: "/ev-charging-investment-guide" },
+
+  ...pageSocialMetadata("EV Charging Station Investment Guide India", "A practical guide to assessing EV charging station investment in India: site feasibility, charger selection, electricity costs, utilisation, operating expenses and questions to ask before signing.", "/ev-charging-investment-guide"),
 };
 
 const checklist = [
