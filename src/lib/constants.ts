@@ -8,6 +8,7 @@ export const SITE = {
   url: "https://myevstation.co",
   email: "hello@myevstation.in",
   phone: "+919625670132",
+  whatsappPhone: "+919876260822",
 } as const;
 
 export interface NavLink {
