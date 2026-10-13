@@ -5,20 +5,7 @@ import SeoFaq from "@/components/custom/SeoFaq";
 import Link from "next/link";
 import { ArrowRight, BatteryCharging, ShieldCheck, MapPin, Zap, Leaf, CarFront, Calculator, Users, Flag } from "lucide-react";
 
-const sections = [
-  { label: "Home", href: "/" },
-  { label: "Why MyEVStation", href: "/why-myevstation" },
-  { label: "Business Model", href: "/business-model" },
-  { label: "Technology", href: "/technology" },
-  { label: "Investment", href: "/ev-charging-investment-guide" },
-  { label: "Calculator", href: "/ev-charging-calculator" },
-  { label: "Impact", href: "/impact" },
-  { label: "FAQs", href: "/faq" },
-  { label: "About Us", href: "/about-us" },
-];
-
 export default function HomePage() {
-  const [mobileOpen, setMobileOpen] = useState(false);
   return (
     <main id="home" className="min-h-screen bg-white text-[#17212b]">
 <section id="home-hero" className="relative isolate min-h-[calc(100svh-5rem)] overflow-hidden bg-[#071e16]">
