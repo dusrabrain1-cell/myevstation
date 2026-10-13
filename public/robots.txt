@@ -1,5 +1,9 @@
 # MyEVStation crawler policy
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /api/admin/
+Disallow: /tl-mirror/
+Disallow: /account/
 
-Sitemap: https://myevstation-9rj8.vercel.app/sitemap.xml
+Sitemap: https://myevstation.co/sitemap.xml
