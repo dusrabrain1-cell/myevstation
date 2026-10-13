@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSocialMetadata } from "@/lib/page-social-metadata";
 import Link from "next/link";
 import SeoFaq from "@/components/custom/SeoFaq";
 import { ArrowRight, Building2, CheckCircle2, MapPin, ShieldCheck, CarFront, Bike, Store, ClipboardCheck } from "lucide-react";
@@ -16,6 +17,8 @@ export const metadata: Metadata = {
     "commercial EV charging Amritsar",
     "EV charging station business Amritsar",
   ],
+
+  ...pageSocialMetadata("EV Charging Stations for Amritsar Markets & Housing Societies", "Explore EV charging solutions for Amritsar commercial markets, shopping areas, hotels, parking sites and housing societies. MyEVStation helps assess site suitability, charger options and installation costs.", "/amritsar-ev-charging"),
 };
 
 const zones = [
