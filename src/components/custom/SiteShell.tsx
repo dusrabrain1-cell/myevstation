@@ -6,8 +6,7 @@ import { RouteLoader } from "@/components/custom/RouteLoader";
 import { ContactModalProvider } from "@/components/custom/contact/ContactModalProvider";
 
 /**
- * Shared site chrome for every route. The homepage has its own designed
- * header/footer inside HomeClient, so the shared chrome is omitted there.
+ * Shared site chrome for every route, including the homepage.
  */
 export default function SiteShell({ children }: { children: React.ReactNode }) {
   return (
