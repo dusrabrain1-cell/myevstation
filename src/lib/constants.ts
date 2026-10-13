@@ -7,7 +7,7 @@ export const SITE = {
     "EV charging station opportunities and partnerships across India.",
   url: "https://myevstation.co",
   email: "hello@myevstation.in",
-  phone: "+919625670132",
+  phone: "+919876260822",
   whatsappPhone: "+919876260822",
 } as const;
 
