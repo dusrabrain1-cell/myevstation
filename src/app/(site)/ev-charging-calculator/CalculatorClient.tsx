@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { ArrowRight, ShieldCheck, MapPin, Calculator, Users, Flag } from "lucide-react";
