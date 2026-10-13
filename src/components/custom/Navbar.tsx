@@ -7,12 +7,10 @@ import { Menu, X, Zap, MessageCircle } from "lucide-react";
 
 import { NAV_LINKS } from "@/lib/constants";
 import { NavMenu } from "./NavMenu";
-import { useContactModal } from "./contact/ContactModalProvider";
 
 export function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  const { open: openContact } = useContactModal();
 
   // Homepage absorbs the logo and Made-in-India badge inside the hero, so
   // the global navbar is hidden there. Other pages keep it.
@@ -29,13 +27,14 @@ export function Navbar() {
         <NavMenu className="hidden min-w-0 flex-1 justify-center lg:flex" />
 
         <div className="hidden lg:block">
-          <button
-            type="button"
-            onClick={() => openContact("Talk to our team")}
-            className="rounded-md bg-mission px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-mission-dark"
+          <a
+            href="https://wa.me/919876260822?text=Hello%20MyEVStation%2C%20I%20would%20like%20to%20enquire."
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 whitespace-nowrap rounded-md bg-mission px-4 py-2.5 text-xs font-bold text-white transition-colors hover:bg-mission-dark xl:px-5 xl:text-sm"
           >
-            Join the Mission
-          </button>
+            <MessageCircle size={16} /> WhatsApp · +91 98762 60822
+          </a>
         </div>
 
         <button
@@ -78,11 +77,11 @@ export function Navbar() {
               type="button"
               onClick={() => {
                 setOpen(false);
-                openContact("Join the Mission");
+
               }}
               className="inline-flex w-full justify-center rounded-md bg-mission px-5 py-2.5 text-sm font-semibold text-white"
             >
-              Join the Mission
+              WhatsApp enquiry · +91 98762 60822
             </button>
           </li>
         </ul>
