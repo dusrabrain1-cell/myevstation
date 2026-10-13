@@ -25,7 +25,7 @@ export function ContactModalProvider({
 }) {
   const open = useCallback((nextSource?: string) => {
     const message = `Hello MyEVStation, I would like to enquire about ${nextSource || "EV charging station opportunities"}. Please guide me on investment, location suitability and next steps.`;
-    window.open(`https://wa.me/919625670132?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
+    window.open(`https://wa.me/919876260822?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
   }, []);
   const close = useCallback(() => {}, []);
 
