@@ -36,8 +36,8 @@ export default function HomePage() {
 
       <section id="home-hero" className="relative isolate min-h-[calc(100svh-5rem)] overflow-hidden bg-[#071e16]">
         <Image src="/myevstation-hero-banner.jpeg" alt="MyEVStation EV charging station, Indian tricolour and veteran leader" width={1920} height={1080} sizes="100vw" className="absolute inset-0 -z-30 h-full w-full object-cover object-[64%_center] sm:object-[58%_center]" priority />
-        <div className="absolute inset-0 -z-20 bg-gradient-to-r from-[#061b14]/85 via-[#061b14]/65 to-[#061b14]/30" />
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_58%_42%,rgba(4,20,14,0.82)_0%,rgba(4,20,14,0.38)_22%,transparent_52%)]" />
+        <div className="absolute inset-0 -z-20 bg-gradient-to-r from-[#061b14]/80 via-[#061b14]/42 to-[#061b14]/10" />
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_58%_42%,rgba(4,20,14,0.22)_0%,rgba(4,20,14,0.08)_22%,transparent_52%)]" />
         <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#061b14]/30 via-transparent to-transparent" />
         <div className="mx-auto flex min-h-[min(760px,calc(100svh-4.5rem))] w-full max-w-[1600px] items-center px-4 py-6 sm:min-h-[calc(100svh-5rem)] sm:px-10 sm:py-8 lg:px-16">
           <div className="w-full max-w-[min(47%,660px)] text-white max-lg:max-w-[56%] max-sm:max-w-full max-sm:rounded-2xl max-sm:bg-[#061b14]/70 max-sm:p-4 max-sm:shadow-lg">
