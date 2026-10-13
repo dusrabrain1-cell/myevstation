@@ -68,6 +68,7 @@ export default function RootLayout({
           "@type": "Organization",
           name: SITE.name,
           url: SITE.url,
+          logo: `${SITE.url}/myevstation-logo.png`,
           description: "EV charging infrastructure and station partnership opportunities in India.",
           telephone: SITE.phone,
           contactPoint: {
