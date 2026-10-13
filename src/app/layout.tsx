@@ -23,7 +23,6 @@ export const metadata: Metadata = {
   },
   description: "Explore EV charging station setup in India with MyEVStation. Compare investment models for landowners, housing societies, businesses and ex-servicemen, and enquire about EV charger installation and partnerships.",
   metadataBase: new URL(SITE.url),
-  alternates: { canonical: "/" },
   keywords: [
     "EV charging station setup India",
     "EV charging station business",
