@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
+import { pageSocialMetadata } from "@/lib/page-social-metadata";
 import SeoFaq from "@/components/custom/SeoFaq";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-export const metadata: Metadata = { title: "EV Charging Station FAQs and Permission Guidance", description: "Find answers about EV charging station permissions, site assessment, investment, chargers and how MyEVStation can help you prepare the next steps.", alternates: { canonical: "/faq" } };
+export const metadata: Metadata = { title: "EV Charging Station FAQs and Permission Guidance", description: "Find answers about EV charging station permissions, site assessment, investment, chargers and how MyEVStation can help you prepare the next steps.", alternates: { canonical: "/faq" } ,
+  ...pageSocialMetadata("EV Charging Station FAQs and Permission Guidance", "Find answers about EV charging station permissions, site assessment, investment, chargers and how MyEVStation can help you prepare the next steps.", "/faq"),
+};
 const items = [
  {question:"Will MyEVStation help me get permission to install an EV charging station?",answer:"Yes. MyEVStation can guide you through the likely permission process, help identify whose consent may be needed, explain the documents and site details to prepare, and discuss coordination with the property owner, RWA or facility manager and relevant electricity provider or authority. Requirements vary by location and project, and final approval rests with the relevant decision-maker or authority."},
  {question:"What if I do not know which permissions or documents are required?",answer:"You do not need to figure it out alone. Share your location, property type, ownership or lease status and whether the site is a housing society, commercial property or private parking. We can help you understand likely permission steps and prepare a checklist for the relevant parties."},
