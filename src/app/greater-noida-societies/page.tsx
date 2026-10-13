@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSocialMetadata } from "@/lib/page-social-metadata";
 import Link from "next/link";
 import SeoFaq from "@/components/custom/SeoFaq";
 import { ArrowRight, Building2, CheckCircle2, MapPin, ShieldCheck, CarFront, Bike, ClipboardCheck } from "lucide-react";
@@ -15,6 +16,8 @@ export const metadata: Metadata = {
     "apartment EV charging installation Greater Noida",
     "EV charger for society parking",
   ],
+
+  ...pageSocialMetadata("EV Charging for Greater Noida Housing Societies & RWAs", "Plan EV charging for Greater Noida apartments, gated societies and RWAs. MyEVStation helps assess shared visitor charging, resident parking chargers, 2W/3W charging and AC car chargers.", "/greater-noida-societies"),
 };
 
 const areas = [
