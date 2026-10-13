@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSocialMetadata } from "@/lib/page-social-metadata";
 import Image from "next/image";
 import { ArrowRight, CheckCircle2, ShieldCheck, Zap, BatteryCharging, CarFront, Bike, Building2, Activity } from "lucide-react";
 
@@ -6,6 +7,8 @@ export const metadata: Metadata = {
   title: "EV Charging Solutions for Housing Societies",
   description: "Explore smart sockets, AC chargers and DC charging options for apartments and housing societies. Review indicative equipment pricing and site-planning considerations with MyEVStation.",
   alternates: { canonical: "/society" },
+
+  ...pageSocialMetadata("EV Charging Solutions for Housing Societies", "Explore smart sockets, AC chargers and DC charging options for apartments and housing societies. Review indicative equipment pricing and site-planning considerations with MyEVStation.", "/society"),
 };
 
 const options = [
