@@ -2,19 +2,13 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { Menu, X, Zap, MessageCircle } from "lucide-react";
 
 import { NAV_LINKS } from "@/lib/constants";
 import { NavMenu } from "./NavMenu";
 
 export function Navbar() {
-  const pathname = usePathname();
   const [open, setOpen] = useState(false);
-
-  // Homepage absorbs the logo and Made-in-India badge inside the hero, so
-  // the global navbar is hidden there. Other pages keep it.
-  if (pathname === "/") return null;
 
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-paper">
