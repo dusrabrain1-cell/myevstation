@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSocialMetadata } from "@/lib/page-social-metadata";
 import Link from "next/link";
 import SeoFaq from "@/components/custom/SeoFaq";
 import { ArrowRight, MapPin, Building2, CheckCircle2, CarFront, Truck, ClipboardCheck, Store } from "lucide-react";
@@ -19,6 +20,8 @@ export const metadata: Metadata = {
     "EV charging for Punjab housing societies",
     "EV charging station franchise Punjab",
   ],
+
+  ...pageSocialMetadata("EV Charging Station Opportunities Across Punjab | City-Wise", "Explore city-wise EV charging site opportunities across Punjab. MyEVStation helps property owners, market associations, fleet operators and housing societies assess underserved locations and charging feasibility.", "/punjab-ev-charging"),
 };
 
 const cityGroups = [
