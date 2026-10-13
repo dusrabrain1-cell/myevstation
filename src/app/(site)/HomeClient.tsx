@@ -1,9 +1,7 @@
 "use client";
 import Image from "next/image";
-import SeoFaq from "@/components/custom/SeoFaq";
 
-import Link from "next/link";
-import { ArrowRight, BatteryCharging, ShieldCheck, MapPin, Zap, Leaf, CarFront, Calculator, Users, Flag } from "lucide-react";
+import { ArrowRight, BatteryCharging, ShieldCheck, MapPin, Zap, Leaf, CarFront, Users, Flag } from "lucide-react";
 
 export default function HomePage() {
   return (
