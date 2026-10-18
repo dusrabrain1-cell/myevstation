@@ -33,7 +33,7 @@ export default function ContactPage() {
             <ul className="mt-8 space-y-4 text-[14px] text-ink-soft">
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-mission" strokeWidth={1.8} />
-                {SITE.email}
+                <a href={`mailto:${SITE.email}`} className="hover:text-mission">{SITE.email}</a>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-mission" strokeWidth={1.8} />
