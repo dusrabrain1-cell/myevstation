@@ -41,7 +41,7 @@ export default function TechnologyContent() {
                 </div>
                 <div className="mt-8 flex flex-col gap-4 rounded-2xl border border-white/10 bg-white/[.04] p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
                   <div><h3 className="font-extrabold">Technology should earn trust.</h3><p className="mt-1 text-sm leading-6 text-white/65">We focus on appropriate charger selection, connected operations and safety-led diagnostics—not promises of zero risk.</p></div>
-                  <a href="https://wa.me/919625670132?text=Hello%20MyEVStation%2C%20I%20would%20like%20to%20enquire%20about%20EV%20charging%20station%20opportunities." className="inline-flex shrink-0 items-center justify-center rounded-full bg-[#e87522] px-6 py-3.5 text-sm font-extrabold text-white">Discuss a partnership <ArrowRight className="ml-2" size={16}/></a>
+                  <a href="https://wa.me/919876260822?text=Hello%20MyEVStation%2C%20I%20would%20like%20to%20enquire%20about%20EV%20charging%20station%20opportunities." className="inline-flex shrink-0 items-center justify-center rounded-full bg-[#e87522] px-6 py-3.5 text-sm font-extrabold text-white">Discuss a partnership <ArrowRight className="ml-2" size={16}/></a>
                 </div>
               </div>
             </section>
