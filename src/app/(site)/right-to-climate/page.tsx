@@ -5,6 +5,7 @@ import { PageHeader } from "@/components/custom/PageHeader";
 export const metadata: Metadata = {
   title: "Right to Climate",
   description: "Our CSR initiative for climate action.",
+  robots: { index: false, follow: true },
 };
 
 export default function RightToClimatePage() {
