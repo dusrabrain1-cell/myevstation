@@ -2,12 +2,15 @@ import type { Metadata } from "next";
 import { Mail, MapPin, Phone } from "lucide-react";
 
 import { ContactForm } from "@/components/custom/contact/ContactForm";
+import { pageSocialMetadata } from "@/lib/page-social-metadata";
 import { SITE } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Contact MyEVStation | EV Charging Station Enquiries",
   description:
     "Contact MyEVStation about EV charging station setup, site assessments, housing society charging, business partnerships and investment enquiries across India.",
+  alternates: { canonical: "/contact" },
+  ...pageSocialMetadata("Contact MyEVStation | EV Charging Station Enquiries", "Contact MyEVStation about EV charging station setup, site assessments, housing society charging, business partnerships and investment enquiries across India.", "/contact"),
 };
 
 export default function ContactPage() {
