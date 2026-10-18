@@ -9,8 +9,7 @@ interface BulletListProps {
 }
 
 /**
- * Branded green-checkmark bullet list — used across hero, Why India,
- * Hemp & Napier, IIT Ropar, etc.
+ * Branded green-checkmark bullet list used across MyEVStation information pages.
  */
 export function BulletList({ items, className, tone = "default" }: BulletListProps) {
   return (
