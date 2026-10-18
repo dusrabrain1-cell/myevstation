@@ -3,7 +3,7 @@ import { pageSocialMetadata } from "@/lib/page-social-metadata";
 import AboutContent from "./AboutContent";
 
 export const metadata: Metadata = {
-  title: "About MyEVStation | EV Charging Leadership Team",
+  title: "About Us | EV Charging Leadership Team",
   description: "Meet the veteran-led MyEVStation team and learn how we help landowners, housing societies, businesses and partners assess EV charging station opportunities across India.",
   alternates: { canonical: "/about-us" },
 
