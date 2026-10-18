@@ -1,8 +1,5 @@
-// These are the public Sanity coordinates for this site (a NEXT_PUBLIC project
-// ID + dataset are shipped to the browser anyway, so they're not secrets). They
-// default to the real values so the app builds and reads content even when env
-// vars aren't configured on the host (e.g. a frontend-only Vercel deploy). Env
-// vars still override, so other datasets/projects can be targeted locally.
+// Configure a dedicated MyEVStation Sanity project through environment variables.
+// The fallback is only a placeholder and must not be used for production.
 export const apiVersion =
   process.env.NEXT_PUBLIC_SANITY_API_VERSION || "2024-10-01";
 
