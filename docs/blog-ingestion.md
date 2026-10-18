@@ -4,7 +4,7 @@ Programmatically create **published** blog articles in Sanity via a single HTTP
 endpoint. Built for an automated pipeline (n8n, a cron job, a script, an LLM
 agent, etc.).
 
-- **Endpoint:** `POST https://www.carbonmandi.com/api/articles`
+- **Endpoint:** `POST https://myevstation.co/api/articles`
 - **Source:** [`src/app/api/articles/route.ts`](../src/app/api/articles/route.ts)
 - Articles appear immediately on `/blogs/blog` (index is dynamic); each article
   page renders on demand. No rebuild/redeploy needed per post.
@@ -76,16 +76,16 @@ directly instead.
 ### Minimal (Markdown body)
 
 ```bash
-curl -X POST https://www.carbonmandi.com/api/articles \
+curl -X POST https://myevstation.co/api/articles \
   -H "Authorization: Bearer $BLOG_INGEST_SECRET" \
   -H "Content-Type: application/json" \
   -d '{
-    "title": "Green Hydrogen in India: 2026 Outlook",
+    "title": "EV Charging Infrastructure in India: 2026 Outlook",
     "excerpt": "Where biomass-based hydrogen is headed this year.",
-    "author": "Carbon Mandi",
-    "categories": ["Green Hydrogen", "Policy"],
+    "author": "MyEVStation",
+    "categories": ["EV Charging", "Infrastructure"],
     "coverImageUrl": "https://example.com/cover.jpg",
-    "markdown": "## Introduction\n\nIndia is scaling green hydrogen...\n\n- Biomass feedstock\n- Rural income\n\n## Outlook\n\nThe road ahead looks bright."
+    "markdown": "## Introduction\n\nIndia is expanding EV charging infrastructure...\n\n- Charging access\n- Site readiness\n\n## Outlook\n\nThe road ahead looks bright."
   }'
 ```
 
