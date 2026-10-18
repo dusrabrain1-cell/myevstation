@@ -11,7 +11,7 @@ export default function AboutContent() {
               <div className="mx-auto max-w-7xl px-5 lg:px-8">
                 <div className="mx-auto max-w-3xl text-center">
                   <p className="text-xs font-extrabold uppercase tracking-[.22em] text-[#c65f19]">Built on service. Focused on the future.</p>
-                  <h2 className="mt-3 text-3xl font-black tracking-tight text-[#092d20] sm:text-5xl">Leadership that understands mission-critical systems</h2>
+                  <h1 className="mt-3 text-3xl font-black tracking-tight text-[#092d20] sm:text-5xl">Leadership that understands mission-critical systems</h1>
                   <p className="mt-4 text-base leading-7 text-[#536258] sm:text-lg">MyEVStation brings an ex-Indian Air Force perspective to EV charging infrastructure—where operational discipline, dependable electronics, safety and customer trust matter.</p>
                 </div>
                 <div className="mt-10 grid gap-5 lg:grid-cols-2">
