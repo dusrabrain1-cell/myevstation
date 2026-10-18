@@ -77,7 +77,8 @@ export function ContactForm({
             type="text"
             autoComplete="name"
             placeholder="Your name"
-            aria-invalid={Boolean(errors.name)}\n            className={inputClass(errors.name)}
+            aria-invalid={Boolean(errors.name)}
+            className={inputClass(errors.name)}
             {...register("name")}
           />
         </Field>
@@ -86,7 +87,8 @@ export function ContactForm({
             type="text"
             autoComplete="organization"
             placeholder="Company / institution"
-            aria-invalid={Boolean(errors.organisation)}\n            className={inputClass(errors.organisation)}
+            aria-invalid={Boolean(errors.organisation)}
+            className={inputClass(errors.organisation)}
             {...register("organisation")}
           />
         </Field>
@@ -95,7 +97,8 @@ export function ContactForm({
             type="text"
             autoComplete="organization-title"
             placeholder="Your role (optional)"
-            aria-invalid={Boolean(errors.designation)}\n            className={inputClass(errors.designation)}
+            aria-invalid={Boolean(errors.designation)}
+            className={inputClass(errors.designation)}
             {...register("designation")}
           />
         </Field>
@@ -104,7 +107,8 @@ export function ContactForm({
             type="email"
             autoComplete="email"
             placeholder="you@company.com"
-            aria-invalid={Boolean(errors.email)}\n            className={inputClass(errors.email)}
+            aria-invalid={Boolean(errors.email)}
+            className={inputClass(errors.email)}
             {...register("email")}
           />
         </Field>
@@ -114,7 +118,8 @@ export function ContactForm({
         <textarea
           rows={4}
           placeholder="How can we work together?"
-          aria-invalid={Boolean(errors.message)}\n          className={inputClass(errors.message)}
+          aria-invalid={Boolean(errors.message)}
+          className={inputClass(errors.message)}
           {...register("message")}
         />
       </Field>
