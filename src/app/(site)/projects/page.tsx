@@ -50,7 +50,7 @@ const PROJECTS: Project[] = [
       { name: "Thapar Institute of Engineering & Technology" },
     ],
     image: "projectPlasmaTextile",
-    href: "#",
+    href: "/contact",
   },
   {
     no: "02",
@@ -254,7 +254,7 @@ function ProjectRow({ project: p }: { project: Project }) {
           )}
         </div>
 
-        {/* CTA — project 01 goes home; the rest open the contact form. */}
+        {/* CTA — project 01 opens the contact page; the rest open the contact form. */}
         <div className="mt-auto pt-7">
           {isFirst ? (
             <Link href={p.href} className={CTA_CLASS}>
