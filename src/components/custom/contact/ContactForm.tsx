@@ -48,7 +48,7 @@ export function ContactForm({
 
   if (status === "success") {
     return (
-      <div className="flex flex-col items-center py-8 text-center">
+      <div role="status" aria-live="polite" className="flex flex-col items-center py-8 text-center">
         <span className="flex h-14 w-14 items-center justify-center rounded-full bg-mission-soft">
           <CheckCircle2 className="h-7 w-7 text-mission" strokeWidth={2} />
         </span>
@@ -77,7 +77,7 @@ export function ContactForm({
             type="text"
             autoComplete="name"
             placeholder="Your name"
-            className={inputClass(errors.name)}
+            aria-invalid={Boolean(errors.name)}\n            className={inputClass(errors.name)}
             {...register("name")}
           />
         </Field>
@@ -86,7 +86,7 @@ export function ContactForm({
             type="text"
             autoComplete="organization"
             placeholder="Company / institution"
-            className={inputClass(errors.organisation)}
+            aria-invalid={Boolean(errors.organisation)}\n            className={inputClass(errors.organisation)}
             {...register("organisation")}
           />
         </Field>
@@ -95,7 +95,7 @@ export function ContactForm({
             type="text"
             autoComplete="organization-title"
             placeholder="Your role (optional)"
-            className={inputClass(errors.designation)}
+            aria-invalid={Boolean(errors.designation)}\n            className={inputClass(errors.designation)}
             {...register("designation")}
           />
         </Field>
@@ -104,7 +104,7 @@ export function ContactForm({
             type="email"
             autoComplete="email"
             placeholder="you@company.com"
-            className={inputClass(errors.email)}
+            aria-invalid={Boolean(errors.email)}\n            className={inputClass(errors.email)}
             {...register("email")}
           />
         </Field>
@@ -114,13 +114,13 @@ export function ContactForm({
         <textarea
           rows={4}
           placeholder="How can we work together?"
-          className={inputClass(errors.message)}
+          aria-invalid={Boolean(errors.message)}\n          className={inputClass(errors.message)}
           {...register("message")}
         />
       </Field>
 
       {status === "error" && (
-        <p className="rounded-md bg-red-50 px-3 py-2 text-[13px] font-medium text-red-700">
+        <p role="alert" aria-live="assertive" className="rounded-md bg-red-50 px-3 py-2 text-[13px] font-medium text-red-700">
           Something went wrong sending your message. Please try again, or email
           us directly.
         </p>
