@@ -12,7 +12,7 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-paper">
-      <nav className="mx-auto flex min-h-20 max-w-[1500px] items-center justify-between gap-6 px-5 py-3 lg:px-8 xl:px-10">
+      <nav aria-label="Primary navigation" className="mx-auto flex min-h-20 max-w-[1500px] items-center justify-between gap-6 px-5 py-3 lg:px-8 xl:px-10">
         <Link href="/" className="flex shrink-0 items-center gap-3" aria-label="MyEVStation home">
           <span className="grid h-10 w-10 place-items-center rounded-xl bg-[#0b5a42] text-white"><Zap size={22} fill="currentColor" /></span>
           <span className="leading-tight"><span className="block whitespace-nowrap text-xl font-extrabold tracking-tight text-[#172d21]">my<span className="text-[#e87522]">EV</span>Station</span><span className="mt-0.5 block whitespace-nowrap text-[8px] font-extrabold uppercase tracking-[.08em] text-[#0b5a42] sm:text-[9px]">Founded by Ex-Indian Air Force</span></span>
@@ -43,7 +43,7 @@ export function Navbar() {
         <button
           type="button"
           className="rounded-lg p-2 xl:hidden"
-          aria-label="Toggle menu"
+          aria-label={open ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={open}
           aria-controls="mobile-primary-navigation"
           onClick={() => setOpen((v) => !v)}
@@ -53,7 +53,7 @@ export function Navbar() {
       </nav>
 
       {open && (
-        <ul id="mobile-primary-navigation" className="flex flex-col gap-1 border-t border-line bg-paper px-6 py-4 xl:hidden">
+        <ul id="mobile-primary-navigation" aria-label="Mobile primary navigation" className="flex flex-col gap-1 border-t border-line bg-paper px-6 py-4 xl:hidden">
           {NAV_LINKS.map((link) =>
             link.comingSoon ? (
               <li key={link.label}>
