@@ -3,7 +3,6 @@ import { ArrowRight, Zap, MessageCircle } from "lucide-react";
 
 const EXPLORE_LINKS = [
   { label: "Why MyEVStation", href: "/why-myevstation" },
-  { label: "National projects", href: "/projects" },
   { label: "Business model", href: "/business-model" },
   { label: "Technology & safety", href: "/technology" },
   { label: "Investment guide", href: "/ev-charging-investment-guide" },
