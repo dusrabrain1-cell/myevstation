@@ -119,6 +119,6 @@ Re-posting the same slug returns `409`. To update an existing post instead:
 
 If you'd rather skip this endpoint, the automation can POST mutations straight to
 the Sanity HTTP API
-(`https://flhfm40u.api.sanity.io/v<version>/data/mutate/production`) with the
+(`https://YOUR_PROJECT_ID.api.sanity.io/v<version>/data/mutate/production`) with the
 write token. This endpoint exists to add auth, validation, slug-safety, image
 upload and Markdown→Portable Text conversion in one call.
