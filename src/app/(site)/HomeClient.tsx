@@ -45,6 +45,36 @@ export default function HomePage() {
 
       <section className="border-y border-[#e3e9e4] bg-white"><div className="mx-auto grid max-w-7xl grid-cols-2 gap-4 px-5 py-6 sm:grid-cols-3 lg:grid-cols-5 lg:px-8">{[{a:"EV ACCESS",b:"For every journey",I:CarFront},{a:"VETERAN-LED",b:"A mission beyond service",I:Flag},{a:"SMART CHARGING",b:"AC & DC infrastructure",I:Zap},{a:"BATTERY SAFETY",b:"Diagnostics-led approach",I:ShieldCheck},{a:"CLEANER MOBILITY",b:"Supporting India's transition",I:Leaf}].map(({a,b,I})=><div key={a} className="flex items-center gap-3"><span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-[#eaf3ed] text-[#0b7652]"><I size={20}/></span><span><b className="block text-[10px] tracking-widest text-[#0b5a42]">{a}</b><span className="mt-1 block text-xs text-[#65716a]">{b}</span></span></div>)}</div></section>
 
+      <section id="locations" className="border-t border-[#e4e9e4] bg-[#f7f9f6] py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-5 lg:px-8">
+          <div className="max-w-3xl">
+            <p className="text-xs font-extrabold uppercase tracking-[.2em] text-[#d96a1b]">Local EV charging opportunities</p>
+            <h2 className="mt-3 text-3xl font-black tracking-tight text-[#15281f] sm:text-4xl">Explore charging options for your location</h2>
+            <p className="mt-4 leading-7 text-[#647067]">Every site is different. Start with a location-specific guide, then confirm demand, electrical capacity, permissions and total installed costs before making an investment.</p>
+          </div>
+          <div className="mt-8 grid gap-4 md:grid-cols-3">
+            <a href="/greater-noida-societies" className="group rounded-2xl border border-[#dfe7df] bg-white p-6 transition hover:border-[#0b7652] hover:shadow-md">
+              <MapPin size={24} className="text-[#0b7652]" />
+              <h3 className="mt-4 text-xl font-extrabold text-[#172d21]">Greater Noida societies</h3>
+              <p className="mt-2 text-sm leading-6 text-[#647067]">Plan resident and visitor charging with your RWA or facility manager.</p>
+              <span className="mt-5 inline-flex items-center gap-2 text-sm font-extrabold text-[#0b7652]">Explore society options <ArrowRight size={15} className="transition group-hover:translate-x-1" /></span>
+            </a>
+            <a href="/amritsar-ev-charging" className="group rounded-2xl border border-[#dfe7df] bg-white p-6 transition hover:border-[#0b7652] hover:shadow-md">
+              <MapPin size={24} className="text-[#0b7652]" />
+              <h3 className="mt-4 text-xl font-extrabold text-[#172d21]">Amritsar commercial sites</h3>
+              <p className="mt-2 text-sm leading-6 text-[#647067]">Assess markets, hotels, parking areas and other commercial properties.</p>
+              <span className="mt-5 inline-flex items-center gap-2 text-sm font-extrabold text-[#0b7652]">Explore Amritsar options <ArrowRight size={15} className="transition group-hover:translate-x-1" /></span>
+            </a>
+            <a href="/punjab-ev-charging" className="group rounded-2xl border border-[#dfe7df] bg-white p-6 transition hover:border-[#0b7652] hover:shadow-md">
+              <MapPin size={24} className="text-[#0b7652]" />
+              <h3 className="mt-4 text-xl font-extrabold text-[#172d21]">Across Punjab</h3>
+              <p className="mt-2 text-sm leading-6 text-[#647067]">Review city-wise opportunities for commercial sites, societies and fleets.</p>
+              <span className="mt-5 inline-flex items-center gap-2 text-sm font-extrabold text-[#0b7652]">Explore Punjab options <ArrowRight size={15} className="transition group-hover:translate-x-1" /></span>
+            </a>
+          </div>
+        </div>
+      </section>
+
       <section id="contact" className="bg-white py-20 sm:py-24"><div className="mx-auto max-w-4xl px-5 text-center lg:px-8"><span className="text-xs font-extrabold uppercase tracking-[.2em] text-[#d96a1b]">Start your next mission</span><h2 className="mt-4 text-4xl font-extrabold tracking-tight text-[#15281f] sm:text-5xl">Ready to own an EV station?</h2><p className="mx-auto mt-5 max-w-2xl leading-7 text-[#647067]">Tell us your budget, location and preferred ownership model. We’ll walk you through the package, site requirements, operating responsibilities and an illustrative financial estimate before you make a decision.</p><div className="mt-8 flex flex-wrap justify-center gap-3"><a href="https://wa.me/919876260822?text=Hello%20MyEVStation%2C%20I%20want%20to%20explore%20an%20EV%20charging%20station%20partnership." target="_blank" rel="noreferrer" className="rounded-full bg-[#e87522] px-7 py-4 text-sm font-extrabold text-white shadow-lg shadow-orange-900/10">Enquire on WhatsApp <ArrowRight className="ml-2 inline" size={16}/></a><a href="/business-model" className="rounded-full border border-[#0b5a42]/25 px-7 py-4 text-sm font-extrabold text-[#0b5a42]">Compare the models</a></div><p className="mt-5 text-xs text-[#8a958c]">WhatsApp opens a pre-filled enquiry directly to our team.</p></div></section>
 
 
