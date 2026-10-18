@@ -6,7 +6,7 @@ import { pageSocialMetadata } from "@/lib/page-social-metadata";
 import { SITE } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Contact MyEVStation | EV Charging Station Enquiries",
+  title: "Contact Us | EV Charging Station Enquiries",
   description:
     "Contact MyEVStation about EV charging station setup, site assessments, housing society charging, business partnerships and investment enquiries across India.",
   alternates: { canonical: "/contact" },
