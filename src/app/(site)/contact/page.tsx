@@ -24,7 +24,7 @@ export default function ContactPage() {
               Contact Us
             </p>
             <h1 className="mt-4 font-display text-[clamp(2rem,4vw,3rem)] font-extrabold leading-[1.05] tracking-tight text-mission">
-              Let&rsquo;s build a greener future together
+              Talk to MyEVStation About EV Charging Station Setup
             </h1>
             <p className="mt-5 max-w-md text-[15px] leading-relaxed text-ink-soft">
               Whether you own a site, manage a housing society, operate a business or fleet, or are exploring an EV charging partnership, tell us about your requirement and our team will guide you on next steps.
