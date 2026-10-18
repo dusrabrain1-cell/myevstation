@@ -48,7 +48,7 @@ export default function AboutContent() {
                 </div>
                 <div className="mt-8 rounded-3xl bg-[#092d20] p-7 text-white sm:flex sm:items-center sm:justify-between sm:gap-8 sm:p-9">
                   <div><p className="text-xs font-extrabold uppercase tracking-[.18em] text-[#ffc18f]">An opportunity after service—and for every entrepreneur</p><h3 className="mt-2 text-2xl font-black sm:text-3xl">Own the opportunity. Help build India’s EV charging network.</h3><p className="mt-3 max-w-2xl text-sm leading-6 text-white/75">Have land, or no land? We’ll help you understand the model, site requirements, technology and next steps before you make a decision.</p></div>
-                  <a href="https://wa.me/919625670132?text=Hello%20MyEVStation%2C%20I%20would%20like%20to%20enquire%20about%20EV%20charging%20station%20opportunities." className="mt-6 inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-[#e87522] px-6 py-4 text-sm font-extrabold text-white sm:mt-0">Discuss Your EV Station <ArrowRight size={17}/></a>
+                  <a href="https://wa.me/919876260822?text=Hello%20MyEVStation%2C%20I%20would%20like%20to%20enquire%20about%20EV%20charging%20station%20opportunities." className="mt-6 inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-[#e87522] px-6 py-4 text-sm font-extrabold text-white sm:mt-0">Discuss Your EV Station <ArrowRight size={17}/></a>
                 </div>
               </div>
             </section>
