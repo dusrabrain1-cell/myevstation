@@ -5,9 +5,9 @@ import { ContactForm } from "@/components/custom/contact/ContactForm";
 import { SITE } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Contact Us — Carbon Mandi",
+  title: "Contact MyEVStation | EV Charging Station Enquiries",
   description:
-    "Get in touch with Carbon Mandi — partner with us to accelerate India's clean, circular bioeconomy.",
+    "Contact MyEVStation about EV charging station setup, site assessments, housing society charging, business partnerships and investment enquiries across India.",
 };
 
 export default function ContactPage() {
@@ -24,14 +24,13 @@ export default function ContactPage() {
               Let&rsquo;s build a greener future together
             </h1>
             <p className="mt-5 max-w-md text-[15px] leading-relaxed text-ink-soft">
-              Whether you&rsquo;re a farmer, partner, investor or researcher —
-              tell us a little about you and our team will get back to you.
+              Whether you own a site, manage a housing society, operate a business or fleet, or are exploring an EV charging partnership, tell us about your requirement and our team will guide you on next steps.
             </p>
 
             <ul className="mt-8 space-y-4 text-[14px] text-ink-soft">
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-mission" strokeWidth={1.8} />
-                carbonmandi@gmail.com
+                {SITE.email}
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-mission" strokeWidth={1.8} />
@@ -41,7 +40,7 @@ export default function ContactPage() {
               </li>
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="mt-0.5 text-mission" strokeWidth={1.8} />
-                IIT Ropar Technology &amp; Innovation Foundation, Punjab, India
+                EV charging station enquiries and partnership support across India
               </li>
             </ul>
           </div>
