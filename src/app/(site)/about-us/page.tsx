@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "Meet the veteran-led MyEVStation team and learn how we help landowners, housing societies, businesses and partners assess EV charging station opportunities across India.",
   alternates: { canonical: "/about-us" },
 
-  ...pageSocialMetadata("About MyEVStation | EV Charging Leadership Team", "Meet the veteran-led team behind MyEVStation and learn about its independent mission to help people explore EV charging infrastructure opportunities.", "/about-us"),
+  ...pageSocialMetadata("About MyEVStation | EV Charging Leadership Team", "Meet the veteran-led MyEVStation team and learn how we help landowners, housing societies, businesses and partners assess EV charging station opportunities across India.", "/about-us"),
 };
 
 export default function Page() {
