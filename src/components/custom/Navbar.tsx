@@ -35,7 +35,7 @@ export function Navbar() {
           href="https://wa.me/919876260822?text=Hello%20MyEVStation%2C%20I%20would%20like%20to%20enquire."
           target="_blank"
           rel="noreferrer"
-          aria-label="Chat with Abhinav on WhatsApp"
+          aria-label="Chat with MyEVStation on WhatsApp"
           className="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-mission text-white xl:hidden"
         >
           <MessageCircle size={20} />
