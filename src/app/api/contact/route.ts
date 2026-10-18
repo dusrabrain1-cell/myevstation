@@ -4,8 +4,7 @@ import { contactSchema } from "@/lib/contact-schema";
 import { SITE } from "@/lib/constants";
 
 const TO_EMAIL = process.env.MYEVSTATION_CONTACT_TO_EMAIL || SITE.email;
-// Resend's shared sender works with no domain setup; swap for a verified
-// domain address (e.g. "Carbon Mandi <hello@carbonmandi.com>") once available.
+// Use a MyEVStation-specific sender override when a verified domain is configured.
 const FROM_EMAIL =
   process.env.MYEVSTATION_CONTACT_FROM_EMAIL || "MyEVStation Website <onboarding@resend.dev>";
 
@@ -43,7 +42,7 @@ export async function POST(request: Request) {
     console.warn(
       "[contact] RESEND_API_KEY not set — submission not emailed:\n" + text
     );
-    return NextResponse.json({ ok: true, delivered: false });
+    return NextResponse.json({ error: "Contact email delivery is not configured. Please contact MyEVStation by phone or email." }, { status: 503 });
   }
 
   try {
