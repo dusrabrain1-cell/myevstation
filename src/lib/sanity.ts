@@ -10,17 +10,7 @@ import { urlFor } from "../../sanity/lib/image";
 export { urlFor };
 export * from "../../sanity/lib/queries";
 
-/**
- * Read-only Sanity API token (server-only — never reaches the browser, since
- * this client is only imported by server components). The dataset doesn't
- * return the full published content set anonymously, so reads need this token;
- * it's hardcoded as a fallback so frontend-only deploys (which can't set env
- * vars) still show all content. SANITY_API_READ_TOKEN overrides it when set.
- * This is a *read* token — rotate it at sanity.io/manage if the repo is public.
- */
-const READ_TOKEN =
-  process.env.SANITY_API_READ_TOKEN ||
-  "skzF8knkUS61i8fZkHqlvQZTggXTEmB2QRh206g1KJR428sWPfj94IaXbPugkEjGsDh0KxMXb3tUz4ax4r3qleYQceaChhqLkywLdeAyIEf1m4V34EB1E67Ia0iEqDmOA4PVJusbrkF7uUPggunNcr5uPpwXZioeo8dKQSRmcQQmJBCRM4tR";
+const READ_TOKEN = process.env.SANITY_API_READ_TOKEN;
 
 /**
  * Server-side read client. `perspective: "published"` ensures the live site
