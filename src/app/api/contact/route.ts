@@ -36,13 +36,16 @@ export async function POST(request: Request) {
 
   const apiKey = process.env.RESEND_API_KEY;
 
-  // No key configured yet — don't lose the submission; log it so it's visible
-  // in the server console while email delivery is being set up.
+  // Never write personal enquiry contents to application logs.
   if (!apiKey) {
-    console.warn(
-      "[contact] RESEND_API_KEY not set — submission not emailed:\n" + text
+    console.error("[contact] RESEND_API_KEY is not configured; enquiry email was not sent.");
+    return NextResponse.json(
+      {
+        error:
+          "Contact email delivery is not configured. Please contact MyEVStation by phone or email.",
+      },
+      { status: 503 }
     );
-    return NextResponse.json({ error: "Contact email delivery is not configured. Please contact MyEVStation by phone or email." }, { status: 503 });
   }
 
   try {
