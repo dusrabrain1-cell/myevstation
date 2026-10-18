@@ -39,7 +39,7 @@ export default function AboutContent() {
                     <div className="p-7 sm:p-9">
                       <div className="flex items-start gap-4">
                         <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-[#e87522] text-white"><Zap size={25}/></div>
-                        <div><p className="text-xs font-extrabold uppercase tracking-[.16em] text-[#c65f19]">Founder</p><h3 className="mt-1 text-2xl font-black text-[#092d20]">HFO Manoj Sharma (Retd.) (Co-Founder &amp; COO)</h3></div>
+                        <div><h3 className="mt-1 text-2xl font-black text-[#092d20]">HFO Manoj Sharma (Retd.) (Co-Founder &amp; COO)</h3></div>
                       </div>
                       <p className="mt-5 text-sm leading-7 text-[#45554a]">Brings 39 years of Indian Air Force service, with expertise in aircraft maintenance, logistics management, technical audits and team leadership, including experience with AN-12, AN-32 and Embraer BBJ/AWACS aircraft.</p>
                       <div className="mt-5 flex flex-wrap items-center gap-2"><span className="whitespace-nowrap rounded-full bg-white px-3 py-2 text-xs font-bold text-[#24543b] ring-1 ring-[#dbe6dc]">Aircraft maintenance</span><span className="whitespace-nowrap rounded-full bg-white px-3 py-2 text-xs font-bold text-[#24543b] ring-1 ring-[#dbe6dc]">Logistics management</span><span className="whitespace-nowrap rounded-full bg-white px-3 py-2 text-xs font-bold text-[#24543b] ring-1 ring-[#dbe6dc]">Technical audits &amp; team leadership</span></div>
