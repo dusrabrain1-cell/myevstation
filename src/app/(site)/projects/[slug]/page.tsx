@@ -1,4 +1,7 @@
+import type { Metadata } from "next";
 import { PageHeader } from "@/components/custom/PageHeader";
+
+export const metadata: Metadata = { robots: { index: false, follow: true } };
 
 export default async function ProjectDetailPage({
   params,
