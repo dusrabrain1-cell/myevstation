@@ -20,7 +20,7 @@ export const siteSettings = defineType({
       name: "tagline",
       title: "Tagline",
       type: "string",
-      description: "e.g. India's first hemp & napier based green hydrogen.",
+      description: "e.g. EV charging station partnerships across India.",
     }),
     defineField({
       name: "logo",
