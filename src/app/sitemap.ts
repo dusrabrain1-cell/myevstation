@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/impact", changeFrequency: "monthly" as const, priority: 0.7 },
     { path: "/faq", changeFrequency: "monthly" as const, priority: 0.8 },
     { path: "/about-us", changeFrequency: "monthly" as const, priority: 0.7 },
+    { path: "/contact", changeFrequency: "monthly" as const, priority: 0.6 },
     { path: "/without-land", changeFrequency: "monthly" as const, priority: 0.9 },
     { path: "/with-land", changeFrequency: "monthly" as const, priority: 0.9 },
     { path: "/ex-servicemen", changeFrequency: "monthly" as const, priority: 0.8 },
