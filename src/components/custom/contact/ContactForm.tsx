@@ -6,6 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { CheckCircle2, Loader2, Send } from "lucide-react";
 
 import { contactSchema, type ContactInput } from "@/lib/contact-schema";
+import { SITE } from "@/lib/constants";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -126,8 +127,11 @@ export function ContactForm({
 
       {status === "error" && (
         <p role="alert" aria-live="assertive" className="rounded-md bg-red-50 px-3 py-2 text-[13px] font-medium text-red-700">
-          Something went wrong sending your message. Please try again, or email
-          us directly.
+          Something went wrong sending your message. Please try again, or email{" "}
+          <a className="underline underline-offset-2" href={"mailto:" + SITE.email}>
+            {SITE.email}
+          </a>
+          .
         </p>
       )}
 
