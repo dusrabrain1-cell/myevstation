@@ -1,12 +1,13 @@
 import { NextResponse } from "next/server";
 
 import { contactSchema } from "@/lib/contact-schema";
+import { SITE } from "@/lib/constants";
 
-const TO_EMAIL = process.env.CONTACT_TO_EMAIL || "carbonmandi@gmail.com";
+const TO_EMAIL = process.env.MYEVSTATION_CONTACT_TO_EMAIL || SITE.email;
 // Resend's shared sender works with no domain setup; swap for a verified
 // domain address (e.g. "Carbon Mandi <hello@carbonmandi.com>") once available.
 const FROM_EMAIL =
-  process.env.CONTACT_FROM_EMAIL || "Carbon Mandi Website <onboarding@resend.dev>";
+  process.env.MYEVSTATION_CONTACT_FROM_EMAIL || "MyEVStation Website <onboarding@resend.dev>";
 
 export async function POST(request: Request) {
   const body = await request.json().catch(() => null);
