@@ -45,6 +45,7 @@ export function Navbar() {
           className="rounded-lg p-2 xl:hidden"
           aria-label="Toggle menu"
           aria-expanded={open}
+          aria-controls="mobile-primary-navigation"
           onClick={() => setOpen((v) => !v)}
         >
           {open ? <X size={22} /> : <Menu size={22} />}
@@ -52,7 +53,7 @@ export function Navbar() {
       </nav>
 
       {open && (
-        <ul className="flex flex-col gap-1 border-t border-line bg-paper px-6 py-4 xl:hidden">
+        <ul id="mobile-primary-navigation" className="flex flex-col gap-1 border-t border-line bg-paper px-6 py-4 xl:hidden">
           {NAV_LINKS.map((link) =>
             link.comingSoon ? (
               <li key={link.label}>
