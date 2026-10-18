@@ -18,7 +18,7 @@ Environment Variables** (Production + Preview), then **redeploy**:
 
 | Variable | What it is | How to get it |
 |---|---|---|
-| `SANITY_API_WRITE_TOKEN` | Sanity token with **Editor/write** permission (creates documents + uploads images). **Secret.** | sanity.io/manage → project `flhfm40u` → **API → Tokens → Add API token** → permission **Editor** → copy the `sk...` value |
+| `SANITY_API_WRITE_TOKEN` | Sanity token with **Editor/write** permission (creates documents + uploads images). **Secret.** | sanity.io/manage → your dedicated MyEVStation Sanity project → **API → Tokens → Add API token** → permission **Editor** → copy the `sk...` value |
 | `BLOG_INGEST_SECRET` | A random string that protects the endpoint. **Secret.** | Generate any long random string, e.g. `openssl rand -hex 32` |
 
 > Without these the endpoint returns `500 "Server not configured…"`.
