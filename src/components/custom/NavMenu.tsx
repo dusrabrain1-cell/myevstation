@@ -3,7 +3,7 @@ import Link from "next/link";
 import { NAV_LINKS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
-const PRIMARY_LABELS = new Set(["Home", "Why MyEVStation", "Business Model", "Technology", "Investment", "Calculator", "About Us"]);
+const PRIMARY_LABELS = new Set(["Home", "Why MyEVStation", "Business Model", "Technology", "Investment", "Calculator", "FAQs", "About Us"]);
 const primaryLinks = NAV_LINKS.filter((link) => PRIMARY_LABELS.has(link.label));
 const moreLinks = NAV_LINKS.filter((link) => !PRIMARY_LABELS.has(link.label));
 
