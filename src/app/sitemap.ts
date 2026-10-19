@@ -24,8 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/punjab-ev-charging", changeFrequency: "monthly" as const, priority: 1.0 },
   ];
   return routes.map((route) => ({
+    ...route,
     url: `${base}${route.path}`,
-    changeFrequency: route.changeFrequency,
-    priority: route.priority,
   }));
 }
