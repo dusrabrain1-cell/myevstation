@@ -20,7 +20,7 @@ export default function ExServicemenPage() {
   return <main className="min-h-screen bg-[#f7f9f6] text-[#17212b]">
     
     <section className="relative isolate flex min-h-[calc(100svh-4.5rem)] overflow-hidden bg-[#071e16] text-white sm:min-h-[calc(100svh-5rem)]">
-      <Image src="/ev-veterans.jpg" alt="Veteran entrepreneur standing at an EV charging station in India" width={900} height={1200} sizes="(max-width: 768px) 100vw, 33vw" className="absolute inset-0 -z-30 h-full w-full object-cover object-[center_30%] sm:object-center" loading="lazy" />
+      <Image src="/ev-veterans.jpg" alt="Veteran entrepreneur standing at an EV charging station in India" width={900} height={1200} sizes="(max-width: 768px) 100vw, 33vw" className="absolute inset-0 -z-30 h-full w-full object-cover object-[center_30%] sm:object-center" preload />
       <div className="absolute inset-0 -z-20 bg-gradient-to-r from-[#061b14]/95 via-[#061b14]/70 to-[#061b14]/10"/>
       <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#061b14]/70 via-transparent to-[#061b14]/10"/>
       <div className="mx-auto flex w-full max-w-7xl items-center px-5 py-14 sm:px-8 sm:py-20 lg:px-12">
