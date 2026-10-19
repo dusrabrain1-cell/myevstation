@@ -42,9 +42,40 @@ export default function ContactPage() {
                 </a>
               </li>
               <li className="flex items-start gap-3">
-                <MapPin size={18} className="mt-0.5 text-mission" strokeWidth={1.8} />
-                EV charging station enquiries and partnership support across India
+                <MapPin size={18} className="mt-0.5 shrink-0 text-mission" strokeWidth={1.8} />
+                <span>EV charging station enquiries and partnership support across India</span>
               </li>
+            </ul>
+
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
+              <div className="rounded-xl border border-line bg-paper p-5">
+                <h2 className="text-sm font-extrabold uppercase tracking-wider text-mission">Noida Office</h2>
+                <p className="mt-3 text-sm leading-6 text-ink-soft">
+                  Hawelia Valenova Park, Plot No. CP-GH-05A, Sector Techzone-IV, Greater Noida West, Uttar Pradesh – 201318
+                </p>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Hawelia%20Valenova%20Park%2C%20Plot%20No.%20CP-GH-05A%2C%20Sector%20Techzone-IV%2C%20Greater%20Noida%20West%2C%20Uttar%20Pradesh%20201318"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-3 inline-flex text-sm font-bold text-mission hover:underline"
+                >
+                  Get directions
+                </a>
+              </div>
+              <div className="rounded-xl border border-line bg-paper p-5">
+                <h2 className="text-sm font-extrabold uppercase tracking-wider text-mission">Punjab Office</h2>
+                <p className="mt-3 text-sm leading-6 text-ink-soft">
+                  Gumtala, Mirankot Road, Meerankot Chowk, Amritsar – 143001, Punjab
+                </p>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Gumtala%2C%20Mirankot%20Road%2C%20Meerankot%20Chowk%2C%20Amritsar%20143001%2C%20Punjab"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-3 inline-flex text-sm font-bold text-mission hover:underline"
+                >
+                  Get directions
+                </a>
+              </div>
             </ul>
           </div>
 
