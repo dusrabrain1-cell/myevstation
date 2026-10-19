@@ -7,7 +7,6 @@ const EXPLORE_LINKS = [
   { label: "Technology & safety", href: "/technology" },
   { label: "Investment guide", href: "/ev-charging-investment-guide" },
   { label: "EV charging calculator", href: "/ev-charging-calculator" },
-  { label: "Impact", href: "/impact" },
   { label: "FAQs & permissions", href: "/faq" },
   { label: "About us", href: "/about-us" },
 ];
