@@ -13,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/ev-charging-calculator", changeFrequency: "monthly" as const, priority: 0.9 },
     { path: "/impact", changeFrequency: "monthly" as const, priority: 0.7 },
     { path: "/faq", changeFrequency: "monthly" as const, priority: 0.8 },
-    { path: "/about-us", changeFrequency: "weekly" as const, priority: 0.8, lastModified: new Date() },
+    { path: "/about-us", changeFrequency: "weekly" as const, priority: 0.8 },
     { path: "/contact", changeFrequency: "monthly" as const, priority: 0.6 },
     { path: "/without-land", changeFrequency: "monthly" as const, priority: 0.9 },
     { path: "/with-land", changeFrequency: "monthly" as const, priority: 0.9 },
