@@ -3,11 +3,22 @@ import { pageSocialMetadata } from "@/lib/page-social-metadata";
 import AboutContent from "./AboutContent";
 
 export const metadata: Metadata = {
-  title: "About Us | EV Charging Leadership Team",
-  description: "Meet the veteran-led MyEVStation team and learn how we help landowners, housing societies, businesses and partners assess EV charging station opportunities across India.",
+  title: "About MyEVStation | EV Charging Team & Partners",
+  description: "Meet the MyEVStation leadership team and regional partners, including Abhinav Sekhri, Senior Partner – Punjab. Learn about our work in EV charging station partnerships and infrastructure across India.",
+  keywords: [
+    "MyEVStation partners",
+    "Abhinav Sekhri MyEVStation",
+    "Senior Partner Punjab",
+    "EV charging station Punjab",
+    "EV charging infrastructure India",
+    "EV charging station partnerships",
+  ],
   alternates: { canonical: "/about-us" },
-
-  ...pageSocialMetadata("About MyEVStation | EV Charging Leadership Team", "Meet the veteran-led MyEVStation team and learn how we help landowners, housing societies, businesses and partners assess EV charging station opportunities across India.", "/about-us"),
+  ...pageSocialMetadata(
+    "MyEVStation Partners | EV Charging Infrastructure in India",
+    "Meet MyEVStation’s leadership team and regional partners, including Abhinav Sekhri, Senior Partner – Punjab, supporting EV charging station partnerships and infrastructure across India.",
+    "/about-us"
+  ),
 };
 
 export default function Page() {
