@@ -76,7 +76,7 @@ export default function ContactPage() {
                   Get directions
                 </a>
               </div>
-            </ul>
+            </div>
           </div>
 
           {/* Right — form card */}
