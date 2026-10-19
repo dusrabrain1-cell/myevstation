@@ -6,13 +6,18 @@ MyEVStation helps prospective partners explore electric vehicle charging station
 
 ## Main pages
 
-- [Home](https://myevstation-9rj8.vercel.app/): EV charging station models, technology overview, investment calculator and partner options.
-- [No-land model](https://myevstation-9rj8.vercel.app/without-land): Indicative equipment packages, charger prices and operating assumptions.
-- [Landowners](https://myevstation-9rj8.vercel.app/with-land): Site assessment considerations for plots, commercial properties, parking areas and fleet locations.
-- [Housing societies](https://myevstation-9rj8.vercel.app/society): Smart sockets, AC and DC charger options, indicative equipment pricing and installation planning.
-- [Ex-servicemen](https://myevstation-9rj8.vercel.app/ex-servicemen): Veteran-focused opportunity overview, illustrative packages and site assessment process.
-- [XML sitemap](https://myevstation-9rj8.vercel.app/sitemap.xml): Public indexable pages.
+- [Why MyEVStation](https://myevstation.co/why-myevstation): Our approach to EV charging site suitability, planning and partnerships.
+- [Business models](https://myevstation.co/business-model): Compare pathways for landowners, no-land investors, societies and ex-servicemen.
+- [Technology](https://myevstation.co/technology): EV charger selection, electrical readiness and safety considerations.
+- [Investment guide](https://myevstation.co/ev-charging-investment-guide): Site feasibility, cost drivers and investment questions.
+
+- [Home](https://myevstation.co/): EV charging station models, technology overview, investment calculator and partner options.
+- [No-land model](https://myevstation.co/without-land): Indicative equipment packages, charger prices and operating assumptions.
+- [Landowners](https://myevstation.co/with-land): Site assessment considerations for plots, commercial properties, parking areas and fleet locations.
+- [Housing societies](https://myevstation.co/society): Smart sockets, AC and DC charger options, indicative equipment pricing and installation planning.
+- [Ex-servicemen](https://myevstation.co/ex-servicemen): Veteran-focused opportunity overview, illustrative packages and site assessment process.
+- [XML sitemap](https://myevstation.co/sitemap.xml): Public indexable pages.
 
 ## Contact
 
-- WhatsApp: +91 96256 70132
+- WhatsApp: +91 98762 60822
