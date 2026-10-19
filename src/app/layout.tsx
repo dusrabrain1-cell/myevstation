@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     "EV charging station for landowners",
     "EV charging station Noida",
     "EV charging station Greater Noida",
-    "EV charging franchise India",
+    "EV charging station business partnership India",
   ],
   applicationName: SITE.name,
   icons: {
