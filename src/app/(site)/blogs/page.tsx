@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHeader } from "@/components/custom/PageHeader";
 import { articlesQuery, sanityFetch, urlFor } from "@/lib/sanity";
-import { blogOne } from "@/lib/blog-fallbacks";
+import { blogOne, blogTwo } from "@/lib/blog-fallbacks";
 
 export const metadata: Metadata = {
   title: "EV Charging Station Blogs & Guides in India",
@@ -37,9 +37,8 @@ export default async function BlogsPage() {
     console.error("[blogs] Could not load published articles:", error);
   }
 
-  if (!articles.some((article) => article.slug === blogOne.slug)) {
-    articles = [blogOne, ...articles];
-  }
+  const fallbacks = [blogOne, blogTwo].filter((fallback) => !articles.some((article) => article.slug === fallback.slug));
+  articles = [...fallbacks, ...articles];
 
   return (
     <main className="min-h-screen bg-paper">
