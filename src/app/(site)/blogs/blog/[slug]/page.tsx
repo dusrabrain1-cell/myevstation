@@ -29,16 +29,17 @@ async function getArticle(slug: string) {
     console.error("[blog detail] Sanity article fetch failed:", error);
   }
   if (slug === blogOne.slug) return blogOne as Article;
+  if (slug === blogTwo.slug) return blogTwo as Article;
   return null;
 }
 
 export async function generateStaticParams() {
   try {
     const slugs = await sanityFetch<{ slug: string }[]>(articleSlugsQuery);
-    return [...new Set([blogOne.slug, ...slugs.map(({ slug }) => slug)])].map((slug) => ({ slug }));
+    return [...new Set([blogOne.slug, blogTwo.slug, ...slugs.map(({ slug }) => slug)])].map((slug) => ({ slug }));
   } catch (error) {
     console.error("[blog detail] Could not load article slugs:", error);
-    return [{ slug: blogOne.slug }];
+    return [{ slug: blogOne.slug }, { slug: blogTwo.slug }];
   }
 }
 
