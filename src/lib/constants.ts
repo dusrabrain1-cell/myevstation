@@ -24,6 +24,7 @@ export const NAV_LINKS: NavLink[] = [
   { label: "Technology", href: "/technology" },
   { label: "Investment", href: "/ev-charging-investment-guide" },
   { label: "Calculator", href: "/ev-charging-calculator" },
+  { label: "Blogs", href: "/blogs" },
   { label: "FAQs", href: "/faq" },
   { label: "About Us", href: "/about-us" },
 ];
