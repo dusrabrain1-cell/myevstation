@@ -29,7 +29,7 @@ export default function CalculatorClient() {
     { id: "dc12", group: "2W / 3W", label: "12 kW DC fast charger — single connector", price: 189000, kw: 12, maintenance: 16999 },
     { id: "ac74", group: "Cars — AC", label: "7.4 kW AC charger", price: 26250, kw: 7.4, maintenance: 2999 },
     { id: "ac11", group: "Cars — AC", label: "11 kW AC charger", price: 36750, kw: 11, maintenance: 4999 },
-    { id: "ac22", group: "Cars — AC", label: "22 kW AC charger (price requires supplier confirmation)", price: null, kw: 22, maintenance: 4999 },
+    { id: "ac22", group: "Cars — AC", label: "22 kW AC charger — single gun (11 kW Type 2; confirm rated output)", price: 36750, kw: 22, maintenance: 4999 },
     { id: "fleet30", group: "Cars / fleets — DC", label: "30 kW DC charger — single connector", price: 346500, kw: 30, maintenance: 16999 },
     { id: "fleet60", group: "Cars / fleets — DC", label: "60 kW DC charger — dual connector", price: 640500, kw: 60, maintenance: 28999 },
     { id: "fleet120", group: "Cars / fleets — DC", label: "120 kW DC charger — dual connector", price: 850500, kw: 120, maintenance: 52999 },
