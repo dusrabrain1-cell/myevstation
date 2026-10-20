@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { SITE } from "@/lib/constants";
 import { articleSlugsQuery, sanityFetch } from "@/lib/sanity";
-import { blogOneSlug, blogTwoSlug, blogThreeSlug, blogFourSlug, blogFiveSlug, blogSixSlug, blogSevenSlug, blogEightSlug, blogNineSlug, blogTenSlug, blogElevenSlug, blogTwelveSlug, blogThirteenSlug, blogFourteenSlug, blogFifteenSlug, blogSixteenSlug, blogSeventeenSlug, blogEighteenSlug, blogNineteenSlug } from "@/lib/blog-fallbacks";
+import { blogOneSlug, blogTwoSlug, blogThreeSlug, blogFourSlug, blogFiveSlug, blogSixSlug, blogSevenSlug, blogEightSlug, blogNineSlug, blogTenSlug, blogElevenSlug, blogTwelveSlug, blogThirteenSlug, blogFourteenSlug, blogFifteenSlug, blogSixteenSlug, blogSeventeenSlug, blogEighteenSlug, blogNineteenSlug, blogTwentySlug } from "@/lib/blog-fallbacks";
 
 /** Public, indexable MyEVStation routes. */
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -29,14 +29,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   let articleRoutes: MetadataRoute.Sitemap = [];
   try {
     const articles = await sanityFetch<{ slug: string }[]>(articleSlugsQuery);
-    articleRoutes = [...new Set([blogOneSlug, blogTwoSlug, blogThreeSlug, blogFourSlug, blogFiveSlug, blogSixSlug, blogSevenSlug, blogEightSlug, blogNineSlug, blogTenSlug, blogElevenSlug, blogTwelveSlug, blogThirteenSlug, blogFourteenSlug, blogFifteenSlug, blogSixteenSlug, blogSeventeenSlug, blogEighteenSlug, blogNineteenSlug, ...articles.map(({ slug }) => slug)])].map((slug) => ({
+    articleRoutes = [...new Set([blogOneSlug, blogTwoSlug, blogThreeSlug, blogFourSlug, blogFiveSlug, blogSixSlug, blogSevenSlug, blogEightSlug, blogNineSlug, blogTenSlug, blogElevenSlug, blogTwelveSlug, blogThirteenSlug, blogFourteenSlug, blogFifteenSlug, blogSixteenSlug, blogSeventeenSlug, blogEighteenSlug, blogNineteenSlug, blogTwentySlug, ...articles.map(({ slug }) => slug)])].map((slug) => ({
       url: `${base}/blogs/blog/${slug}`,
       changeFrequency: "monthly" as const,
       priority: 0.7,
     }));
   } catch (error) {
     console.error("[sitemap] Could not load published blog slugs:", error);
-    articleRoutes = [blogOneSlug, blogTwoSlug, blogThreeSlug, blogFourSlug, blogFiveSlug, blogSixSlug, blogSevenSlug, blogEightSlug, blogNineSlug, blogTenSlug, blogElevenSlug, blogTwelveSlug, blogThirteenSlug, blogFourteenSlug, blogFifteenSlug, blogSixteenSlug, blogSeventeenSlug, blogEighteenSlug, blogNineteenSlug].map((slug) => ({ url: `${base}/blogs/blog/${slug}`, changeFrequency: "monthly" as const, priority: 0.8 }));
+    articleRoutes = [blogOneSlug, blogTwoSlug, blogThreeSlug, blogFourSlug, blogFiveSlug, blogSixSlug, blogSevenSlug, blogEightSlug, blogNineSlug, blogTenSlug, blogElevenSlug, blogTwelveSlug, blogThirteenSlug, blogFourteenSlug, blogFifteenSlug, blogSixteenSlug, blogSeventeenSlug, blogEighteenSlug, blogNineteenSlug, blogTwentySlug].map((slug) => ({ url: `${base}/blogs/blog/${slug}`, changeFrequency: "monthly" as const, priority: 0.8 }));
   }
 
   return [
