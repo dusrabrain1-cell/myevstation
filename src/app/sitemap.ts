@@ -1,7 +1,6 @@
 import type { MetadataRoute } from "next";
 import { SITE } from "@/lib/constants";
-import { articleSlugsQuery } from "@/sanity/lib/queries";
-import { sanityFetch } from "@/lib/sanity";
+import { articleSlugsQuery, sanityFetch } from "@/lib/sanity";
 
 /** Public, indexable MyEVStation routes. */
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
