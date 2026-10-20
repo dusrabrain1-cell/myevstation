@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 const options = [
   { group: "SMART SOCKETS & LIGHT CHARGING", rows: [["Basic 3.3 kW socket","₹5,250"],["Pro 3.3 kW socket","₹5,775"],["Connected 3.3 kW socket (4G)","₹7,875"]] },
-  { group: "AC CHARGERS FOR CARS", rows: [["7.4 kW AC","₹26,250"],["7.4 kW AC with 4G","₹28,350"],["11 kW AC","₹36,750"],["11 kW AC with 4G","₹38,850"],["22 kW AC","₹36,750"],["22 kW AC with 4G","₹38,850"]] },
+  { group: "AC CHARGERS FOR CARS", rows: [["7.4 kW AC","₹26,250"],["7.4 kW AC with 4G","₹28,350"],["11 kW AC","₹36,750"],["11 kW AC with 4G","₹38,850"],["22 kW AC · single gun (11 kW Type 2)","₹36,750 incl. GST"],["22 kW AC with 4G","₹38,850"]] },
   { group: "DC CHARGERS FOR 2- & 3-WHEELERS", rows: [["3 kW DC single connector","₹79,800"],["3 kW DC dual connector","₹91,350"],["6 kW DC single connector","₹1,47,000"],["12 kW DC single connector","₹1,89,000"]] },
   { group: "DC FAST CHARGING FOR CARS & FLEETS", rows: [["30 kW DC","₹3,46,500"],["60 kW DC","₹6,40,500"],["120 kW DC","₹8,50,500"],["180 kW DC","₹12,60,000"],["240 kW DC","₹14,70,000"]] },
 ];
