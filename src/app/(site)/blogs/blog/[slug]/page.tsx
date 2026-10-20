@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PortableBody } from "@/components/custom/PortableBody";
-import { articleBySlugQuery, articleSlugsQuery } from "@/sanity/lib/queries";
-import { sanityFetch, urlFor } from "@/lib/sanity";
+import { articleBySlugQuery, articleSlugsQuery, sanityFetch, urlFor } from "@/lib/sanity";
 import type { PortableTextBlock } from "@portabletext/types";
 
 type Article = {
