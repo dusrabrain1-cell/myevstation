@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { SITE } from "@/lib/constants";
 import { articleSlugsQuery, sanityFetch } from "@/lib/sanity";
+import { blogOneSlug } from "@/lib/blog-fallbacks";
 
 /** Public, indexable MyEVStation routes. */
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -28,7 +29,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   let articleRoutes: MetadataRoute.Sitemap = [];
   try {
     const articles = await sanityFetch<{ slug: string }[]>(articleSlugsQuery);
-    articleRoutes = articles.map(({ slug }) => ({
+    articleRoutes = [...new Set([blogOneSlug, ...articles.map(({ slug }) => slug)])].map((slug) => ({
       url: `${base}/blogs/blog/${slug}`,
       changeFrequency: "monthly" as const,
       priority: 0.7,
