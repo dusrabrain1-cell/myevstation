@@ -4,11 +4,12 @@ import Image from "next/image";
 import { ArrowRight, CheckCircle2, ShieldCheck, Flag, MapPin, Users, BatteryCharging } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "EV Charging Station Opportunity for Ex-Servicemen",
-  description: "Explore MyEVStation's veteran-focused EV charging station opportunity, indicative Starter and Growth package examples, operating assumptions and site assessment process.",
+  title: "EV Charging Station Opportunity for Ex-Servicemen in India",
+  description: "Explore an EV charging station business opportunity for ex-servicemen and veterans in India. Compare indicative investment packages, managed operations and site suitability with MyEVStation.",
+  keywords: ["EV charging station for ex-servicemen", "ex-servicemen business opportunity", "ex-servicemen led EV charging station", "EV station business for veterans", "EV charging business after retirement", "veteran entrepreneurship India", "EV charging station investment for ex-servicemen", "retired defence personnel business opportunity"],
   alternates: { canonical: "/ex-servicemen" },
 
-  ...pageSocialMetadata("EV Charging Station Opportunity for Ex-Servicemen", "Explore MyEVStation's veteran-focused EV charging station opportunity, indicative Starter and Growth package examples, operating assumptions and site assessment process.", "/ex-servicemen"),
+  ...pageSocialMetadata("EV Charging Station Opportunity for Ex-Servicemen in India", "Explore an EV charging station business opportunity for ex-servicemen and veterans in India. Compare indicative investment packages, managed operations and site suitability with MyEVStation.", "/ex-servicemen"),
 };
 
 const packages = [
