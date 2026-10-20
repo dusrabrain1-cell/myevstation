@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { PortableBody } from "@/components/custom/PortableBody";
 import { articleBySlugQuery, articleSlugsQuery, sanityFetch, urlFor } from "@/lib/sanity";
 import type { PortableTextBlock } from "@portabletext/types";
-import { blogOne } from "@/lib/blog-fallbacks";
+import { blogOne, blogTwo } from "@/lib/blog-fallbacks";
 
 type Article = {
   _id: string;
