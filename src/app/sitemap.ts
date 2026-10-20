@@ -36,6 +36,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }));
   } catch (error) {
     console.error("[sitemap] Could not load published blog slugs:", error);
+    articleRoutes = [{ url: `${base}/blogs/blog/${blogOneSlug}`, changeFrequency: "monthly", priority: 0.8 }];
   }
 
   return [
