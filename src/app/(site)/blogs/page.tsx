@@ -37,6 +37,10 @@ export default async function BlogsPage() {
     console.error("[blogs] Could not load published articles:", error);
   }
 
+  if (!articles.some((article) => article.slug === blogOne.slug)) {
+    articles = [blogOne, ...articles];
+  }
+
   return (
     <main className="min-h-screen bg-paper">
       <PageHeader
