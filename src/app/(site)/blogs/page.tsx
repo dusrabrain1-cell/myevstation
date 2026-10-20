@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHeader } from "@/components/custom/PageHeader";
 import { articlesQuery, sanityFetch, urlFor } from "@/lib/sanity";
+import { blogOne } from "@/lib/blog-fallbacks";
 
 export const metadata: Metadata = {
   title: "EV Charging Station Blogs & Guides in India",
