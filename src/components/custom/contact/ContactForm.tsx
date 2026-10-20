@@ -30,21 +30,24 @@ export function ContactForm({
     defaultValues: { source },
   });
 
-  async function onSubmit(values: ContactInput) {
-    setStatus("submitting");
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...values, source }),
-      });
-      if (!res.ok) throw new Error("Request failed");
-      setStatus("success");
-      reset();
-      onSuccess?.();
-    } catch {
-      setStatus("error");
-    }
+  function onSubmit(values: ContactInput) {
+    const lines = [
+      "Hello MyEVStation, I have submitted an enquiry through the website.",
+      "",
+      `Name: ${values.name}`,
+      `Organisation: ${values.organisation}`,
+      values.designation ? `Designation: ${values.designation}` : null,
+      `Email: ${values.email}`,
+      source ? `Enquiry source: ${source}` : null,
+      "",
+      "Message:",
+      values.message,
+    ].filter(Boolean);
+    const whatsappUrl = `https://wa.me/919876260822?text=${encodeURIComponent(lines.join("\\n"))}`;
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+    setStatus("success");
+    reset();
+    onSuccess?.();
   }
 
   if (status === "success") {
