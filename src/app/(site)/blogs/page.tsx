@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHeader } from "@/components/custom/PageHeader";
 import { articlesQuery, sanityFetch, urlFor } from "@/lib/sanity";
-import { blogOne, blogTwo, blogThree, blogFour, blogFive, blogSix, blogSeven, blogEight, blogNine, blogTen, blogEleven, blogTwelve, blogThirteen, blogFourteen, blogFifteen } from "@/lib/blog-fallbacks";
+import { blogOne, blogTwo, blogThree, blogFour, blogFive, blogSix, blogSeven, blogEight, blogNine, blogTen, blogEleven, blogTwelve, blogThirteen, blogFourteen, blogFifteen, blogSixteen } from "@/lib/blog-fallbacks";
 
 export const metadata: Metadata = {
   title: "EV Charging Station Blogs & Guides in India",
@@ -37,7 +37,7 @@ export default async function BlogsPage() {
     console.error("[blogs] Could not load published articles:", error);
   }
 
-  const fallbacks = [blogOne, blogTwo, blogThree, blogFour, blogFive, blogSix, blogSeven, blogEight, blogNine, blogTen, blogEleven, blogTwelve, blogThirteen, blogFourteen, blogFifteen].filter((fallback) => !articles.some((article) => article.slug === fallback.slug));
+  const fallbacks = [blogOne, blogTwo, blogThree, blogFour, blogFive, blogSix, blogSeven, blogEight, blogNine, blogTen, blogEleven, blogTwelve, blogThirteen, blogFourteen, blogFifteen, blogSixteen].filter((fallback) => !articles.some((article) => article.slug === fallback.slug));
   articles = [...fallbacks, ...articles];
 
   return (
