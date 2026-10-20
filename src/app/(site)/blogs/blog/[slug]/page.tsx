@@ -22,16 +22,23 @@ type Article = {
 type PageProps = { params: Promise<{ slug: string }> };
 
 async function getArticle(slug: string) {
-  return sanityFetch<Article | null>(articleBySlugQuery, { slug });
+  try {
+    const article = await sanityFetch<Article | null>(articleBySlugQuery, { slug });
+    if (article) return article;
+  } catch (error) {
+    console.error("[blog detail] Sanity article fetch failed:", error);
+  }
+  if (slug === blogOne.slug) return blogOne as Article;
+  return null;
 }
 
 export async function generateStaticParams() {
   try {
     const slugs = await sanityFetch<{ slug: string }[]>(articleSlugsQuery);
-    return slugs.map(({ slug }) => ({ slug }));
+    return [...new Set([blogOne.slug, ...slugs.map(({ slug }) => slug)])].map((slug) => ({ slug }));
   } catch (error) {
     console.error("[blog detail] Could not load article slugs:", error);
-    return [];
+    return [{ slug: blogOne.slug }];
   }
 }
 
