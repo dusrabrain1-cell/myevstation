@@ -20,7 +20,7 @@ const groups = [
     ["7.4 kW AC charger with 4G", "Not stated in quote", "₹28,350", "2 years"],
     ["11 kW AC charger", "Not stated in quote", "₹36,750", "2 years"],
     ["11 kW AC charger with 4G", "Not stated in quote", "₹38,850", "2 years"],
-    ["22 kW AC charger", "Not stated in quote", "₹36,750", "2 years"],
+    ["22 kW AC charger", "Single gun (11 kW Type 2)", "₹36,750 incl. 5% GST (₹35,000 + ₹1,750 GST)", "2 years"],
     ["22 kW AC charger with 4G", "Not stated in quote", "₹38,850", "2 years"],
   ]},
   { title: "DC fast charging for cars & fleets", rows: [
