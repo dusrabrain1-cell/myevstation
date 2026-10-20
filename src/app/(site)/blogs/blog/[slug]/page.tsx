@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { PortableBody } from "@/components/custom/PortableBody";
 import { articleBySlugQuery, articleSlugsQuery, sanityFetch, urlFor } from "@/lib/sanity";
 import type { PortableTextBlock } from "@portabletext/types";
-import { blogOne, blogTwo, blogThree, blogFour, blogFive } from "@/lib/blog-fallbacks";
+import { blogOne, blogTwo, blogThree, blogFour, blogFive, blogSix } from "@/lib/blog-fallbacks";
 
 type Article = {
   _id: string;
@@ -33,16 +33,17 @@ async function getArticle(slug: string) {
   if (slug === blogThree.slug) return blogThree as Article;
   if (slug === blogFour.slug) return blogFour as Article;
   if (slug === blogFive.slug) return blogFive as Article;
+  if (slug === blogSix.slug) return blogSix as Article;
   return null;
 }
 
 export async function generateStaticParams() {
   try {
     const slugs = await sanityFetch<{ slug: string }[]>(articleSlugsQuery);
-    return [...new Set([blogOne.slug, blogTwo.slug, blogThree.slug, blogFour.slug, blogFive.slug, ...slugs.map(({ slug }) => slug)])].map((slug) => ({ slug }));
+    return [...new Set([blogOne.slug, blogTwo.slug, blogThree.slug, blogFour.slug, blogFive.slug, blogSix.slug, ...slugs.map(({ slug }) => slug)])].map((slug) => ({ slug }));
   } catch (error) {
     console.error("[blog detail] Could not load article slugs:", error);
-    return [{ slug: blogOne.slug }, { slug: blogTwo.slug }, { slug: blogThree.slug }, { slug: blogFour.slug }, { slug: blogFive.slug }];
+    return [{ slug: blogOne.slug }, { slug: blogTwo.slug }, { slug: blogThree.slug }, { slug: blogFour.slug }, { slug: blogFive.slug }, { slug: blogSix.slug }];
   }
 }
 
