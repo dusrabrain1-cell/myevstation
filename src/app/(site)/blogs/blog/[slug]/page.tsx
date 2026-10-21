@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { PortableBody } from "@/components/custom/PortableBody";
 import { articleBySlugQuery, articleSlugsQuery, sanityFetch, urlFor } from "@/lib/sanity";
 import type { PortableTextBlock } from "@portabletext/types";
-import { blogOne, blogTwo, blogThree, blogFour, blogFive, blogSix, blogSeven, blogEight, blogNine, blogTen, blogEleven, blogTwelve, blogThirteen, blogFourteen, blogFifteen, blogSixteen, blogSeventeen, blogEighteen, blogNineteen, blogTwenty, blogTwentyOne, blogTwentyTwo } from "@/lib/blog-fallbacks";
+import { blogOne, blogTwo, blogThree, blogFour, blogFive, blogSix, blogSeven, blogEight, blogNine, blogTen, blogEleven, blogTwelve, blogThirteen, blogFourteen, blogFifteen, blogSixteen, blogSeventeen, blogEighteen, blogNineteen, blogTwenty, blogTwentyOne, blogTwentyTwo, blogTwentyThree } from "@/lib/blog-fallbacks";
 
 type Article = {
   _id: string;
@@ -50,16 +50,17 @@ async function getArticle(slug: string) {
   if (slug === blogTwenty.slug) return blogTwenty as Article;
   if (slug === blogTwentyOne.slug) return blogTwentyOne as Article;
   if (slug === blogTwentyTwo.slug) return blogTwentyTwo as Article;
+  if (slug === blogTwentyThree.slug) return blogTwentyThree as Article;
   return null;
 }
 
 export async function generateStaticParams() {
   try {
     const slugs = await sanityFetch<{ slug: string }[]>(articleSlugsQuery);
-    return [...new Set([blogOne.slug, blogTwo.slug, blogThree.slug, blogFour.slug, blogFive.slug, blogSix.slug, blogSeven.slug, blogEight.slug, blogNine.slug, blogTen.slug, blogEleven.slug, blogTwelve.slug, blogThirteen.slug, blogFourteen.slug, blogFifteen.slug, blogSixteen.slug, blogSeventeen.slug, blogEighteen.slug, blogNineteen.slug, blogTwenty.slug, blogTwentyOne.slug, blogTwentyTwo.slug, ...slugs.map(({ slug }) => slug)])].map((slug) => ({ slug }));
+    return [...new Set([blogOne.slug, blogTwo.slug, blogThree.slug, blogFour.slug, blogFive.slug, blogSix.slug, blogSeven.slug, blogEight.slug, blogNine.slug, blogTen.slug, blogEleven.slug, blogTwelve.slug, blogThirteen.slug, blogFourteen.slug, blogFifteen.slug, blogSixteen.slug, blogSeventeen.slug, blogEighteen.slug, blogNineteen.slug, blogTwenty.slug, blogTwentyOne.slug, blogTwentyTwo.slug, blogTwentyThree.slug, ...slugs.map(({ slug }) => slug)])].map((slug) => ({ slug }));
   } catch (error) {
     console.error("[blog detail] Could not load article slugs:", error);
-    return [{ slug: blogOne.slug }, { slug: blogTwo.slug }, { slug: blogThree.slug }, { slug: blogFour.slug }, { slug: blogFive.slug }, { slug: blogSix.slug }, { slug: blogSeven.slug }, { slug: blogEight.slug }, { slug: blogNine.slug }, { slug: blogTen.slug }, { slug: blogEleven.slug }, { slug: blogTwelve.slug }, { slug: blogThirteen.slug }, { slug: blogFourteen.slug }, { slug: blogFifteen.slug }, { slug: blogSixteen.slug }, { slug: blogSeventeen.slug }, { slug: blogEighteen.slug }, { slug: blogNineteen.slug }, { slug: blogTwenty.slug }, { slug: blogTwentyOne.slug }, { slug: blogTwentyTwo.slug }];
+    return [{ slug: blogOne.slug }, { slug: blogTwo.slug }, { slug: blogThree.slug }, { slug: blogFour.slug }, { slug: blogFive.slug }, { slug: blogSix.slug }, { slug: blogSeven.slug }, { slug: blogEight.slug }, { slug: blogNine.slug }, { slug: blogTen.slug }, { slug: blogEleven.slug }, { slug: blogTwelve.slug }, { slug: blogThirteen.slug }, { slug: blogFourteen.slug }, { slug: blogFifteen.slug }, { slug: blogSixteen.slug }, { slug: blogSeventeen.slug }, { slug: blogEighteen.slug }, { slug: blogNineteen.slug }, { slug: blogTwenty.slug }, { slug: blogTwentyOne.slug }, { slug: blogTwentyTwo.slug }, { slug: blogTwentyThree.slug }];
   }
 }
 
