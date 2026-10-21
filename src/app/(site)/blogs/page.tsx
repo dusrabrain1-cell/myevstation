@@ -29,6 +29,8 @@ type Article = {
   coverImage?: unknown;
 };
 
+const fallbackImageUrl = "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=900&q=80";
+
 export default async function BlogsPage() {
   let articles: Article[] = [];
   try {
@@ -68,12 +70,13 @@ export default async function BlogsPage() {
               return (
                 <article key={article._id} className="flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-white shadow-sm transition-shadow hover:shadow-md">
                   <Link href={`/blogs/blog/${article.slug}`} className="group block" aria-label={`Read ${article.title}`}>
-                    {imageUrl ? (
-                      // eslint-disable-next-line @next/next/no-img-element
-                      <img src={imageUrl} alt={article.title} loading="lazy" className="aspect-[5/3] w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]" />
-                    ) : (
-                      <div className="grid aspect-[5/3] place-items-center bg-cream px-6 text-center text-lg font-extrabold text-mission">MyEVStation Insights</div>
-                    )}
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={imageUrl || fallbackImageUrl}
+                      alt={article.title}
+                      loading="lazy"
+                      className="aspect-[5/3] w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                    />
                   </Link>
                   <div className="flex flex-1 flex-col p-5">
                     <div className="mb-3 flex flex-wrap items-center gap-2">
