@@ -316,19 +316,20 @@ export const blogFiveSlug = "start-ev-charging-station-business-without-land";
 
 export const blogFive = {
   _id: "static-blog-without-land",
-  title: "How to Start an EV Charging Station Business Without Owning Land",
+  title: "How to Start an EV Charging Business Without Land in India",
   slug: blogFiveSlug,
   excerpt: "Learn how to explore EV charging station opportunities without owning land, using property partnerships, leases and revenue-sharing models, with practical checks for site access, costs and agreements.",
   author: "MyEVStation Editorial Team",
   categories: ["Without Land", "EV Business Models"],
   publishedAt: "2026-10-20T00:00:00.000Z",
   seo: {
-    metaTitle: "Start an EV Charging Station Business Without Land | MyEVStation",
-    metaDescription: "Want to start an EV charging station business without owning land? Explore host-site partnerships, lease and revenue-share models, site feasibility, costs and contract checks.",
+    metaTitle: "How to Start an EV Charging Business Without Land in India | MyEVStation",
+    metaDescription: "Learn how to start an EV charging business without buying land in India. Compare host-site partnerships, leases and revenue sharing, then check site permissions, setup costs and feasibility.",
   },
   body: [
     paragraph("You may be able to participate in the EV charging station business without purchasing or owning land. Depending on the location and commercial arrangement, a property owner may provide the site while an investor, charging operator or another partner funds or manages the equipment and operations."),
     paragraph("Not owning land does not mean the business has no upfront cost or risk. The right model depends on who provides the equipment, pays for electrical work, manages the station, bears operating expenses and receives the revenue. These responsibilities should be agreed in writing before money is committed."),
+    paragraph("A practical starting sequence is: identify a potential host property, obtain permission for a site assessment, check parking access and local charging demand, arrange an electrical feasibility review, compare written operator or equipment proposals, and agree on costs and revenue terms before signing. This process helps you evaluate an EV charging business without purchasing land while keeping the project risks visible."),
     heading("Can you start without owning land?"),
     paragraph("Potentially, yes. Some arrangements use a rented site, a host property or a partnership with an existing property owner. Availability depends on the owner’s consent, site suitability, electrical feasibility and the commercial terms offered. There is no universal arrangement that suits every location."),
     heading("Model 1: Partner with a property owner"),
