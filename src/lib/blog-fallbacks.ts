@@ -725,19 +725,20 @@ export const blogTenSlug = "ev-charging-station-business-punjab-investment-locat
 
 export const blogTen = {
   _id: "static-blog-punjab-ev-charging-business",
-  title: "EV Charging Station Business in Punjab: Investment, Locations and Partnership Opportunities",
+  title: "EV Charging Station Business in Punjab: Cost, Locations and Setup Guide",
   slug: blogTenSlug,
-  excerpt: "Explore how to assess EV charging station opportunities in Punjab, from urban and highway sites to fleets and commercial properties, with guidance on electrical feasibility, partnerships, investment costs and realistic revenue planning.",
+  excerpt: "A practical Punjab guide to EV charging station setup, investment costs, site selection, fleet and commercial partnerships, electrical feasibility and revenue planning across key cities and travel corridors.",
   author: "MyEVStation Editorial Team",
   categories: ["Punjab", "EV Business", "Investment"],
   publishedAt: "2026-10-20T00:00:00.000Z",
   seo: {
-    metaTitle: "EV Charging Station Business in Punjab | MyEVStation",
-    metaDescription: "Planning an EV charging station business in Punjab? Learn how to evaluate locations, fleet and commercial opportunities, investment costs, site feasibility and partnerships.",
+    metaTitle: "EV Charging Station Business in Punjab: Cost & Setup | MyEVStation",
+    metaDescription: "Explore EV charging station business setup in Punjab. Compare site options in Amritsar, Ludhiana, Jalandhar, Patiala and Mohali, plus costs, permissions and partnerships.",
   },
   body: [
     paragraph("Punjab may offer different types of EV charging opportunities, including residential communities, commercial parking, workplaces, fleet depots and selected travel corridors. But the right location depends on actual vehicle use, charging demand, electrical capacity, site access and commercial terms. A broad regional opportunity is not proof that a particular station will be viable."),
     paragraph("This guide is for property owners, investors, fleet operators and potential charging partners who want to evaluate a project in Punjab. It explains how to shortlist sites, assess the budget and compare partnership models before making a commitment."),
+    paragraph("For a city-level assessment, shortlist specific properties in Amritsar, Ludhiana, Jalandhar, Patiala, Mohali and other relevant Punjab markets. These are areas to investigate, not a ranking of demand or a claim that every location is commercially viable. Compare actual vehicle movement, parking behaviour, nearby chargers, electricity capacity and site economics before choosing a location."),
     heading("Where should you look for EV charging opportunities in Punjab?"),
     paragraph("Begin with the people and vehicles likely to use the charger. Different locations serve different needs, so identify the main user group and estimate when vehicles are parked, how long they stay and how much energy they may need."),
     heading("1. Urban and commercial locations"),
