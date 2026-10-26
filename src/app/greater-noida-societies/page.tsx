@@ -5,8 +5,8 @@ import SeoFaq from "@/components/custom/SeoFaq";
 import { ArrowRight, Building2, CheckCircle2, MapPin, ShieldCheck, CarFront, Bike, ClipboardCheck } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "EV Charging for Greater Noida Housing Societies & RWAs",
-  description: "Plan EV charging for Greater Noida apartments, gated societies and RWAs. MyEVStation helps assess shared visitor charging, resident parking chargers, 2W/3W charging and AC car chargers.",
+  title: "EV Charging for Greater Noida Societies & RWAs | MyEVStation",
+  description: "Explore EV charging installation for Greater Noida housing societies, apartments and RWAs. Assess resident and visitor chargers, electrical load, installation costs and site feasibility with MyEVStation.",
   alternates: { canonical: "/greater-noida-societies" },
   keywords: [
     "EV charging Greater Noida society",
@@ -129,6 +129,19 @@ export default function GreaterNoidaSocietiesPage() {
           <p className="mt-4 text-sm text-white/65">MyEVStation · India · Society feasibility is subject to site review.</p>
         </div>
       </section>
+      <section className="mx-auto max-w-7xl px-5 py-12">
+        <div className="rounded-2xl border border-[#dce8df] bg-white p-6 sm:p-8">
+          <p className="text-xs font-extrabold uppercase tracking-[.2em] text-[#0b7652]">Planning resources</p>
+          <h2 className="mt-3 text-2xl font-black">Plan your society’s EV charging project</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-[#647067]">Before an RWA approves an installation, compare the site requirements, charger options and project economics. These MyEVStation resources can help your committee prepare for a feasibility discussion.</p>
+          <div className="mt-5 grid gap-3 sm:grid-cols-3">
+            <Link href="/ev-charging-calculator" className="rounded-xl border border-[#e0e8e1] p-4 font-bold text-[#0b5a42] hover:bg-[#f7f9f6]">Estimate charging project costs <ArrowRight size={16} className="ml-1 inline" /></Link>
+            <Link href="/blogs/blog/ev-charging-stations-housing-societies-installation-permissions-revenue" className="rounded-xl border border-[#e0e8e1] p-4 font-bold text-[#0b5a42] hover:bg-[#f7f9f6]">Read the housing society installation guide <ArrowRight size={16} className="ml-1 inline" /></Link>
+            <Link href="/business-model" className="rounded-xl border border-[#e0e8e1] p-4 font-bold text-[#0b5a42] hover:bg-[#f7f9f6]">Compare EV charging business models <ArrowRight size={16} className="ml-1 inline" /></Link>
+          </div>
+        </div>
+      </section>
+
       <SeoFaq eyebrow="RWA and resident questions" title="Greater Noida society EV charging: FAQs" items={[
         { question: "Will MyEVStation help our RWA or society obtain installation permission?", answer: "Yes. MyEVStation can guide the RWA, facility manager or resident through the permission steps, help prepare a document checklist and explain what to discuss with the society committee and electricity provider. We can also help identify site details needed for a feasibility review. Requirements depend on the society's rules and installation; the RWA, property decision-maker and relevant authorities retain final approval." },
         { question: "Who pays for charging equipment and electricity?", answer: "This must be agreed before installation. Possible arrangements include resident-funded dedicated chargers, a shared charging service or a host/operator agreement. The written proposal should explain equipment ownership, metering, tariffs, software fees, maintenance and billing responsibility." },
