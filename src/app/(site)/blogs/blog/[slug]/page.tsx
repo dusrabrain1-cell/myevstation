@@ -138,7 +138,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
     mainEntityOfPage: articleUrl,
     url: articleUrl,
     ...(article.publishedAt ? { datePublished: article.publishedAt } : {}),
-    ...(article.author ? { author: { "@type": "Person", name: article.author } } : {}),
+    ...(article.author ? { author: { "@type": article.author.toLowerCase().includes("team") ? "Organization" : "Person", name: article.author, ...(article.author.toLowerCase().includes("team") ? { url: SITE.url } : {}) } } : {}),
     publisher: { "@type": "Organization", name: "MyEVStation", url: SITE.url },
     ...(imageUrl ? { image: [imageUrl] } : {}),
   };
