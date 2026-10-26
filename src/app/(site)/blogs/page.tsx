@@ -40,7 +40,9 @@ export default async function BlogsPage() {
   }
 
   const fallbacks = [blogOne, blogTwo, blogThree, blogFour, blogFive, blogSix, blogSeven, blogEight, blogNine, blogTen, blogEleven, blogTwelve, blogThirteen, blogFourteen, blogFifteen, blogSixteen, blogSeventeen, blogEighteen, blogNineteen, blogTwenty, blogTwentyOne, blogTwentyTwo, blogTwentyThree, blogTwentyFour, blogTwentyFive, blogTwentySix].filter((fallback) => !articles.some((article) => article.slug === fallback.slug));
-  articles = [...fallbacks, ...articles];
+  // Keep one card per canonical article URL. Static fallbacks can share a slug,
+  // and Sanity content should take precedence when it has the same slug.
+  articles = [...new Map([...fallbacks, ...articles].map((article) => [article.slug, article])).values()];
 
   return (
     <main className="min-h-screen bg-paper">
