@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SITE } from "@/lib/constants";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PortableBody } from "@/components/custom/PortableBody";
@@ -110,7 +111,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
   const imageUrl = article.coverImage?.asset?._ref
     ? urlFor(article.coverImage).width(1400).height(800).fit("max").auto("format").url()
     : undefined;
-  const articleUrl = `https://myevstation.co/blogs/blog/${article.slug}`;
+  const articleUrl = `${SITE.url}/blogs/blog/${article.slug}`;
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -120,7 +121,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
     url: articleUrl,
     ...(article.publishedAt ? { datePublished: article.publishedAt } : {}),
     ...(article.author ? { author: { "@type": "Person", name: article.author } } : {}),
-    publisher: { "@type": "Organization", name: "MyEVStation", url: "https://myevstation.co" },
+    publisher: { "@type": "Organization", name: "MyEVStation", url: SITE.url },
     ...(imageUrl ? { image: [imageUrl] } : {}),
   };
 
