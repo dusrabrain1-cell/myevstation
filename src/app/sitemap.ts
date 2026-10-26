@@ -29,6 +29,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { path: "/ghaziabad-ev-charging", changeFrequency: "monthly" as const, priority: 0.9 },
     { path: "/faridabad-ev-charging", changeFrequency: "monthly" as const, priority: 0.9 },
     { path: "/amritsar-ev-charging", changeFrequency: "monthly" as const, priority: 0.9 },
+    { path: "/ludhiana-ev-charging", changeFrequency: "monthly" as const, priority: 0.9 },
     { path: "/punjab-ev-charging", changeFrequency: "monthly" as const, priority: 1.0 },
   ];
   let articleRoutes: MetadataRoute.Sitemap = [];
