@@ -23,6 +23,8 @@ type Article = {
 type PageProps = { params: Promise<{ slug: string }> };
 
 async function getArticle(slug: string) {
+  // Keep the actively maintained franchise guide in sync with its SEO fallback content.
+  if (slug === blogSeven.slug) return blogSeven as Article;
   try {
     const article = await sanityFetch<Article | null>(articleBySlugQuery, { slug });
     if (article?.body?.length) return article;
