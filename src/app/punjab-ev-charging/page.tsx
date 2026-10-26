@@ -116,6 +116,19 @@ export default function PunjabEvChargingPage() {
         </div>
       </section>
 
+      <section className="mx-auto max-w-7xl px-5 pb-10">
+        <div className="rounded-3xl border border-[#dce8df] bg-white p-6 sm:p-8">
+          <p className="text-xs font-extrabold uppercase tracking-[.16em] text-[#0b7652]">Explore local and planning resources</p>
+          <h2 className="mt-2 text-2xl font-black">Plan your next step with MyEVStation</h2>
+          <p className="mt-3 max-w-3xl text-sm leading-6 text-[#647067]">Compare the commercial model, estimate project assumptions and explore our city-specific information before requesting a site assessment.</p>
+          <div className="mt-5 grid gap-3 sm:grid-cols-3">
+            <Link href="/amritsar-ev-charging" className="rounded-xl border border-[#e0e8e1] p-4 font-bold text-[#0b5a42] hover:bg-[#f7f9f6]">EV charging in Amritsar <ArrowRight size={16} className="ml-1 inline" /></Link>
+            <Link href="/ev-charging-calculator" className="rounded-xl border border-[#e0e8e1] p-4 font-bold text-[#0b5a42] hover:bg-[#f7f9f6]">EV charging investment calculator <ArrowRight size={16} className="ml-1 inline" /></Link>
+            <Link href="/business-model" className="rounded-xl border border-[#e0e8e1] p-4 font-bold text-[#0b5a42] hover:bg-[#f7f9f6]">Explore the business model <ArrowRight size={16} className="ml-1 inline" /></Link>
+          </div>
+        </div>
+      </section>
+
       <section aria-label="Founder credibility" className="border-b border-[#dce8df] bg-white">
         <div className="mx-auto grid max-w-7xl gap-4 px-5 py-6 sm:grid-cols-[auto_1fr] sm:items-center">
           <div className="flex items-center gap-3">
