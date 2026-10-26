@@ -170,15 +170,15 @@ export const blogThreeSlug = "ev-charging-station-investment-cost-india";
 
 export const blogThree = {
   _id: "static-blog-ev-charging-investment-cost",
-  title: "EV Charging Station Investment Cost in India: A Complete Guide",
+  title: "EV Charging Station Cost in India: Equipment, Setup and Investment Breakdown",
   slug: blogThreeSlug,
-  excerpt: "Understand EV charging station investment costs in India, including chargers, electrical infrastructure, installation, recurring expenses and ROI planning.",
+  excerpt: "Explore EV charging station costs in India, from AC and DC chargers to electrical upgrades, installation, site preparation and ongoing operating expenses. Build a realistic site-specific budget before investing.",
   author: "MyEVStation Editorial Team",
   categories: ["Investment Cost", "EV Charging Business"],
   publishedAt: "2026-10-20T00:00:00.000Z",
   seo: {
-    metaTitle: "EV Charging Station Investment Cost in India: Complete Guide | MyEVStation",
-    metaDescription: "Understand EV charging station investment costs in India, including chargers, electrical infrastructure, installation, recurring expenses and ROI planning.",
+    metaTitle: "EV Charging Station Cost in India: Setup & Investment | MyEVStation",
+    metaDescription: "Compare EV charging station setup costs in India, including AC and DC chargers, electrical infrastructure, installation, site preparation and ongoing expenses. Plan a realistic budget for your location.",
   },
   body: [
     paragraph("Planning an EV charging station investment in India starts with understanding the complete project cost—not just the price of the charger. Electrical infrastructure, installation, site preparation, software, ongoing operations and working capital can all affect the final budget."),
