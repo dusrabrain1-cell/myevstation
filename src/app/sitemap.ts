@@ -39,8 +39,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     articleRoutes = [blogOneSlug, blogTwoSlug, blogThreeSlug, blogFourSlug, blogFiveSlug, blogSixSlug, blogSevenSlug, blogEightSlug, blogNineSlug, blogTenSlug, blogElevenSlug, blogTwelveSlug, blogThirteenSlug, blogFourteenSlug, blogFifteenSlug, blogSixteenSlug, blogSeventeenSlug, blogEighteenSlug, blogNineteenSlug, blogTwentySlug, blogTwentyOneSlug, blogTwentyTwoSlug, blogTwentyThreeSlug, blogTwentyFourSlug, blogTwentyFiveSlug, blogTwentySixSlug, blogTwentySevenSlug, blogTwentyEightSlug, blogTwentyNineSlug, blogThirtySlug, blogThirtyOneSlug, blogThirtyTwoSlug, blogThirtyThreeSlug, blogThirtyFourSlug, blogThirtyFiveSlug].map((slug) => ({ url: `${base}/blogs/blog/${slug}`, changeFrequency: "monthly" as const, priority: 0.8 }));
   }
 
-  return [
+  const entries: MetadataRoute.Sitemap = [
     ...routes.map((route) => ({ ...route, url: `${base}${route.path}` })),
     ...articleRoutes,
   ];
+
+  // Deduplicate by the final canonical URL as a final safeguard.
+  return [...new Map(entries.map((entry) => [entry.url, entry])).values()];
 }
