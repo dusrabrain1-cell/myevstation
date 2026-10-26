@@ -112,6 +112,15 @@ export default async function BlogArticlePage({ params }: PageProps) {
     ? urlFor(article.coverImage).width(1400).height(800).fit("max").auto("format").url()
     : undefined;
   const articleUrl = `${SITE.url}/blogs/blog/${article.slug}`;
+  const breadcrumbStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE.url },
+      { "@type": "ListItem", position: 2, name: "Blogs", item: `${SITE.url}/blogs` },
+      { "@type": "ListItem", position: 3, name: article.title, item: articleUrl },
+    ],
+  };
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -185,6 +194,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
           </div>
         </aside>
       </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData).replace(/</g, "\\u003c") }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }} />
     </main>
   );
