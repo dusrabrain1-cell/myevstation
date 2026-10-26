@@ -32,11 +32,9 @@ const segments = [
 
 const localities = [
   "Sarabha Nagar, Model Town and nearby residential areas",
-  "NIT Ludhiana and Old Ludhiana",
-  "Dugri and Urban Estate areas",
-  "Greater Ludhiana (Neharpar)",
-  "Ludhiana–Chandigarh and Ludhiana–Delhi highway corridors",
-  "IMT Ludhiana, Ballabgarh and industrial areas",
+  "Ferozepur Road and Pakhowal Road commercial corridors",
+  "Dugri, BRS Nagar and Urban Estate areas",
+  "Focal Point and Giaspura industrial areas",
 ];
 
 export default function LudhianaEvChargingPage() {
@@ -47,7 +45,7 @@ export default function LudhianaEvChargingPage() {
         <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:py-20 lg:grid-cols-[1.1fr_.9fr] lg:items-center">
           <div>
             <p className="text-xs font-extrabold uppercase tracking-[.2em] text-[#c7e7d0]">Ludhiana · EV infrastructure · Site feasibility</p>
-            <h1 className="mt-4 text-4xl font-black leading-tight sm:text-6xl">EV CHARGING SOLUTIONS FOR FARIDABAD.</h1>
+            <h1 className="mt-4 text-4xl font-black leading-tight sm:text-6xl">EV CHARGING SOLUTIONS FOR LUDHIANA.</h1>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-white/85">Looking to add EV charging to a residential society, office campus, commercial property, retail destination or fleet location in Ludhiana? MyEVStation helps assess the property, user demand, charger requirements and electrical readiness before a project proposal is prepared.</p>
             <div className="mt-7 flex flex-wrap gap-3">
               <a href={whatsapp} className="inline-flex items-center gap-2 rounded-xl bg-[#e87522] px-6 py-4 font-extrabold text-white">Discuss your Ludhiana site <ArrowRight size={17} /></a>
@@ -105,7 +103,7 @@ export default function LudhianaEvChargingPage() {
       <section className="bg-[#123b4b] py-14 text-white sm:py-18"><div className="mx-auto max-w-4xl px-5 text-center"><p className="text-xs font-extrabold uppercase tracking-[.2em] text-[#c7e7d0]">Property owners · RWAs · fleet operators</p><h2 className="mt-3 text-3xl font-black sm:text-4xl">Let's assess your Ludhiana site</h2><p className="mt-4 leading-7 text-white/80">Start with the property details and intended charging use. We will discuss site feasibility before equipment or commercial commitments.</p><a href={whatsapp} className="mt-7 inline-flex items-center gap-2 rounded-xl bg-[#e87522] px-6 py-4 font-extrabold text-white">Contact MyEVStation <ArrowRight size={17} /></a></div></section>
 
       <SeoFaq eyebrow="Ludhiana site planning" title="EV charging in Ludhiana: frequently asked questions" items={[
-        { question: "Which Ludhiana areas does MyEVStation cover?", answer: "The outreach focus includes NIT Ludhiana, Old Ludhiana, Sector 15, Sector 16, Sector 21, Greater Ludhiana (Neharpar), the Mathura Road corridor, IMT Ludhiana and Ballabgarh. Site feasibility is assessed individually. Site feasibility is assessed individually." },
+        { question: "Which Ludhiana areas does MyEVStation cover?", answer: "The outreach focus includes Sarabha Nagar, Model Town, Ferozepur Road, Pakhowal Road, Dugri, BRS Nagar, Focal Point and Giaspura. Site feasibility is assessed individually." },
         { question: "Can an EV charger be installed in a Ludhiana housing society?", answer: "It may be possible subject to parking rights, RWA or property approval, electrical capacity, safe cable routing, metering and applicable requirements. A site review should confirm the installation plan." },
         { question: "Can offices and commercial properties host EV chargers?", answer: "Potentially, where the owner permits the use and access, parking, power availability and operating arrangements are suitable. Public access and operating hours should be agreed in advance." },
         { question: "What is the cost of an EV charging station in Ludhiana?", answer: "Installed cost depends on charger type, electrical upgrades, cable distance, civil work, metering, software and maintenance. Request an itemised site-specific quotation." },
