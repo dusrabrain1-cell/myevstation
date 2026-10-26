@@ -45,7 +45,7 @@ export default function JalandharEvChargingPage() {
         <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:py-20 lg:grid-cols-[1.1fr_.9fr] lg:items-center">
           <div>
             <p className="text-xs font-extrabold uppercase tracking-[.2em] text-[#c7e7d0]">Jalandhar · EV infrastructure · Site feasibility</p>
-            <h1 className="mt-4 text-4xl font-black leading-tight sm:text-6xl">EV CHARGING SOLUTIONS FOR LUDHIANA.</h1>
+            <h1 className="mt-4 text-4xl font-black leading-tight sm:text-6xl">EV CHARGING SOLUTIONS FOR JALANDHAR.</h1>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-white/85">Looking to add EV charging to a residential society, office campus, commercial property, retail destination or fleet location in Jalandhar? MyEVStation helps assess the property, user demand, charger requirements and electrical readiness before a project proposal is prepared.</p>
             <div className="mt-7 flex flex-wrap gap-3">
               <a href={whatsapp} className="inline-flex items-center gap-2 rounded-xl bg-[#e87522] px-6 py-4 font-extrabold text-white">Discuss your Jalandhar site <ArrowRight size={17} /></a>
