@@ -487,18 +487,18 @@ export const blogSevenSlug = "ev-charging-station-franchise-india-costs-partners
 
 export const blogSeven = {
   _id: "static-blog-ev-charging-franchise-india",
-  title: "EV Charging Station Franchise Cost in India: Fees, Models and What to Check",
+  title: "EV Charging Station Franchise in India: Cost, Models and Checklist",
   slug: blogSevenSlug,
-  excerpt: "Compare EV charging station franchise costs in India, including fees, charger and installation expenses, revenue-sharing models, operator support and contract checks before investing.",
+  excerpt: "Explore EV charging station franchise options in India. Compare franchise, dealership and operator models, upfront costs, revenue sharing, site requirements and contract checks before investing.",
   author: "MyEVStation Editorial Team",
   categories: ["Franchise", "Partnerships", "EV Business"],
   publishedAt: "2026-10-20T00:00:00.000Z",
   seo: {
-    metaTitle: "EV Charging Station Franchise Cost in India | MyEVStation",
-    metaDescription: "Understand EV charging station franchise costs in India, including fees, equipment, installation, revenue sharing and operator agreements. Compare models and verify site economics before investing.",
+    metaTitle: "EV Charging Station Franchise in India: Cost & Models | MyEVStation",
+    metaDescription: "Exploring an EV charging station franchise in India? Compare franchise, dealership and operator models, upfront costs, revenue sharing, site requirements and contract checks before investing.",
   },
   body: [
-    paragraph("If you are researching an EV charging station franchise in India, start by understanding exactly what the provider offers. Some businesses use a franchise arrangement, while others offer equipment supply, software, site-hosting, revenue-sharing or charging-network partnerships. These models are not interchangeable, and the label alone does not tell you the costs, support or risks involved."),
+    paragraph("If you are looking for an EV charging station franchise in India, first establish whether the provider is offering a genuine franchise, an equipment dealership, a site-hosting arrangement or an operator partnership. These models have different costs, responsibilities and commercial rights. Compare the written offer—not just the franchise label—before deciding."),
     paragraph("Before paying a franchise fee or signing an agreement, request the complete commercial proposal, verify the company and its track record, assess your site and compare the net economics. There is no universal investment amount or guaranteed income for every location."),
     heading("What does an EV charging station franchise mean?"),
     paragraph("In a franchise arrangement, a provider may allow a partner to use its brand, systems or operating methods under agreed terms. In other arrangements, the provider may simply sell chargers, license software, operate a network or collaborate with a property owner. Ask which model is actually being offered and what legal and commercial obligations come with it."),
