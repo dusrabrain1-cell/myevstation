@@ -101,6 +101,17 @@ export default function PunjabEvChargingPage() {
         </div>
       </section>
 
+      <section className="mx-auto max-w-7xl px-5 py-10">
+        <div className="grid gap-5 rounded-3xl border border-[#dce8df] bg-white p-7 sm:grid-cols-[1fr_auto] sm:items-center sm:p-9">
+          <div>
+            <p className="text-xs font-extrabold uppercase tracking-[.16em] text-[#0b7652]">Planning a Punjab project?</p>
+            <h2 className="mt-2 text-2xl font-black">Understand the investment before shortlisting a site</h2>
+            <p className="mt-3 max-w-3xl text-sm leading-6 text-[#647067]">Read our practical guide to charger costs, electrical work, operating models and site-level revenue assumptions. Use it alongside local checks—not as a substitute for a technical survey or written quotations.</p>
+          </div>
+          <Link href="/blogs/blog/ev-charging-station-business-punjab-investment-locations-partnerships" className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#0b5a42] px-5 py-4 text-sm font-extrabold text-white">Read Punjab investment guide <ArrowRight size={17} /></Link>
+        </div>
+      </section>
+
       <section aria-label="Founder credibility" className="border-b border-[#dce8df] bg-white">
         <div className="mx-auto grid max-w-7xl gap-4 px-5 py-6 sm:grid-cols-[auto_1fr] sm:items-center">
           <div className="flex items-center gap-3">
