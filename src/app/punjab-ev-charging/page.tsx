@@ -5,10 +5,14 @@ import SeoFaq from "@/components/custom/SeoFaq";
 import { ArrowRight, MapPin, Building2, CheckCircle2, CarFront, Truck, ClipboardCheck, Store } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "EV Charging Station Opportunities Across Punjab | City-Wise",
-  description: "Explore city-wise EV charging site opportunities across Punjab. MyEVStation helps property owners, market associations, fleet operators and housing societies assess underserved locations and charging feasibility.",
+  title: "EV Charging Station in Punjab | City-Wise Site Opportunities",
+  description: "Looking for an EV charging station in Punjab or planning to set one up? Explore city-wise opportunities in Amritsar, Ludhiana, Jalandhar, Mohali and more. Assess sites, power feasibility and business models with MyEVStation.",
   alternates: { canonical: "/punjab-ev-charging" },
   keywords: [
+    "EV charging station in Punjab",
+    "EV charging stations in Punjab",
+    "set up EV charging station in Punjab",
+    "EV charging business Punjab",
     "EV charging station Punjab",
     "EV charging station business Punjab",
     "EV charger Amritsar",
@@ -21,7 +25,7 @@ export const metadata: Metadata = {
     "EV charging station franchise Punjab",
   ],
 
-  ...pageSocialMetadata("EV Charging Station Opportunities Across Punjab | City-Wise", "Explore city-wise EV charging site opportunities across Punjab. MyEVStation helps property owners, market associations, fleet operators and housing societies assess underserved locations and charging feasibility.", "/punjab-ev-charging"),
+  ...pageSocialMetadata("EV Charging Station in Punjab | City-Wise Site Opportunities", "Looking for an EV charging station in Punjab or planning to set one up? Explore city-wise opportunities in Amritsar, Ludhiana, Jalandhar, Mohali and more. Assess sites, power feasibility and business models with MyEVStation.", "/punjab-ev-charging"),
 };
 
 const cityGroups = [
@@ -83,8 +87,8 @@ export default function PunjabEvChargingPage() {
         <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:py-20 lg:grid-cols-[1.1fr_.9fr] lg:items-center">
           <div>
             <p className="text-xs font-extrabold uppercase tracking-[.2em] text-[#c7e7d0]">Punjab · City-wise site development</p>
-            <h1 className="mt-4 text-4xl font-black leading-tight sm:text-6xl">FIND PUNJAB’S NEXT EV CHARGING LOCATIONS.</h1>
-            <p className="mt-5 max-w-2xl text-lg leading-8 text-white/85">MyEVStation is building a Punjab-wide pipeline of potential EV charging sites. We want to find places where EV use is emerging but convenient, compatible and reliable charging may be limited—then verify local demand and existing stations before recommending investment.</p>
+            <h1 className="mt-4 text-4xl font-black leading-tight sm:text-6xl">EV CHARGING STATION OPPORTUNITIES ACROSS PUNJAB.</h1>
+            <p className="mt-5 max-w-2xl text-lg leading-8 text-white/85">Looking to set up an EV charging station in Punjab, host a charger at your property or explore a charging business? MyEVStation is building a Punjab-wide pipeline of potential sites across Amritsar, Ludhiana, Jalandhar, Mohali, Patiala and other markets. We assess local demand, existing chargers, electrical feasibility and site access before recommending a project.</p>
             <div className="mt-7 flex flex-wrap gap-3">
               <a href={whatsapp} className="inline-flex items-center gap-2 rounded-xl bg-[#e87522] px-6 py-4 font-extrabold text-white">Suggest a site in Punjab <ArrowRight size={17} /></a>
               <Link href="/amritsar-ev-charging" className="inline-flex items-center gap-2 rounded-xl border border-white/35 px-6 py-4 font-bold text-white">Amritsar campaign <ArrowRight size={17} /></Link>
