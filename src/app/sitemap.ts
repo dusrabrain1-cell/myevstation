@@ -24,6 +24,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { path: "/society", changeFrequency: "monthly" as const, priority: 0.8 },
     { path: "/greater-noida-societies", changeFrequency: "monthly" as const, priority: 0.9 },
     { path: "/delhi-ncr-ev-charging", changeFrequency: "monthly" as const, priority: 0.95 },
+    { path: "/gurugram-ev-charging", changeFrequency: "monthly" as const, priority: 0.95 },
     { path: "/amritsar-ev-charging", changeFrequency: "monthly" as const, priority: 0.9 },
     { path: "/punjab-ev-charging", changeFrequency: "monthly" as const, priority: 1.0 },
   ];
