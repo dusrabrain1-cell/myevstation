@@ -39,7 +39,10 @@ export default async function BlogsPage() {
     console.error("[blogs] Could not load published articles:", error);
   }
 
-  const fallbacks = [blogOne, blogTwo, blogThree, blogFour, blogFive, blogSix, blogSeven, blogEight, blogNine, blogTen, blogEleven, blogTwelve, blogThirteen, blogFourteen, blogFifteen, blogSixteen, blogSeventeen, blogEighteen, blogNineteen, blogTwenty, blogTwentyOne, blogTwentyTwo, blogTwentyThree, blogTwentyFour, blogTwentyFive, blogTwentySix, blogTwentySeven, blogTwentyEight, blogTwentyNine, blogThirty, blogThirtyOne, blogThirtyTwo, blogThirtyThree, blogThirtyFour, blogThirtyFive].filter((fallback) => !articles.some((article) => article.slug === fallback.slug));
+  const allFallbacks = [blogOne, blogTwo, blogThree, blogFour, blogFive, blogSix, blogSeven, blogEight, blogNine, blogTen, blogEleven, blogTwelve, blogThirteen, blogFourteen, blogFifteen, blogSixteen, blogSeventeen, blogEighteen, blogNineteen, blogTwenty, blogTwentyOne, blogTwentyTwo, blogTwentyThree, blogTwentyFour, blogTwentyFive, blogTwentySix, blogTwentySeven, blogTwentyEight, blogTwentyNine, blogThirty, blogThirtyOne, blogThirtyTwo, blogThirtyThree, blogThirtyFour, blogThirtyFive];
+  // Keep the first fallback for each canonical slug; repeated legacy hospital entries shared one URL.
+  const uniqueFallbacks = allFallbacks.filter((fallback, index, all) => all.findIndex((item) => item.slug === fallback.slug) === index);
+  const fallbacks = uniqueFallbacks.filter((fallback) => !articles.some((article) => article.slug === fallback.slug));
   articles = [...fallbacks, ...articles];
 
   return (
