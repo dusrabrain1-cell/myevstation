@@ -5,8 +5,8 @@ import SeoFaq from "@/components/custom/SeoFaq";
 import { ArrowRight, Building2, CheckCircle2, MapPin, ShieldCheck, CarFront, Bike, Store, ClipboardCheck } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "EV Charging Stations for Amritsar Markets & Housing Societies",
-  description: "Explore EV charging solutions for Amritsar commercial markets, shopping areas, hotels, parking sites and housing societies. MyEVStation helps assess site suitability, charger options and installation costs.",
+  title: "EV Charging Station in Amritsar | Markets & Societies | MyEVStation",
+  description: "Explore EV charging station opportunities in Amritsar for commercial markets, hotels, parking sites, fleets and housing societies. Assess charger options, site feasibility and installation costs with MyEVStation.",
   alternates: { canonical: "/amritsar-ev-charging" },
   keywords: [
     "EV charging station Amritsar",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     "EV charging station business Amritsar",
   ],
 
-  ...pageSocialMetadata("EV Charging Stations for Amritsar Markets & Housing Societies", "Explore EV charging solutions for Amritsar commercial markets, shopping areas, hotels, parking sites and housing societies. MyEVStation helps assess site suitability, charger options and installation costs.", "/amritsar-ev-charging"),
+  ...pageSocialMetadata("EV Charging Station in Amritsar | Markets & Societies | MyEVStation", "Explore EV charging station opportunities in Amritsar for commercial markets, hotels, parking sites, fleets and housing societies. Assess charger options, site feasibility and installation costs with MyEVStation.", "/amritsar-ev-charging"),
 };
 
 const zones = [
@@ -126,6 +126,21 @@ export default function AmritsarEvChargingPage() {
           <p className="mt-4 text-sm text-white/65">MyEVStation · Amritsar, Punjab · Subject to site feasibility.</p>
         </div>
       </section>
+      <section className="border-y border-[#e0e8e1] bg-white py-12">
+        <div className="mx-auto max-w-7xl px-5">
+          <div className="max-w-3xl">
+            <p className="text-xs font-extrabold uppercase tracking-[.2em] text-[#0b7652]">Explore MyEVStation</p>
+            <h2 className="mt-3 text-2xl font-black sm:text-3xl">Plan your EV charging project in Punjab</h2>
+            <p className="mt-3 leading-7 text-[#647067]">Compare the wider Punjab opportunity, review the charging business model and estimate site-level setup costs before making an investment decision.</p>
+          </div>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Link href="/punjab-ev-charging" className="rounded-xl border border-[#cbdacf] px-5 py-3 font-bold text-[#0b5a42] hover:bg-[#f2f7f3]">EV charging across Punjab <ArrowRight size={16} className="ml-1 inline" /></Link>
+            <Link href="/ev-charging-calculator" className="rounded-xl border border-[#cbdacf] px-5 py-3 font-bold text-[#0b5a42] hover:bg-[#f2f7f3]">EV charging cost calculator <ArrowRight size={16} className="ml-1 inline" /></Link>
+            <Link href="/business-model" className="rounded-xl border border-[#cbdacf] px-5 py-3 font-bold text-[#0b5a42] hover:bg-[#f2f7f3]">Explore the business model <ArrowRight size={16} className="ml-1 inline" /></Link>
+          </div>
+        </div>
+      </section>
+
       <SeoFaq eyebrow="Amritsar site enquiries" title="Amritsar EV charging: FAQs" items={[
         { question: "Where in Amritsar should I consider an EV charging site?", answer: "Begin with a site-specific review of commercial parking, markets, hotels, destination businesses, housing societies and fleet locations. Areas mentioned on this page are prospecting zones, not a claim that they have no existing chargers or that a site is already approved." },
         { question: "How do I check whether a nearby charging station already exists?", answer: "Check multiple operator apps and public maps, confirm the station is operational, verify connector compatibility and access hours, and visit the area. Do not rely on a single directory or assume a pin on a map is currently usable." },
