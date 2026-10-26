@@ -7,7 +7,7 @@ export const siteSettingsQuery = defineQuery(`
 `);
 
 export const articlesQuery = defineQuery(`
-  *[_type == "article"] | order(publishedAt desc){
+  *[_type == "article" && count(body) > 0] | order(publishedAt desc){
     _id, title, "slug": slug.current, excerpt, author, categories, publishedAt, coverImage
   }
 `);
@@ -20,5 +20,5 @@ export const articleBySlugQuery = defineQuery(`
 `);
 
 export const articleSlugsQuery = defineQuery(`
-  *[_type == "article" && defined(slug.current)]{ "slug": slug.current }
+  *[_type == "article" && defined(slug.current) && count(body) > 0]{ "slug": slug.current }
 `);

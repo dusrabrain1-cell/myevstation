@@ -25,7 +25,7 @@ type PageProps = { params: Promise<{ slug: string }> };
 async function getArticle(slug: string) {
   try {
     const article = await sanityFetch<Article | null>(articleBySlugQuery, { slug });
-    if (article) return article;
+    if (article?.body?.length) return article;
   } catch (error) {
     console.error("[blog detail] Sanity article fetch failed:", error);
   }
