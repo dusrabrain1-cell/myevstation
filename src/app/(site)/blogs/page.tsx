@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHeader } from "@/components/custom/PageHeader";
 import { articlesQuery, sanityFetch, urlFor } from "@/lib/sanity";
-import { blogOne, blogTwo, blogThree, blogFour, blogFive, blogSix, blogSeven, blogEight, blogNine, blogTen, blogEleven, blogTwelve, blogThirteen, blogFourteen, blogFifteen, blogSixteen, blogSeventeen, blogEighteen, blogNineteen, blogTwenty, blogTwentyOne, blogTwentyTwo, blogTwentyThree, blogTwentyFour, blogTwentyFive, blogTwentySix, blogTwentySeven, blogTwentyEight, blogTwentyNine, blogThirty, blogThirtyOne, blogThirtyTwo, blogThirtyThree } from "@/lib/blog-fallbacks";
+import { blogOne, blogTwo, blogThree, blogFour, blogFive, blogSix, blogSeven, blogEight, blogNine, blogTen, blogEleven, blogTwelve, blogThirteen, blogFourteen, blogFifteen, blogSixteen, blogSeventeen, blogEighteen, blogNineteen, blogTwenty, blogTwentyOne, blogTwentyTwo, blogTwentyThree, blogTwentyFour, blogTwentyFive, blogTwentySix, blogTwentySeven, blogTwentyEight, blogTwentyNine, blogThirty, blogThirtyOne, blogThirtyTwo, blogThirtyThree, blogThirtyFour } from "@/lib/blog-fallbacks";
 
 export const metadata: Metadata = {
   title: "EV Charging Station Blogs & Guides in India",
@@ -39,7 +39,7 @@ export default async function BlogsPage() {
     console.error("[blogs] Could not load published articles:", error);
   }
 
-  const fallbacks = [blogOne, blogTwo, blogThree, blogFour, blogFive, blogSix, blogSeven, blogEight, blogNine, blogTen, blogEleven, blogTwelve, blogThirteen, blogFourteen, blogFifteen, blogSixteen, blogSeventeen, blogEighteen, blogNineteen, blogTwenty, blogTwentyOne, blogTwentyTwo, blogTwentyThree, blogTwentyFour, blogTwentyFive, blogTwentySix, blogTwentySeven, blogTwentyEight, blogTwentyNine, blogThirty, blogThirtyOne, blogThirtyTwo, blogThirtyThree].filter((fallback) => !articles.some((article) => article.slug === fallback.slug));
+  const fallbacks = [blogOne, blogTwo, blogThree, blogFour, blogFive, blogSix, blogSeven, blogEight, blogNine, blogTen, blogEleven, blogTwelve, blogThirteen, blogFourteen, blogFifteen, blogSixteen, blogSeventeen, blogEighteen, blogNineteen, blogTwenty, blogTwentyOne, blogTwentyTwo, blogTwentyThree, blogTwentyFour, blogTwentyFive, blogTwentySix, blogTwentySeven, blogTwentyEight, blogTwentyNine, blogThirty, blogThirtyOne, blogThirtyTwo, blogThirtyThree, blogThirtyFour].filter((fallback) => !articles.some((article) => article.slug === fallback.slug));
   articles = [...fallbacks, ...articles];
 
   return (
