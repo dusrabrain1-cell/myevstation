@@ -93,15 +93,15 @@ export const blogTwoSlug = "how-to-start-ev-charging-station-business-india";
 
 export const blogTwo = {
   _id: "static-blog-start-ev-charging",
-  title: "How to Start an EV Charging Station Business in India: A Step-by-Step Guide",
+  title: "How to Start an EV Charging Station Business in India: 7 Practical Steps",
   slug: blogTwoSlug,
-  excerpt: "Learn how to start an EV charging station business in India, from site selection and charger types to investment costs, electricity requirements, operations and financial feasibility.",
+  excerpt: "A practical guide to starting an EV charging station business in India: choose an operating model, assess demand, check electricity capacity, select chargers, estimate costs, complete site work and plan operations.",
   author: "MyEVStation Editorial Team",
   categories: ["EV Charging Business", "Startup Guide"],
   publishedAt: "2026-10-20T00:00:00.000Z",
   seo: {
-    metaTitle: "How to Start an EV Charging Station Business in India | MyEVStation",
-    metaDescription: "Learn how to start an EV charging station business in India, from site selection and charger types to investment costs, electricity requirements, operations and financial feasibility.",
+    metaTitle: "How to Start an EV Charging Station Business: 7 Steps | MyEVStation",
+    metaDescription: "Learn how to start an EV charging station business in India in 7 steps: choose a model, assess site demand, check power capacity, select chargers, budget costs and plan operations.",
   },
   body: [
     paragraph("Starting an EV charging station business in India requires more than choosing a charger and finding a parking space. You need to assess customer demand, electrical feasibility, site access, investment costs, operating expenses and the business model that will support the installation."),
