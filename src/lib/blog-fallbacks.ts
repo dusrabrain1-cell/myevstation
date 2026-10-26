@@ -1368,18 +1368,18 @@ export const blogSeventeenSlug = "ev-charging-station-maintenance-india-uptime-s
 
 export const blogSeventeen = {
   _id: "static-blog-ev-charging-maintenance",
-  title: "EV Charger Maintenance Cost in India: Uptime, SLA and Safety Checklist",
+  title: "EV Charging Station Maintenance in India: Cost, Uptime & Safety Checklist",
   slug: blogSeventeenSlug,
-  excerpt: "Understand EV charger maintenance costs in India, preventive servicing, uptime tracking, repair budgets, warranty coverage and operator service-level agreements.",
+  excerpt: "A practical EV charging station maintenance guide for India covering preventive servicing, charger repairs, uptime, software monitoring, warranty coverage, safety and operator SLAs.",
   author: "MyEVStation Editorial Team",
   categories: ["EV Charging Operations", "Maintenance & Safety"],
   publishedAt: "2026-10-20T00:00:00.000Z",
   seo: {
-    metaTitle: "EV Charger Maintenance Cost in India: Uptime & SLA | MyEVStation",
-    metaDescription: "Plan EV charger maintenance in India: preventive service, repair costs, uptime, warranty coverage and operator SLAs. Use a practical checklist for reliable operations.",
+    metaTitle: "EV Charging Station Maintenance in India | MyEVStation",
+    metaDescription: "Learn EV charging station maintenance in India: preventive service, repair costs, uptime tracking, software checks, safety, warranties and operator SLAs.",
   },
   body: [
-    paragraph("Installing an EV charger is only the beginning of running a reliable charging station. Ongoing maintenance, software monitoring, customer support and safe electrical infrastructure all influence whether drivers can charge when they need to. A practical maintenance plan helps operators spot issues early, manage repair costs and reduce avoidable downtime."),
+    paragraph("EV charging station maintenance is essential for reliable day-to-day operations. Preventive servicing, charger and connector inspections, software monitoring, payment checks and a clear fault-response process all influence whether drivers can charge when they need to. A practical maintenance plan helps operators identify issues early, manage repair costs and reduce avoidable downtime."),
     paragraph("The right maintenance schedule depends on charger type, usage, equipment instructions, site conditions and the service agreement. This guide outlines what operators and site owners should plan for; it is not a substitute for the equipment manufacturer's instructions or a qualified electrical professional's assessment."),
     heading("Why maintenance matters for an EV charging station"),
     bullet("Reliability: identify faults before they lead to extended service interruptions."),
