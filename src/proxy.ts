@@ -8,7 +8,6 @@ const CANONICAL_HOST = "myevstation.co.in";
 const LEGACY_HOSTS = new Set([
   "myevstation.co",
   "www.myevstation.co",
-  "www.myevstation.co.in",
 ]);
 
 export function proxy(request: NextRequest) {
