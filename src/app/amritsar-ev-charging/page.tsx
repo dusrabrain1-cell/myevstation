@@ -135,6 +135,8 @@ export default function AmritsarEvChargingPage() {
           </div>
           <div className="mt-6 flex flex-wrap gap-3">
             <Link href="/punjab-ev-charging" className="rounded-xl border border-[#cbdacf] px-5 py-3 font-bold text-[#0b5a42] hover:bg-[#f2f7f3]">EV charging across Punjab <ArrowRight size={16} className="ml-1 inline" /></Link>
+            <Link href="/ludhiana-ev-charging" className="rounded-xl border border-[#cbdacf] px-5 py-3 font-bold text-[#0b5a42] hover:bg-[#f2f7f3]">EV charging in Ludhiana <ArrowRight size={16} className="ml-1 inline" /></Link>
+            <Link href="/jalandhar-ev-charging" className="rounded-xl border border-[#cbdacf] px-5 py-3 font-bold text-[#0b5a42] hover:bg-[#f2f7f3]">EV charging in Jalandhar <ArrowRight size={16} className="ml-1 inline" /></Link>
             <Link href="/ev-charging-calculator" className="rounded-xl border border-[#cbdacf] px-5 py-3 font-bold text-[#0b5a42] hover:bg-[#f2f7f3]">EV charging cost calculator <ArrowRight size={16} className="ml-1 inline" /></Link>
             <Link href="/business-model" className="rounded-xl border border-[#cbdacf] px-5 py-3 font-bold text-[#0b5a42] hover:bg-[#f2f7f3]">Explore the business model <ArrowRight size={16} className="ml-1 inline" /></Link>
           </div>
