@@ -17,6 +17,7 @@ export function pageSocialMetadata(
   const image = "/myevstation-hero-banner.jpeg";
 
   return {
+    alternates: { canonical: canonicalPath },
     openGraph: {
       type: "website",
       locale: "en_IN",
