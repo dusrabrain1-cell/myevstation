@@ -64,18 +64,31 @@ export default function RootLayout({
       >
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "Organization",
-          name: SITE.name,
-          url: SITE.url,
-          logo: `${SITE.url}/myevstation-logo.png`,
-          description: "EV charging infrastructure and station partnership opportunities in India.",
-          telephone: SITE.phone,
-          contactPoint: {
-            "@type": "ContactPoint",
-            telephone: SITE.whatsappPhone,
-            contactType: "sales",
-            availableLanguage: ["English", "Hindi"]
-          }
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": `${SITE.url}/#organization`,
+              name: SITE.name,
+              url: SITE.url,
+              logo: `${SITE.url}/myevstation-logo.png`,
+              description: "EV charging infrastructure and station partnership opportunities in India.",
+              telephone: SITE.phone,
+              contactPoint: {
+                "@type": "ContactPoint",
+                telephone: SITE.whatsappPhone,
+                contactType: "sales",
+                availableLanguage: ["English", "Hindi"]
+              }
+            },
+            {
+              "@type": "WebSite",
+              "@id": `${SITE.url}/#website`,
+              name: SITE.name,
+              url: SITE.url,
+              publisher: { "@id": `${SITE.url}/#organization` },
+              inLanguage: "en-IN"
+            }
+          ]
         }) }} />
         <SiteShell>{children}</SiteShell>
       </body>
