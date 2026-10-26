@@ -1351,15 +1351,15 @@ export const blogSeventeenSlug = "ev-charging-station-maintenance-india-uptime-s
 
 export const blogSeventeen = {
   _id: "static-blog-ev-charging-maintenance",
-  title: "EV Charging Station Maintenance in India: Costs, Uptime and Safety Checklist",
+  title: "EV Charger Maintenance Cost in India: Uptime, SLA and Safety Checklist",
   slug: blogSeventeenSlug,
-  excerpt: "Learn how to maintain EV charging stations in India, plan preventive servicing, reduce downtime, track uptime and budget for repairs, safety checks and operator support.",
+  excerpt: "Understand EV charger maintenance costs in India, preventive servicing, uptime tracking, repair budgets, warranty coverage and operator service-level agreements.",
   author: "MyEVStation Editorial Team",
   categories: ["EV Charging Operations", "Maintenance & Safety"],
   publishedAt: "2026-10-20T00:00:00.000Z",
   seo: {
-    metaTitle: "EV Charging Station Maintenance in India | MyEVStation",
-    metaDescription: "Learn how to maintain EV charging stations in India, plan preventive servicing, reduce downtime, track uptime and budget for repairs, safety checks and operator support.",
+    metaTitle: "EV Charger Maintenance Cost in India: Uptime & SLA | MyEVStation",
+    metaDescription: "Plan EV charger maintenance in India: preventive service, repair costs, uptime, warranty coverage and operator SLAs. Use a practical checklist for reliable operations.",
   },
   body: [
     paragraph("Installing an EV charger is only the beginning of running a reliable charging station. Ongoing maintenance, software monitoring, customer support and safe electrical infrastructure all influence whether drivers can charge when they need to. A practical maintenance plan helps operators spot issues early, manage repair costs and reduce avoidable downtime."),
