@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Zap } from "lucide-react";
+import { ArrowRight, Linkedin, Zap } from "lucide-react";
 
 const EXPLORE_LINKS = [
   { label: "Why MyEVStation", href: "/why-myevstation" },
@@ -21,6 +21,8 @@ const PARTNER_LINKS = [
   { label: "Greater Noida societies", href: "/greater-noida-societies" },
 ];
 
+const LINKEDIN_URL = "https://www.linkedin.com/company/myevstation/posts/?viewAsMember=true";
+
 export function Footer() {
   return (
     <footer className="border-t border-[#dfe7df] bg-white">
@@ -36,7 +38,7 @@ export function Footer() {
           </div>
           <div><h3 className="text-sm font-extrabold uppercase tracking-wider text-[#172d21]">Explore</h3><ul className="mt-5 space-y-3">{EXPLORE_LINKS.map(link=><li key={link.label}><Link href={link.href} className="group inline-flex items-center gap-2 text-sm text-[#526158] hover:text-[#0b5a42]"><span>{link.label}</span><ArrowRight size={13} className="opacity-0 transition group-hover:opacity-100"/></Link></li>)}</ul></div>
           <div><h3 className="text-sm font-extrabold uppercase tracking-wider text-[#172d21]">Choose your model</h3><ul className="mt-5 space-y-3">{PARTNER_LINKS.map(link=><li key={link.label}><Link href={link.href} className="group inline-flex items-center gap-2 text-sm text-[#526158] hover:text-[#0b5a42]"><span>{link.label}</span><ArrowRight size={13} className="opacity-0 transition group-hover:opacity-100"/></Link></li>)}</ul></div>
-          <div><h3 className="text-sm font-extrabold uppercase tracking-wider text-[#172d21]">Contact</h3><div className="mt-5 space-y-5 text-sm leading-6 text-[#647067]"><div><p className="font-extrabold text-[#172d21]">Noida Office</p><p className="mt-1">Hawelia Valenova Park, Plot No. CP-GH-05A, Sector Techzone-IV, Greater Noida West, Uttar Pradesh – 201318</p><a href="https://www.google.com/maps/search/?api=1&query=Hawelia%20Valenova%20Park%2C%20Plot%20No.%20CP-GH-05A%2C%20Sector%20Techzone-IV%2C%20Greater%20Noida%20West%2C%20Uttar%20Pradesh%20201318" target="_blank" rel="noreferrer" className="inline-block mt-1 font-bold text-[#0b5a42] hover:text-[#e87522]">Get directions</a></div><div><p className="font-extrabold text-[#172d21]">Punjab Office</p><p className="mt-1">Gumtala, Mirankot Road, Meerankot Chowk, Amritsar – 143001, Punjab</p><a href="https://www.google.com/maps/search/?api=1&query=Gumtala%2C%20Mirankot%20Road%2C%20Meerankot%20Chowk%2C%20Amritsar%20143001%2C%20Punjab" target="_blank" rel="noreferrer" className="inline-block mt-1 font-bold text-[#0b5a42] hover:text-[#e87522]">Get directions</a></div></div></div>
+          <div><h3 className="text-sm font-extrabold uppercase tracking-wider text-[#172d21]">Contact</h3><div className="mt-5 space-y-5 text-sm leading-6 text-[#647067]"><div><p className="font-extrabold text-[#172d21]">Noida Office</p><p className="mt-1">Hawelia Valenova Park, Plot No. CP-GH-05A, Sector Techzone-IV, Greater Noida West, Uttar Pradesh – 201318</p><a href="https://www.google.com/maps/search/?api=1&query=Hawelia%20Valenova%20Park%2C%20Plot%20No.%20CP-GH-05A%2C%20Sector%20Techzone-IV%2C%20Greater%20Noida%20West%2C%20Uttar%20Pradesh%20201318" target="_blank" rel="noreferrer" className="inline-block mt-1 font-bold text-[#0b5a42] hover:text-[#e87522]">Get directions</a></div><div><p className="font-extrabold text-[#172d21]">Punjab Office</p><p className="mt-1">Gumtala, Mirankot Road, Meerankot Chowk, Amritsar – 143001, Punjab</p><a href="https://www.google.com/maps/search/?api=1&query=Gumtala%2C%20Mirankot%20Road%2C%20Meerankot%20Chowk%2C%20Amritsar%20143001%2C%20Punjab" target="_blank" rel="noreferrer" className="inline-block mt-1 font-bold text-[#0b5a42] hover:text-[#e87522]">Get directions</a></div><div><p className="font-extrabold text-[#172d21]">Follow us</p><a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" aria-label="MyEVStation on LinkedIn (opens in a new tab)" className="mt-2 inline-flex items-center gap-2 font-bold text-[#0b5a42] transition hover:text-[#e87522]"><Linkedin size={18} aria-hidden="true" /> LinkedIn</a></div></div></div>
         </div>
       </div>
       <div className="border-t border-[#e4e9e4] bg-[#f7f9f6] px-5 py-4 text-center text-xs text-[#748077]">© {new Date().getFullYear()} MyEVStation. All rights reserved.</div>
