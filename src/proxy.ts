@@ -4,11 +4,10 @@ import { NextRequest, NextResponse } from "next/server";
  * Consolidate legacy hostnames on the canonical MyEVStation domain.
  * Preserve the requested path and query string so old links continue to work.
  */
-const CANONICAL_HOST = "myevstation.co.in";
+const CANONICAL_HOST = "www.myevstation.co.in";
 const LEGACY_HOSTS = new Set([
   "myevstation.co",
   "www.myevstation.co",
-  "www.myevstation.co.in",
 ]);
 
 export function proxy(request: NextRequest) {
