@@ -1,0 +1,44 @@
+name: SEO branch build validation
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "src/**"
+      - "sanity/**"
+      - "package.json"
+      - "package-lock.json"
+      - "next.config.*"
+      - ".github/workflows/seo-build.yml"
+  push:
+    branches:
+      - "seo/technical-indexing-fixes"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: seo-build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  production-build:
+    name: Production build
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci
+
+      - name: Run production build
+        run: npm run build
