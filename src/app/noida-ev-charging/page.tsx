@@ -39,8 +39,8 @@ const localities = [
   "Residential and commercial sectors across Noida",
 ];
 
-export default function GurugramEvChargingPage() {
-  const whatsapp = "https://wa.me/919876260822?text=Hello%20MyEVStation%2C%20I%20want%20to%20discuss%20an%20EV%20charging%20site%20in%20Gurugram.%20Please%20guide%20me%20on%20site%20feasibility.";
+export default function NoidaEvChargingPage() {
+  const whatsapp = "https://wa.me/919876260822?text=Hello%20MyEVStation%2C%20I%20want%20to%20discuss%20an%20EV%20charging%20site%20in%20Noida.%20Please%20guide%20me%20on%20site%20feasibility.";
   return (
     <main className="min-h-screen bg-[#f7f9f6] text-[#17212b]">
       <section className="bg-[linear-gradient(120deg,#0b2a1e,#0b7652)] text-white">
