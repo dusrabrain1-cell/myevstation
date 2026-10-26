@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { PortableBody } from "@/components/custom/PortableBody";
 import { articleBySlugQuery, articleSlugsQuery, sanityFetch, urlFor } from "@/lib/sanity";
 import type { PortableTextBlock } from "@portabletext/types";
-import { blogOne, blogTwo, blogThree, blogFour, blogFive, blogSix, blogSeven, blogEight, blogNine, blogTen, blogEleven, blogTwelve, blogThirteen, blogFourteen, blogFifteen, blogSixteen, blogSeventeen, blogEighteen, blogNineteen, blogTwenty, blogTwentyOne, blogTwentyTwo, blogTwentyThree, blogTwentyFour, blogTwentyFive, blogTwentySix, blogTwentySeven, blogTwentyEight, blogTwentyNine, blogThirty, blogThirtyOne } from "@/lib/blog-fallbacks";
+import { blogOne, blogTwo, blogThree, blogFour, blogFive, blogSix, blogSeven, blogEight, blogNine, blogTen, blogEleven, blogTwelve, blogThirteen, blogFourteen, blogFifteen, blogSixteen, blogSeventeen, blogEighteen, blogNineteen, blogTwenty, blogTwentyOne, blogTwentyTwo, blogTwentyThree, blogTwentyFour, blogTwentyFive, blogTwentySix, blogTwentySeven, blogTwentyEight, blogTwentyNine, blogThirty, blogThirtyOne, blogThirtyTwo } from "@/lib/blog-fallbacks";
 
 type Article = {
   _id: string;
@@ -60,16 +60,17 @@ async function getArticle(slug: string) {
   if (slug === blogTwentyNine.slug) return blogTwentyNine as Article;
   if (slug === blogThirty.slug) return blogThirty as Article;
   if (slug === blogThirtyOne.slug) return blogThirtyOne as Article;
+  if (slug === blogThirtyTwo.slug) return blogThirtyTwo as Article;
   return null;
 }
 
 export async function generateStaticParams() {
   try {
     const slugs = await sanityFetch<{ slug: string }[]>(articleSlugsQuery);
-    return [...new Set([blogOne.slug, blogTwo.slug, blogThree.slug, blogFour.slug, blogFive.slug, blogSix.slug, blogSeven.slug, blogEight.slug, blogNine.slug, blogTen.slug, blogEleven.slug, blogTwelve.slug, blogThirteen.slug, blogFourteen.slug, blogFifteen.slug, blogSixteen.slug, blogSeventeen.slug, blogEighteen.slug, blogNineteen.slug, blogTwenty.slug, blogTwentyOne.slug, blogTwentyTwo.slug, blogTwentyThree.slug, blogTwentyFour.slug, blogTwentyFive.slug, blogTwentySix.slug, blogTwentySeven.slug, blogTwentyEight.slug, blogTwentyNine.slug, blogThirty.slug, blogThirtyOne.slug, ...slugs.map(({ slug }) => slug)])].map((slug) => ({ slug }));
+    return [...new Set([blogOne.slug, blogTwo.slug, blogThree.slug, blogFour.slug, blogFive.slug, blogSix.slug, blogSeven.slug, blogEight.slug, blogNine.slug, blogTen.slug, blogEleven.slug, blogTwelve.slug, blogThirteen.slug, blogFourteen.slug, blogFifteen.slug, blogSixteen.slug, blogSeventeen.slug, blogEighteen.slug, blogNineteen.slug, blogTwenty.slug, blogTwentyOne.slug, blogTwentyTwo.slug, blogTwentyThree.slug, blogTwentyFour.slug, blogTwentyFive.slug, blogTwentySix.slug, blogTwentySeven.slug, blogTwentyEight.slug, blogTwentyNine.slug, blogThirty.slug, blogThirtyOne.slug, blogThirtyTwo.slug, ...slugs.map(({ slug }) => slug)])].map((slug) => ({ slug }));
   } catch (error) {
     console.error("[blog detail] Could not load article slugs:", error);
-    return [{ slug: blogOne.slug }, { slug: blogTwo.slug }, { slug: blogThree.slug }, { slug: blogFour.slug }, { slug: blogFive.slug }, { slug: blogSix.slug }, { slug: blogSeven.slug }, { slug: blogEight.slug }, { slug: blogNine.slug }, { slug: blogTen.slug }, { slug: blogEleven.slug }, { slug: blogTwelve.slug }, { slug: blogThirteen.slug }, { slug: blogFourteen.slug }, { slug: blogFifteen.slug }, { slug: blogSixteen.slug }, { slug: blogSeventeen.slug }, { slug: blogEighteen.slug }, { slug: blogNineteen.slug }, { slug: blogTwenty.slug }, { slug: blogTwentyOne.slug }, { slug: blogTwentyTwo.slug }, { slug: blogTwentyThree.slug }, { slug: blogTwentyFour.slug }, { slug: blogTwentyFive.slug }, { slug: blogTwentySix.slug }, { slug: blogTwentySeven.slug }, { slug: blogTwentyEight.slug }, { slug: blogTwentyNine.slug }, { slug: blogThirty.slug }, { slug: blogThirtyOne.slug }];
+    return [{ slug: blogOne.slug }, { slug: blogTwo.slug }, { slug: blogThree.slug }, { slug: blogFour.slug }, { slug: blogFive.slug }, { slug: blogSix.slug }, { slug: blogSeven.slug }, { slug: blogEight.slug }, { slug: blogNine.slug }, { slug: blogTen.slug }, { slug: blogEleven.slug }, { slug: blogTwelve.slug }, { slug: blogThirteen.slug }, { slug: blogFourteen.slug }, { slug: blogFifteen.slug }, { slug: blogSixteen.slug }, { slug: blogSeventeen.slug }, { slug: blogEighteen.slug }, { slug: blogNineteen.slug }, { slug: blogTwenty.slug }, { slug: blogTwentyOne.slug }, { slug: blogTwentyTwo.slug }, { slug: blogTwentyThree.slug }, { slug: blogTwentyFour.slug }, { slug: blogTwentyFive.slug }, { slug: blogTwentySix.slug }, { slug: blogTwentySeven.slug }, { slug: blogTwentyEight.slug }, { slug: blogTwentyNine.slug }, { slug: blogThirty.slug }, { slug: blogThirtyOne.slug }, { slug: blogThirtyTwo.slug }];
   }
 }
 
