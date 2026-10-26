@@ -30,6 +30,7 @@ async function getArticle(slug: string) {
   if (slug === blogSix.slug) return blogSix as Article;
   if (slug === blogEleven.slug) return blogEleven as Article;
   if (slug === blogNineteen.slug) return blogNineteen as Article;
+  if (slug === blogSixteen.slug) return blogSixteen as Article;
   try {
     const article = await sanityFetch<Article | null>(articleBySlugQuery, { slug });
     if (article?.body?.length) return article;
