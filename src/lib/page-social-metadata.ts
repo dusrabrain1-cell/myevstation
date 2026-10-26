@@ -10,7 +10,7 @@ export function pageSocialMetadata(
   title: string,
   description: string,
   path: string,
-): Pick<Metadata, "openGraph" | "twitter"> {
+): Pick<Metadata, "alternates" | "openGraph" | "twitter"> {
   const canonicalPath = path.startsWith("/") ? path : `/${path}`;
   const url = `${SITE.url.replace(/\/$/, "")}${canonicalPath === "/" ? "/" : canonicalPath}`;
   const socialTitle = title.includes(SITE.name) ? title : `${title} | ${SITE.name}`;
