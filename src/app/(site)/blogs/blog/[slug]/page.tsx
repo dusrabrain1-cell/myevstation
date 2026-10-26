@@ -56,6 +56,7 @@ async function getArticle(slug: string) {
   if (slug === blogTwentyFive.slug) return blogTwentyFive as Article;
   if (slug === blogTwentySix.slug) return blogTwentySix as Article;
   if (slug === blogTwentySeven.slug) return blogTwentySeven as Article;
+  if (slug === blogTwentySeven.slug) return blogTwentySeven as Article;
   return null;
 }
 
