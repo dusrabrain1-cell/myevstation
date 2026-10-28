@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { pageSocialMetadata } from "@/lib/page-social-metadata";
+import SeoBreadcrumbJsonLd from "@/components/custom/SeoBreadcrumbJsonLd";
 import Image from "next/image";
 import { whatsappHref, SITE } from "@/lib/constants";
 import { ArrowRight, CheckCircle2, ShieldCheck, Flag, MapPin, Users, BatteryCharging } from "lucide-react";
@@ -49,5 +50,6 @@ export default function ExServicemenPage() {
     <section id="enquire" className="bg-[#0b2a1e] py-14 text-white sm:py-20"><div className="mx-auto max-w-4xl px-5 text-center"><p className="text-xs font-extrabold uppercase tracking-[.2em] text-[#ffb181]">Take the next step</p><h2 className="mt-3 text-3xl font-black sm:text-5xl">Your next chapter starts with a conversation.</h2><p className="mx-auto mt-4 max-w-2xl leading-7 text-white/75">Tell us your preferred city and whether you want the ₹3.75 lakh Starter or ₹5 lakh Growth package. We’ll discuss site options and the written scope before you decide.</p><a href={whatsappHref("Hello MyEVStation, I am enquiring from the ex-servicemen EV station ownership page. Please share the Starter and Growth packages, potential host-site options and next steps.")} target="_blank" rel="noreferrer" className="mt-7 inline-flex items-center gap-2 rounded-xl bg-[#e87522] px-7 py-4 font-extrabold">Start a WhatsApp enquiry <ArrowRight size={17}/></a><p className="mt-3 text-xs text-white/50">WhatsApp opens a prepared enquiry to MyEVStation at +91 98762 60822.</p></div></section>
     
       <section aria-label="Related EV charging guides" className="border-t border-[#e1e8e0] bg-white py-10"><div className="mx-auto max-w-7xl px-5"><h2 className="text-xl font-black text-[#203b2d]">Explore related EV charging options</h2><div className="mt-4 flex flex-wrap gap-x-6 gap-y-3 text-sm font-bold text-[#0b5a42]"><a href="/without-land" className="underline-offset-4 hover:underline">EV charging without land</a><a href="/business-model" className="underline-offset-4 hover:underline">Business models</a><a href="/ev-charging-investment-guide" className="underline-offset-4 hover:underline">Investment guide</a><a href="/ev-charging-calculator" className="underline-offset-4 hover:underline">Investment calculator</a></div></div></section>
+<SeoBreadcrumbJsonLd items={[{ name: "Home", path: "/" }, { name: "Ex-Servicemen EV Opportunity", path: "/ex-servicemen" }]} />
 </main>;
 }
