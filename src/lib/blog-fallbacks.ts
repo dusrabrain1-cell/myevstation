@@ -1993,15 +1993,15 @@ export const blogTwentyThreeSlug = "calculate-ev-charging-station-plan-no-land-h
 
 export const blogTwentyThree = {
   _id: "static-blog-ev-station-plan-three-models",
-  title: "Calculate Your EV Charging Station Plan: No Land, Housing Society or Own Land — Investment and ROI",
+  title: "Choose an EV Charging Site Model in India: No Land, Society or Own Land",
   slug: blogTwentyThreeSlug,
-  excerpt: "Compare three EV charging station plans in India: start without owning land, install chargers in a housing society, or use your own land. Learn what to calculate for setup cost, monthly revenue, expenses, ROI and payback.",
+  excerpt: "Compare three ways to host or participate in EV charging in India: a host-site partnership without land ownership, a housing society installation, or a station on your own property. Understand the practical checks for each site model.",
   author: "MyEVStation Editorial Team",
   categories: ["EV Charging Calculator", "Investment Planning", "EV Business"],
   publishedAt: "2026-10-21T00:00:00.000Z",
   seo: {
-    metaTitle: "Calculate Your EV Station Plan: No Land, Society or Own Land | MyEVStation",
-    metaDescription: "Plan an EV charging station in India with MyEVStation. Compare no-land, housing society and own-land options, estimate setup costs, monthly cash flow, ROI and payback.",
+    metaTitle: "EV Charging Site Options: No Land, Society or Own Property | MyEVStation",
+    metaDescription: "Explore EV charging site options in India: partner with a property owner, install chargers in a housing society or use your own property. Compare permissions, access, power readiness and responsibilities.",
   },
   body: [
     paragraph("Planning an EV charging station starts with your situation: do you have a suitable property, want to install chargers in a housing society, or want to participate without owning land? Each route has different costs, permissions, responsibilities and potential returns. This guide helps you structure the numbers before you invest."),
