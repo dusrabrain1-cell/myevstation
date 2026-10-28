@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import SeoBreadcrumbJsonLd from "@/components/custom/SeoBreadcrumbJsonLd";
 import { pageSocialMetadata } from "@/lib/page-social-metadata";
 import WhyContent from "./WhyContent";
 
@@ -11,5 +12,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <main className="bg-white text-[#17212b]"><WhyContent /></main>;
+  return <main className="bg-white text-[#17212b]"><WhyContent /><SeoBreadcrumbJsonLd items={[{ name: "Home", path: "/" }, { name: "Why MyEVStation", path: "/why-myevstation" }]} /></main>;
 }
