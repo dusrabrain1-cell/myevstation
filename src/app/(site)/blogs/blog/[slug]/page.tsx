@@ -213,7 +213,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
               ...( /mainten|service|uptime|repair|preventive|safety inspection/.test(topic)
                 ? [{ href: "/technology", label: "Review charger technology and operations" }, { href: "/faq", label: "Read EV charging FAQs" }, { href: "/contact", label: "Discuss maintenance and support" }]
                 : []),
-              ...( /landowner|property|petrol|highway|hotel|resort|warehouse|logistic/.test(topic)
+              ...( /landowner|property|petrol|highway|hotel|resort|warehouse|logistic|without[- ]land|no[- ]land|host.site|property.owner/.test(topic)
                 ? [{ href: "/with-land", label: "Partner with a suitable property" }, { href: "/without-land", label: "Explore options without owning land" }]
                 : []),
               ...( /invest|business|cost|roi|calculator|franchise|channel partner/.test(topic)
