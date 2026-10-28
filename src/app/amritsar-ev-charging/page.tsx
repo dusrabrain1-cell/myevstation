@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { pageSocialMetadata } from "@/lib/page-social-metadata";
 import Link from "next/link";
 import SeoFaq from "@/components/custom/SeoFaq";
+import { whatsappHref } from "@/lib/constants";
 import { ArrowRight, Building2, CheckCircle2, MapPin, ShieldCheck, CarFront, Bike, Store, ClipboardCheck } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -38,7 +39,7 @@ const steps = [
 ];
 
 export default function AmritsarEvChargingPage() {
-  const whatsapp = "https://wa.me/919876260822?text=Hello%20MyEVStation%2C%20I%20am%20interested%20in%20EV%20charging%20in%20Amritsar.%20My%20site%20is%20a%20market%2Fcommercial%20property%2Fhousing%20society.%20Please%20help%20with%20a%20site%20assessment.";
+  const whatsapp = whatsappHref("Hello MyEVStation, I am enquiring from the Amritsar EV charging page. My site may be a market, commercial property or housing society. Please help with a site assessment.");
   return (
     <main className="min-h-screen bg-[#f7f9f6] text-[#17212b]">
       
