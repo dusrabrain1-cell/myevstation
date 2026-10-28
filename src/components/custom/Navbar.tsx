@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Menu, X, Zap, MessageCircle } from "lucide-react";
 
-import { NAV_LINKS } from "@/lib/constants";
+import { NAV_LINKS, SITE, whatsappHref } from "@/lib/constants";
 import { NavMenu } from "./NavMenu";
 
 export function Navbar() {
@@ -22,17 +22,17 @@ export function Navbar() {
 
         <div className="hidden xl:block">
           <a
-            href="https://wa.me/919876260822?text=Hello%20MyEVStation%2C%20I%20would%20like%20to%20enquire."
+            href="{whatsappHref("Hello MyEVStation, I am enquiring through the website navigation. Please guide me on EV charging station opportunities and next steps.")}"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 whitespace-nowrap rounded-md bg-mission px-4 py-2.5 text-xs font-bold text-white transition-colors hover:bg-mission-dark xl:px-5 xl:text-sm"
           >
-            <MessageCircle size={16} /> WhatsApp · +91 98762 60822
+            <MessageCircle size={16} /> WhatsApp · {SITE.phone}
           </a>
         </div>
 
         <a
-          href="https://wa.me/919876260822?text=Hello%20MyEVStation%2C%20I%20would%20like%20to%20enquire."
+          href="{whatsappHref("Hello MyEVStation, I am enquiring through the website navigation. Please guide me on EV charging station opportunities and next steps.")}"
           target="_blank"
           rel="noreferrer"
           aria-label="Chat with MyEVStation on WhatsApp"
@@ -78,13 +78,13 @@ export function Navbar() {
           )}
           <li className="px-2 pt-3">
             <a
-              href="https://wa.me/919876260822?text=Hello%20MyEVStation%2C%20I%20would%20like%20to%20enquire."
+              href="{whatsappHref("Hello MyEVStation, I am enquiring through the website navigation. Please guide me on EV charging station opportunities and next steps.")}"
               target="_blank"
               rel="noreferrer"
               onClick={() => setOpen(false)}
               className="inline-flex w-full justify-center rounded-md bg-mission px-5 py-2.5 text-sm font-semibold text-white"
             >
-              <MessageCircle size={16} className="mr-2" /> WhatsApp enquiry · +91 98762 60822
+              <MessageCircle size={16} className="mr-2" /> WhatsApp enquiry · {SITE.phone}
             </a>
           </li>
         </ul>
