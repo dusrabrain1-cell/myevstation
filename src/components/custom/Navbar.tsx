@@ -22,7 +22,7 @@ export function Navbar() {
 
         <div className="hidden xl:block">
           <a
-            href="{whatsappHref("Hello MyEVStation, I am enquiring through the website navigation. Please guide me on EV charging station opportunities and next steps.")}"
+            href={whatsappHref("Hello MyEVStation, I am enquiring through the website navigation. Please guide me on EV charging station opportunities and next steps.")}
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 whitespace-nowrap rounded-md bg-mission px-4 py-2.5 text-xs font-bold text-white transition-colors hover:bg-mission-dark xl:px-5 xl:text-sm"
@@ -32,7 +32,7 @@ export function Navbar() {
         </div>
 
         <a
-          href="{whatsappHref("Hello MyEVStation, I am enquiring through the website navigation. Please guide me on EV charging station opportunities and next steps.")}"
+          href={whatsappHref("Hello MyEVStation, I am enquiring through the website navigation. Please guide me on EV charging station opportunities and next steps.")}
           target="_blank"
           rel="noreferrer"
           aria-label="Chat with MyEVStation on WhatsApp"
@@ -78,7 +78,7 @@ export function Navbar() {
           )}
           <li className="px-2 pt-3">
             <a
-              href="{whatsappHref("Hello MyEVStation, I am enquiring through the website navigation. Please guide me on EV charging station opportunities and next steps.")}"
+              href={whatsappHref("Hello MyEVStation, I am enquiring through the website navigation. Please guide me on EV charging station opportunities and next steps.")}
               target="_blank"
               rel="noreferrer"
               onClick={() => setOpen(false)}
