@@ -2,8 +2,10 @@
 
 import { createContext, useCallback, useContext } from "react";
 
+import { SITE } from "@/lib/constants";
+
 type ContactModalContextValue = {
-  /** Open the contact modal. `source` labels which CTA triggered it. */
+  /** Open a WhatsApp enquiry with the CTA source prefilled. */
   open: (source?: string) => void;
   close: () => void;
 };
@@ -25,14 +27,14 @@ export function ContactModalProvider({
 }) {
   const open = useCallback((nextSource?: string) => {
     const message = `Hello MyEVStation, I would like to enquire about ${nextSource || "EV charging station opportunities"}. Please guide me on investment, location suitability and next steps.`;
-    window.open(`https://wa.me/919876260822?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
+    const phone = SITE.whatsappPhone.replace(/\D/g, "");
+    window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
   }, []);
   const close = useCallback(() => {}, []);
 
   return (
     <ContactModalContext.Provider value={{ open, close }}>
       {children}
-
     </ContactModalContext.Provider>
   );
 }
