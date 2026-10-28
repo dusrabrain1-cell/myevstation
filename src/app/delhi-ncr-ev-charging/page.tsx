@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { pageSocialMetadata } from "@/lib/page-social-metadata";
 import Link from "next/link";
 import SeoFaq from "@/components/custom/SeoFaq";
+import { whatsappHref } from "@/lib/constants";
 import { ArrowRight, Building2, CarFront, CheckCircle2, ClipboardCheck, MapPin, Truck, Users } from "lucide-react";
 
 const title = "EV Charging Stations in Delhi NCR | Societies, Commercial Sites & Fleets";
@@ -42,7 +43,7 @@ const segments = [
 ];
 
 export default function DelhiNcrEvChargingPage() {
-  const whatsapp = "https://wa.me/919876260822?text=Hello%20MyEVStation%2C%20I%20want%20to%20discuss%20an%20EV%20charging%20site%20in%20Delhi%20NCR.%20Please%20help%20with%20site%20feasibility.";
+  const whatsapp = whatsappHref("Hello MyEVStation, I am enquiring from the Delhi NCR EV charging page about a potential site. Please help with site feasibility.");
   return (
     <main className="min-h-screen bg-[#f7f9f6] text-[#17212b]">
       <section className="bg-[linear-gradient(120deg,#0b2a1e,#0b7652)] text-white">
