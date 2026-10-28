@@ -6,7 +6,7 @@ type BreadcrumbItem = {
 };
 
 export default function SeoBreadcrumbJsonLd({ items }: { items: BreadcrumbItem[] }) {
-  const base = SITE.url.replace(/\\/$/, "");
+  const base = SITE.url.replace(/\/$/, "");
   const data = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
