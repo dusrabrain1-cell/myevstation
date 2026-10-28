@@ -77,6 +77,65 @@ export default function BusinessModelContent() {
             </section>
       
             <section id="how-it-works" className="bg-white pt-16 pb-10 sm:pt-20 sm:pb-12"><div className="mx-auto max-w-7xl px-5 lg:px-8"><div className="mx-auto max-w-3xl text-center"><span className="text-xs font-extrabold uppercase tracking-[.2em] text-[#d96a1b]">Simple from day one</span><h2 className="mt-3 text-3xl font-black tracking-tight text-[#15281f] sm:text-4xl">How an EV charging station business works</h2><p className="mt-3 leading-7 text-[#647067]">You don’t need to be an electrical engineer. Start with the right site, a suitable charger plan and a clear operating agreement.</p></div><div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">{[{n:"01",t:"Choose your route",b:"Bring your own land, or ask about a host location if you don’t own property."},{n:"02",t:"Check the site",b:"Review power availability, parking, vehicle demand, access and permissions before committing."},{n:"03",t:"Install & connect",b:"Select AC or DC chargers, arrange installation, connect monitoring and test the setup."},{n:"04",t:"Operate & track",b:"Drivers charge and pay; review usage, expenses, service status and settlements under your agreement."}].map(s=><article key={s.n} className="rounded-2xl border border-[#e3e9e4] bg-[#f8faf7] p-5"><span className="grid h-10 w-10 place-items-center rounded-xl bg-[#0b5a42] text-sm font-black text-white">{s.n}</span><h3 className="mt-4 text-lg font-extrabold text-[#172d21]">{s.t}</h3><p className="mt-2 text-sm leading-6 text-[#667168]">{s.b}</p></article>)}</div><div className="mt-6 rounded-2xl border border-[#dbe8dd] bg-[#eef7ef] p-5 sm:flex sm:items-center sm:justify-between sm:gap-6"><div><h3 className="font-extrabold text-[#16462f]">Not sure which charger you need?</h3><p className="mt-1 text-sm leading-6 text-[#58695d]">Slow charging may suit long parking stays. DC fast charging may suit busy fleet or public locations. The right choice depends on vehicle type, site power and expected demand.</p></div><a href={whatsappHref("Hello MyEVStation, I would like to enquire about EV charging station opportunities.")} className="mt-4 inline-flex shrink-0 items-center rounded-full bg-[#0b5a42] px-5 py-3 text-sm font-bold text-white sm:mt-0">Get help choosing <ArrowRight className="ml-2" size={16}/></a></div></div></section>
+
+            <section id="investment-guidance" className="bg-[#f7f9f6] py-16 sm:py-20">
+              <div className="mx-auto max-w-7xl px-5 lg:px-8">
+                <div className="grid gap-10 lg:grid-cols-[1.05fr_.95fr] lg:items-center">
+                  <div>
+                    <span className="text-xs font-extrabold uppercase tracking-[.2em] text-[#d96a1b]">Plan with clarity</span>
+                    <h2 className="mt-4 text-3xl font-black tracking-tight text-[#15281f] sm:text-4xl">Explore the numbers before you invest</h2>
+                    <p className="mt-4 max-w-2xl leading-7 text-[#647067]">An EV charging station’s performance depends on its location, charger utilisation, electricity tariff, installation cost and operating agreement. Review the assumptions before choosing an investment or revenue-sharing model.</p>
+                    <div className="mt-6 flex flex-wrap gap-3">
+                      <Link href="/ev-charging-investment-guide" className="inline-flex items-center gap-2 rounded-full bg-[#0b5a42] px-5 py-3 text-sm font-extrabold text-white transition hover:bg-[#084632]">Read the investment guide <ArrowRight size={16}/></Link>
+                      <Link href="/ev-charging-calculator" className="inline-flex items-center gap-2 rounded-full border border-[#0b5a42] bg-white px-5 py-3 text-sm font-extrabold text-[#0b5a42] transition hover:bg-[#eef7ef]">Estimate project economics <ArrowRight size={16}/></Link>
+                    </div>
+                  </div>
+                  <div className="rounded-3xl border border-[#dfe7df] bg-white p-6 shadow-[0_10px_30px_rgba(11,90,66,0.06)] sm:p-8">
+                    <h3 className="text-xl font-black text-[#15281f]">What should a feasibility check cover?</h3>
+                    <ul className="mt-5 space-y-3 text-sm leading-6 text-[#58695d]">
+                      <li><strong className="text-[#172d21]">Site & demand:</strong> vehicle movement, dwell time, access, parking and nearby competition.</li>
+                      <li><strong className="text-[#172d21]">Electrical readiness:</strong> sanctioned load, transformer or connection needs, cabling and safety.</li>
+                      <li><strong className="text-[#172d21]">Project costs:</strong> charger hardware, civil and electrical work, software, permissions and contingency.</li>
+                      <li><strong className="text-[#172d21]">Operating economics:</strong> charging tariff, electricity cost, rent or revenue share, maintenance and payment fees.</li>
+                    </ul>
+                    <p className="mt-5 border-t border-[#e8eee8] pt-4 text-xs leading-5 text-[#718075]">Illustrative calculations are not guaranteed returns. Actual costs, utilisation and profitability must be validated for each site.</p>
+                  </div>
+                </div>
+                <div className="mt-12 grid gap-5 md:grid-cols-3">
+                  <article className="rounded-2xl border border-[#e0e8e1] bg-white p-6">
+                    <h3 className="font-extrabold text-[#172d21]">I own land or parking space</h3>
+                    <p className="mt-2 text-sm leading-6 text-[#647067]">Understand site suitability, host responsibilities and possible commercial structures.</p>
+                    <Link href="/with-land" className="mt-4 inline-flex items-center gap-2 text-sm font-extrabold text-[#0b5a42]">Landowner model <ArrowRight size={15}/></Link>
+                  </article>
+                  <article className="rounded-2xl border border-[#e0e8e1] bg-white p-6">
+                    <h3 className="font-extrabold text-[#172d21]">I want to invest without land</h3>
+                    <p className="mt-2 text-sm leading-6 text-[#647067]">Review host-location options, capital requirements and the responsibilities in a managed model.</p>
+                    <Link href="/without-land" className="mt-4 inline-flex items-center gap-2 text-sm font-extrabold text-[#0b5a42]">No-land model <ArrowRight size={15}/></Link>
+                  </article>
+                  <article className="rounded-2xl border border-[#e0e8e1] bg-white p-6">
+                    <h3 className="font-extrabold text-[#172d21]">I represent a society or RWA</h3>
+                    <p className="mt-2 text-sm leading-6 text-[#647067]">Assess resident demand, electrical capacity, installation scope and billing arrangements.</p>
+                    <Link href="/society" className="mt-4 inline-flex items-center gap-2 text-sm font-extrabold text-[#0b5a42]">Society charging <ArrowRight size={15}/></Link>
+                  </article>
+                </div>
+                <div className="mt-8 rounded-3xl bg-[#102f25] px-6 py-8 text-white sm:flex sm:items-center sm:justify-between sm:gap-8 sm:px-9">
+                  <div>
+                    <h3 className="text-2xl font-black">Have a site or investment requirement?</h3>
+                    <p className="mt-2 max-w-2xl text-sm leading-6 text-white/75">Share the location, available parking, power details and your preferred commercial model. The team can review the information and discuss the next steps.</p>
+                  </div>
+                  <Link href="/contact" className="mt-5 inline-flex shrink-0 items-center gap-2 rounded-full bg-[#e87522] px-6 py-3 text-sm font-extrabold text-white transition hover:bg-[#cf6218] sm:mt-0">Discuss your project <ArrowRight size={16}/></Link>
+                </div>
+                <div className="mx-auto mt-12 max-w-4xl">
+                  <h2 className="text-center text-2xl font-black text-[#15281f] sm:text-3xl">EV charging business model: common questions</h2>
+                  <div className="mt-6 divide-y divide-[#e1e8e2] rounded-2xl border border-[#e1e8e2] bg-white px-5 sm:px-7">
+                    <div className="py-5"><h3 className="font-extrabold text-[#172d21]">How much does it cost to start an EV charging station business in India?</h3><p className="mt-2 text-sm leading-6 text-[#647067]">There is no single fixed cost. It depends on charger type and quantity, electrical load and connection, civil work, software, site rent and permissions. Use the <Link href="/ev-charging-calculator" className="font-bold text-[#0b5a42] underline">EV charging calculator</Link> as an initial planning aid and obtain site-specific quotations.</p></div>
+                    <div className="py-5"><h3 className="font-extrabold text-[#172d21]">Can I participate without owning land?</h3><p className="mt-2 text-sm leading-6 text-[#647067]">Potentially, subject to a suitable host site and a clear agreement covering investment, access, operations, revenue settlement and responsibilities. See the <Link href="/without-land" className="font-bold text-[#0b5a42] underline">no-land model</Link>.</p></div>
+                    <div className="py-5"><h3 className="font-extrabold text-[#172d21]">Are EV charging station returns guaranteed?</h3><p className="mt-2 text-sm leading-6 text-[#647067]">No. Revenue depends on actual charging sessions and energy delivered, while profitability also depends on tariffs, utilisation, electricity, rent, maintenance, fees, taxes and financing. Validate assumptions before investing.</p></div>
+                    <div className="py-5"><h3 className="font-extrabold text-[#172d21]">How do I get my location assessed?</h3><p className="mt-2 text-sm leading-6 text-[#647067]">Contact MyEVStation with the site address, parking capacity, available electrical load (if known) and photographs or a site plan. The team can discuss a preliminary feasibility review.</p></div>
+                  </div>
+                </div>
+              </div>
+            </section>
       
       
     </>
