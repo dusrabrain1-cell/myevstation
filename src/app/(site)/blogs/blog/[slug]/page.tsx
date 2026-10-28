@@ -207,7 +207,13 @@ export default async function BlogArticlePage({ params }: PageProps) {
               ...( /servicemen|veteran|military|defence/.test(topic)
                 ? [{ href: "/ex-servicemen", label: "Opportunities for ex-servicemen" }]
                 : []),
-              ...( /landowner|property|commercial|petrol|highway|hotel|resort|warehouse|logistic/.test(topic)
+              ...( /office|workplace|commercial building|facility manager|corporate campus/.test(topic)
+                ? [{ href: "/business-model", label: "Explore commercial EV charging models" }, { href: "/technology", label: "Review charger technology and operations" }, { href: "/ev-charging-calculator", label: "Estimate your charging project" }]
+                : []),
+              ...( /mainten|service|uptime|repair|preventive|safety inspection/.test(topic)
+                ? [{ href: "/technology", label: "Review charger technology and operations" }, { href: "/faq", label: "Read EV charging FAQs" }, { href: "/contact", label: "Discuss maintenance and support" }]
+                : []),
+              ...( /landowner|property|petrol|highway|hotel|resort|warehouse|logistic/.test(topic)
                 ? [{ href: "/with-land", label: "Partner with a suitable property" }, { href: "/without-land", label: "Explore options without owning land" }]
                 : []),
               ...( /invest|business|cost|roi|calculator|franchise|channel partner/.test(topic)
