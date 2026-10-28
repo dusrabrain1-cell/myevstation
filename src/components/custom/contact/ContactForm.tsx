@@ -20,6 +20,7 @@ export function ContactForm({
   onSuccess?: () => void;
 }) {
   const [status, setStatus] = useState<Status>("idle");
+  const [whatsappFallbackUrl, setWhatsappFallbackUrl] = useState<string | null>(null);
   const {
     register,
     handleSubmit,
@@ -32,6 +33,7 @@ export function ContactForm({
 
   async function onSubmit(values: ContactInput) {
     setStatus("submitting");
+    setWhatsappFallbackUrl(null);
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
@@ -43,10 +45,22 @@ export function ContactForm({
         throw new Error(result?.error || "Your enquiry could not be delivered.");
       }
       setStatus("success");
+      setWhatsappFallbackUrl(null);
       reset();
       onSuccess?.();
     } catch (error) {
       console.error("[contact form] Submission failed:", error);
+      const message = [
+        "MyEVStation website enquiry",
+        `Name: ${values.name}`,
+        `Organisation: ${values.organisation}`,
+        values.designation ? `Designation: ${values.designation}` : null,
+        `Email: ${values.email}`,
+        `Source: ${source || values.source || "Website contact form"}`,
+        `Message: ${values.message}`,
+      ].filter(Boolean).join("\\n");
+      const phone = SITE.whatsappPhone.replace(/\\D/g, "");
+      setWhatsappFallbackUrl(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`);
       setStatus("error");
     }
   }
@@ -136,6 +150,21 @@ export function ContactForm({
             {SITE.email}
           </a>
           .
+          {whatsappFallbackUrl && (
+            <>
+              {" "}
+              You can also{" "}
+              <a
+                className="font-bold underline underline-offset-2"
+                href={whatsappFallbackUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                continue on WhatsApp
+              </a>
+              {" "}with your enquiry details already filled in.
+            </>
+          )}
         </p>
       )}
 
