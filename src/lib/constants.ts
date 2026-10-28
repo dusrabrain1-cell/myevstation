@@ -11,6 +11,11 @@ export const SITE = {
   whatsappPhone: "+919876260822",
 } as const;
 
+export function whatsappHref(message: string) {
+  const phone = SITE.whatsappPhone.replace(/\D/g, "");
+  return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+}
+
 export interface NavLink {
   label: string;
   href: string;
