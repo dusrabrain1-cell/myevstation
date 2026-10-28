@@ -1277,8 +1277,8 @@ export const blogSixteen = {
   categories: ["Office Buildings", "EV Charging Infrastructure"],
   publishedAt: "2026-10-20T00:00:00.000Z",
   seo: {
-    metaTitle: "EV Charger for Office Buildings in India | MyEVStation",
-    metaDescription: "Explore EV chargers for office and government buildings in India. Assess employee demand, workplace parking, AC and DC options, electrical load, setup costs and charging operations.",
+    metaTitle: "EV Charging Infrastructure for Commercial Buildings in India",
+    metaDescription: "Learn how EV charging infrastructure works in commercial buildings in India. Compare office chargers, electrical load, installation costs, billing and operator models.",
   },
   body: [
     paragraph("An EV charger for an office building can serve employees, visitors, tenants and, where appropriate, company fleets while vehicles remain parked during the workday. In India, office and government building projects should begin with actual charging demand, parking access, electrical capacity, building permissions and a clearly defined operating model."),
@@ -1355,6 +1355,8 @@ export const blogSixteen = {
     paragraph("MyEVStation shares information about EV charging infrastructure, site planning and business models. Office owners and facility teams can start by defining the intended users, parking arrangements and electrical requirements, then compare suitable installation or operator options."),
     paragraph("Explore the MyEVStation Business Model at https://www.myevstation.co.in/business-model, review planning assumptions at https://www.myevstation.co.in/ev-charging-calculator, or contact the team at https://www.myevstation.co.in/contact."),
     heading("Frequently asked questions"),
+    paragraph("How does EV charging infrastructure work in commercial buildings? A commercial building typically combines compatible chargers, a suitable electrical connection and distribution system, safe cable routes and parking bays, metering or payment arrangements, and an operating or maintenance process. The final design depends on building load, vehicle demand, parking duration and permissions."),
+    paragraph("What is needed to install EV chargers in an office building? Start with a demand and parking assessment, confirm permission from the property decision-maker, obtain an electrical feasibility review and compare itemised installation and operating costs."),
     paragraph("Is workplace AC charging enough? It may be suitable when vehicles remain parked for several hours, but the decision depends on vehicle capability, energy needs, charging windows and electrical capacity."),
     paragraph("Should office charging be free for employees? That is a business and workplace policy decision. Consider electricity costs, access rules, administration and the intended employee benefit before choosing a model."),
     paragraph("Can a charging operator install equipment at an office building? Potentially, if the site is suitable and the parties agree on written commercial, access, installation and operating terms."),
@@ -1378,8 +1380,8 @@ export const blogSeventeen = {
   categories: ["EV Charging Operations", "Maintenance & Safety"],
   publishedAt: "2026-10-20T00:00:00.000Z",
   seo: {
-    metaTitle: "EV Charging Station Maintenance in India | MyEVStation",
-    metaDescription: "Learn EV charging station maintenance in India: preventive service, repair costs, uptime tracking, software checks, safety, warranties and operator SLAs.",
+    metaTitle: "EV Charging Station Maintenance in India: Cost & Uptime",
+    metaDescription: "EV charging station maintenance in India explained: preventive servicing, charger repairs, uptime monitoring, safety checks, warranties and maintenance contracts.",
   },
   body: [
     paragraph("EV charging station maintenance is essential for reliable day-to-day operations. Preventive servicing, charger and connector inspections, software monitoring, payment checks and a clear fault-response process all influence whether drivers can charge when they need to. A practical maintenance plan helps operators identify issues early, manage repair costs and reduce avoidable downtime."),
@@ -1456,6 +1458,8 @@ export const blogSeventeen = {
     paragraph("Before installation, identify who owns the equipment, who operates it, who pays for routine service and repairs, and how downtime is reported. Include recurring service and connectivity costs in financial projections. A proposal that includes equipment but leaves operations undefined may understate the real work and expense of running a station."),
     paragraph("Use the MyEVStation EV Charging Calculator at https://www.myevstation.co.in/ev-charging-calculator for indicative planning assumptions, and review the business model at https://www.myevstation.co.in/business-model. Replace estimates with site-specific quotations and written service terms before making an investment decision."),
     heading("Frequently asked questions"),
+    paragraph("What does EV charging station maintenance include in India? It can include visual equipment checks, connector and cable inspection, electrical checks by qualified professionals, software and connectivity monitoring, payment-flow checks, fault logging, preventive servicing and documented repairs. The exact scope depends on the charger, site and service agreement."),
+    paragraph("How much does EV charging station maintenance cost? There is no single standard price. Request a written quote that separates scheduled visits, technician call-outs, parts, travel, network fees, warranty exclusions and emergency support."),
     paragraph("How often should an EV charger be serviced? Follow the manufacturer's instructions, warranty conditions and a schedule suited to usage and site conditions. Qualified professionals should determine the appropriate inspection intervals for electrical systems."),
     paragraph("Who is responsible for maintenance if a charging operator manages the station? The agreement should explicitly allocate routine servicing, fault diagnosis, repairs, customer support, costs and reporting between the site owner and operator."),
     paragraph("Does a warranty cover every repair? Not necessarily. Coverage depends on the warranty terms and may exclude some types of damage, site-side electrical issues or other conditions."),
