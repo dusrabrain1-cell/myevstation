@@ -43,7 +43,19 @@ export default async function BlogsPage() {
   // Keep the first fallback for each canonical slug; repeated legacy hospital entries shared one URL.
   const uniqueFallbacks = allFallbacks.filter((fallback, index, all) => all.findIndex((item) => item.slug === fallback.slug) === index);
   const fallbacks = uniqueFallbacks.filter((fallback) => !articles.some((article) => article.slug === fallback.slug));
-  articles = [...fallbacks, ...articles];
+  // Merge CMS and fallback content by canonical slug, then surface the newest
+  // published articles first so recently published guides are easy to discover.
+  const articlesBySlug = new Map<string, Article>();
+  for (const article of [...fallbacks, ...articles]) {
+    if (article.slug && !articlesBySlug.has(article.slug)) {
+      articlesBySlug.set(article.slug, article);
+    }
+  }
+  articles = [...articlesBySlug.values()].sort((a, b) => {
+    const dateA = a.publishedAt ? Date.parse(a.publishedAt) : 0;
+    const dateB = b.publishedAt ? Date.parse(b.publishedAt) : 0;
+    return (Number.isFinite(dateB) ? dateB : 0) - (Number.isFinite(dateA) ? dateA : 0);
+  });
 
   return (
     <main className="min-h-screen bg-paper">
