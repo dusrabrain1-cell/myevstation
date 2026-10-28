@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { pageSocialMetadata } from "@/lib/page-social-metadata";
 import Link from "next/link";
 import SeoFaq from "@/components/custom/SeoFaq";
+import SeoBreadcrumbJsonLd from "@/components/custom/SeoBreadcrumbJsonLd";
 import { whatsappHref } from "@/lib/constants";
 import { ArrowRight, Building2, CheckCircle2, MapPin, ShieldCheck, CarFront, Bike, Store, ClipboardCheck } from "lucide-react";
 
@@ -154,6 +155,7 @@ export default function AmritsarEvChargingPage() {
       ]} />
 
       
+      <SeoBreadcrumbJsonLd items={[{ name: "Home", path: "/" }, { name: "Amritsar EV Charging", path: "/amritsar-ev-charging" }]} />
     </main>
   );
 }
