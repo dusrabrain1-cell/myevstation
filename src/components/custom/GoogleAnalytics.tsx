@@ -28,6 +28,8 @@ export default function GoogleAnalytics() {
         link_url: href,
         link_text: linkText,
         page_location: window.location.href,
+        page_path: `${window.location.pathname}${window.location.search}`,
+        page_title: document.title,
       };
 
       let contactMethod: "whatsapp" | "phone" | "email" | null = null;
@@ -55,6 +57,8 @@ export default function GoogleAnalytics() {
       window.gtag?.("event", "generate_lead", {
         method: "website_contact_form",
         page_location: window.location.href,
+        page_path: `${window.location.pathname}${window.location.search}`,
+        page_title: document.title,
       });
     };
 
