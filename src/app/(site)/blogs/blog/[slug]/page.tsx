@@ -197,6 +197,39 @@ export default async function BlogArticlePage({ params }: PageProps) {
               <p>This article is being prepared. Please check back soon for the complete guide.</p>
             )}
           </div>
+
+          {(() => {
+            const topic = `${article.title} ${article.slug} ${article.categories?.join(" ") ?? ""}`.toLowerCase();
+            const links = [
+              ...( /societ|resident|housing|apartment|rwa/.test(topic)
+                ? [{ href: "/society", label: "EV charging for housing societies" }, { href: "/greater-noida-societies", label: "Greater Noida society solutions" }]
+                : []),
+              ...( /servicemen|veteran|military|defence/.test(topic)
+                ? [{ href: "/ex-servicemen", label: "Opportunities for ex-servicemen" }]
+                : []),
+              ...( /landowner|property|commercial|petrol|highway|hotel|resort|warehouse|logistic/.test(topic)
+                ? [{ href: "/with-land", label: "Partner with a suitable property" }, { href: "/without-land", label: "Explore options without owning land" }]
+                : []),
+              ...( /invest|business|cost|roi|calculator|franchise|channel partner/.test(topic)
+                ? [{ href: "/ev-charging-calculator", label: "Estimate your EV charging plan" }, { href: "/business-model", label: "Compare business models" }]
+                : []),
+              { href: "/contact", label: "Discuss your site or partnership" },
+            ].filter((link, index, all) => all.findIndex((item) => item.href === link.href) === index).slice(0, 4);
+
+            return (
+              <nav aria-label="Related MyEVStation resources" className="mt-10 rounded-2xl border border-line bg-white p-6">
+                <h2 className="text-xl font-extrabold text-ink">Explore related MyEVStation resources</h2>
+                <p className="mt-2 text-sm leading-6 text-ink/70">Continue with a relevant guide or take the next step for your charging project.</p>
+                <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+                  {links.map((link) => (
+                    <li key={link.href}>
+                      <Link href={link.href} className="font-semibold text-mission underline-offset-4 hover:underline">{link.label} →</Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            );
+          })()}
         </article>
 
         <aside className="mt-14 rounded-2xl bg-[#0b5a42] p-6 text-white sm:p-8">
