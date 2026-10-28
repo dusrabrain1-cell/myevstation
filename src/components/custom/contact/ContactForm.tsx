@@ -45,6 +45,7 @@ export function ContactForm({
         throw new Error(result?.error || "Your enquiry could not be delivered.");
       }
       setStatus("success");
+      window.dispatchEvent(new Event("myevstation:lead-submitted"));
       setWhatsappFallbackUrl(null);
       reset();
       onSuccess?.();
