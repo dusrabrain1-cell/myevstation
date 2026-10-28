@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { Bike, Building2, CarFront, Wrench } from "lucide-react";
+import { whatsappHref } from "@/lib/constants";
 
 const groups = [
   { title: "Smart sockets & light charging", rows: [
@@ -85,7 +86,7 @@ export default function ChargerQuotation({ audience = "land" }: { audience?: "la
         ]} minWidth="760px"/>
         <p className="mt-4 rounded-xl border border-[#f0d8c7] bg-[#fff8f2] p-4 text-sm leading-6 text-[#76543d]"><strong>Important — service duration is not confirmed:</strong> the supplied documents do not state a free-service period in days/months or a fixed managed-service/manpower fee. Those fields are marked “not stated” rather than guessed. Warranty is not the same as free maintenance or on-site service. Get the service duration, annual maintenance, response times and exclusions confirmed in writing before ordering.</p>
       </article>
-      <div className="mt-8 flex flex-wrap gap-3"><a href={audience === "society" ? "https://wa.me/919876260822?text=Hello%20MyEVStation%2C%20please%20share%20an%20itemised%20EV%20charging%20quotation%20for%20our%20society%2C%20including%20charger%20quantity%2C%20connector%20count%2C%20installation%2C%20CMS%20and%20service%20duration." : "https://wa.me/919876260822?text=Hello%20MyEVStation%2C%20please%20share%20an%20itemised%20EV%20charging%20quotation%20for%20my%20site%2C%20including%20charger%20quantity%2C%20connector%20count%2C%20installation%2C%20CMS%20and%20service%20duration."} className="inline-flex items-center rounded-xl bg-[#0b5a42] px-5 py-3.5 font-extrabold text-white">Request itemised quotation</a><a href={audience === "society" ? "#enquire" : "/without-land#enquire"} className="inline-flex items-center rounded-xl border border-[#cdd8ce] px-5 py-3.5 font-bold text-[#304438]">{audience === "society" ? "Discuss society requirements" : "Ask about managed packages"}</a></div>
+      <div className="mt-8 flex flex-wrap gap-3"><a href={audience === "society" ? whatsappHref("Hello MyEVStation, please share an itemised EV charging quotation for our society, including charger quantity, connector count, installation, CMS and service duration.") : whatsappHref("Hello MyEVStation, please share an itemised EV charging quotation for my site, including charger quantity, connector count, installation, CMS and service duration.")} className="inline-flex items-center rounded-xl bg-[#0b5a42] px-5 py-3.5 font-extrabold text-white">Request itemised quotation</a><a href={audience === "society" ? "#enquire" : "/without-land#enquire"} className="inline-flex items-center rounded-xl border border-[#cdd8ce] px-5 py-3.5 font-bold text-[#304438]">{audience === "society" ? "Discuss society requirements" : "Ask about managed packages"}</a></div>
     </div>
   </section>;
 }
