@@ -194,7 +194,7 @@ export default function PunjabEvChargingPage() {
       ]} />
 
       
-      <SeoBreadcrumbJsonLd items={[["Home","/"],["Punjab EV Charging","/punjab-ev-charging"]]} />
+      <SeoBreadcrumbJsonLd items={[{ name: "Home", path: "/" }, { name: "Punjab EV Charging", path: "/punjab-ev-charging" }]} />
     </main>
   );
 }
