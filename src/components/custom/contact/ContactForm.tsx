@@ -30,24 +30,25 @@ export function ContactForm({
     defaultValues: { source },
   });
 
-  function onSubmit(values: ContactInput) {
-    const lines = [
-      "Hello MyEVStation, I have submitted an enquiry through the website.",
-      "",
-      `Name: ${values.name}`,
-      `Organisation: ${values.organisation}`,
-      values.designation ? `Designation: ${values.designation}` : null,
-      `Email: ${values.email}`,
-      source ? `Enquiry source: ${source}` : null,
-      "",
-      "Message:",
-      values.message,
-    ].filter(Boolean);
-    const whatsappUrl = `https://wa.me/919876260822?text=${encodeURIComponent(lines.join("\\n"))}`;
-    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
-    setStatus("success");
-    reset();
-    onSuccess?.();
+  async function onSubmit(values: ContactInput) {
+    setStatus("submitting");
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...values, source }),
+      });
+      const result = await response.json().catch(() => null);
+      if (!response.ok || !result?.delivered) {
+        throw new Error(result?.error || "Your enquiry could not be delivered.");
+      }
+      setStatus("success");
+      reset();
+      onSuccess?.();
+    } catch (error) {
+      console.error("[contact form] Submission failed:", error);
+      setStatus("error");
+    }
   }
 
   if (status === "success") {
