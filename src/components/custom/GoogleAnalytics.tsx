@@ -23,12 +23,19 @@ export default function GoogleAnalytics() {
       if (!link) return;
 
       const href = link.href;
+      const linkText = link.textContent?.trim().slice(0, 100) || "Contact link";
+      const eventParams = {
+        link_url: href,
+        link_text: linkText,
+        page_location: window.location.href,
+      };
+
       if (href.startsWith("https://wa.me/") || href.startsWith("https://api.whatsapp.com/")) {
-        window.gtag?.("event", "whatsapp_click", {
-          link_url: href,
-          link_text: link.textContent?.trim().slice(0, 100) || "WhatsApp",
-          page_location: window.location.href,
-        });
+        window.gtag?.("event", "whatsapp_click", eventParams);
+      } else if (href.startsWith("tel:")) {
+        window.gtag?.("event", "phone_click", eventParams);
+      } else if (href.startsWith("mailto:")) {
+        window.gtag?.("event", "email_click", eventParams);
       }
     };
 
