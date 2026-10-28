@@ -8,6 +8,12 @@ import { MessageCircle, Loader2 } from "lucide-react";
 import { contactSchema, type ContactInput } from "@/lib/contact-schema";
 import { whatsappHref } from "@/lib/constants";
 
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
 export function ContactForm({
   source,
   onSuccess,
@@ -38,7 +44,31 @@ export function ContactForm({
       `Message: ${values.message}`,
     ].filter(Boolean).join("\n");
 
-    window.location.assign(whatsappHref(message));
+    const whatsappUrl = whatsappHref(message);
+    const navigateToWhatsApp = () => window.location.assign(whatsappUrl);
+
+    // Record the form-based WhatsApp handoff before navigating away.
+    if (typeof window.gtag === "function") {
+      const eventParams = {
+        link_url: whatsappUrl,
+        link_text: "Continue to WhatsApp",
+        contact_method: "whatsapp",
+        contact_source: source || values.source || "website_contact_form",
+        page_location: window.location.href,
+        page_path: `${window.location.pathname}${window.location.search}`,
+        page_title: document.title,
+      };
+      window.gtag("event", "contact_cta_click", eventParams);
+      window.gtag("event", "whatsapp_click", {
+        ...eventParams,
+        event_callback: navigateToWhatsApp,
+        event_timeout: 1200,
+      });
+      // Ensure navigation even if the analytics callback is blocked.
+      window.setTimeout(navigateToWhatsApp, 1500);
+    } else {
+      navigateToWhatsApp();
+    }
     onSuccess?.();
   }
 
