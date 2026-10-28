@@ -5,9 +5,9 @@ import { SITE } from "@/lib/constants";
 import { ArrowRight, CheckCircle2, ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "EV Charging Station Investment Guide India",
+  title: "EV Charging Station Investment in India: Cost, ROI & Models",
   description:
-    "A practical guide to assessing EV charging station investment in India: site feasibility, charger selection, electricity costs, utilisation, operating expenses and questions to ask before signing.",
+    "Planning an EV charging station investment in India? Understand setup costs, charger and electrical expenses, revenue models, ROI assumptions and site feasibility before investing.",
   alternates: { canonical: "/ev-charging-investment-guide" },
 
   ...pageSocialMetadata("EV Charging Station Investment Guide India", "A practical guide to assessing EV charging station investment in India: site feasibility, charger selection, electricity costs, utilisation, operating expenses and questions to ask before signing.", "/ev-charging-investment-guide"),
@@ -38,6 +38,18 @@ const faqs = [
   {
     q: "What should a site assessment include?",
     a: "It should review access and parking, electrical load, connection and upgrade requirements, likely demand, charger mix, installation scope, permissions, operating model and a transparent financial estimate with assumptions.",
+  },
+  {
+    q: "What is included in the total EV charging station setup cost?",
+    a: "A complete project budget can include charger hardware, cabling, electrical panels, protection and earthing, load enhancement, civil work, installation, testing, software, payment charges, signage, taxes and working capital. The exact scope depends on the site and charger configuration.",
+  },
+  {
+    q: "How do I calculate EV charging station ROI?",
+    a: "Estimate charging sessions and energy delivered, apply the customer tariff, then deduct electricity, rent or revenue share, software, payment fees, maintenance, staffing, taxes and financing costs. Compare the resulting cash flow with the full installed investment under conservative, expected and optimistic utilisation scenarios.",
+  },
+  {
+    q: "Is an EV charging station franchise different from an investment partnership?",
+    a: "Yes. A franchise may include brand or operating-system rights and fees, while a site-host or investment partnership may allocate property, capital and operating responsibilities differently. Review the written agreement and compare the total costs, rights and obligations.",
   },
 ];
 
@@ -114,7 +126,11 @@ export default function EVChargingInvestmentGuide() {
           <ShieldCheck size={28} className="text-[#0b7652]"/>
           <h2 className="mt-3 text-xl font-black">Important: treat every projection as an estimate</h2>
           <p className="mt-3 text-sm leading-6 text-[#526158]">Equipment prices, operating assumptions and illustrative cash flows are not a guarantee of demand, profit or payback. Site feasibility, approvals, electricity costs, final quotations and signed commercial agreements can materially change the outcome. Review the assumptions and obtain written scope and responsibilities before investing.</p>
-          <Link href="/#investment" className="mt-5 inline-flex items-center gap-2 rounded-xl bg-[#0b5a42] px-5 py-3 font-extrabold text-white">Use the planning calculator <ArrowRight size={17}/></Link>
+          <div className="mt-5 flex flex-wrap gap-3">
+            <Link href="/ev-charging-calculator" className="inline-flex items-center gap-2 rounded-xl bg-[#0b5a42] px-5 py-3 font-extrabold text-white">Use the EV charging calculator <ArrowRight size={17}/></Link>
+            <Link href="/blogs/blog/ev-charging-station-franchise-india-costs-partnerships" className="inline-flex items-center gap-2 rounded-xl border border-[#0b5a42]/20 px-5 py-3 font-extrabold text-[#0b5a42]">Compare franchise models <ArrowRight size={17}/></Link>
+            <Link href="/contact" className="inline-flex items-center gap-2 rounded-xl border border-[#0b5a42]/20 px-5 py-3 font-extrabold text-[#0b5a42]">Discuss a project <ArrowRight size={17}/></Link>
+          </div>
         </aside>
       </article>
 
