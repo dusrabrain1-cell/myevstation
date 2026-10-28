@@ -155,7 +155,7 @@ export default function GreaterNoidaSocietiesPage() {
       ]} />
 
       
-      <SeoBreadcrumbJsonLd items={[["Home","/"],["Greater Noida Society EV Charging","/greater-noida-societies"]]} />
+      <SeoBreadcrumbJsonLd items={[{ name: "Home", path: "/" }, { name: "Greater Noida Society EV Charging", path: "/greater-noida-societies" }]} />
     </main>
   );
 }
