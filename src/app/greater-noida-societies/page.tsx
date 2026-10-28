@@ -7,8 +7,8 @@ import { whatsappHref } from "@/lib/constants";
 import { ArrowRight, Building2, CheckCircle2, MapPin, ShieldCheck, CarFront, Bike, ClipboardCheck } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "EV Charging for Greater Noida Societies & RWAs | MyEVStation",
-  description: "Explore EV charging installation for Greater Noida housing societies, apartments and RWAs. Assess resident and visitor chargers, electrical load, installation costs and site feasibility with MyEVStation.",
+  title: "EV Charging Stations in Greater Noida for Societies & RWAs | MyEVStation",
+  description: "Looking for EV charging stations in Greater Noida? MyEVStation helps housing societies and RWAs assess resident and visitor chargers, electrical load, installation costs and site feasibility.",
   alternates: { canonical: "/greater-noida-societies" },
   keywords: [
     "EV charging Greater Noida society",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "EV charger for society parking",
   ],
 
-  ...pageSocialMetadata("EV Charging for Greater Noida Housing Societies & RWAs", "Plan EV charging for Greater Noida apartments, gated societies and RWAs. MyEVStation helps assess shared visitor charging, resident parking chargers, 2W/3W charging and AC car chargers.", "/greater-noida-societies"),
+  ...pageSocialMetadata("EV Charging Stations in Greater Noida | Society & RWA Setup", "Plan EV charging for Greater Noida apartments, gated societies and RWAs. Assess shared visitor charging, resident parking chargers, 2W/3W options, AC car chargers and electrical feasibility.", "/greater-noida-societies"),
 };
 
 const areas = [
@@ -47,7 +47,7 @@ export default function GreaterNoidaSocietiesPage() {
         <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:py-20 lg:grid-cols-[1.1fr_.9fr] lg:items-center">
           <div>
             <p className="text-xs font-extrabold uppercase tracking-[.2em] text-[#c7e7d0]">Greater Noida · Housing societies · RWAs</p>
-            <h1 className="mt-4 text-4xl font-black leading-tight sm:text-6xl">MAKE YOUR GREATER NOIDA SOCIETY EV-READY.</h1>
+            <h1 className="mt-4 text-4xl font-black leading-tight sm:text-6xl">EV CHARGING STATIONS FOR GREATER NOIDA SOCIETIES &amp; RWAs.</h1>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-white/85">Planning EV charging in an apartment complex? MyEVStation helps your RWA or society management compare resident parking chargers, shared visitor charging and suitable options for electric two-wheelers, three-wheelers and cars—starting with a site and electrical-readiness assessment.</p>
             <div className="mt-7 flex flex-wrap gap-3">
               <a href={whatsapp} className="inline-flex items-center gap-2 rounded-xl bg-[#e87522] px-6 py-4 font-extrabold text-white">Request a society assessment <ArrowRight size={17} /></a>
@@ -86,11 +86,23 @@ export default function GreaterNoidaSocietiesPage() {
       <section className="mx-auto max-w-7xl px-5 py-14 sm:py-20">
         <div className="max-w-3xl">
           <p className="text-xs font-extrabold uppercase tracking-[.2em] text-[#0b7652]">Local focus</p>
-          <h2 className="mt-3 text-3xl font-black sm:text-4xl">Society EV charging across Greater Noida</h2>
+          <h2 className="mt-3 text-3xl font-black sm:text-4xl">EV charging station planning across Greater Noida</h2>
           <p className="mt-4 leading-7 text-[#647067]">We are targeting residential communities across Greater Noida and Greater Noida West. These are service focus areas for enquiries—not a claim that a charger is already installed at each location. Availability and feasibility are confirmed individually.</p>
         </div>
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {areas.map((area) => <article key={area} className="flex gap-3 rounded-2xl border border-[#e0e8e1] bg-white p-5"><MapPin size={22} className="mt-1 shrink-0 text-[#0b7652]" /><div><h3 className="font-extrabold">{area}</h3><p className="mt-2 text-sm leading-6 text-[#667168]">Ask for a society-specific review of parking, access, demand and electrical capacity.</p></div></article>)}
+        </div>
+
+        <div className="mt-8 rounded-2xl border border-[#dce8df] bg-white p-6 sm:p-8">
+          <h3 className="text-xl font-black text-[#172d21]">How to assess an EV charging site in Greater Noida</h3>
+          <p className="mt-3 leading-7 text-[#647067]">Whether your property is in Greater Noida West, near Pari Chowk, in Alpha, Beta or Gamma sectors, around Knowledge Park or Techzone, or along the Yamuna Expressway, begin with the needs of that specific community. A suitable location should have safe vehicle movement, clearly identified parking bays, a practical cable route, permission from the authorised property decision-maker and electrical capacity confirmed by a qualified professional.</p>
+          <ul className="mt-4 grid gap-3 text-sm leading-6 text-[#53635a] sm:grid-cols-2">
+            <li>• Count resident, visitor and fleet vehicles that may need charging.</li>
+            <li>• Review parking dwell time and whether bays are dedicated or shared.</li>
+            <li>• Check sanctioned load, distribution equipment and upgrade requirements.</li>
+            <li>• Confirm access, safety, metering, billing and maintenance responsibilities.</li>
+          </ul>
+          <p className="mt-4 text-sm leading-6 text-[#647067]">MyEVStation does not claim that chargers are already installed in every listed locality. Equipment choice, installation scope and commercial terms are confirmed only after a site-specific assessment.</p>
         </div>
       </section>
 
