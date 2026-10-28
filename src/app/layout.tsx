@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { SITE } from "@/lib/constants";
 import SiteShell from "@/components/custom/SiteShell";
+import GoogleAnalytics from "@/components/custom/GoogleAnalytics";
 
 export const metadata: Metadata = {
   title: {
@@ -77,6 +78,7 @@ export default function RootLayout({
             }
           ]
         }) }} />
+        <GoogleAnalytics />
         <SiteShell>{children}</SiteShell>
       </body>
     </html>
