@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { pageSocialMetadata } from "@/lib/page-social-metadata";
+import SeoBreadcrumbJsonLd from "@/components/custom/SeoBreadcrumbJsonLd";
 import Link from "next/link";
 import SeoFaq from "@/components/custom/SeoFaq";
 import { whatsappHref } from "@/lib/constants";
@@ -154,6 +155,7 @@ export default function GreaterNoidaSocietiesPage() {
       ]} />
 
       
+      <SeoBreadcrumbJsonLd items={[["Home","/"],["Greater Noida Society EV Charging","/greater-noida-societies"]]} />
     </main>
   );
 }
