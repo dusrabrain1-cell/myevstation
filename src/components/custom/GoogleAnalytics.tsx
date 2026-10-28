@@ -10,7 +10,7 @@ declare global {
   }
 }
 
-const measurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+const measurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-GE6NE2HN2P";
 
 export default function GoogleAnalytics() {
   useEffect(() => {
