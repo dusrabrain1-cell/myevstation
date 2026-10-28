@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { pageSocialMetadata } from "@/lib/page-social-metadata";
 import Link from "next/link";
 import SeoFaq from "@/components/custom/SeoFaq";
+import SeoBreadcrumbJsonLd from "@/components/custom/SeoBreadcrumbJsonLd";
 import { whatsappHref } from "@/lib/constants";
 import { ArrowRight, Building2, CarFront, CheckCircle2, ClipboardCheck, MapPin, Truck, Users } from "lucide-react";
 
@@ -115,6 +116,7 @@ export default function DelhiNcrEvChargingPage() {
         { question: "Does MyEVStation guarantee utilisation or returns?", answer: "No. Utilisation and revenue depend on actual demand, competition, access, tariffs, operating costs and the commercial agreement. Any projection should show its assumptions and sensitivity to lower usage." },
         { question: "Does the founders' prior Indian Air Force service mean government endorsement?", answer: "No. MyEVStation is an independent venture. The founders' prior service is professional background and does not imply official Indian Air Force or Government of India endorsement." }
       ]} />
+      <SeoBreadcrumbJsonLd items={[{ name: "Home", path: "/" }, { name: "Delhi NCR EV Charging", path: "/delhi-ncr-ev-charging" }]} />
     </main>
   );
 }
