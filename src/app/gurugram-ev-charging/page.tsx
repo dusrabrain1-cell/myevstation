@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { pageSocialMetadata } from "@/lib/page-social-metadata";
 import SeoFaq from "@/components/custom/SeoFaq";
+import { whatsappHref } from "@/lib/constants";
 import { ArrowRight, Building2, CarFront, CheckCircle2, MapPin, Truck, Users, ClipboardCheck } from "lucide-react";
 
 const title = "EV Charging Station in Gurugram | Societies, Offices & Fleets";
@@ -40,7 +41,7 @@ const localities = [
 ];
 
 export default function GurugramEvChargingPage() {
-  const whatsapp = "https://wa.me/919876260822?text=Hello%20MyEVStation%2C%20I%20want%20to%20discuss%20an%20EV%20charging%20site%20in%20Gurugram.%20Please%20guide%20me%20on%20site%20feasibility.";
+  const whatsapp = whatsappHref("Hello MyEVStation, I am enquiring from the Gurugram EV charging page about a potential site. Please guide me on site feasibility.");
   return (
     <main className="min-h-screen bg-[#f7f9f6] text-[#17212b]">
       <section className="bg-[linear-gradient(120deg,#0b2a1e,#0b7652)] text-white">
