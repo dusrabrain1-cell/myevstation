@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { pageSocialMetadata } from "@/lib/page-social-metadata";
 import SeoFaq from "@/components/custom/SeoFaq";
+import SeoBreadcrumbJsonLd from "@/components/custom/SeoBreadcrumbJsonLd";
 import { whatsappHref } from "@/lib/constants";
 import { ArrowRight, Building2, CarFront, CheckCircle2, MapPin, Truck, Users, ClipboardCheck } from "lucide-react";
 
@@ -114,6 +115,7 @@ export default function JalandharEvChargingPage() {
         { question: "Are revenue or utilisation guaranteed?", answer: "No. Results depend on actual demand, competition, access, tariffs, operating costs and the commercial agreement. Projections should state assumptions and consider lower utilisation." },
         { question: "Does the founders' prior Indian Air Force service mean government endorsement?", answer: "No. MyEVStation is an independent venture. The founders' prior service is professional background and does not imply official Indian Air Force or Government of India endorsement." }
       ]} />
+      <SeoBreadcrumbJsonLd items={[{ name: "Home", path: "/" }, { name: "Jalandhar EV Charging", path: "/jalandhar-ev-charging" }]} />
     </main>
   );
 }
