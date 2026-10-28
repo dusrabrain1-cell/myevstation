@@ -30,12 +30,24 @@ export default function GoogleAnalytics() {
         page_location: window.location.href,
       };
 
+      let contactMethod: "whatsapp" | "phone" | "email" | null = null;
+
       if (href.startsWith("https://wa.me/") || href.startsWith("https://api.whatsapp.com/")) {
+        contactMethod = "whatsapp";
         window.gtag?.("event", "whatsapp_click", eventParams);
       } else if (href.startsWith("tel:")) {
+        contactMethod = "phone";
         window.gtag?.("event", "phone_click", eventParams);
       } else if (href.startsWith("mailto:")) {
+        contactMethod = "email";
         window.gtag?.("event", "email_click", eventParams);
+      }
+
+      if (contactMethod) {
+        window.gtag?.("event", "contact_cta_click", {
+          ...eventParams,
+          contact_method: contactMethod,
+        });
       }
     };
 
