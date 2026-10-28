@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { pageSocialMetadata } from "@/lib/page-social-metadata";
 import Link from "next/link";
 import SeoFaq from "@/components/custom/SeoFaq";
+import { whatsappHref } from "@/lib/constants";
 import { ArrowRight, Building2, CheckCircle2, MapPin, ShieldCheck, CarFront, Bike, ClipboardCheck } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -36,7 +37,7 @@ const steps = [
 ];
 
 export default function GreaterNoidaSocietiesPage() {
-  const whatsapp = "https://wa.me/919876260822?text=Hello%20MyEVStation%2C%20I%20represent%20a%20housing%20society%2FRWA%20in%20Greater%20Noida.%20I%20want%20an%20EV%20charging%20site%20assessment.%20Please%20share%20the%20next%20steps.";
+  const whatsapp = whatsappHref("Hello MyEVStation, I represent a housing society or RWA in Greater Noida. I am enquiring from the Greater Noida societies page and would like an EV charging site assessment.");
   return (
     <main className="min-h-screen bg-[#f7f9f6] text-[#17212b]">
       
