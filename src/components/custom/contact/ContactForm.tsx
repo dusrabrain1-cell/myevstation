@@ -59,7 +59,7 @@ export function ContactForm({
         `Source: ${source || values.source || "Website contact form"}`,
         `Message: ${values.message}`,
       ].filter(Boolean).join("\n");
-      const phone = SITE.whatsappPhone.replace(/\\D/g, "");
+      const phone = SITE.whatsappPhone.replace(/\D/g, "");
       setWhatsappFallbackUrl(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`);
       setStatus("error");
     }
