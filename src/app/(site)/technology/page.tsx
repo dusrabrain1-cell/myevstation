@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import SeoBreadcrumbJsonLd from "@/components/custom/SeoBreadcrumbJsonLd";
 import { pageSocialMetadata } from "@/lib/page-social-metadata";
 import TechnologyContent from "./TechnologyContent";
 
@@ -11,5 +12,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <main className="bg-white text-[#17212b]"><TechnologyContent /></main>;
+  return <main className="bg-white text-[#17212b]"><TechnologyContent /><SeoBreadcrumbJsonLd items={[{ name: "Home", path: "/" }, { name: "EV Charging Technology", path: "/technology" }]} /></main>;
 }
