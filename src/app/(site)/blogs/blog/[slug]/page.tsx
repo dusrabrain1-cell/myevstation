@@ -261,7 +261,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
                 Share your city, site type, parking access, available electrical load and investment preference. MyEVStation can review the information and discuss a site-specific feasibility assessment and itemised proposal. Costs, utilisation, revenue and payback depend on the site and are not guaranteed.
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
-                <Link href="/contact?source=investment-roi-guide" className="rounded-lg bg-white px-5 py-3 text-sm font-bold text-[#0b5a42] hover:bg-cream">Request an investment assessment</Link>
+                <Link href={article.slug === "ev-charging-station-investment-cost-india" ? "/contact?source=investment-cost-guide" : "/contact?source=investment-roi-guide"} className="rounded-lg bg-white px-5 py-3 text-sm font-bold text-[#0b5a42] hover:bg-cream">Request an investment assessment</Link>
                 <Link href="/ev-charging-calculator" className="rounded-lg border border-white/50 px-5 py-3 text-sm font-bold text-white hover:bg-white/10">Estimate your project</Link>
                 <Link href="/business-model" className="rounded-lg border border-white/50 px-5 py-3 text-sm font-bold text-white hover:bg-white/10">Compare business models</Link>
               </div>
