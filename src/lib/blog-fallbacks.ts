@@ -1005,15 +1005,15 @@ export const blogThirteenSlug = "ev-charging-station-business-property-owners-pa
 
 export const blogThirteen = {
   _id: "static-blog-property-owners-parking-space",
-  title: "EV Charging Station Business for Property Owners: Earn from Your Parking Space",
+  title: "EV Charging for Commercial Property Owners: Monetise Parking Space in India",
   slug: blogThirteenSlug,
   excerpt: "Discover how property owners can explore EV charging at parking sites, compare host-site and revenue-sharing models, assess electrical feasibility and evaluate costs and contracts before proceeding.",
   author: "MyEVStation Editorial Team",
   categories: ["Property Owners", "EV Charging Business"],
   publishedAt: "2026-10-20T00:00:00.000Z",
   seo: {
-    metaTitle: "EV Charging for Property Owners: Earn from Parking Space | MyEVStation",
-    metaDescription: "Learn how property owners can explore EV charging at parking sites, compare host-site and revenue-sharing models, assess electrical feasibility and understand costs and contracts.",
+    metaTitle: "EV Charging for Commercial Property Owners | MyEVStation",
+    metaDescription: "Own commercial parking, office, hotel or retail space? Explore EV charging site-host partnerships, installation requirements, revenue models and property feasibility in India.",
   },
   body: [
     paragraph("Do you own a commercial property, office parking area, hotel, shop, warehouse or other site with usable parking space? EV charging may be an opportunity to make that space more useful as electric vehicle adoption grows. The right approach depends on local demand, electrical feasibility and the agreement you make with an installer or charging operator."),
@@ -1070,6 +1070,9 @@ export const blogThirteen = {
     heading("How MyEVStation can help"),
     paragraph("MyEVStation shares information about EV charging business models and opportunities for property owners, investors and commercial sites. A practical first step is to discuss the site, intended participation model, parking access and electrical feasibility before comparing proposals."),
     paragraph("Explore the business model at https://www.myevstation.co.in/business-model, read the guide to EV charging at housing societies at https://www.myevstation.co.in/blogs/blog/ev-charging-stations-housing-societies-installation-permissions-revenue, review the option of operating without owning land at https://www.myevstation.co.in/blogs/blog/start-ev-charging-station-business-without-land, or contact the team at https://www.myevstation.co.in/contact."),
+    heading("Submit your property for an EV charging site assessment"),
+    paragraph("If you own or manage commercial parking, an office building, hotel, retail property, warehouse or residential complex, share the location and basic site details with MyEVStation. The team can review whether a discussion about EV charging installation, a host-site arrangement or an operating partnership is appropriate. Suitability depends on demand, access, electrical capacity and written property permissions."),
+    paragraph("For an initial discussion, use https://www.myevstation.co.in/contact?source=property-owner-guide and include your city, property type, approximate parking capacity, access hours and available electrical load. Any investment, rent, revenue share or operator responsibilities will be confirmed only in a site-specific written proposal; no income is guaranteed."),
     heading("Frequently asked questions"),
     paragraph("Do I need to buy the charger to host an EV charging station? Not always. Some operator arrangements may fund equipment, while other models require the property owner to invest. Confirm the actual offer and obligations in the written contract."),
     paragraph("Can I earn fixed rent from my parking space? A fixed-rent structure may be negotiated with an operator, but availability and terms depend on the site and commercial agreement. Do not assume rent or income is guaranteed."),
