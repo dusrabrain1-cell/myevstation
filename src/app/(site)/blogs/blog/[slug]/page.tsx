@@ -179,7 +179,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
                 <time dateTime={article.publishedAt}>
                   Published {new Date(article.publishedAt).toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" })}
                 </time>
-              )}
+          ))}
             </div>
           </header>
 
