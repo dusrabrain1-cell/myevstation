@@ -10,6 +10,7 @@ import { whatsappHref } from "@/lib/constants";
 
 declare global {
   interface Window {
+    dataLayer?: IArguments[];
     gtag?: (...args: unknown[]) => void;
   }
 }
@@ -45,40 +46,40 @@ export function ContactForm({
       leadSource ? `Enquiry source: ${leadSource}` : null,
       "",
       `Message: ${values.message}`,
-    ].filter(Boolean).join("\n");
+    ].filter(Boolean).join("\\n");
 
     const whatsappUrl = whatsappHref(message);
     const navigateToWhatsApp = () => window.location.assign(whatsappUrl);
 
-    // Record the form-based WhatsApp handoff before navigating away.
-    if (typeof window.gtag === "function") {
-      const eventParams = {
-        link_url: whatsappUrl,
-        link_text: "Continue to WhatsApp",
-        contact_method: "whatsapp",
-        contact_source: leadSource,
-        page_location: window.location.href,
-        page_path: `${window.location.pathname}${window.location.search}`,
-        page_title: document.title,
-      };
-      // Count a completed, valid enquiry as a lead before handing the visitor to WhatsApp.
-      // The WhatsApp event remains separate so the team can distinguish lead intent from contact clicks.
-      window.gtag("event", "generate_lead", {
-        ...eventParams,
-        lead_method: "whatsapp_form",
-        lead_source: leadSource,
-      });
-      window.gtag("event", "contact_cta_click", eventParams);
-      window.gtag("event", "whatsapp_click", {
-        ...eventParams,
-        event_callback: navigateToWhatsApp,
-        event_timeout: 1200,
-      });
-      // Ensure navigation even if the analytics callback is blocked.
-      window.setTimeout(navigateToWhatsApp, 1500);
-    } else {
-      navigateToWhatsApp();
-    }
+    // Queue analytics commands even when the GA script has not loaded yet.
+    // The gtag.js loader consumes this queue when it becomes available.
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function (...args: unknown[]) {
+      window.dataLayer?.push(arguments);
+    };
+
+    const eventParams = {
+      link_url: whatsappUrl,
+      link_text: "Continue to WhatsApp",
+      contact_method: "whatsapp",
+      contact_source: leadSource,
+      lead_method: "whatsapp_form",
+      lead_source: leadSource,
+      page_location: window.location.href,
+      page_path: `${window.location.pathname}${window.location.search}`,
+      page_title: document.title,
+    };
+
+    // A valid form submission is the lead action; WhatsApp handoff is tracked separately.
+    window.gtag("event", "generate_lead", eventParams);
+    window.gtag("event", "contact_cta_click", eventParams);
+    window.gtag("event", "whatsapp_click", {
+      ...eventParams,
+      event_callback: navigateToWhatsApp,
+      event_timeout: 1200,
+    });
+    // Do not strand the visitor if analytics is blocked or the callback never fires.
+    window.setTimeout(navigateToWhatsApp, 1500);
     onSuccess?.();
   }
 
