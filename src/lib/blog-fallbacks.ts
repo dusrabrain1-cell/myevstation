@@ -1278,19 +1278,22 @@ export const blogSixteenSlug = "ev-charging-station-for-office-buildings-india";
 
 export const blogSixteen = {
   _id: "static-blog-ev-charging-office-buildings",
-  title: "EV Charger for Office Buildings in India: Installation & Workplace Charging",
+  title: "EV Chargers for Offices & Coworking Spaces in India: Installation Guide",
   slug: blogSixteenSlug,
   excerpt: "Planning EV charger installation for an office, coworking space or government building in India? Assess workplace demand, employee and visitor parking, electrical load, permissions, installation costs and charging-operator models before choosing a solution.",
   author: "MyEVStation Editorial Team",
   categories: ["Office Buildings", "EV Charging Infrastructure"],
   publishedAt: "2026-10-20T00:00:00.000Z",
   seo: {
-    metaTitle: "EV Charger for Office Buildings in India | Workplace Installation",
-    metaDescription: "Plan EV charger installation for offices, coworking spaces and government buildings in India. Review workplace demand, electrical load, permissions, costs and operator options."
+    metaTitle: "EV Chargers for Offices & Coworking Spaces in India | MyEVStation",
+    metaDescription: "Explore EV charger installation for offices and coworking spaces in India. Assess employee demand, parking, electrical load, installation costs and workplace charging models."
   },
   body: [
     paragraph("EV charger installation for an office building in India can serve employees, visitors, tenants and company fleets while vehicles remain parked during the workday. Office campuses, coworking spaces and government buildings should begin with workplace charging demand, parking access, electrical capacity, building permissions and a clearly defined operating model."),
     paragraph("This workplace EV charging guide explains how office owners, facility managers, commercial landlords, coworking operators and authorised government property teams can assess a project before buying equipment or signing an operator agreement. Requirements, project costs and results vary, so use a site-specific assessment rather than a generic estimate."),
+    heading("EV charger for a coworking space: what should operators plan?"),
+    paragraph("A coworking space may serve members, day visitors, staff and tenants who park for different lengths of time. Before installing EV chargers, check whether parking is controlled by the coworking operator or landlord, whether charging bays can be allocated to members and visitors, and how access will work during busy hours. A practical pilot can begin with a small number of bays, clear booking or first-come rules, usage reporting and a defined process for billing and support."),
+    paragraph("For a coworking operator, the key decision is whether charging is an employee or member amenity, a paid service, or a host-site partnership with an external operator. Compare the full cost and responsibilities—not just charger price—including electricity, load upgrades, maintenance, software, payment processing, parking management and equipment ownership. Confirm all arrangements with the property owner in writing."),
     heading("Why consider workplace EV charging?"),
     paragraph("Workplace charging may support employees who drive electric vehicles, provide an option for visitors and help a property prepare for changing transport needs. Its value can be an employee amenity, a paid charging service or part of a wider property strategy. The appropriate objective should be clear before the project is designed."),
     bullet("Employee convenience during regular working hours."),
@@ -1369,6 +1372,7 @@ export const blogSixteen = {
     paragraph("How does EV charging infrastructure work in commercial buildings? A commercial building typically combines compatible chargers, a suitable electrical connection and distribution system, safe cable routes and parking bays, metering or payment arrangements, and an operating or maintenance process. The final design depends on building load, vehicle demand, parking duration and permissions."),
     paragraph("What is needed to install EV chargers in an office building? Start with a demand and parking assessment, confirm permission from the property decision-maker, obtain an electrical feasibility review and compare itemised installation and operating costs."),
     paragraph("Can EV chargers be installed at government buildings or coworking spaces? They may be suitable where the property has authorised parking, electrical capacity and an approved operating arrangement. Confirm the relevant procurement, landlord, facility-management and safety requirements before proceeding."),
+    paragraph("What should a coworking space check before installing EV chargers? Confirm landlord approval, member and visitor demand, parking-bay access, electrical capacity, charging hours, billing policy, maintenance responsibilities and whether the installation is owner-funded or operator-managed. Start with a measured pilot if demand is not yet established."),
     paragraph("Is workplace AC charging enough? It may be suitable when vehicles remain parked for several hours, but the decision depends on vehicle capability, energy needs, charging windows and electrical capacity."),
     paragraph("Should office charging be free for employees? That is a business and workplace policy decision. Consider electricity costs, access rules, administration and the intended employee benefit before choosing a model."),
     paragraph("Can a charging operator install equipment at an office building? Potentially, if the site is suitable and the parties agree on written commercial, access, installation and operating terms."),
