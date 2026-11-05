@@ -168,7 +168,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
               <div className="mb-4 flex flex-wrap gap-2">
                 {article.categories.map((category) => (
                   <span key={category} className="rounded-full bg-mission-soft px-3 py-1 text-xs font-bold text-mission">{category}</span>
-              )}
+                ))}
               </div>
             ) : null}
             <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-ink sm:text-4xl lg:text-5xl">{article.title}</h1>
@@ -277,7 +277,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
                 <Link href="/contact" className="rounded-lg border border-white/50 px-5 py-3 text-sm font-bold text-white hover:bg-white/10">Discuss your site</Link>
                 <Link href="/blogs" className="rounded-lg border border-white/50 px-5 py-3 text-sm font-bold text-white hover:bg-white/10">All blogs</Link>
               </div>
-            </>
+          ))}
           )}
         </aside>
       </div>
