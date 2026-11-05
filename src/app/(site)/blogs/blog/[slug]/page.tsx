@@ -216,6 +216,9 @@ export default async function BlogArticlePage({ params }: PageProps) {
               ...( /landowner|property|petrol|highway|hotel|resort|warehouse|logistic|without[- ]land|no[- ]land|host.site|property.owner/.test(topic)
                 ? [{ href: "/with-land", label: "Partner with a suitable property" }, { href: "/without-land", label: "Explore options without owning land" }]
                 : []),
+              ...( /franchise/.test(topic)
+                ? [{ href: "/without-land", label: "Explore an EV charging business without owning land" }, { href: "/with-land", label: "Partner with a property for EV charging" }, { href: "/ex-servicemen", label: "Explore ex-servicemen opportunities" }]
+                : []),
               ...( /invest|business|cost|roi|calculator|franchise|channel partner/.test(topic)
                 ? [{ href: "/ev-charging-calculator", label: "Estimate your EV charging plan" }, { href: "/business-model", label: "Compare business models" }]
                 : []),
@@ -239,15 +242,31 @@ export default async function BlogArticlePage({ params }: PageProps) {
         </article>
 
         <aside className="mt-14 rounded-2xl bg-[#0b5a42] p-6 text-white sm:p-8">
-          <h2 className="text-2xl font-extrabold">Planning an EV charging station?</h2>
-          <p className="mt-3 max-w-2xl text-sm leading-6 text-white/85">
-            Explore MyEVStation’s business models, review indicative investment assumptions and check your site’s suitability before making a decision.
-          </p>
-          <div className="mt-6 flex flex-wrap gap-3">
-            <Link href="/ev-charging-calculator" className="rounded-lg bg-white px-5 py-3 text-sm font-bold text-[#0b5a42] hover:bg-cream">Open calculator</Link>
-            <Link href="/contact" className="rounded-lg border border-white/50 px-5 py-3 text-sm font-bold text-white hover:bg-white/10">Discuss your site</Link>
-            <Link href="/blogs" className="rounded-lg border border-white/50 px-5 py-3 text-sm font-bold text-white hover:bg-white/10">All blogs</Link>
-          </div>
+          {/\bfranchise\b/i.test(`${article.title} ${article.slug}`) ? (
+            <>
+              <h2 className="text-2xl font-extrabold">Compare your EV charging franchise or partnership options</h2>
+              <p className="mt-3 max-w-2xl text-sm leading-6 text-white/85">
+                Tell MyEVStation whether you are an investor, property owner or aspiring operator. We can review your city, site access, available power and preferred investment model before discussing a suitable proposal. Commercial terms and returns are site-specific and are not guaranteed.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <Link href="/contact?source=franchise-guide" className="rounded-lg bg-white px-5 py-3 text-sm font-bold text-[#0b5a42] hover:bg-cream">Discuss a partnership</Link>
+                <Link href="/without-land" className="rounded-lg border border-white/50 px-5 py-3 text-sm font-bold text-white hover:bg-white/10">Explore without land</Link>
+                <Link href="/ev-charging-calculator" className="rounded-lg border border-white/50 px-5 py-3 text-sm font-bold text-white hover:bg-white/10">Estimate investment</Link>
+              </div>
+            </>
+          ) : (
+            <>
+              <h2 className="text-2xl font-extrabold">Planning an EV charging station?</h2>
+              <p className="mt-3 max-w-2xl text-sm leading-6 text-white/85">
+                Explore MyEVStation’s business models, review indicative investment assumptions and check your site’s suitability before making a decision.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <Link href="/ev-charging-calculator" className="rounded-lg bg-white px-5 py-3 text-sm font-bold text-[#0b5a42] hover:bg-cream">Open calculator</Link>
+                <Link href="/contact" className="rounded-lg border border-white/50 px-5 py-3 text-sm font-bold text-white hover:bg-white/10">Discuss your site</Link>
+                <Link href="/blogs" className="rounded-lg border border-white/50 px-5 py-3 text-sm font-bold text-white hover:bg-white/10">All blogs</Link>
+              </div>
+            </>
+          )}
         </aside>
       </div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData).replace(/</g, "\\u003c") }} />
