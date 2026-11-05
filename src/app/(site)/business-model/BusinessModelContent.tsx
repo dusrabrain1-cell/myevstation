@@ -88,6 +88,7 @@ export default function BusinessModelContent() {
                     <div className="mt-6 flex flex-wrap gap-3">
                       <Link href="/ev-charging-investment-guide" className="inline-flex items-center gap-2 rounded-full bg-[#0b5a42] px-5 py-3 text-sm font-extrabold text-white transition hover:bg-[#084632]">Read the investment guide <ArrowRight size={16}/></Link>
                       <Link href="/ev-charging-calculator" className="inline-flex items-center gap-2 rounded-full border border-[#0b5a42] bg-white px-5 py-3 text-sm font-extrabold text-[#0b5a42] transition hover:bg-[#eef7ef]">Estimate project economics <ArrowRight size={16}/></Link>
+                      <Link href="/blogs/blog/ev-charging-station-for-office-buildings-india" className="inline-flex items-center gap-2 rounded-full border border-[#dfe7df] bg-white px-5 py-3 text-sm font-extrabold text-[#0b5a42] transition hover:bg-[#eef7ef]">Workplace & office charging guide <ArrowRight size={16}/></Link>
                     </div>
                   </div>
                   <div className="rounded-3xl border border-[#dfe7df] bg-white p-6 shadow-[0_10px_30px_rgba(11,90,66,0.06)] sm:p-8">
