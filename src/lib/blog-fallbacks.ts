@@ -391,15 +391,15 @@ export const blogSixSlug = "ev-charging-station-business-model-investment-revenu
 
 export const blogSix = {
   _id: "static-blog-business-model-revenue-roi",
-  title: "EV Charging Station Business Model in India: Investment, Revenue and ROI",
+  title: "EV Charging Station Investment in India: Cost, Business Model and ROI",
   slug: blogSixSlug,
-  excerpt: "Compare EV charging station business models in India, understand who invests and operates, what drives revenue and costs, and how to evaluate ROI without relying on guaranteed-return claims.",
+  excerpt: "Planning an EV charging station investment in India? Compare ownership, property-host and operator models, understand setup and running costs, estimate charging revenue and assess ROI with realistic site-specific assumptions.",
   author: "MyEVStation Editorial Team",
   categories: ["Business Model", "Investment", "ROI"],
   publishedAt: "2026-10-20T00:00:00.000Z",
   seo: {
-    metaTitle: "EV Charging Station Business Model in India: Revenue & ROI | MyEVStation",
-    metaDescription: "Compare EV charging station business models in India, including owner-investor, host-site, lease and operator partnerships. Understand revenue, costs and ROI.",
+    metaTitle: "EV Charging Station Investment in India: Cost & ROI | MyEVStation",
+    metaDescription: "Assess EV charging station investment in India: setup costs, business models, charging revenue, operating expenses and ROI. Compare site-specific options before investing."
   },
   body: [
     paragraph("An EV charging station can be structured in different ways: an investor may own the equipment, a property owner may host it, or a charging operator may manage the technology and customer experience. The commercial result depends on the agreement, site demand, charger utilisation, electricity costs and other expenses—not simply on installing a charger."),
