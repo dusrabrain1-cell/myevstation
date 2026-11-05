@@ -1616,7 +1616,7 @@ export const blogNineteenSlug = "ev-charging-stations-shopping-malls-retail-cent
 
 export const blogNineteen = {
   _id: "static-blog-ev-charging-shopping-malls",
-  title: "EV Charging Stations for Shopping Malls in India: Cost, Setup & Partnerships",
+  title: "EV Charger for Malls in India: Installation, Cost & Partnerships",
   slug: blogNineteenSlug,
   excerpt: "Planning an EV charger for a mall in India? Explore charger selection, parking and electrical feasibility, installation costs, operator partnerships, revenue models and maintenance for shopping malls and retail centres.",
   author: "MyEVStation Editorial Team",
@@ -1696,7 +1696,7 @@ export const blogNineteen = {
     paragraph("A phased approach can help the property team learn from actual usage before committing to a larger installation. Set clear success measures at the beginning and review them after an agreed pilot period."),
     heading("Related MyEVStation guides"),
     paragraph("For a comparison of installation expenses, read https://www.myevstation.co.in/blogs/blog/ev-charging-station-installation-cost-india-ac-vs-dc. For electricity, permissions and safety planning, see https://www.myevstation.co.in/blogs/blog/ev-charging-station-requirements-india-electricity-load-permissions-safety. For a wider view of investment and operating assumptions, visit https://www.myevstation.co.in/blogs/blog/ev-charging-station-business-model-investment-revenue-roi."),
-    paragraph("You can also review the MyEVStation business model at https://www.myevstation.co.in/business-model or contact the team at https://www.myevstation.co.in/contact to discuss a potential site."),
+    paragraph("You can also review the MyEVStation business model at https://www.myevstation.co.in/business-model or contact the team at https://www.myevstation.co.in/contact?source=mall-guide to discuss a potential mall or retail-centre site."),
     heading("Frequently asked questions"),
     paragraph("Should every mall install DC fast chargers? No. The appropriate mix depends on visit duration, customer demand, electrical capacity, budget and the business model."),
     paragraph("Can a mall partner with a charging operator instead of buying equipment? Potentially. The property and operator should document investment, ownership, electricity costs, maintenance, customer support, revenue settlement and exit terms."),
