@@ -500,15 +500,15 @@ export const blogSevenSlug = "ev-charging-station-franchise-india-costs-partners
 
 export const blogSeven = {
   _id: "static-blog-ev-charging-franchise-india",
-  title: "EV Charging Station Franchise in India: Cost, How to Apply & Business Models",
+  title: "EV Charging Station Franchise in India: Cost & How to Apply",
   slug: blogSevenSlug,
   excerpt: "Explore EV charging station franchise options in India. Compare franchise, dealership and operator models, upfront costs, revenue sharing, site requirements and contract checks before investing.",
   author: "MyEVStation Editorial Team",
   categories: ["Franchise", "Partnerships", "EV Business"],
   publishedAt: "2026-10-20T00:00:00.000Z",
   seo: {
-    metaTitle: "EV Charging Station Franchise Cost in India: Apply & Compare",
-    metaDescription: "Explore EV charging station franchise cost in India, how to apply, investment components and franchise vs dealership options. Compare site requirements and partnership terms before you invest.",
+    metaTitle: "EV Charging Station Franchise in India: Cost & Apply Online | MyEVStation",
+    metaDescription: "Looking for an EV charging station franchise in India? Compare franchise, dealership and operator models, costs, site requirements and how to apply. Request a site-specific proposal before investing.",
   },
   body: [
     paragraph("If you are looking for an EV charging station franchise in India, first establish whether the provider is offering a genuine franchise, an equipment dealership, a site-hosting arrangement or an operator partnership. These models have different costs, responsibilities and commercial rights. Compare the written offer—not just the franchise label—before deciding."),
