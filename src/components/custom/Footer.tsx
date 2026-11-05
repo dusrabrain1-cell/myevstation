@@ -6,6 +6,7 @@ const EXPLORE_LINKS = [
   { label: "Business model", href: "/business-model" },
   { label: "Technology & safety", href: "/technology" },
   { label: "Investment guide", href: "/ev-charging-investment-guide" },
+  { label: "Commercial EV charging", href: "/commercial-ev-charging" },
   { label: "EV charging calculator", href: "/ev-charging-calculator" },
   { label: "FAQs & permissions", href: "/faq" },
   { label: "About us", href: "/about-us" },
