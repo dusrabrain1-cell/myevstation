@@ -398,19 +398,20 @@ export const blogSixSlug = "ev-charging-station-business-model-investment-revenu
 
 export const blogSix = {
   _id: "static-blog-business-model-revenue-roi",
-  title: "EV Charging Station Business Model in India: Investment, Revenue and ROI",
+  title: "EV Charging Station Business Model in India: Cost, Revenue & ROI",
   slug: blogSixSlug,
   excerpt: "Planning an EV charging station investment in India? Compare ownership, property-host and operator models, understand setup and running costs, estimate charging revenue and assess ROI with realistic site-specific assumptions.",
   author: "MyEVStation Editorial Team",
   categories: ["Business Model", "Investment", "ROI"],
   publishedAt: "2026-10-20T00:00:00.000Z",
   seo: {
-    metaTitle: "EV Charging Business Model in India: Investment & ROI | MyEVStation",
-    metaDescription: "Explore EV charging station business models in India, setup investment, charging revenue, operating costs and ROI calculations. Compare ownership and site-host options before investing."
+    metaTitle: "EV Charging Station Business Model in India: Cost, Revenue & ROI | MyEVStation",
+    metaDescription: "Understand EV charging station business models in India, setup cost, charging revenue, operating expenses and ROI. Compare ownership, franchise and site-host options, then request a site-specific feasibility assessment."
   },
   body: [
     paragraph("An EV charging station can be structured in different ways: an investor may own the equipment, a property owner may host it, or a charging operator may manage the technology and customer experience. The commercial result depends on the agreement, site demand, charger utilisation, electricity costs and other expenses—not simply on installing a charger."),
     paragraph("This guide explains common business models and a practical way to assess revenue and return on investment (ROI). Figures should be based on a real site assessment and written quotations. No revenue or payback period is guaranteed."),
+    paragraph("Need an EV charging station investment assessment? Share your location, property type, parking capacity and available electrical load with MyEVStation to discuss a site-specific deployment or operating model. Start with the contact form: https://www.myevstation.co.in/contact?source=business-model-roi-guide. A proposal is subject to site feasibility and written commercial terms."),
     heading("What is the EV charging station business model?"),
     paragraph("A business model sets out who provides the location, funds the equipment, owns the chargers, manages operations, pays expenses and receives revenue. These roles can sit with one company or be shared between several partners."),
     heading("Common EV charging business models"),
