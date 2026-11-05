@@ -277,8 +277,8 @@ export default async function BlogArticlePage({ params }: PageProps) {
                 <Link href="/contact" className="rounded-lg border border-white/50 px-5 py-3 text-sm font-bold text-white hover:bg-white/10">Discuss your site</Link>
                 <Link href="/blogs" className="rounded-lg border border-white/50 px-5 py-3 text-sm font-bold text-white hover:bg-white/10">All blogs</Link>
               </div>
+            </>
           ))}
-          )}
         </aside>
       </div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData).replace(/</g, "\\u003c") }} />
