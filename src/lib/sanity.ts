@@ -35,5 +35,20 @@ export async function sanityFetch<T>(
   query: string,
   params: Record<string, unknown> = {}
 ): Promise<T> {
+  // The fallback project ID in sanity/env.ts is only a placeholder. When the
+  // production environment has no real Sanity project/dataset configured,
+  // let callers use their local published-content fallbacks instead of making
+  // requests to a non-existent dataset during build or page rendering.
+  const isConfigured = Boolean(
+    process.env.NEXT_PUBLIC_SANITY_PROJECT_ID &&
+    process.env.NEXT_PUBLIC_SANITY_DATASET
+  );
+
+  if (!isConfigured) {
+    throw new Error(
+      "Sanity CMS is not configured. Set NEXT_PUBLIC_SANITY_PROJECT_ID and NEXT_PUBLIC_SANITY_DATASET to enable CMS content."
+    );
+  }
+
   return client.fetch<T>(query, params, { cache: "no-store" });
 }
