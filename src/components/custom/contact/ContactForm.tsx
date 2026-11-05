@@ -10,7 +10,7 @@ import { whatsappHref } from "@/lib/constants";
 
 declare global {
   interface Window {
-    dataLayer?: IArguments[];
+    dataLayer?: unknown[];
     gtag?: (...args: unknown[]) => void;
   }
 }
