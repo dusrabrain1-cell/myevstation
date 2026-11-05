@@ -1596,15 +1596,15 @@ export const blogNineteenSlug = "ev-charging-stations-shopping-malls-retail-cent
 
 export const blogNineteen = {
   _id: "static-blog-ev-charging-shopping-malls",
-  title: "EV Charger for Malls in India: Installation, Cost and Business Guide",
+  title: "EV Charging Stations for Shopping Malls in India: Cost, Setup & Partnerships",
   slug: blogNineteenSlug,
   excerpt: "Planning an EV charger for a mall in India? Explore charger selection, parking and electrical feasibility, installation costs, operator partnerships, revenue models and maintenance for shopping malls and retail centres.",
   author: "MyEVStation Editorial Team",
   categories: ["Commercial EV Charging", "Retail & Malls"],
   publishedAt: "2026-10-20T00:00:00.000Z",
   seo: {
-    metaTitle: "EV Charger for Malls in India: Cost & Setup | MyEVStation",
-    metaDescription: "A practical guide to installing an EV charger for a mall in India. Compare AC and DC chargers, parking needs, electrical load, setup costs, operator models and maintenance.",
+    metaTitle: "EV Charging Stations for Shopping Malls in India | MyEVStation",
+    metaDescription: "Planning EV charging for a shopping mall? Compare AC and DC charger setup, parking and electrical load, installation costs, operator partnerships and a practical pilot plan in India.",
   },
   body: [
     paragraph("An EV charger for a mall can make parking more useful for customers who arrive in electric cars or two-wheelers and spend time shopping, dining or watching a film. For mall owners and facility managers in India, the right installation depends on parking duration, visitor demand, electrical capacity, charger mix and the operating agreement."),
