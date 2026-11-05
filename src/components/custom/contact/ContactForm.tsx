@@ -33,13 +33,16 @@ export function ContactForm({
 
   function onSubmit(values: ContactInput) {
     setOpening(true);
+    // Preserve attribution from links such as /contact?source=franchise-guide.
+    const querySource = new URLSearchParams(window.location.search).get("source");
+    const leadSource = source || values.source || querySource || "website_contact_form";
     const message = [
       "Hello MyEVStation, I would like to enquire about EV charging.",
       "",
       `Name: ${values.name}`,
       `Organisation: ${values.organisation}`,
       values.designation ? `Designation: ${values.designation}` : null,
-      source || values.source ? `Enquiry source: ${source || values.source}` : null,
+      leadSource ? `Enquiry source: ${leadSource}` : null,
       "",
       `Message: ${values.message}`,
     ].filter(Boolean).join("\n");
@@ -53,7 +56,7 @@ export function ContactForm({
         link_url: whatsappUrl,
         link_text: "Continue to WhatsApp",
         contact_method: "whatsapp",
-        contact_source: source || values.source || "website_contact_form",
+        contact_source: leadSource,
         page_location: window.location.href,
         page_path: `${window.location.pathname}${window.location.search}`,
         page_title: document.title,
@@ -63,7 +66,7 @@ export function ContactForm({
       window.gtag("event", "generate_lead", {
         ...eventParams,
         lead_method: "whatsapp_form",
-        lead_source: source || values.source || "website_contact_form",
+        lead_source: leadSource,
       });
       window.gtag("event", "contact_cta_click", eventParams);
       window.gtag("event", "whatsapp_click", {
