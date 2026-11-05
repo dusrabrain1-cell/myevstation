@@ -391,15 +391,15 @@ export const blogSixSlug = "ev-charging-station-business-model-investment-revenu
 
 export const blogSix = {
   _id: "static-blog-business-model-revenue-roi",
-  title: "EV Charging Station Investment in India: Cost, Business Model and ROI",
+  title: "EV Charging Station Business Model in India: Investment, Revenue and ROI",
   slug: blogSixSlug,
   excerpt: "Planning an EV charging station investment in India? Compare ownership, property-host and operator models, understand setup and running costs, estimate charging revenue and assess ROI with realistic site-specific assumptions.",
   author: "MyEVStation Editorial Team",
   categories: ["Business Model", "Investment", "ROI"],
   publishedAt: "2026-10-20T00:00:00.000Z",
   seo: {
-    metaTitle: "EV Charging Station Investment in India: Cost & ROI | MyEVStation",
-    metaDescription: "Assess EV charging station investment in India: setup costs, business models, charging revenue, operating expenses and ROI. Compare site-specific options before investing."
+    metaTitle: "EV Charging Business Model in India: Investment & ROI | MyEVStation",
+    metaDescription: "Explore EV charging station business models in India, setup investment, charging revenue, operating costs and ROI calculations. Compare ownership and site-host options before investing."
   },
   body: [
     paragraph("An EV charging station can be structured in different ways: an investor may own the equipment, a property owner may host it, or a charging operator may manage the technology and customer experience. The commercial result depends on the agreement, site demand, charger utilisation, electricity costs and other expenses—not simply on installing a charger."),
@@ -466,6 +466,9 @@ export const blogSix = {
     heading("Use a calculator—but validate every assumption"),
     paragraph("The MyEVStation EV Charging Calculator can help organise an initial estimate: https://www.myevstation.co.in/ev-charging-calculator. Treat the output as a planning scenario, not a promise. Replace assumed equipment costs, energy sales, tariffs and operating expenses with current written quotes and site-specific evidence."),
     paragraph("You can also explore the business model guide at https://www.myevstation.co.in/business-model and the investment guide at https://www.myevstation.co.in/ev-charging-investment-guide."),
+    heading("Get a site-specific EV charging investment assessment"),
+    paragraph("If you are evaluating an EV charging station for a commercial property, housing society, office, retail location or fleet site, MyEVStation can discuss the site and possible deployment or operating arrangements. Share your city, site type, parking access, available electrical load and expected vehicle users so the team can assess whether a feasibility discussion is appropriate."),
+    paragraph("Request an initial discussion through the MyEVStation contact page: https://www.myevstation.co.in/contact?source=investment-roi-guide. Any commercial proposal, investment amount and revenue arrangement must be confirmed after site assessment and in writing. No income or payback is guaranteed."),
     heading("Revenue management for a commercial EV charging station"),
     paragraph("Commercial EV charging revenue management means monitoring sessions, energy delivered, tariffs, payment collections, refunds, downtime and the share payable to a site host or network partner. Review these figures together rather than judging performance from total collections alone."),
     bullet("Track energy sold and successful paid sessions by charger and connector."),
