@@ -1308,8 +1308,8 @@ export const blogSixteen = {
   categories: ["Office Buildings", "EV Charging Infrastructure"],
   publishedAt: "2026-10-20T00:00:00.000Z",
   seo: {
-    metaTitle: "EV Chargers for Offices & Coworking Spaces in India | MyEVStation",
-    metaDescription: "Explore EV charger installation for offices and coworking spaces in India. Assess employee demand, parking, electrical load, installation costs and workplace charging models."
+    metaTitle: "Office EV Charging in India: Installation, Cost & Coworking | MyEVStation",
+    metaDescription: "Plan EV charging for offices, coworking spaces and government buildings in India. Compare workplace charger installation, parking, electrical load, site permissions, costs and operator models."
   },
   body: [
     paragraph("EV charger installation for an office building in India can serve employees, visitors, tenants and company fleets while vehicles remain parked during the workday. Office campuses, coworking spaces and government buildings should begin with workplace charging demand, parking access, electrical capacity, building permissions and a clearly defined operating model."),
