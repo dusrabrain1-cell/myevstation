@@ -4,11 +4,11 @@ import { pageSocialMetadata } from "@/lib/page-social-metadata";
 import BusinessModelContent from "./BusinessModelContent";
 
 export const metadata: Metadata = {
-  title: "EV Charging Station Business Model in India | MyEVStation",
-  description: "Compare EV charging station business models in India, including investment, revenue sharing, operating responsibilities and options for landowners, investors, housing societies and ex-servicemen.",
+  title: "EV Charging Station Business Model in India: Investment & Revenue | MyEVStation",
+  description: "Explore EV charging station business models in India: owner-funded stations, host-location partnerships, revenue sharing, site requirements, investment costs and operating responsibilities for investors and property owners.",
   alternates: { canonical: "/business-model" },
 
-  ...pageSocialMetadata("EV Charging Station Business Model in India | MyEVStation", "Compare EV charging station business models in India, including investment, revenue sharing, operating responsibilities and options for landowners, investors, housing societies and ex-servicemen.", "/business-model"),
+  ...pageSocialMetadata("EV Charging Station Business Model in India: Investment & Revenue | MyEVStation", "Explore EV charging station business models in India: owner-funded stations, host-location partnerships, revenue sharing, site requirements, investment costs and operating responsibilities for investors and property owners.", "/business-model"),
 };
 
 export default function Page() {
