@@ -254,6 +254,18 @@ export default async function BlogArticlePage({ params }: PageProps) {
                 <Link href="/ev-charging-calculator" className="rounded-lg border border-white/50 px-5 py-3 text-sm font-bold text-white hover:bg-white/10">Estimate investment</Link>
               </div>
             </>
+          ) : (/investment|revenue|roi|business-model/.test(`${article.title} ${article.slug}`.toLowerCase()) ? (
+            <>
+              <h2 className="text-2xl font-extrabold">Assess your EV charging station investment before you commit</h2>
+              <p className="mt-3 max-w-2xl text-sm leading-6 text-white/85">
+                Share your city, site type, parking access, available electrical load and investment preference. MyEVStation can review the information and discuss a site-specific feasibility assessment and itemised proposal. Costs, utilisation, revenue and payback depend on the site and are not guaranteed.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <Link href="/contact?source=investment-roi-guide" className="rounded-lg bg-white px-5 py-3 text-sm font-bold text-[#0b5a42] hover:bg-cream">Request an investment assessment</Link>
+                <Link href="/ev-charging-calculator" className="rounded-lg border border-white/50 px-5 py-3 text-sm font-bold text-white hover:bg-white/10">Estimate your project</Link>
+                <Link href="/business-model" className="rounded-lg border border-white/50 px-5 py-3 text-sm font-bold text-white hover:bg-white/10">Compare business models</Link>
+              </div>
+            </>
           ) : (
             <>
               <h2 className="text-2xl font-extrabold">Planning an EV charging station?</h2>
