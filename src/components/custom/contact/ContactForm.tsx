@@ -35,7 +35,7 @@ export function ContactForm({
     setOpening(true);
     // Preserve attribution from links such as /contact?source=franchise-guide.
     const querySource = new URLSearchParams(window.location.search).get("source");
-    const leadSource = source || values.source || querySource || "website_contact_form";
+    const leadSource = querySource || source || values.source || "website_contact_form";
     const message = [
       "Hello MyEVStation, I would like to enquire about EV charging.",
       "",
