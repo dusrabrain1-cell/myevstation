@@ -58,6 +58,13 @@ export function ContactForm({
         page_path: `${window.location.pathname}${window.location.search}`,
         page_title: document.title,
       };
+      // Count a completed, valid enquiry as a lead before handing the visitor to WhatsApp.
+      // The WhatsApp event remains separate so the team can distinguish lead intent from contact clicks.
+      window.gtag("event", "generate_lead", {
+        ...eventParams,
+        lead_method: "whatsapp_form",
+        lead_source: source || values.source || "website_contact_form",
+      });
       window.gtag("event", "contact_cta_click", eventParams);
       window.gtag("event", "whatsapp_click", {
         ...eventParams,
