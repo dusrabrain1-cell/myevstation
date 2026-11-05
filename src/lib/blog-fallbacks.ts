@@ -1303,15 +1303,15 @@ export const blogSixteenSlug = "ev-charging-station-for-office-buildings-india";
 
 export const blogSixteen = {
   _id: "static-blog-ev-charging-office-buildings",
-  title: "EV Chargers for Offices & Coworking Spaces in India: Installation Guide",
+  title: "EV Chargers for Offices & Coworking Spaces in India: Setup Guide",
   slug: blogSixteenSlug,
   excerpt: "Planning EV charger installation for an office, coworking space or government building in India? Assess workplace demand, employee and visitor parking, electrical load, permissions, installation costs and charging-operator models before choosing a solution.",
   author: "MyEVStation Editorial Team",
   categories: ["Office Buildings", "EV Charging Infrastructure"],
   publishedAt: "2026-10-20T00:00:00.000Z",
   seo: {
-    metaTitle: "Office EV Charging in India: Installation, Cost & Coworking | MyEVStation",
-    metaDescription: "Plan EV charging for offices, coworking spaces and government buildings in India. Compare workplace charger installation, parking, electrical load, site permissions, costs and operator models."
+    metaTitle: "EV Charger for Offices & Coworking Spaces India | MyEVStation",
+    metaDescription: "Plan EV charging points for offices, coworking spaces and government buildings in India. Compare installation, electrical load, parking, costs and operator options."
   },
   body: [
     paragraph("EV charger installation for an office building in India can serve employees, visitors, tenants and company fleets while vehicles remain parked during the workday. Office campuses, coworking spaces and government buildings should begin with workplace charging demand, parking access, electrical capacity, building permissions and a clearly defined operating model."),
@@ -1329,6 +1329,9 @@ export const blogSixteen = {
     heading("EV chargers for coworking spaces and government buildings"),
     paragraph("Government offices, public-sector campuses and coworking spaces can assess workplace EV charging for employees, authorised visitors, tenants and service fleets. The planning process should identify the department or property manager authorised to approve the project, the parking areas available for charging, user access rules and the process for procurement or operator selection. Applicable procurement, electrical and building requirements should be confirmed with the responsible authority; requirements can differ between properties."),
     paragraph("Coworking operators may need to coordinate with landlords, facility managers and multiple tenant groups. A pilot with clearly allocated bays, access hours, billing rules and usage reporting can help establish actual demand before expanding. For government or multi-tenant sites, document responsibility for electricity charges, equipment ownership, maintenance, safety and public access before installation."),
+    heading("How to install EV charging points in an office building"),
+    paragraph("A practical office EV charging installation starts with written property approval, a parking and user-demand review, and an electrical feasibility assessment. The site team should confirm sanctioned load, existing peak demand, cable routes, distribution panels, protection, earthing, metering and any utility connection upgrade before selecting charger capacity. Next, compare an owner-funded installation with a managed charging operator or host-site partnership, then agree who pays for equipment, electricity, maintenance and software. Complete testing and commissioning with qualified professionals, publish clear access and billing rules, and monitor usage during an initial pilot."),
+    paragraph("Commercial building EV charging infrastructure should be planned around the people using the property. Offices may prioritise employee parking during working hours, coworking spaces may need member and visitor access, while government buildings may have additional approval and procurement procedures. A single charger configuration will not suit every building; design the installation around dwell time, vehicle compatibility, electrical capacity and the authorised operating model."),
     heading("Start with employee and visitor demand"),
     paragraph("Before choosing chargers, estimate how many employees and visitors may use them, how long vehicles remain parked, typical arrival and departure times, and whether vehicles need a full charge or a partial top-up during the workday."),
     bullet("Survey employees and tenants about vehicle types, charging needs and expected frequency of use."),
