@@ -93,15 +93,15 @@ export const blogTwoSlug = "how-to-start-ev-charging-station-business-india";
 
 export const blogTwo = {
   _id: "static-blog-start-ev-charging",
-  title: "How to Start an EV Charging Station Business in India: 10 Practical Steps",
+  title: "How to Start an EV Charging Station Business in India: Cost, Setup & 10 Steps",
   slug: blogTwoSlug,
   excerpt: "A practical guide to starting an EV charging station business in India: choose an operating model, assess demand, check electricity capacity, select chargers, estimate costs, complete site work and plan operations.",
   author: "MyEVStation Editorial Team",
   categories: ["EV Charging Business", "Startup Guide"],
   publishedAt: "2026-10-20T00:00:00.000Z",
   seo: {
-    metaTitle: "How to Start an EV Charging Station Business: 10 Steps | MyEVStation",
-    metaDescription: "Learn how to start an EV charging station business in India in 10 steps: choose a model, assess demand, select a site and charger, check power, budget, verify permissions and plan operations.",
+    metaTitle: "How to Start an EV Charging Station Business in India | MyEVStation",
+    metaDescription: "Learn how to start an EV charging station business in India. Compare business models, site requirements, charger costs, electrical setup, investment planning and the steps to launch.",
   },
   body: [
     paragraph("Starting an EV charging station business in India requires more than choosing a charger and finding a parking space. You need to assess customer demand, electrical feasibility, site access, investment costs, operating expenses and the business model that will support the installation."),
@@ -153,6 +153,13 @@ export const blogTwo = {
     paragraph("A station’s performance depends on reliable service as well as location and equipment. Define who is responsible for customer complaints, refunds, repairs and emergency response."),
     heading("Step 10: Review the proposal before investing"),
     paragraph("Check the supplier or operator’s track record, written scope of work, equipment warranty, service-level commitments, commercial assumptions and references. Clarify who owns the customer relationship and charging data, how revenue is reconciled and what happens if the site or partnership is discontinued."),
+    heading("How to get an EV charging station project assessed"),
+    paragraph("Before purchasing a charger, prepare a short site brief so the project can be assessed on its actual requirements. Include the city and exact site type, whether you own or control the property, available parking bays, operating hours, likely vehicle users and any known sanctioned electrical load."),
+    bullet("Property owners: share the site address or map pin, parking layout and permission status."),
+    bullet("Investors or operators: explain your proposed investment range, preferred business model and who will manage day-to-day operations."),
+    bullet("Societies, offices and commercial facilities: identify the facility decision-maker, user access rules and expected parking duration."),
+    paragraph("A site review should establish technical feasibility, indicative equipment and installation scope, cost heads, operating responsibilities and proposed commercial terms. No fixed return or utilisation level should be assumed before demand is validated."),
+    paragraph("To discuss a site-specific assessment, use https://www.myevstation.co.in/contact?source=start-business-guide. You can also compare operating options at https://www.myevstation.co.in/business-model and review indicative assumptions with https://www.myevstation.co.in/ev-charging-calculator."),
     paragraph("MyEVStation provides information about EV charging business models and site discussions. Explore https://www.myevstation.co.in/business-model or contact https://www.myevstation.co.in/contact to discuss your requirements."),
     heading("Frequently asked questions"),
     paragraph("How much does it cost to start an EV charging station? There is no single cost for every project. Charger type, electrical upgrades, site work, software and recurring costs all affect the budget."),
