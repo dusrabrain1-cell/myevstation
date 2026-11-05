@@ -858,7 +858,7 @@ export const blogEleven = {
   categories: ["Installation Cost", "AC vs DC", "Maintenance"],
   publishedAt: "2026-10-20T00:00:00.000Z",
   seo: {
-    metaTitle: "EV Charger Installation Cost in India: AC vs DC | MyEVStation",
+    metaTitle: "EV Charger Installation Cost in India: AC vs DC & Electrical Work | MyEVStation",
     metaDescription: "Compare EV charger installation requirements in India: AC vs DC, cabling, panels, electrical upgrades, civil work and commissioning. Request a site-specific installation quote.",
   },
   body: [
@@ -926,6 +926,9 @@ export const blogEleven = {
     paragraph("How do I know the right charger size? Base the choice on vehicle compatibility, dwell time, expected energy demand, available electrical capacity and project economics—not just maximum charging speed."),
     heading("Conclusion"),
     paragraph("A reliable installation budget includes the charger, electrical infrastructure, civil work, commissioning and ongoing operating costs. The best way to avoid surprises is to assess the site first, compare itemised quotations and document the scope, exclusions and maintenance responsibilities."),
+    heading("Request an EV charger installation assessment"),
+    paragraph("Planning an AC or DC charger at an office, housing society, commercial property, fleet facility or other site? Share your city, site type, preferred charger type (if known), number of parking bays and available electrical load. MyEVStation can review the requirement and discuss the next steps for a site-specific installation assessment. The final scope and price depend on the site survey, equipment specification and electrical work required."),
+    paragraph("Start your enquiry at https://www.myevstation.co.in/contact?source=installation-cost-guide and include any existing electrical drawings or charger specifications if available."),
     paragraph("Disclaimer: This article is for general informational purposes only and is not financial, legal or electrical advice. Costs and requirements vary by equipment and site. Confirm the design, permissions, current quotations and safety requirements with qualified professionals before proceeding."),
   ] as unknown as PortableTextBlock[],
 };
