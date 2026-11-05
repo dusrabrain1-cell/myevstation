@@ -168,7 +168,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
               <div className="mb-4 flex flex-wrap gap-2">
                 {article.categories.map((category) => (
                   <span key={category} className="rounded-full bg-mission-soft px-3 py-1 text-xs font-bold text-mission">{category}</span>
-              )}
+                ))}
               </div>
             ) : null}
             <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-ink sm:text-4xl lg:text-5xl">{article.title}</h1>
@@ -179,7 +179,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
                 <time dateTime={article.publishedAt}>
                   Published {new Date(article.publishedAt).toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" })}
                 </time>
-          ))}
+              )}
             </div>
           </header>
 
