@@ -99,10 +99,11 @@ export default function DelhiNcrEvChargingPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-5 pb-14">
-        <div className="rounded-3xl border border-[#dce8df] bg-white p-6 sm:p-8"><p className="text-xs font-extrabold uppercase tracking-[.16em] text-[#0b7652]">Planning resources</p><h2 className="mt-2 text-2xl font-black">Continue planning with MyEVStation</h2><div className="mt-5 grid gap-3 sm:grid-cols-3">
+        <div className="rounded-3xl border border-[#dce8df] bg-white p-6 sm:p-8"><p className="text-xs font-extrabold uppercase tracking-[.16em] text-[#0b7652]">Planning resources</p><h2 className="mt-2 text-2xl font-black">Continue planning with MyEVStation</h2><div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           <Link href="/greater-noida-societies" className="rounded-xl border border-[#e0e8e1] p-4 font-bold text-[#0b5a42] hover:bg-[#f7f9f6]">Greater Noida society charging <ArrowRight size={16} className="ml-1 inline" /></Link>
           <Link href="/business-model" className="rounded-xl border border-[#e0e8e1] p-4 font-bold text-[#0b5a42] hover:bg-[#f7f9f6]">Compare business models <ArrowRight size={16} className="ml-1 inline" /></Link>
           <Link href="/ev-charging-calculator" className="rounded-xl border border-[#e0e8e1] p-4 font-bold text-[#0b5a42] hover:bg-[#f7f9f6]">EV charging cost calculator <ArrowRight size={16} className="ml-1 inline" /></Link>
+          <Link href="/blogs/blog/ev-charging-station-installation-cost-india-ac-vs-dc" className="rounded-xl border border-[#e0e8e1] p-4 font-bold text-[#0b5a42] hover:bg-[#f7f9f6]">EV charger installation cost guide <ArrowRight size={16} className="ml-1 inline" /></Link>
         </div></div>
       </section>
 
