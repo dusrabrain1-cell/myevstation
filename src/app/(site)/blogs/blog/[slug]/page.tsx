@@ -130,6 +130,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
     ? urlFor(article.coverImage).width(1400).height(800).fit("max").auto("format").url()
     : undefined;
   const articleUrl = `${SITE.url}/blogs/blog/${article.slug}`;
+  const isCommercialPropertyGuide = /mall|office|coworking|government|public-sector/.test(`${article.title} ${article.slug}`.toLowerCase());
   const breadcrumbStructuredData = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -189,6 +190,16 @@ export default async function BlogArticlePage({ params }: PageProps) {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={imageUrl} alt={article.title} className="max-h-[520px] w-full object-cover" fetchPriority="high" />
             </figure>
+          )}
+
+          {isCommercialPropertyGuide && (
+            <aside className="mt-8 flex flex-col gap-4 rounded-2xl border border-[#dce8df] bg-[#f4f8f4] p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
+              <div>
+                <h2 className="text-lg font-extrabold text-[#173d2e]">Planning EV charging for a commercial property?</h2>
+                <p className="mt-2 max-w-2xl text-sm leading-6 text-[#53665a]">Share your city, property type, parking capacity and available electrical details. MyEVStation can review the information and discuss a site-specific assessment.</p>
+              </div>
+              <Link href={`/contact?source=${encodeURIComponent(article.slug)}`} className="inline-flex shrink-0 items-center justify-center rounded-lg bg-[#0b5a42] px-5 py-3 text-sm font-bold text-white hover:bg-[#084b37]">Request site assessment</Link>
+            </aside>
           )}
 
           <div className="prose prose-lg mt-9 max-w-none prose-headings:font-extrabold prose-headings:tracking-tight prose-headings:text-ink prose-p:leading-8 prose-p:text-ink/80 prose-a:font-semibold prose-a:text-mission prose-strong:text-ink prose-li:text-ink/80 prose-blockquote:border-mission prose-blockquote:text-ink/70">
