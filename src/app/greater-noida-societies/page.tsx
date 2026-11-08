@@ -122,7 +122,7 @@ export default function GreaterNoidaSocietiesPage() {
       <section className="mx-auto max-w-7xl px-5 py-14 sm:py-20">
         <h2 className="text-3xl font-black sm:text-4xl">Charging options to evaluate</h2>
         <p className="mt-4 max-w-3xl leading-7 text-[#647067]">The best charger depends on vehicle compatibility, dwell time, parking layout and sanctioned load. Equipment price is not the same as the total installed cost.</p>
-        <div className="mt-8 grid gap-5 sm:grid-cols-3">
+        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {[
             { Icon: Bike, title: "2W / 3W charging", body: "Consider compatible low-power charging for electric scooters, e-rickshaws or delivery fleets." },
             { Icon: CarFront, title: "AC car charging", body: "For cars parked for several hours, evaluate compatible 7.4 kW, 11 kW or 22 kW AC equipment." },
@@ -152,6 +152,7 @@ export default function GreaterNoidaSocietiesPage() {
             <Link href="/ev-charging-calculator" className="rounded-xl border border-[#e0e8e1] p-4 font-bold text-[#0b5a42] hover:bg-[#f7f9f6]">Estimate charging project costs <ArrowRight size={16} className="ml-1 inline" /></Link>
             <Link href="/blogs/blog/ev-charging-stations-housing-societies-installation-permissions-revenue" className="rounded-xl border border-[#e0e8e1] p-4 font-bold text-[#0b5a42] hover:bg-[#f7f9f6]">Read the housing society installation guide <ArrowRight size={16} className="ml-1 inline" /></Link>
             <Link href="/business-model" className="rounded-xl border border-[#e0e8e1] p-4 font-bold text-[#0b5a42] hover:bg-[#f7f9f6]">Compare EV charging business models <ArrowRight size={16} className="ml-1 inline" /></Link>
+            <Link href="/blogs/blog/ev-charging-station-installation-cost-india-ac-vs-dc" className="rounded-xl border border-[#e0e8e1] p-4 font-bold text-[#0b5a42] hover:bg-[#f7f9f6]">EV charger installation cost guide <ArrowRight size={16} className="ml-1 inline" /></Link>
           </div>
         </div>
       </section>
