@@ -10,7 +10,7 @@ export default function BusinessModelContent() {
               <div className="mx-auto max-w-7xl px-5 lg:px-8">
                 <div className="mx-auto mb-12 max-w-3xl text-center">
                   <span className="text-xs font-extrabold uppercase tracking-[.2em] text-[#d96a1b]">Choose your entry point</span>
-                  <h2 className="mt-4 text-4xl font-extrabold tracking-tight text-[#15281f] sm:text-5xl">How would you like to start?</h2>
+                  <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-[#15281f] sm:text-5xl">How would you like to start?</h1>
                   <p className="mt-4 text-base leading-7 text-[#647067]">Choose the option that describes you. The next page explains the model, costs and steps in simple language.</p>
                 </div>
                 <div className="grid items-stretch gap-5 sm:grid-cols-2 xl:grid-cols-4">
