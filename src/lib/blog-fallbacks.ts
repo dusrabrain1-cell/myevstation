@@ -410,7 +410,7 @@ export const blogSix = {
   categories: ["Business Model", "Investment", "ROI"],
   publishedAt: "2026-10-20T00:00:00.000Z",
   seo: {
-    metaTitle: "EV Charging Station Business Model: Cost & ROI in India | MyEVStation",
+    metaTitle: "EV Charging Business Model & ROI in India | MyEVStation",
     metaDescription: "Explore EV charging station business models in India, investment costs, charging revenue and operating expenses. Compare owner-funded, franchise and site-host options before requesting a site feasibility assessment."
   },
   body: [
@@ -520,7 +520,7 @@ export const blogSeven = {
   categories: ["Franchise", "Partnerships", "EV Business"],
   publishedAt: "2026-10-20T00:00:00.000Z",
   seo: {
-    metaTitle: "EV Charging Station Franchise in India: Cost & Apply | MyEVStation",
+    metaTitle: "EV Charging Franchise in India: Cost & Apply | MyEVStation",
     metaDescription: "Compare EV charging station franchise and operator models in India. Understand investment components, site eligibility, revenue sharing, operating costs and application steps before requesting a proposal.",
   },
   body: [
@@ -1325,7 +1325,7 @@ export const blogSixteen = {
   categories: ["Office Buildings", "EV Charging Infrastructure"],
   publishedAt: "2026-10-20T00:00:00.000Z",
   seo: {
-    metaTitle: "EV Charger for Coworking Spaces & Offices in India | MyEVStation",
+    metaTitle: "EV Chargers for Offices & Coworking in India | MyEVStation",
     metaDescription: "Planning an EV charger for a coworking space or office? Assess member and employee demand, parking, electrical capacity, installation costs and operator options in India."
   },
   body: [
@@ -1643,7 +1643,7 @@ export const blogNineteen = {
   categories: ["Commercial EV Charging", "Retail & Malls"],
   publishedAt: "2026-10-20T00:00:00.000Z",
   seo: {
-    metaTitle: "EV Charger for Mall in India: Cost, Installation & Business Model | MyEVStation",
+    metaTitle: "EV Chargers for Malls: Cost & Setup in India | MyEVStation",
     metaDescription: "Need an EV charger for a mall in India? Compare AC and DC charging, installation costs, electrical capacity and operator partnerships. Request a site assessment for your shopping mall or retail centre.",
   },
   body: [
@@ -3281,7 +3281,7 @@ export const blogThirtyFour = {
   categories: ["EV Charging Infrastructure", "Government & Public Sector"],
   publishedAt: "2026-10-26T00:00:00.000Z",
   seo: {
-    metaTitle: "EV Charging Stations for Government Buildings in India | MyEVStation",
+    metaTitle: "EV Charging for Government Buildings in India | MyEVStation",
     metaDescription: "Planning EV charging at a government office or public-sector building in India? Review site feasibility, AC and DC charger selection, electrical capacity, procurement, safety and operations."
   },
   body: [
