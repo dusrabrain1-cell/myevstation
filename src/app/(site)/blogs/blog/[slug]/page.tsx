@@ -96,6 +96,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const imageUrl = imageSource?.asset?._ref
     ? urlFor(imageSource).width(1200).height(630).fit("crop").auto("format").url()
     : undefined;
+  const socialImageUrl = imageUrl || "/myevstation-hero-banner.jpeg";
   const canonical = `/blogs/blog/${article.slug}`;
 
   return {
@@ -109,13 +110,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       type: "article",
       ...(article.publishedAt ? { publishedTime: article.publishedAt } : {}),
       ...(article.author ? { authors: [article.author] } : {}),
-      ...(imageUrl ? { images: [{ url: imageUrl, width: 1200, height: 630, alt: article.title }] } : {}),
+      images: [{ url: socialImageUrl, width: 1200, height: 630, alt: article.title }],
     },
     twitter: {
-      card: imageUrl ? "summary_large_image" : "summary",
+      card: "summary_large_image",
       title,
       description,
-      ...(imageUrl ? { images: [imageUrl] } : {}),
+      images: [socialImageUrl],
     },
   };
 }
