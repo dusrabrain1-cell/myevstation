@@ -102,7 +102,7 @@ export default function BusinessModelContent() {
                     <p className="mt-5 border-t border-[#e8eee8] pt-4 text-xs leading-5 text-[#718075]">Illustrative calculations are not guaranteed returns. Actual costs, utilisation and profitability must be validated for each site.</p>
                   </div>
                 </div>
-                <div className="mt-12 grid gap-5 md:grid-cols-3">
+                <div className="mt-12 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
                   <article className="rounded-2xl border border-[#e0e8e1] bg-white p-6">
                     <h3 className="font-extrabold text-[#172d21]">I own land or parking space</h3>
                     <p className="mt-2 text-sm leading-6 text-[#647067]">Understand site suitability, host responsibilities and possible commercial structures.</p>
@@ -117,6 +117,11 @@ export default function BusinessModelContent() {
                     <h3 className="font-extrabold text-[#172d21]">I represent a society or RWA</h3>
                     <p className="mt-2 text-sm leading-6 text-[#647067]">Assess resident demand, electrical capacity, installation scope and billing arrangements.</p>
                     <Link href="/society" className="mt-4 inline-flex items-center gap-2 text-sm font-extrabold text-[#0b5a42]">Society charging <ArrowRight size={15}/></Link>
+                  </article>
+                  <article className="rounded-2xl border border-[#e0e8e1] bg-white p-6">
+                    <h3 className="font-extrabold text-[#172d21]">Comparing franchise options?</h3>
+                    <p className="mt-2 text-sm leading-6 text-[#647067]">Understand franchise, dealership and host-site partnerships, costs, contract checks and how to apply before committing funds.</p>
+                    <Link href="/blogs/blog/ev-charging-station-franchise-india-costs-partnerships" className="mt-4 inline-flex items-center gap-2 text-sm font-extrabold text-[#0b5a42]">Read franchise guide <ArrowRight size={15}/></Link>
                   </article>
                 </div>
                 <div className="mt-8 rounded-3xl bg-[#102f25] px-6 py-8 text-white sm:flex sm:items-center sm:justify-between sm:gap-8 sm:px-9">
