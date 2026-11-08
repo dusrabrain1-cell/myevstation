@@ -65,7 +65,7 @@ export default function CalculatorClient() {
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <div className="mx-auto mb-10 max-w-4xl text-center">
             <span className="text-xs font-extrabold uppercase tracking-[.2em] text-[#d96a1b]">Plan your investment</span>
-            <h2 className="mt-4 text-4xl font-extrabold tracking-tight text-[#15281f] sm:text-5xl">Calculate your EV station plan.</h2>
+            <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-[#15281f] sm:text-5xl">Calculate your EV station plan.</h1>
             <p className="mx-auto mt-5 max-w-3xl leading-7 text-[#647067]">Select your land situation, package and charger type. The calculator uses the supplied package economics and charger quotation where available, then shows which assumptions drive the result.</p>
             <div className="mx-auto mt-7 max-w-3xl rounded-2xl border border-[#dce8dd] bg-[#f4f8f3] p-5 text-left">
               <div className="flex items-center gap-3"><span className="grid h-11 w-11 place-items-center rounded-xl bg-white text-[#0b7652]"><Calculator size={23}/></span><div><b className="block text-sm">Transparent planning estimate</b><p className="mt-1 text-xs leading-5 text-[#68746b]">Not a quotation, guaranteed income or investment advice.</p></div></div>
