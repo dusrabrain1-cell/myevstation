@@ -7,8 +7,8 @@ import { whatsappHref } from "@/lib/constants";
 import { ArrowRight, MapPin, Building2, CheckCircle2, CarFront, Truck, ClipboardCheck, Store } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "EV Charging Station in Punjab | City-Wise Site Opportunities",
-  description: "Looking for an EV charging station in Punjab or planning to set one up? Explore city-wise opportunities in Amritsar, Ludhiana, Jalandhar, Mohali and more. Assess sites, power feasibility and business models with MyEVStation.",
+  title: "EV Charging Stations in Punjab | Setup & Site Assessment",
+  description: "Planning to set up an EV charging station in Punjab? Explore site opportunities in Amritsar, Ludhiana, Jalandhar, Mohali and more. Discuss site assessment, power feasibility and EV charging business options with MyEVStation.",
   alternates: { canonical: "/punjab-ev-charging" },
   keywords: [
     "EV charging station in Punjab",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     "EV charging station franchise Punjab",
   ],
 
-  ...pageSocialMetadata("EV Charging Station in Punjab | City-Wise Site Opportunities", "Looking for an EV charging station in Punjab or planning to set one up? Explore city-wise opportunities in Amritsar, Ludhiana, Jalandhar, Mohali and more. Assess sites, power feasibility and business models with MyEVStation.", "/punjab-ev-charging"),
+  ...pageSocialMetadata("EV Charging Stations in Punjab | Setup & Site Assessment", "Planning to set up an EV charging station in Punjab? Explore site opportunities in Amritsar, Ludhiana, Jalandhar, Mohali and more. Discuss site assessment, power feasibility and EV charging business options with MyEVStation.", "/punjab-ev-charging"),
 };
 
 const cityGroups = [
