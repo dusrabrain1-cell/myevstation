@@ -177,15 +177,15 @@ export const blogThreeSlug = "ev-charging-station-investment-cost-india";
 
 export const blogThree = {
   _id: "static-blog-ev-charging-investment-cost",
-  title: "EV Charging Station Setup Cost in India: Complete Investment Breakdown",
+  title: "EV Charging Station Cost in India: Installation, Setup & Investment Breakdown",
   slug: blogThreeSlug,
-  excerpt: "Understand the cost of setting up an EV charging station in India, including charger prices, electrical upgrades, installation, civil work, software, operating expenses and working capital.",
+  excerpt: "Planning an EV charging station in India? Understand charger and installation costs, electrical connection upgrades, civil work, commissioning, software fees and ongoing expenses before requesting a site-specific quote.",
   author: "MyEVStation Editorial Team",
   categories: ["Investment Cost", "EV Charging Business"],
   publishedAt: "2026-10-20T00:00:00.000Z",
   seo: {
-    metaTitle: "EV Charging Station Cost in India: Setup & Investment Breakdown | MyEVStation",
-    metaDescription: "Planning an EV charging station in India? Break down charger price, electrical connection, civil work, installation, software and operating costs before requesting a site-specific quote.",
+    metaTitle: "EV Charging Station Installation Cost in India: Setup Guide | MyEVStation",
+    metaDescription: "Understand EV charging station installation cost in India, including AC/DC charger equipment, electrical upgrades, cabling, civil work and commissioning. Get a site-specific cost assessment from MyEVStation.",
   },
   body: [
     paragraph("The cost of setting up an EV charging station in India depends on much more than the charger purchase price. Your total project budget may include charging equipment, electrical infrastructure, installation, civil work, software, commissioning, ongoing operations and working capital. This guide explains the main cost components to assess before requesting quotations or investing."),
@@ -244,6 +244,10 @@ export const blogThree = {
     paragraph("What costs are often overlooked? Electrical upgrades, civil work, recurring platform fees, rent, maintenance, downtime and working capital can be missed if a budget focuses only on the charger."),
     paragraph("Can I rely on advertised monthly revenue or payback? Treat claims as assumptions until supported by transparent data for comparable sites. Actual performance can vary materially."),
     paragraph("Should I include a government subsidy in my calculations? Only after checking current official guidelines and confirming that the specific project and applicant meet the eligibility conditions."),
+    paragraph("What is included in EV charger installation cost? A complete installation quote may cover mounting or foundations, cable routing or trenching, electrical panels and protection, earthing, testing, commissioning, parking markings and signage. Confirm each item in writing because some suppliers quote equipment separately from installation."),
+    paragraph("How much does it cost to install an electric car charger at a home or commercial property? The scope can be very different. A home installation may use an existing suitable electrical connection, while a commercial or public charging site may need higher sanctioned load, multiple charging points, additional protection, civil work or a connection upgrade. A qualified site assessment is needed before a reliable estimate can be given."),
+    paragraph("Is AC or DC charger installation more expensive? DC fast-charging projects can involve higher-rated equipment and more demanding electrical infrastructure. AC installations may be more suitable where vehicles stay parked longer. The right comparison is the complete installed project cost and expected customer use—not the charger price alone."),
+    paragraph("For a detailed breakdown of installation work and AC-versus-DC considerations, read the MyEVStation guide to EV charging station installation cost: https://www.myevstation.co.in/blogs/blog/ev-charging-station-installation-cost-india-ac-vs-dc. To test your own planning assumptions, use the EV Charging Calculator: https://www.myevstation.co.in/ev-charging-calculator."),
     heading("Conclusion"),
     paragraph("A sound EV charging investment budget includes equipment, electrical work, installation, site preparation, recurring expenses and a reserve for working capital. Validate the site, obtain comparable written quotations and stress-test the financial model before committing funds."),
     paragraph("Disclaimer: This article is for general informational purposes and is not financial, legal or electrical advice. Costs, rules and project requirements can change; confirm current details with qualified professionals and relevant authorities."),
