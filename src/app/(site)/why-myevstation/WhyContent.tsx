@@ -13,7 +13,7 @@ export default function WhyContent() {
                     <div className="absolute -right-16 -top-16 h-64 w-64 rounded-full border border-white/10"/><div className="absolute -right-4 -top-4 h-44 w-44 rounded-full border border-white/10"/>
                     <div className="relative">
                       <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-[10px] font-extrabold uppercase tracking-[.18em] text-[#ffc18f]"><Flag size={13}/> Why MyEVStation</span>
-                      <h2 className="mt-6 text-3xl font-black leading-[1.08] tracking-tight sm:text-4xl">Aircraft-level discipline.<br/><span className="text-[#ff9a4a]">A new mission for EV infrastructure.</span></h2>
+                      <h1 className="mt-6 text-3xl font-black leading-[1.08] tracking-tight sm:text-4xl">Aircraft-level discipline.<br/><span className="text-[#ff9a4a]">A new mission for EV infrastructure.</span></h1>
                       <p className="mt-5 max-w-xl text-sm leading-7 text-white/75 sm:text-base">Founded by ex-Indian Air Force professionals, MyEVStation brings a safety-first mindset shaped by nearly four decades of aircraft maintenance and technical experience to India’s evolving EV ecosystem.</p>
                     </div>
                     <div className="relative mt-8 rounded-2xl border border-white/15 bg-white/[.07] p-5">
