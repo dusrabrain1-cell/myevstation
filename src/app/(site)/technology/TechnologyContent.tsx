@@ -10,7 +10,7 @@ export default function TechnologyContent() {
               <div className="mx-auto max-w-7xl px-5 lg:px-8">
                 <div className="max-w-3xl">
                   <span className="text-xs font-extrabold uppercase tracking-[.2em] text-[#ffb181]">Technology &amp; safety</span>
-                  <h2 className="mt-4 text-4xl font-extrabold tracking-tight sm:text-5xl">Two technology layers. One safer EV ecosystem.</h2>
+                  <h1 className="mt-4 text-4xl font-extrabold tracking-tight sm:text-5xl">Two technology layers. One safer EV ecosystem.</h1>
                   <p className="mt-5 leading-7 text-white/70">MyEVStation brings together EV charging infrastructure and a connected AI-enabled battery diagnostics approach—helping operators plan charging access while adding visibility into battery condition and charging-system performance.</p>
                 </div>
                 <div className="mt-10 grid gap-5 lg:grid-cols-2">
