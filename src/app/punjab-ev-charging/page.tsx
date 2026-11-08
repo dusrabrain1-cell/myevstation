@@ -129,6 +129,8 @@ export default function PunjabEvChargingPage() {
             <Link href="/jalandhar-ev-charging" className="rounded-xl border border-[#e0e8e1] p-4 font-bold text-[#0b5a42] hover:bg-[#f7f9f6]">EV charging in Jalandhar <ArrowRight size={16} className="ml-1 inline" /></Link>
             <Link href="/ev-charging-calculator" className="rounded-xl border border-[#e0e8e1] p-4 font-bold text-[#0b5a42] hover:bg-[#f7f9f6]">EV charging investment calculator <ArrowRight size={16} className="ml-1 inline" /></Link>
             <Link href="/business-model" className="rounded-xl border border-[#e0e8e1] p-4 font-bold text-[#0b5a42] hover:bg-[#f7f9f6]">Explore the business model <ArrowRight size={16} className="ml-1 inline" /></Link>
+            <Link href="/blogs/blog/ev-charging-station-installation-cost-india-ac-vs-dc" className="rounded-xl border border-[#e0e8e1] p-4 font-bold text-[#0b5a42] hover:bg-[#f7f9f6]">EV charger installation cost guide <ArrowRight size={16} className="ml-1 inline" /></Link>
+            <Link href="/blogs/blog/ev-charging-station-investment-cost-india" className="rounded-xl border border-[#e0e8e1] p-4 font-bold text-[#0b5a42] hover:bg-[#f7f9f6]">Full EV station investment breakdown <ArrowRight size={16} className="ml-1 inline" /></Link>
           </div>
         </div>
       </section>
