@@ -220,10 +220,18 @@ export default async function BlogArticlePage({ params }: PageProps) {
                 ? [{ href: "/without-land", label: "Explore an EV charging business without owning land" }, { href: "/with-land", label: "Partner with a property for EV charging" }, { href: "/ex-servicemen", label: "Explore ex-servicemen opportunities" }]
                 : []),
               ...( /invest|business|cost|roi|calculator|franchise|channel partner/.test(topic)
-                ? [{ href: "/ev-charging-calculator", label: "Estimate your EV charging plan" }, { href: "/business-model", label: "Compare business models" }, { href: "/with-land", label: "Host a charging station at your property" }, { href: "/without-land", label: "Explore options without owning land" }]
+                ? [
+                    { href: "/ev-charging-calculator", label: "Estimate your EV charging plan" },
+                    ...(article.slug !== "ev-charging-station-business-model-investment-revenue-roi"
+                      ? [{ href: "/blogs/blog/ev-charging-station-business-model-investment-revenue-roi", label: "Understand EV charging revenue and ROI" }]
+                      : []),
+                    { href: "/business-model", label: "Compare business models" },
+                    { href: "/with-land", label: "Host a charging station at your property" },
+                    { href: "/without-land", label: "Explore options without owning land" },
+                  ]
                 : []),
               { href: "/contact", label: "Discuss your site or partnership" },
-            ].filter((link, index, all) => all.findIndex((item) => item.href === link.href) === index).slice(0, 4);
+            ].filter((link, index, all) => all.findIndex((item) => item.href === link.href) === index).slice(0, 5);
 
             return (
               <nav aria-label="Related MyEVStation resources" className="mt-10 rounded-2xl border border-line bg-white p-6">
