@@ -102,7 +102,7 @@ export default function BusinessModelContent() {
                     <p className="mt-5 border-t border-[#e8eee8] pt-4 text-xs leading-5 text-[#718075]">Illustrative calculations are not guaranteed returns. Actual costs, utilisation and profitability must be validated for each site.</p>
                   </div>
                 </div>
-                <div className="mt-12 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+                <div className="mt-12 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
                   <article className="rounded-2xl border border-[#e0e8e1] bg-white p-6">
                     <h3 className="font-extrabold text-[#172d21]">I own land or parking space</h3>
                     <p className="mt-2 text-sm leading-6 text-[#647067]">Understand site suitability, host responsibilities and possible commercial structures.</p>
@@ -117,6 +117,11 @@ export default function BusinessModelContent() {
                     <h3 className="font-extrabold text-[#172d21]">I represent a society or RWA</h3>
                     <p className="mt-2 text-sm leading-6 text-[#647067]">Assess resident demand, electrical capacity, installation scope and billing arrangements.</p>
                     <Link href="/society" className="mt-4 inline-flex items-center gap-2 text-sm font-extrabold text-[#0b5a42]">Society charging <ArrowRight size={15}/></Link>
+                  </article>
+                  <article className="rounded-2xl border border-[#e0e8e1] bg-white p-6">
+                    <h3 className="font-extrabold text-[#172d21]">I manage a mall or retail property</h3>
+                    <p className="mt-2 text-sm leading-6 text-[#647067]">Review visitor parking, dwell time, electrical capacity and operator models before planning EV charging for a shopping destination.</p>
+                    <Link href="/blogs/blog/ev-charging-stations-shopping-malls-retail-centres-india" className="mt-4 inline-flex items-center gap-2 text-sm font-extrabold text-[#0b5a42]">Read mall charging guide <ArrowRight size={15}/></Link>
                   </article>
                   <article className="rounded-2xl border border-[#e0e8e1] bg-white p-6">
                     <h3 className="font-extrabold text-[#172d21]">Comparing franchise options?</h3>
