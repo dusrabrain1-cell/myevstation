@@ -17,6 +17,7 @@ const PARTNER_LINKS = [
   { label: "Have land or a site?", href: "/with-land" },
   { label: "Housing societies", href: "/society" },
   { label: "Ex-servicemen opportunity", href: "/ex-servicemen" },
+  { label: "EV charging franchise guide", href: "/blogs/blog/ev-charging-station-franchise-india-costs-partnerships" },
   { label: "Punjab EV charging", href: "/punjab-ev-charging" },
   { label: "Amritsar EV charging", href: "/amritsar-ev-charging" },
   { label: "Greater Noida societies", href: "/greater-noida-societies" },
