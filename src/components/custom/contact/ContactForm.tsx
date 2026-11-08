@@ -70,8 +70,8 @@ export function ContactForm({
       page_title: document.title,
     };
 
-    // A valid form submission is the lead action; WhatsApp handoff is tracked separately.
-    window.gtag("event", "generate_lead", eventParams);
+    // Track the validated form separately from a confirmed lead: the visitor still needs to send the pre-filled WhatsApp message.
+    window.gtag("event", "contact_form_submit", eventParams);
     window.gtag("event", "contact_cta_click", eventParams);
     window.gtag("event", "whatsapp_click", {
       ...eventParams,
