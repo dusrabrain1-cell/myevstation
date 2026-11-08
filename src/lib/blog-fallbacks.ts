@@ -410,8 +410,8 @@ export const blogSix = {
   categories: ["Business Model", "Investment", "ROI"],
   publishedAt: "2026-10-20T00:00:00.000Z",
   seo: {
-    metaTitle: "EV Charging Station Business Model in India: Cost, Revenue & ROI | MyEVStation",
-    metaDescription: "Understand EV charging station business models in India, setup cost, charging revenue, operating expenses and ROI. Compare ownership, franchise and site-host options, then request a site-specific feasibility assessment."
+    metaTitle: "EV Charging Station Business Model: Cost & ROI in India | MyEVStation",
+    metaDescription: "Explore EV charging station business models in India, investment costs, charging revenue and operating expenses. Compare owner-funded, franchise and site-host options before requesting a site feasibility assessment."
   },
   body: [
     paragraph("An EV charging station can be structured in different ways: an investor may own the equipment, a property owner may host it, or a charging operator may manage the technology and customer experience. The commercial result depends on the agreement, site demand, charger utilisation, electricity costs and other expenses—not simply on installing a charger."),
@@ -520,8 +520,8 @@ export const blogSeven = {
   categories: ["Franchise", "Partnerships", "EV Business"],
   publishedAt: "2026-10-20T00:00:00.000Z",
   seo: {
-    metaTitle: "EV Charging Station Franchise in India: Cost & Apply Online | MyEVStation",
-    metaDescription: "Looking for an EV charging station franchise in India? Compare franchise, dealership and operator models, costs, site requirements and how to apply. Request a site-specific proposal before investing.",
+    metaTitle: "EV Charging Station Franchise in India: Cost & Apply | MyEVStation",
+    metaDescription: "Compare EV charging station franchise and operator models in India. Understand investment components, site eligibility, revenue sharing, operating costs and application steps before requesting a proposal.",
   },
   body: [
     paragraph("If you are looking for an EV charging station franchise in India, first establish whether the provider is offering a genuine franchise, an equipment dealership, a site-hosting arrangement or an operator partnership. These models have different costs, responsibilities and commercial rights. Compare the written offer—not just the franchise label—before deciding."),
@@ -1325,11 +1325,11 @@ export const blogSixteen = {
   categories: ["Office Buildings", "EV Charging Infrastructure"],
   publishedAt: "2026-10-20T00:00:00.000Z",
   seo: {
-    metaTitle: "EV Charger for Offices & Coworking Spaces in India | MyEVStation",
-    metaDescription: "Plan EV charging points for offices and coworking spaces in India. Compare workplace charging demand, parking, electrical load, installation costs and operator options."
+    metaTitle: "EV Charger for Coworking Spaces & Offices in India | MyEVStation",
+    metaDescription: "Planning an EV charger for a coworking space or office? Assess member and employee demand, parking, electrical capacity, installation costs and operator options in India."
   },
   body: [
-    paragraph("EV charger installation for an office building in India can serve employees, visitors, tenants and company fleets while vehicles remain parked during the workday. Office campuses, coworking spaces and government buildings should begin with workplace charging demand, parking access, electrical capacity, building permissions and a clearly defined operating model."),
+    paragraph("EV charger installation for an office building in India can serve employees, visitors, tenants and company fleets while vehicles remain parked during the workday. Office campuses and coworking spaces should begin with workplace charging demand, parking access, electrical capacity, building permissions and a clearly defined operating model."),
     paragraph("This workplace EV charging guide explains how office owners, facility managers, commercial landlords, coworking operators and authorised government property teams can assess a project before buying equipment or signing an operator agreement. Requirements, project costs and results vary, so use a site-specific assessment rather than a generic estimate."),
     heading("EV charger for a coworking space: what should operators plan?"),
     paragraph("A coworking space may serve members, day visitors, staff and tenants who park for different lengths of time. Before installing EV chargers, check whether parking is controlled by the coworking operator or landlord, whether charging bays can be allocated to members and visitors, and how access will work during busy hours. A practical pilot can begin with a small number of bays, clear booking or first-come rules, usage reporting and a defined process for billing and support."),
@@ -1409,12 +1409,12 @@ export const blogSixteen = {
     bullet("7. Pilot the installation, measure usage and resolve operational issues."),
     bullet("8. Expand only when observed demand and site capacity support it."),
     heading("How MyEVStation can help"),
-    paragraph("MyEVStation helps commercial property owners and facility teams explore EV charging infrastructure, site planning and operating models. If you manage an office, coworking space or authorised government property, share the city, parking capacity, intended users and available electrical details to discuss a site-specific assessment. Installation scope, costs and commercial terms depend on the property and are not guaranteed."),
-    paragraph("Explore the MyEVStation Business Model at https://www.myevstation.co.in/business-model, review planning assumptions at https://www.myevstation.co.in/ev-charging-calculator, or request an office-site discussion at https://www.myevstation.co.in/contact?source=office-workplace-charging-guide."),
+    paragraph("MyEVStation helps commercial property owners and facility teams explore EV charging infrastructure, site planning and operating models. If you manage an office or coworking space, share the city, parking capacity, intended users and available electrical details to discuss a site-specific assessment. For government offices and public-sector campuses, see our dedicated government-building EV charging planning guide. Installation scope, costs and commercial terms depend on the property and are not guaranteed."),
+    paragraph("Explore the MyEVStation Business Model at https://www.myevstation.co.in/business-model, review planning assumptions at https://www.myevstation.co.in/ev-charging-calculator, read the dedicated guide to EV charging at government buildings at https://www.myevstation.co.in/blogs/blog/ev-charging-stations-government-buildings-public-sector-offices-india, or request an office-site discussion at https://www.myevstation.co.in/contact?source=office-workplace-charging-guide."),
     heading("Frequently asked questions"),
     paragraph("How does EV charging infrastructure work in commercial buildings? A commercial building typically combines compatible chargers, a suitable electrical connection and distribution system, safe cable routes and parking bays, metering or payment arrangements, and an operating or maintenance process. The final design depends on building load, vehicle demand, parking duration and permissions."),
     paragraph("What is needed to install EV chargers in an office building? Start with a demand and parking assessment, confirm permission from the property decision-maker, obtain an electrical feasibility review and compare itemised installation and operating costs."),
-    paragraph("Can EV chargers be installed at government buildings or coworking spaces? They may be suitable where the property has authorised parking, electrical capacity and an approved operating arrangement. Confirm the relevant procurement, landlord, facility-management and safety requirements before proceeding."),
+    paragraph("Can EV chargers be installed at a coworking space? They may be suitable where the property has authorised parking, electrical capacity and an approved operating arrangement. Confirm landlord, facility-management and safety requirements before proceeding. Government departments should follow the separate procurement and public-property planning requirements covered in our government-building guide."),
     paragraph("What should a coworking space check before installing EV chargers? Confirm landlord approval, member and visitor demand, parking-bay access, electrical capacity, charging hours, billing policy, maintenance responsibilities and whether the installation is owner-funded or operator-managed. Start with a measured pilot if demand is not yet established."),
     paragraph("Is workplace AC charging enough? It may be suitable when vehicles remain parked for several hours, but the decision depends on vehicle capability, energy needs, charging windows and electrical capacity."),
     paragraph("Should office charging be free for employees? That is a business and workplace policy decision. Consider electricity costs, access rules, administration and the intended employee benefit before choosing a model."),
@@ -3281,8 +3281,8 @@ export const blogThirtyFour = {
   categories: ["EV Charging Infrastructure", "Government & Public Sector"],
   publishedAt: "2026-10-26T00:00:00.000Z",
   seo: {
-    metaTitle: "EV Charging at Government Buildings in India | MyEVStation",
-    metaDescription: "Plan EV charging at government offices and public sector buildings in India. Learn site assessment, AC vs DC chargers, power planning, safety, procurement and operations."
+    metaTitle: "EV Charging Stations for Government Buildings in India | MyEVStation",
+    metaDescription: "Planning EV charging at a government office or public-sector building in India? Review site feasibility, AC and DC charger selection, electrical capacity, procurement, safety and operations."
   },
   body: [
     paragraph("Government buildings and public sector campuses can play a practical role in expanding India's electric vehicle charging infrastructure. Offices, administrative complexes, public institutions and selected public-sector facilities often have managed parking, predictable operating hours and an identifiable facilities team. These characteristics can make them suitable locations for workplace and visitor charging when demand, electrical capacity and site permissions are properly assessed."),
