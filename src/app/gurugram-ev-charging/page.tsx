@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { fitMetaDescription, fitMetaTitle } from "@/lib/seo-metadata";
 import Link from "next/link";
 import { pageSocialMetadata } from "@/lib/page-social-metadata";
 import SeoFaq from "@/components/custom/SeoFaq";
@@ -6,12 +7,12 @@ import SeoBreadcrumbJsonLd from "@/components/custom/SeoBreadcrumbJsonLd";
 import { whatsappHref } from "@/lib/constants";
 import { ArrowRight, Building2, CarFront, CheckCircle2, MapPin, Truck, Users, ClipboardCheck } from "lucide-react";
 
-const title = "EV Charging Station in Gurugram | Societies, Offices & Fleets";
-const description = "Plan EV charger installation and charging stations in Gurugram for housing societies, RWAs, offices, commercial properties, hotels and fleets. Review site access, power readiness, charger options and project costs with MyEVStation.";
+const title = fitMetaTitle("EV Charging Station in Gurugram | Societies, Offices & Fleets");
+const description = fitMetaDescription("Plan EV charger installation and charging stations in Gurugram for housing societies, RWAs, offices, commercial properties, hotels and fleets. Review site access, power readiness, charger options and project costs with MyEVStation.");
 
 export const metadata: Metadata = {
-  title,
-  description,
+  title: fitMetaTitle(title),
+  description: fitMetaDescription(description),
   alternates: { canonical: "/gurugram-ev-charging" },
   keywords: [
     "EV charging station in Gurugram",
