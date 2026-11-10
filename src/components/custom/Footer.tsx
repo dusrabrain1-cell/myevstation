@@ -19,6 +19,8 @@ const PARTNER_LINKS = [
   { label: "Housing societies", href: "/society" },
   { label: "Ex-servicemen opportunity", href: "/ex-servicemen" },
   { label: "EV charging franchise guide", href: "/blogs/blog/ev-charging-station-franchise-india-costs-partnerships" },
+  { label: "EV charging at petrol pumps", href: "/blogs/blog/ev-charging-stations-at-petrol-pumps-in-india" },
+  { label: "EV charging for car dealerships", href: "/blogs/blog/ev-charging-for-car-dealerships-showrooms-service-centres-india" },
   { label: "Punjab EV charging", href: "/punjab-ev-charging" },
   { label: "Amritsar EV charging", href: "/amritsar-ev-charging" },
   { label: "Greater Noida societies", href: "/greater-noida-societies" },
