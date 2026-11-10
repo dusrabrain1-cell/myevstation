@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { fitMetaDescription, fitMetaTitle } from "@/lib/seo-metadata";
 import { pageSocialMetadata } from "@/lib/page-social-metadata";
 import SeoBreadcrumbJsonLd from "@/components/custom/SeoBreadcrumbJsonLd";
 import ChargerQuotation from "@/components/custom/ChargerQuotation";
@@ -8,7 +9,7 @@ import { ArrowRight, CheckCircle2, ShieldCheck, Zap, BatteryCharging, CarFront, 
 
 export const metadata: Metadata = {
   title: "EV Charging Solutions for Housing Societies",
-  description: "Explore smart sockets, AC chargers and DC charging options for apartments and housing societies. Review indicative equipment pricing and site-planning considerations with MyEVStation.",
+  description: fitMetaDescription("Explore smart sockets, AC chargers and DC charging options for apartments and housing societies. Review indicative equipment pricing and site-planning considerations with MyEVStation."),
   alternates: { canonical: "/society" },
 
   ...pageSocialMetadata("EV Charging Solutions for Housing Societies", "Explore smart sockets, AC chargers and DC charging options for apartments and housing societies. Review indicative equipment pricing and site-planning considerations with MyEVStation.", "/society"),
