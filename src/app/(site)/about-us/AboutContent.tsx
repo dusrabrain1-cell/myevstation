@@ -25,7 +25,7 @@ export default function AboutContent() {
                     <div className="p-7 sm:p-9">
                       <div className="flex items-start gap-4">
                         <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-[#0b5a42] text-white"><ShieldCheck size={25}/></div>
-                        <div><h3 className="mt-1 text-2xl font-black text-[#092d20]">HFL Raj Kishore Prasad (Retd.)</h3></div>
+                        <div><h2 className="mt-1 text-2xl font-black text-[#092d20]">HFL Raj Kishore Prasad (Retd.)</h2></div>
                       </div>
                       <p className="mt-5 text-sm leading-7 text-[#45554a]">Brings 37 years of Indian Air Force experience, with expertise in AN-12, Avro (HS-748) and Embraer-135/145 (Legacy) aircraft systems. Recognised with the Chief of the Air Staff Commendation and USTAD National Award, with advanced technical training in Brazil.</p>
                       <div className="mt-5 flex flex-wrap gap-2"><span className="rounded-full bg-white px-3 py-2 text-xs font-bold text-[#24543b] ring-1 ring-[#dbe6dc]">Aviation electronics</span><span className="rounded-full bg-white px-3 py-2 text-xs font-bold text-[#24543b] ring-1 ring-[#dbe6dc]">Avionics & reliability</span><span className="rounded-full bg-white px-3 py-2 text-xs font-bold text-[#24543b] ring-1 ring-[#dbe6dc]">Technical team leadership</span></div>
