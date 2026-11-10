@@ -10,6 +10,7 @@ function trimAtWord(value: string, maxLength: number): string {
 
 export function fitMetaTitle(value: string): string {
   let base = value.replace(/(?:\s*\|\s*MyEVStation)+$/i, "").trim();
+  if (/\\bMyEVStation\\b/i.test(base)) return trimAtWord(base, 60);
   const maxBase = 60 - BRAND_SUFFIX.length;
   if (base.length > maxBase) base = trimAtWord(base, maxBase);
   return `${base}${BRAND_SUFFIX}`;
