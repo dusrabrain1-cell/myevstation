@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { fitMetaDescription, fitMetaTitle } from "@/lib/seo-metadata";
 import Link from "next/link";
 import { PageHeader } from "@/components/custom/PageHeader";
 import { articlesQuery, sanityFetch, urlFor } from "@/lib/sanity";
@@ -6,13 +7,11 @@ import { blogOne, blogTwo, blogThree, blogFour, blogFive, blogSix, blogSeven, bl
 
 export const metadata: Metadata = {
   title: "EV Charging Station Blogs & Guides in India",
-  description:
-    "Explore MyEVStation blogs on EV charging station business, investment costs, ROI, ex-servicemen opportunities, housing societies, installation requirements and regional EV charging markets in India.",
+  description: fitMetaDescription("Explore MyEVStation blogs on EV charging station business, investment costs, ROI, ex-servicemen opportunities, housing societies, installation requirements and regional EV charging markets in India."),
   alternates: { canonical: "/blogs" },
   openGraph: {
     title: "EV Charging Station Blogs & Guides in India | MyEVStation",
-    description:
-      "Practical guides to EV charging station setup, investment, site selection, installation and business partnerships in India.",
+    description: fitMetaDescription("Practical guides to EV charging station setup, investment, site selection, installation and business partnerships in India."),
     url: "/blogs",
     type: "website",
   },
