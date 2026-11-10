@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { fitMetaDescription, fitMetaTitle } from "@/lib/seo-metadata";
 import { pageSocialMetadata } from "@/lib/page-social-metadata";
 import SeoBreadcrumbJsonLd from "@/components/custom/SeoBreadcrumbJsonLd";
 import ChargerQuotation from "@/components/custom/ChargerQuotation";
@@ -8,7 +9,7 @@ import { ArrowRight, CheckCircle2, MapPin, Building2, Zap, ShieldCheck, Clipboar
 
 export const metadata: Metadata = {
   title: "EV Charging Station for Landowners",
-  description: "Explore how to assess your plot, commercial property, parking area or fleet site for an EV charging station with MyEVStation. Discuss power load, access and site suitability.",
+  description: fitMetaDescription("Explore how to assess your plot, commercial property, parking area or fleet site for an EV charging station with MyEVStation. Discuss power load, access and site suitability."),
   alternates: { canonical: "/with-land" },
 
   ...pageSocialMetadata("EV Charging Station for Landowners", "Explore how to assess your plot, commercial property, parking area or fleet site for an EV charging station with MyEVStation. Discuss power load, access and site suitability.", "/with-land"),
