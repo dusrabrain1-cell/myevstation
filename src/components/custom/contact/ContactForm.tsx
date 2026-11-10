@@ -72,6 +72,8 @@ export function ContactForm({
 
     // Track the validated form separately from a confirmed lead: the visitor still needs to send the pre-filled WhatsApp message.
     window.gtag("event", "contact_form_submit", eventParams);
+    // GA4 recommended lead event: validated enquiry intent before the visitor sends the WhatsApp message.
+    window.gtag("event", "generate_lead", { ...eventParams, method: "whatsapp" });
     window.gtag("event", "contact_cta_click", eventParams);
     window.gtag("event", "whatsapp_click", {
       ...eventParams,
