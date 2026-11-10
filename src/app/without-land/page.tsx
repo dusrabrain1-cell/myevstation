@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { fitMetaDescription, fitMetaTitle } from "@/lib/seo-metadata";
 import { pageSocialMetadata } from "@/lib/page-social-metadata";
 import SeoBreadcrumbJsonLd from "@/components/custom/SeoBreadcrumbJsonLd";
 import { whatsappHref } from "@/lib/constants";
@@ -6,7 +7,7 @@ import { ArrowRight, CheckCircle2, MapPin, ShieldCheck, Smartphone, Wrench, Wall
 
 export const metadata: Metadata = {
   title: "No-Land EV Charging Station Investment Model",
-  description: "Explore MyEVStation's no-land EV charging station model, indicative Starter and Growth packages, operating assumptions and site requirements in India.",
+  description: fitMetaDescription("Explore MyEVStation's no-land EV charging station model, indicative Starter and Growth packages, operating assumptions and site requirements in India."),
   alternates: { canonical: "/without-land" },
 
   ...pageSocialMetadata("No-Land EV Charging Station Investment Model", "Explore MyEVStation's no-land EV charging station model, indicative Starter and Growth packages, charger prices, operating assumptions and site requirements in India.", "/without-land"),
