@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { fitMetaDescription, fitMetaTitle } from "@/lib/seo-metadata";
 import { pageSocialMetadata } from "@/lib/page-social-metadata";
 import SeoBreadcrumbJsonLd from "@/components/custom/SeoBreadcrumbJsonLd";
 import Link from "next/link";
@@ -7,8 +8,8 @@ import { whatsappHref } from "@/lib/constants";
 import { ArrowRight, MapPin, Building2, CheckCircle2, CarFront, Truck, ClipboardCheck, Store } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "EV Charging Stations in Punjab | Setup & Site Assessment",
-  description: "Planning to set up an EV charging station in Punjab? Explore site opportunities in Amritsar, Ludhiana, Jalandhar, Mohali and more. Discuss site assessment, power feasibility and EV charging business options with MyEVStation.",
+  title: fitMetaTitle("EV Charging Stations in Punjab | Setup & Site Assessment"),
+  description: fitMetaDescription("Planning to set up an EV charging station in Punjab? Explore site opportunities in Amritsar, Ludhiana, Jalandhar, Mohali and more. Discuss site assessment, power feasibility and EV charging business options with MyEVStation."),
   alternates: { canonical: "/punjab-ev-charging" },
   keywords: [
     "EV charging station in Punjab",
