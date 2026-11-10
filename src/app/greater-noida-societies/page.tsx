@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { fitMetaDescription, fitMetaTitle } from "@/lib/seo-metadata";
 import { pageSocialMetadata } from "@/lib/page-social-metadata";
 import SeoBreadcrumbJsonLd from "@/components/custom/SeoBreadcrumbJsonLd";
 import Link from "next/link";
@@ -7,8 +8,8 @@ import { whatsappHref } from "@/lib/constants";
 import { ArrowRight, Building2, CheckCircle2, MapPin, ShieldCheck, CarFront, Bike, ClipboardCheck } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "EV Charging Stations in Greater Noida for Societies & RWAs | MyEVStation",
-  description: "Looking for EV charging stations in Greater Noida? MyEVStation helps housing societies and RWAs assess resident and visitor chargers, electrical load, installation costs and site feasibility.",
+  title: fitMetaTitle("EV Charging Stations in Greater Noida for Societies & RWAs | MyEVStation"),
+  description: fitMetaDescription("Looking for EV charging stations in Greater Noida? MyEVStation helps housing societies and RWAs assess resident and visitor chargers, electrical load, installation costs and site feasibility."),
   alternates: { canonical: "/greater-noida-societies" },
   keywords: [
     "EV charging Greater Noida society",
