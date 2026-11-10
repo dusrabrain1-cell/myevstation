@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { fitMetaDescription, fitMetaTitle } from "@/lib/seo-metadata";
 import Link from "next/link";
 import { pageSocialMetadata } from "@/lib/page-social-metadata";
 import SeoFaq from "@/components/custom/SeoFaq";
@@ -6,12 +7,12 @@ import SeoBreadcrumbJsonLd from "@/components/custom/SeoBreadcrumbJsonLd";
 import { whatsappHref } from "@/lib/constants";
 import { ArrowRight, Building2, Hotel, Hospital, Landmark, ShoppingBag, Truck, ClipboardCheck, Zap } from "lucide-react";
 
-const title = "Commercial EV Charging Solutions for Offices, Malls & Hotels";
-const description = "Plan EV charger installation for commercial properties in India. MyEVStation helps offices, malls, hotels, hospitals, institutions and fleet sites assess charger options, electrical readiness, project costs and operating models.";
+const title = fitMetaTitle("Commercial EV Charging Solutions for Offices, Malls & Hotels");
+const description = fitMetaDescription("Plan EV charger installation for commercial properties in India. MyEVStation helps offices, malls, hotels, hospitals, institutions and fleet sites assess charger options, electrical readiness, project costs and operating models.");
 
 export const metadata: Metadata = {
-  title,
-  description,
+  title: fitMetaTitle(title),
+  description: fitMetaDescription(description),
   alternates: { canonical: "/commercial-ev-charging" },
   keywords: [
     "commercial EV charging solutions",
