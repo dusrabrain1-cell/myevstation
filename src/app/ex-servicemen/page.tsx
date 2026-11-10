@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { fitMetaDescription, fitMetaTitle } from "@/lib/seo-metadata";
 import { pageSocialMetadata } from "@/lib/page-social-metadata";
 import SeoBreadcrumbJsonLd from "@/components/custom/SeoBreadcrumbJsonLd";
 import Image from "next/image";
@@ -6,8 +7,8 @@ import { whatsappHref, SITE } from "@/lib/constants";
 import { ArrowRight, CheckCircle2, ShieldCheck, Flag, MapPin, Users, BatteryCharging } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "EV Charging Station Business for Ex-Servicemen | MyEVStation",
-  description: "Explore EV charging station ownership for ex-servicemen in India. Compare ₹3.75 lakh and ₹5 lakh illustrative packages, managed operations, site assessment and written commercial terms before enquiring.",
+  title: fitMetaTitle("EV Charging Station Business for Ex-Servicemen | MyEVStation"),
+  description: fitMetaDescription("Explore EV charging station ownership for ex-servicemen in India. Compare ₹3.75 lakh and ₹5 lakh illustrative packages, managed operations, site assessment and written commercial terms before enquiring."),
   keywords: ["EV charging station for ex-servicemen", "ex-servicemen business opportunity", "ex-servicemen led EV charging station", "EV station business for veterans", "EV charging business after retirement", "veteran entrepreneurship India", "EV charging station investment for ex-servicemen", "retired defence personnel business opportunity"],
   alternates: { canonical: "/ex-servicemen" },
 
