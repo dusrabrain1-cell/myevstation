@@ -7,7 +7,7 @@ import GoogleAnalytics from "@/components/custom/GoogleAnalytics";
 export const metadata: Metadata = {
   title: {
     default: `${SITE.name} — ${SITE.shortDescription}`,
-    template: `%s | ${SITE.name}`,
+    template: "%s",
   },
   description: "Explore EV charging station setup in India with MyEVStation. Compare investment models for landowners, housing societies, businesses and ex-servicemen, and enquire about EV charger installation and partnerships.",
   metadataBase: new URL(SITE.url),
