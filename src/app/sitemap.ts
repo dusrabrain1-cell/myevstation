@@ -11,6 +11,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { path: "/why-myevstation", changeFrequency: "monthly" as const, priority: 0.8 },
     { path: "/business-model", changeFrequency: "monthly" as const, priority: 0.9 },
     { path: "/commercial-ev-charging", changeFrequency: "monthly" as const, priority: 0.95 },
+    { path: "/ev-station-setup-company-india", changeFrequency: "monthly" as const, priority: 0.95 },
     { path: "/technology", changeFrequency: "monthly" as const, priority: 0.8 },
     { path: "/ev-charging-investment-guide", changeFrequency: "monthly" as const, priority: 0.9 },
     { path: "/ev-charging-calculator", changeFrequency: "monthly" as const, priority: 0.9 },
