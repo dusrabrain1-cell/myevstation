@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { SITE } from "@/lib/constants";
+import { fitMetaDescription, fitMetaTitle } from "@/lib/seo-metadata";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PortableBody } from "@/components/custom/PortableBody";
@@ -90,8 +91,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const article = await getArticle(slug);
   if (!article) return { title: "Article not found", robots: { index: false, follow: true } };
 
-  const title = article.seo?.metaTitle || article.title;
-  const description = article.seo?.metaDescription || article.excerpt || `Read ${article.title} — practical EV charging station guidance from MyEVStation.`;
+  const title = fitMetaTitle(article.seo?.metaTitle || article.title);
+  const description = fitMetaDescription(article.seo?.metaDescription || article.excerpt || `Read ${article.title} — practical EV charging station guidance from MyEVStation.`);
   const imageSource = article.seo?.ogImage ?? article.coverImage;
   const imageUrl = imageSource?.asset?._ref
     ? urlFor(imageSource).width(1200).height(630).fit("crop").auto("format").url()

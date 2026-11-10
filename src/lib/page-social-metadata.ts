@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { SITE } from "@/lib/constants";
+import { fitMetaDescription, fitMetaTitle } from "@/lib/seo-metadata";
 
 /**
  * Route-specific social metadata so each page shares its own title,
@@ -13,7 +14,7 @@ export function pageSocialMetadata(
 ): Pick<Metadata, "alternates" | "openGraph" | "twitter"> {
   const canonicalPath = path.startsWith("/") ? path : `/${path}`;
   const url = `${SITE.url.replace(/\/$/, "")}${canonicalPath === "/" ? "/" : canonicalPath}`;
-  const socialTitle = title.includes(SITE.name) ? title : `${title} | ${SITE.name}`;
+  const socialTitle = fitMetaTitle(title);
   const image = "/myevstation-hero-banner.jpeg";
 
   return {
@@ -24,7 +25,7 @@ export function pageSocialMetadata(
       url,
       siteName: SITE.name,
       title: socialTitle,
-      description,
+      description: fitMetaDescription(description),
       images: [{
         url: image,
         width: 1200,

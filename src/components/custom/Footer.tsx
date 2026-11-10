@@ -10,6 +10,7 @@ const EXPLORE_LINKS = [
   { label: "EV charging calculator", href: "/ev-charging-calculator" },
   { label: "FAQs & permissions", href: "/faq" },
   { label: "About us", href: "/about-us" },
+  { label: "Our impact", href: "/impact" },
 ];
 
 const PARTNER_LINKS = [

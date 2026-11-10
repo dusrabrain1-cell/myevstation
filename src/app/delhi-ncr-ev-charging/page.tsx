@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { fitMetaDescription, fitMetaTitle } from "@/lib/seo-metadata";
 import { pageSocialMetadata } from "@/lib/page-social-metadata";
 import Link from "next/link";
 import SeoFaq from "@/components/custom/SeoFaq";
@@ -6,12 +7,12 @@ import SeoBreadcrumbJsonLd from "@/components/custom/SeoBreadcrumbJsonLd";
 import { whatsappHref } from "@/lib/constants";
 import { ArrowRight, Building2, CarFront, CheckCircle2, ClipboardCheck, MapPin, Truck, Users } from "lucide-react";
 
-const title = "EV Charging Stations in Delhi NCR | Societies, Commercial Sites & Fleets";
-const description = "Explore EV charging station opportunities across Delhi NCR for housing societies, RWAs, commercial properties, offices, hotels and fleets. Assess site access, power readiness, charger options and installation costs with MyEVStation.";
+const title = fitMetaTitle("EV Charging Stations in Delhi NCR | Societies, Commercial Sites & Fleets");
+const description = fitMetaDescription("Explore EV charging station opportunities across Delhi NCR for housing societies, RWAs, commercial properties, offices, hotels and fleets. Assess site access, power readiness, charger options and installation costs with MyEVStation.");
 
 export const metadata: Metadata = {
-  title,
-  description,
+  title: fitMetaTitle(title),
+  description: fitMetaDescription(description),
   alternates: { canonical: "/delhi-ncr-ev-charging" },
   keywords: [
     "EV charging station Delhi NCR",

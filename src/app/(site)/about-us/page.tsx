@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { fitMetaDescription, fitMetaTitle } from "@/lib/seo-metadata";
 import SeoBreadcrumbJsonLd from "@/components/custom/SeoBreadcrumbJsonLd";
 import { pageSocialMetadata } from "@/lib/page-social-metadata";
 import AboutContent from "./AboutContent";
 
 export const metadata: Metadata = {
   title: "About MyEVStation | EV Charging Team & Partners",
-  description: "Meet the MyEVStation leadership team and regional partners, including Abhinav Sekhri, Senior Partner – Punjab. Learn about our work in EV charging station partnerships and infrastructure across India.",
+  description: fitMetaDescription("Meet the MyEVStation leadership team and regional partners, including Abhinav Sekhri, Senior Partner – Punjab. Learn about our work in EV charging station partnerships and infrastructure across India."),
   keywords: [
     "MyEVStation partners",
     "Abhinav Sekhri MyEVStation",

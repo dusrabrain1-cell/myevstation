@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { fitMetaDescription, fitMetaTitle } from "@/lib/seo-metadata";
 import { pageSocialMetadata } from "@/lib/page-social-metadata";
 import Link from "next/link";
 import SeoFaq from "@/components/custom/SeoFaq";
@@ -7,8 +8,8 @@ import { whatsappHref } from "@/lib/constants";
 import { ArrowRight, Building2, CheckCircle2, MapPin, ShieldCheck, CarFront, Bike, Store, ClipboardCheck } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "EV Charging Station in Amritsar | Markets & Societies | MyEVStation",
-  description: "Explore EV charging station opportunities in Amritsar for commercial markets, hotels, parking sites, fleets and housing societies. Assess charger options, site feasibility and installation costs with MyEVStation.",
+  title: fitMetaTitle("EV Charging Station in Amritsar | Markets & Societies | MyEVStation"),
+  description: fitMetaDescription("Explore EV charging station opportunities in Amritsar for commercial markets, hotels, parking sites, fleets and housing societies. Assess charger options, site feasibility and installation costs with MyEVStation."),
   alternates: { canonical: "/amritsar-ev-charging" },
   keywords: [
     "EV charging station Amritsar",

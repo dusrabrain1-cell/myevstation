@@ -24,7 +24,7 @@ export default function BusinessModelContent() {
                     </div>
                     <div className="flex flex-1 flex-col items-center bg-gradient-to-b from-[#f0f7f0] to-white px-5 pb-5 pt-5 text-center sm:px-6">
                       <p className="text-[9px] font-black uppercase tracking-[.16em] text-[#bd5518]">SERVICE DOESN’T END. IT EVOLVES.</p>
-                      <h3 className="mt-2 text-[1.35rem] font-black leading-[1.05] tracking-tight text-[#142f24] sm:text-[1.45rem]">YOUR NEXT MISSION<br/>STARTS HERE.</h3>
+                      <h2 className="mt-2 text-[1.35rem] font-black leading-[1.05] tracking-tight text-[#142f24] sm:text-[1.45rem]">YOUR NEXT MISSION<br/>STARTS HERE.</h2>
                       <p className="mt-3 text-sm leading-5 text-[#52665a]">Turn your experience, discipline and leadership into a new chapter in India’s EV future.</p>
                       <div className="mt-auto pt-4"><span className="inline-flex rounded-full border border-[#c8ddce] bg-white px-3 py-1.5 text-[10px] font-bold text-[#0b5a42]">Purpose · Opportunity · Service</span></div>
                     </div>
