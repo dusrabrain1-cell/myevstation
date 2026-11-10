@@ -91,7 +91,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const article = await getArticle(slug);
   if (!article) return { title: "Article not found", robots: { index: false, follow: true } };
 
-  const title = fitMetaTitle(article.seo?.metaTitle || article.title);
+  const titleOverrides: Record<string, string> = {
+    "ev-charging-station-installation-cost-india-ac-vs-dc": "EV Charger Installation Cost: AC vs DC",
+    "ev-charging-station-investment-cost-india": "EV Charging Station Investment Cost India",
+  };
+  const title = fitMetaTitle(titleOverrides[slug] || article.seo?.metaTitle || article.title);
   const description = fitMetaDescription(article.seo?.metaDescription || article.excerpt || `Read ${article.title} — practical EV charging station guidance from MyEVStation.`);
   const imageSource = article.seo?.ogImage ?? article.coverImage;
   const imageUrl = imageSource?.asset?._ref
