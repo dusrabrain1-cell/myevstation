@@ -26,7 +26,6 @@ export const NAV_LINKS: NavLink[] = [
   { label: "Home", href: "/" },
   { label: "Why MyEVStation", href: "/why-myevstation" },
   { label: "Business Model", href: "/business-model" },
-  { label: "EV Station Setup", href: "/ev-station-setup-company-india" },
   { label: "Technology", href: "/technology" },
   { label: "Calculator", href: "/ev-charging-calculator" },
   { label: "FAQs", href: "/faq" },
