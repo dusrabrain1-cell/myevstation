@@ -5,7 +5,7 @@ import { SITE, whatsappHref } from "@/lib/constants";
 import { pageSocialMetadata } from "@/lib/page-social-metadata";
 import { fitMetaDescription, fitMetaTitle } from "@/lib/seo-metadata";
 
-const title = "EV Charging Station Setup Company in India | MyEVStation";
+const title = "EV Charging Station Setup Company in India";
 const description = "Compare EV charging station setup companies in India. MyEVStation helps landowners, investors, housing societies and commercial properties assess sites, costs, AC/DC charger options and partnerships.";
 
 export const metadata: Metadata = {
