@@ -6,11 +6,11 @@ import { SITE } from "@/lib/constants";
 import { ArrowRight, CheckCircle2, ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: fitMetaTitle("EV Charging Station Investment in India: Cost, ROI & Models"),
-  description: fitMetaDescription("Planning an EV charging station investment in India? Understand setup costs, charger and electrical expenses, revenue models, ROI assumptions and site feasibility before investing."),
+  title: fitMetaTitle("EV Charging Station Investment in India"),
+  description: fitMetaDescription("EV charging station investment in India: compare setup costs, AC/DC chargers, electrical work, revenue models and ROI assumptions before investing."),
   alternates: { canonical: "/ev-charging-investment-guide" },
 
-  ...pageSocialMetadata("EV Charging Station Investment Guide India", "A practical guide to assessing EV charging station investment in India: site feasibility, charger selection, electricity costs, utilisation, operating expenses and questions to ask before signing.", "/ev-charging-investment-guide"),
+  ...pageSocialMetadata("EV Charging Station Investment in India", "Compare EV charging station setup costs, electrical work, charger options, operating costs and ROI assumptions. Assess site feasibility before investing.", "/ev-charging-investment-guide"),
 };
 
 const checklist = [

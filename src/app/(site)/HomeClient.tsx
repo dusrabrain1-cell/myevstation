@@ -18,9 +18,8 @@ export default function HomePage() {
               <span className="text-[#ff9b42]">🇮🇳</span> A veteran-led mission for a cleaner, stronger India
             </div>
             <h1 className="max-w-[650px] text-[clamp(1.85rem,3.7vw,3.8rem)] font-black leading-[1.02] tracking-[-.04em] drop-shadow-lg sm:leading-[.96]">
-              EV CHARGING STATIONS FOR INDIA’S NEXT MISSION
-              <span className="mt-2 block"><span className="text-[#ff8b2b]">Powering</span> <span className="text-white">Clean Energy</span></span>
-            </h1>
+              EV CHARGING STATION SETUP IN INDIA
+              <span className="mt-2 block"><span className="text-[#ff8b2b">Powering</span> <span className="text-white">Clean Energy</span></span></h1>
             <p className="mt-3 max-w-xl text-sm font-semibold leading-5 text-white drop-shadow sm:text-base sm:leading-6">
               Own an EV charging business with or without land. Compare investment options, understand the setup process and discuss site suitability, operating responsibilities and estimated returns before you decide.
             </p>
