@@ -49,7 +49,11 @@ export function ContactForm({
     ].filter(Boolean).join("\\n");
 
     const whatsappUrl = whatsappHref(message);
-    const navigateToWhatsApp = () => window.location.assign(whatsappUrl);
+    let fallbackTimer: number | undefined;
+    const navigateToWhatsApp = () => {
+      if (fallbackTimer) window.clearTimeout(fallbackTimer);
+      window.location.assign(whatsappUrl);
+    };
 
     // Queue analytics commands even when the GA script has not loaded yet.
     // The gtag.js loader consumes this queue when it becomes available.
@@ -59,8 +63,7 @@ export function ContactForm({
     };
 
     const eventParams = {
-      link_url: whatsappUrl,
-      link_text: "Continue to WhatsApp",
+      // Avoid sending the WhatsApp URL/query string to GA4; it contains the visitor details and message.
       contact_method: "whatsapp",
       contact_source: leadSource,
       lead_method: "whatsapp_form",
@@ -81,7 +84,7 @@ export function ContactForm({
       event_timeout: 1200,
     });
     // Do not strand the visitor if analytics is blocked or the callback never fires.
-    window.setTimeout(navigateToWhatsApp, 1500);
+    fallbackTimer = window.setTimeout(navigateToWhatsApp, 1500);
     onSuccess?.();
   }
 
