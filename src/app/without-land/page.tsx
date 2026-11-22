@@ -6,11 +6,11 @@ import { whatsappHref } from "@/lib/constants";
 import { ArrowRight, CheckCircle2, MapPin, ShieldCheck, Smartphone, Wrench, Wallet, Zap, FileCheck } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "No-Land EV Charging Station Investment Model",
-  description: fitMetaDescription("Explore MyEVStation's no-land EV charging station model, indicative Starter and Growth packages, operating assumptions and site requirements in India."),
+  title: fitMetaTitle("EV Charging Station Franchise in India Without Land"),
+  description: fitMetaDescription("Explore an EV charging station franchise in India without owning land. Compare host-location partnerships, site requirements, costs and operating responsibilities with MyEVStation."),
   alternates: { canonical: "/without-land" },
 
-  ...pageSocialMetadata("No-Land EV Charging Station Investment Model", "Explore MyEVStation's no-land EV charging station model, indicative Starter and Growth packages, charger prices, operating assumptions and site requirements in India.", "/without-land"),
+  ...pageSocialMetadata("EV Charging Station Franchise in India Without Land", "Explore an EV charging station franchise in India without owning land. Compare host-location partnerships, site requirements, costs and operating responsibilities with MyEVStation.", "/without-land"),
 };
 
 const plans = [
