@@ -18,12 +18,4 @@ export function fitMetaTitle(value: string): string {
 
 export function fitMetaDescription(value: string): string {
   return trimAtWord(value, 155);
-}  if (base.toLowerCase().includes("myevstation")) return trimAtWord(base, 60);
-  const maxBase = 60 - BRAND_SUFFIX.length;
-  if (base.length > maxBase) base = trimAtWord(base, maxBase);
-  return `${base}${BRAND_SUFFIX}`;
-}
-
-export function fitMetaDescription(value: string): string {
-  return trimAtWord(value, 155);
 }
