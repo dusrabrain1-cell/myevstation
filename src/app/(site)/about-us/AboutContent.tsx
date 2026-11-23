@@ -59,7 +59,7 @@ export default function AboutContent() {
                     <article itemScope itemType="https://schema.org/Person" className="group overflow-hidden rounded-[1.75rem] border border-[#dce7df] bg-white shadow-[0_18px_55px_-28px_rgba(9,45,32,0.28)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_25px_65px_-28px_rgba(9,45,32,0.38)]">
                       <div className="grid md:grid-cols-[0.82fr_1.18fr]">
                         <div className="relative min-h-[300px] overflow-hidden bg-[#e8efe9] sm:min-h-[390px]">
-                          <Image src="/images/abhinav-sekhri.jpg" alt="Abhinav Sekhri, Senior Partner – Punjab at MyEVStation" width={960} height={1200} sizes="(max-width: 768px) 100vw, 40vw" className="h-full w-full object-cover object-center transition duration-500 group-hover:scale-[1.025]" loading="lazy" itemProp="image" />
+                          <Image src="/images/abhinav-sekhri.jpg" alt="Abhinav Sekhri, Senior Partner – Punjab at MyEVStation" width={960} height={1200} sizes="(max-width: 768px) 100vw, 40vw" className="h-full w-full object-cover object-[60%_center] md:object-center transition duration-500 group-hover:scale-[1.025]" loading="lazy" itemProp="image" />
                           <div className="absolute inset-0 bg-gradient-to-t from-[#092d20]/70 via-transparent to-transparent" />
                           <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full border border-white/50 bg-white/95 px-3.5 py-2 text-[10px] font-extrabold uppercase tracking-[.13em] text-[#0b5a42] shadow-sm"><span className="h-2 w-2 rounded-full bg-[#e87522]" /> Punjab, India</div>
                           <div className="absolute inset-x-0 bottom-0 p-5 sm:p-7">
@@ -87,7 +87,7 @@ export default function AboutContent() {
                     <article itemScope itemType="https://schema.org/Person" className="group overflow-hidden rounded-[1.75rem] border border-[#dce7df] bg-white shadow-[0_18px_55px_-28px_rgba(9,45,32,0.28)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_25px_65px_-28px_rgba(9,45,32,0.38)]">
                       <div className="grid md:grid-cols-[0.82fr_1.18fr]">
                         <div className="relative min-h-[300px] overflow-hidden bg-[#e8efe9] sm:min-h-[390px]">
-                          <Image src="/images/dr-gireesh-k-subbiah.jpg" alt="Dr. Gireesh K. Subbiah, Regional Partner – South India at MyEVStation" width={960} height={1200} sizes="(max-width: 768px) 100vw, 40vw" className="h-full w-full object-cover object-center transition duration-500 group-hover:scale-[1.025]" loading="lazy" itemProp="image" />
+                          <Image src="/images/dr-gireesh-k-subbiah.jpg" alt="Dr. Gireesh K. Subbiah, Regional Partner – South India at MyEVStation" width={960} height={1200} sizes="(max-width: 768px) 100vw, 40vw" className="h-full w-full object-cover object-[60%_center] md:object-center transition duration-500 group-hover:scale-[1.025]" loading="lazy" itemProp="image" />
                           <div className="absolute inset-0 bg-gradient-to-t from-[#092d20]/70 via-transparent to-transparent" />
                           <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full border border-white/50 bg-white/95 px-3.5 py-2 text-[10px] font-extrabold uppercase tracking-[.13em] text-[#0b5a42] shadow-sm"><span className="h-2 w-2 rounded-full bg-[#e87522]" /> South India</div>
                           <div className="absolute inset-x-0 bottom-0 p-5 sm:p-7">
