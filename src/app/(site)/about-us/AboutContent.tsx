@@ -84,6 +84,33 @@ export default function AboutContent() {
                         </div>
                       </div>
                     </article>
+                    <article itemScope itemType="https://schema.org/Person" className="group overflow-hidden rounded-[1.75rem] border border-[#dce7df] bg-white shadow-[0_18px_55px_-28px_rgba(9,45,32,0.28)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_25px_65px_-28px_rgba(9,45,32,0.38)]">
+                      <div className="grid md:grid-cols-[0.82fr_1.18fr]">
+                        <div className="relative min-h-[300px] overflow-hidden bg-[#e8efe9] sm:min-h-[390px]">
+                          <Image src="/images/dr-gireesh-k-subbiah.jpg" alt="Dr. Gireesh K. Subbiah, Regional Partner – South India at MyEVStation" width={960} height={1200} sizes="(max-width: 768px) 100vw, 40vw" className="h-full w-full object-cover object-center transition duration-500 group-hover:scale-[1.025]" loading="lazy" itemProp="image" />
+                          <div className="absolute inset-0 bg-gradient-to-t from-[#092d20]/70 via-transparent to-transparent" />
+                          <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full border border-white/50 bg-white/95 px-3.5 py-2 text-[10px] font-extrabold uppercase tracking-[.13em] text-[#0b5a42] shadow-sm"><span className="h-2 w-2 rounded-full bg-[#e87522]" /> South India</div>
+                          <div className="absolute inset-x-0 bottom-0 p-5 sm:p-7">
+                            <p className="text-xs font-bold uppercase tracking-[.2em] text-white/75">Regional leadership</p>
+                            <p className="mt-1 text-xl font-extrabold text-white">Expanding EV infrastructure across South India</p>
+                          </div>
+                        </div>
+                        <div className="flex flex-col justify-center p-7 sm:p-10">
+                          <div className="flex flex-wrap items-center gap-2">
+                            <span className="rounded-full bg-[#e8f4eb] px-3 py-1.5 text-[11px] font-extrabold uppercase tracking-[.1em] text-[#0b5a42]">Regional Partner</span>
+                            <span className="rounded-full bg-[#fff1e7] px-3 py-1.5 text-[11px] font-extrabold uppercase tracking-[.1em] text-[#a84d13]">South India</span>
+                          </div>
+                          <h3 itemProp="name" className="mt-5 text-3xl font-black tracking-tight text-[#092d20] sm:text-4xl">Dr. Gireesh K. Subbiah</h3>
+                          <p itemProp="jobTitle" className="mt-2 text-sm font-bold text-[#c65f19]">Regional Partner – South India, MyEVStation</p>
+                          <p itemProp="description" className="mt-5 text-sm leading-7 text-[#45554a] sm:text-base">Clinically trained epidemiologist, researcher, and systems strategist with experience in scientific research, AI-driven operations, and multi-institutional coordination. As Founder &amp; Chief AI Architect at Trilith Business Solutions and an ICMR-associated study lead researcher, he brings data-driven thinking and operational execution to South India EV infrastructure expansion, partnerships, fleet connections, and sustainable technology adoption.</p>
+                          <div className="mt-6 flex flex-wrap gap-2" aria-label="Areas of experience">
+                            <span className="rounded-lg border border-[#dce7df] bg-[#f7faf7] px-3 py-2 text-xs font-bold text-[#24543b]">Research &amp; Systems Strategy</span>
+                            <span className="rounded-lg border border-[#dce7df] bg-[#f7faf7] px-3 py-2 text-xs font-bold text-[#24543b]">AI &amp; Operations</span>
+                            <span className="rounded-lg border border-[#dce7df] bg-[#f7faf7] px-3 py-2 text-xs font-bold text-[#24543b]">EV Partnerships</span>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
                   </div>
                   <p className="relative mx-auto mt-7 max-w-3xl text-center text-sm leading-6 text-[#657469]">We’re building a wider network of regional partners to help bring suitable EV charging solutions to more locations.</p>
                 </section>
